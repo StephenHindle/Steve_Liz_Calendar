@@ -473,6 +473,39 @@
   .meal-slot label{width:76px;font-size:12px;font-weight:600;color:var(--muted);flex:0 0 auto;text-transform:capitalize;}
   .meal-slot input{flex:1;padding:8px 11px;border:1px solid var(--border-strong);border-radius:9px;outline:none;font-size:14px;background:var(--surface);}
   .meal-slot input:focus{border-color:var(--accent);}
+  .meal-pick-btn{flex:1;text-align:left;padding:8px 11px;border:1px solid var(--border-strong);border-radius:9px;font-size:14px;background:var(--surface);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .meal-pick-btn.empty{color:var(--muted-2);}
+  .meal-pick-btn:hover{border-color:var(--accent);}
+
+  .lib-meal{border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:9px;}
+  .lib-title{font-size:15px;font-weight:700;border:none;border-bottom:1px solid var(--border);padding:5px 2px;outline:none;background:none;color:var(--text);}
+  .lib-title:focus{border-color:var(--accent);}
+  .lib-ings{display:flex;flex-direction:column;gap:6px;}
+  .lib-ing{display:flex;align-items:center;gap:8px;}
+  .lib-ing input{flex:1;padding:8px 10px;border:1px solid var(--border-strong);border-radius:8px;outline:none;font-size:14px;background:var(--surface);color:var(--text);}
+  .lib-ing input:focus{border-color:var(--accent);}
+  .lib-ing .li-del{width:28px;height:28px;border-radius:7px;display:grid;place-items:center;color:var(--muted-2);flex:0 0 auto;}
+  .lib-ing .li-del:hover{background:#fdecec;color:#d64545;}
+  .lib-meal-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+
+  .mp-list{display:flex;flex-direction:column;gap:6px;}
+  .mp-meal{display:flex;flex-direction:column;gap:2px;text-align:left;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);width:100%;}
+  .mp-meal:hover{border-color:var(--accent);background:var(--surface-2);}
+  .mp-meal.sel{border-color:var(--accent);background:var(--accent-soft);}
+  .mp-meal .mp-t{font-size:14.5px;font-weight:600;}
+  .mp-meal .mp-i{font-size:12px;color:var(--muted);}
+  .mp-custom{display:flex;gap:8px;margin-top:4px;}
+  .mp-custom input{flex:1;padding:10px 12px;border:1px solid var(--border-strong);border-radius:10px;outline:none;background:var(--surface);color:var(--text);}
+  .mp-custom input:focus{border-color:var(--accent);}
+  .mp-section-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:8px 0 2px;}
+  .mp-empty{font-size:13px;color:var(--muted-2);padding:4px 2px;}
+
+  .gp-tools{display:flex;gap:4px;margin-bottom:4px;}
+  .gp-row{display:flex;align-items:center;gap:11px;padding:10px 4px;border-bottom:1px solid var(--border);}
+  .gp-row:last-child{border-bottom:none;}
+  .gp-row .gp-text{flex:1;font-size:15px;}
+  .gp-row.existing .gp-text{color:var(--muted-2);}
+  .gp-tag{font-size:11px;font-weight:600;color:var(--muted-2);background:var(--surface-2);border:1px solid var(--border);padding:2px 8px;border-radius:999px;flex:0 0 auto;}
 
   /* ---- forecast + location ---- */
   .fc-grid{display:flex;flex-direction:column;}
@@ -886,16 +919,73 @@
       </button>
     </div>
     <div class="sheet-body">
-      <div class="nav" style="justify-content:center;">
-        <button class="nav-arrow" id="mealsPrev" aria-label="Previous week"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <span class="period-label" id="mealsWeekLabel" style="text-align:center;"></span>
-        <button class="nav-arrow" id="mealsNext" aria-label="Next week"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      <div class="tabs" id="mealTabs">
+        <button class="tab sel" data-mtab="planner">Planner</button>
+        <button class="tab" data-mtab="library">My meals</button>
       </div>
-      <div class="meal-days" id="mealDays"></div>
+      <div id="mealPlannerPane">
+        <div class="nav" style="justify-content:center;">
+          <button class="nav-arrow" id="mealsPrev" aria-label="Previous week"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <span class="period-label" id="mealsWeekLabel" style="text-align:center;"></span>
+          <button class="nav-arrow" id="mealsNext" aria-label="Next week"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+        <div class="meal-days" id="mealDays"></div>
+      </div>
+      <div id="mealLibraryPane" style="display:none">
+        <p class="empty-note">Save meals with their ingredients here, then pick them on any day. When you add a day's meals to the grocery list, those ingredients are offered for you to tick.</p>
+        <div class="cat-list" id="mealLibraryList"></div>
+        <button class="add-cat" id="addMeal">+ Add meal</button>
+      </div>
     </div>
     <div class="sheet-foot">
-      <button class="btn btn-ghost" id="mealsToGrocery" style="flex:1;">Send week to grocery list</button>
+      <button class="btn btn-ghost" id="mealsToGrocery" style="flex:1;">Add ingredients to grocery</button>
       <button class="btn btn-primary" id="mealsDone">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Meal picker -->
+<div class="overlay" id="mealPickOverlay">
+  <div class="sheet scope-sheet" role="dialog" aria-modal="true" aria-labelledby="mealPickTitle">
+    <div class="sheet-head">
+      <h2 id="mealPickTitle">Choose a meal</h2>
+      <button class="icon-btn" id="mealPickClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body">
+      <div class="mp-section-label">Saved meals</div>
+      <div class="mp-list" id="mealPickList"></div>
+      <div class="mp-section-label">Or type something</div>
+      <div class="mp-custom">
+        <input id="mealPickCustom" placeholder="Custom entry" autocomplete="off">
+        <button class="btn btn-primary" id="mealPickCustomAdd" style="flex:0 0 auto;height:auto;padding:0 16px;">Set</button>
+      </div>
+      <div class="list-tools"><button class="link-btn danger" id="mealPickClear">Clear this slot</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Grocery selection -->
+<div class="overlay" id="groceryPickOverlay">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="gpTitle">
+    <div class="sheet-head">
+      <h2 id="gpTitle">Add to grocery list</h2>
+      <button class="icon-btn" id="gpClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body">
+      <p class="empty-note" id="gpNote">Tick the ingredients to add to your Grocery list.</p>
+      <div class="gp-tools">
+        <button class="link-btn" id="gpAll">Select all</button>
+        <button class="link-btn" id="gpNone">Select none</button>
+      </div>
+      <div id="gpList"></div>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn btn-ghost" id="gpCancel" style="flex:0 0 auto;padding:0 18px;">Cancel</button>
+      <button class="btn btn-primary" id="gpAdd" style="flex:1;">Add ticked</button>
     </div>
   </div>
 </div>
@@ -968,9 +1058,19 @@
   if(!settings.weatherDefaultApplied){ settings.weather.on = true; settings.weatherDefaultApplied = true; saveSettings(); }
 
   var lists = load("cal.lists", [ { id:"grocery", name:"Grocery", items:[] } ]);
-  var meals = load("cal.meals", {});   // { 'YYYY-MM-DD': {breakfast,lunch,dinner,snack} }
+  var meals = load("cal.meals", {});   // { 'YYYY-MM-DD': { slot: {text, mealId} } }
+  var mealLibrary = load("cal.mealLibrary", []);  // [ {id, title, ingredients:[{id,text}]} ]
   function saveLists(){ store.set("cal.lists", JSON.stringify(lists)); }
   function saveMeals(){ store.set("cal.meals", JSON.stringify(meals)); }
+  function saveMealLibrary(){ store.set("cal.mealLibrary", JSON.stringify(mealLibrary)); }
+  // migrate any legacy string slot values to {text, mealId}
+  Object.keys(meals).forEach(function(k){
+    var day=meals[k]; if(!day || typeof day!=="object"){ meals[k]={}; return; }
+    Object.keys(day).forEach(function(sl){
+      var v=day[sl];
+      if(typeof v==="string"){ day[sl]= v ? {text:v, mealId:""} : null; }
+    });
+  });
 
   var state = { view:"week", date:new Date(), editing:null, personFilter:null, mealsWeek:new Date() };
   var firedReminders = {};   // { dateKey: { triggerKey:true } }
@@ -1832,7 +1932,7 @@
   }
   /* ---------- Data backup ---------- */
   function exportData(){
-    var payload={tasks:tasks,settings:settings,lists:lists,meals:meals,version:2};
+    var payload={tasks:tasks,settings:settings,lists:lists,meals:meals,mealLibrary:mealLibrary,version:3};
     var blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
     var url=URL.createObjectURL(blob);
     var a=document.createElement("a");
@@ -1856,7 +1956,13 @@
         }
         if(data.lists) lists=data.lists;
         if(data.meals) meals=data.meals;
-        saveTasks(); saveSettings(); saveLists(); saveMeals();
+        if(data.mealLibrary) mealLibrary=data.mealLibrary;
+        // migrate any legacy string slots in the imported meals
+        Object.keys(meals).forEach(function(k){
+          var day=meals[k]; if(!day || typeof day!=="object"){ meals[k]={}; return; }
+          Object.keys(day).forEach(function(sl){ if(typeof day[sl]==="string"){ day[sl]= day[sl] ? {text:day[sl], mealId:""} : null; } });
+        });
+        saveTasks(); saveSettings(); saveLists(); saveMeals(); saveMealLibrary();
         applyAccent(); updateGreeting(); renderSetCats(); renderSetPeople();
         $("weekStartToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active",(+b.dataset.ws)===settings.weekStart); });
         if(settings.weather.on){ if(settings.weather.lat!=null) refreshWeather(); else geolocate(true); }
@@ -2054,7 +2160,30 @@
 
   /* ---------- Meal planner ---------- */
   var MEAL_SLOTS=[["breakfast","Breakfast"],["lunch","Lunch"],["dinner","Dinner"],["snack","Snack"]];
-  function openMeals(){ state.mealsWeek=new Date(state.date); renderMeals(); openOverlay("mealsOverlay"); }
+  var mealTab="planner", mealPickTarget=null, gpItems=[];
+
+  function libMealById(id){ for(var i=0;i<mealLibrary.length;i++) if(mealLibrary[i].id===id) return mealLibrary[i]; return null; }
+  function slotTitle(val){
+    if(!val) return "";
+    if(typeof val==="string") return val;
+    if(val.mealId){ var m=libMealById(val.mealId); return m ? m.title : "(removed meal)"; }
+    return val.text||"";
+  }
+  function groceryList(){
+    var g=lists.filter(function(l){return l.id==="grocery" || l.name.toLowerCase()==="grocery";})[0];
+    if(!g){ g={id:"grocery",name:"Grocery",items:[]}; lists.push(g); saveLists(); }
+    return g;
+  }
+
+  function openMeals(){ state.mealsWeek=new Date(state.date); showMealTab("planner"); openOverlay("mealsOverlay"); }
+  function showMealTab(name){
+    mealTab=name;
+    $("mealPlannerPane").style.display = name==="planner" ? "block" : "none";
+    $("mealLibraryPane").style.display = name==="library" ? "block" : "none";
+    $("mealsToGrocery").style.display = name==="planner" ? "inline-flex" : "none";
+    $("mealTabs").querySelectorAll("button").forEach(function(b){ b.classList.toggle("sel", b.dataset.mtab===name); });
+    if(name==="library") renderMealLibrary(); else renderMeals();
+  }
   function renderMeals(){
     var s=startOfWeek(state.mealsWeek), e=addDays(s,6);
     $("mealsWeekLabel").textContent = s.getDate()+" "+MONTHS[s.getMonth()].slice(0,3)+" – "+e.getDate()+" "+MONTHS[e.getMonth()].slice(0,3);
@@ -2068,38 +2197,139 @@
         MEAL_SLOTS.forEach(function(slot){
           var row=document.createElement("div"); row.className="meal-slot";
           var lab=document.createElement("label"); lab.textContent=slot[1];
-          var inp=document.createElement("input"); inp.type="text"; inp.value=meals[k][slot[0]]||""; inp.placeholder="—";
-          inp.addEventListener("input", function(){ meals[k][slot[0]]=inp.value; saveMeals(); });
-          row.appendChild(lab); row.appendChild(inp); day.appendChild(row);
+          var btn=document.createElement("button"); btn.type="button"; btn.className="meal-pick-btn";
+          var title=slotTitle(meals[k][slot[0]]);
+          btn.textContent = title || "Add";
+          if(!title) btn.classList.add("empty");
+          (function(dateKey, slotKey){ btn.addEventListener("click", function(){ openMealPicker(dateKey, slotKey); }); })(k, slot[0]);
+          row.appendChild(lab); row.appendChild(btn); day.appendChild(row);
         });
         box.appendChild(day);
       })(addDays(s,i));
     }
   }
-  function mealsToGrocery(){
-    var s=startOfWeek(state.mealsWeek);
-    var grocery=lists.filter(function(l){return l.id==="grocery" || l.name.toLowerCase()==="grocery";})[0];
-    if(!grocery){ grocery={id:"grocery",name:"Grocery",items:[]}; lists.push(grocery); }
-    var added=0;
+  function renderMealLibrary(){
+    var box=$("mealLibraryList"); box.innerHTML="";
+    if(!mealLibrary.length){ var e=document.createElement("p"); e.className="mp-empty"; e.textContent="No saved meals yet. Add one to get started."; box.appendChild(e); }
+    mealLibrary.forEach(function(meal, mi){
+      if(!meal.ingredients) meal.ingredients=[];
+      var card=document.createElement("div"); card.className="lib-meal";
+      var title=document.createElement("input"); title.className="lib-title"; title.value=meal.title||""; title.placeholder="Meal name";
+      title.addEventListener("input", function(){ meal.title=title.value; saveMealLibrary(); });
+      card.appendChild(title);
+      var ings=document.createElement("div"); ings.className="lib-ings";
+      meal.ingredients.forEach(function(ing, ii){
+        var r=document.createElement("div"); r.className="lib-ing";
+        var inp=document.createElement("input"); inp.value=ing.text||""; inp.placeholder="Ingredient";
+        inp.addEventListener("input", function(){ ing.text=inp.value; saveMealLibrary(); });
+        var del=document.createElement("button"); del.className="li-del"; del.setAttribute("aria-label","Remove ingredient");
+        del.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+        del.addEventListener("click", function(){ meal.ingredients.splice(ii,1); saveMealLibrary(); renderMealLibrary(); });
+        r.appendChild(inp); r.appendChild(del); ings.appendChild(r);
+      });
+      card.appendChild(ings);
+      var addIng=document.createElement("button"); addIng.className="link-btn"; addIng.textContent="+ Add ingredient";
+      addIng.addEventListener("click", function(){ meal.ingredients.push({id:uid(), text:""}); saveMealLibrary(); renderMealLibrary(); });
+      var delMeal=document.createElement("button"); delMeal.className="link-btn danger"; delMeal.textContent="Delete meal";
+      delMeal.addEventListener("click", function(){ mealLibrary.splice(mi,1); saveMealLibrary(); renderMealLibrary(); });
+      var foot=document.createElement("div"); foot.className="lib-meal-foot"; foot.appendChild(addIng); foot.appendChild(delMeal);
+      card.appendChild(foot);
+      box.appendChild(card);
+    });
+  }
+  function openMealPicker(k, slotKey){
+    mealPickTarget={ k:k, slot:slotKey };
+    var slotLabel=""; MEAL_SLOTS.forEach(function(s){ if(s[0]===slotKey) slotLabel=s[1]; });
+    var d=fromKey(k);
+    $("mealPickTitle").textContent = slotLabel+" · "+DOWS_SHORT[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()].slice(0,3);
+    $("mealPickCustom").value="";
+    renderMealPickList();
+    openOverlay("mealPickOverlay");
+  }
+  function renderMealPickList(){
+    var box=$("mealPickList"); box.innerHTML="";
+    if(!mealLibrary.length){ var e=document.createElement("div"); e.className="mp-empty"; e.textContent="No saved meals yet. Add some under the My meals tab."; box.appendChild(e); return; }
+    var cur=meals[mealPickTarget.k] && meals[mealPickTarget.k][mealPickTarget.slot];
+    var curId=cur && cur.mealId;
+    mealLibrary.forEach(function(meal){
+      var b=document.createElement("button"); b.type="button"; b.className="mp-meal"+(meal.id===curId?" sel":"");
+      var n=(meal.ingredients||[]).filter(function(x){return (x.text||"").trim();}).length;
+      var t=document.createElement("span"); t.className="mp-t"; t.textContent=meal.title||"(untitled meal)";
+      var ic=document.createElement("span"); ic.className="mp-i"; ic.textContent=n+" ingredient"+(n===1?"":"s");
+      b.appendChild(t); b.appendChild(ic);
+      b.addEventListener("click", function(){ setSlotFromMeal(meal.id); });
+      box.appendChild(b);
+    });
+  }
+  function setSlotFromMeal(mealId){
+    var t=mealPickTarget; if(!t) return;
+    if(!meals[t.k]) meals[t.k]={};
+    meals[t.k][t.slot]={ mealId:mealId, text:"" };
+    saveMeals(); closeOverlay("mealPickOverlay"); renderMeals();
+  }
+  function setSlotCustom(){
+    var t=mealPickTarget; if(!t) return;
+    var v=$("mealPickCustom").value.trim();
+    if(!meals[t.k]) meals[t.k]={};
+    meals[t.k][t.slot]= v ? { mealId:"", text:v } : null;
+    saveMeals(); closeOverlay("mealPickOverlay"); renderMeals();
+  }
+  function clearSlot(){
+    var t=mealPickTarget; if(!t) return;
+    if(meals[t.k]) meals[t.k][t.slot]=null;
+    saveMeals(); closeOverlay("mealPickOverlay"); renderMeals();
+  }
+  function openGroceryPick(){
+    var s=startOfWeek(state.mealsWeek), seen={}, items=[], g=groceryList();
     for(var i=0;i<7;i++){
-      var k=keyOf(addDays(s,i)); var m=meals[k]; if(!m) continue;
+      var k=keyOf(addDays(s,i)), m=meals[k]; if(!m) continue;
       MEAL_SLOTS.forEach(function(slot){
-        var v=(m[slot[0]]||"").trim(); if(!v) return;
-        var exists=grocery.items.some(function(it){ return it.text.toLowerCase()===v.toLowerCase(); });
-        if(!exists){ grocery.items.push({id:uid(), text:v, done:false}); added++; }
+        var val=m[slot[0]]; if(!val) return;
+        var list=[];
+        if(val.mealId){ var meal=libMealById(val.mealId); if(meal){ (meal.ingredients||[]).forEach(function(ing){ var tx=(ing.text||"").trim(); if(tx) list.push(tx); }); } }
+        else if(val.text){ var tt=val.text.trim(); if(tt) list.push(tt); }
+        list.forEach(function(tx){
+          var key=tx.toLowerCase(); if(seen[key]) return; seen[key]=true;
+          var existing=g.items.some(function(it){ return it.text.toLowerCase()===key; });
+          items.push({ text:tx, existing:existing, checked:!existing });
+        });
       });
     }
-    saveLists();
-    toast(added? added+" item"+(added>1?"s":"")+" added to Grocery" : "Nothing new to add");
+    if(!items.length){ toast("No ingredients found for this week"); return; }
+    gpItems=items; renderGroceryPick(); openOverlay("groceryPickOverlay");
+  }
+  function renderGroceryPick(){
+    var box=$("gpList"); box.innerHTML="";
+    gpItems.forEach(function(it){
+      var row=document.createElement("div"); row.className="gp-row"+(it.existing?" existing":"");
+      var tk=document.createElement("span"); tk.className="tick"+(it.checked?" on":""); tk.style.setProperty("--tick-c", settings.accent); tk.innerHTML=CHECK_SVG;
+      tk.addEventListener("click", function(){ it.checked=!it.checked; renderGroceryPick(); });
+      var txt=document.createElement("span"); txt.className="gp-text"; txt.textContent=it.text;
+      row.appendChild(tk); row.appendChild(txt);
+      if(it.existing){ var tag=document.createElement("span"); tag.className="gp-tag"; tag.textContent="on list"; row.appendChild(tag); }
+      box.appendChild(row);
+    });
+  }
+  function gpSetAll(v){ gpItems.forEach(function(it){ it.checked=v; }); renderGroceryPick(); }
+  function gpCommit(){
+    var g=groceryList(), added=0;
+    gpItems.forEach(function(it){
+      if(!it.checked) return;
+      var exists=g.items.some(function(x){ return x.text.toLowerCase()===it.text.toLowerCase(); });
+      if(!exists){ g.items.push({id:uid(), text:it.text, done:false}); added++; }
+    });
+    saveLists(); closeOverlay("groceryPickOverlay");
+    toast(added ? (added+" item"+(added>1?"s":"")+" added to Grocery") : "Nothing new added");
   }
   function renderDayMeals(d){
     var strip=$("dayMeals"); strip.innerHTML="";
-    var m=meals[keyOf(d)]; var any=false;
+    var m=meals[keyOf(d)], any=false;
     MEAL_SLOTS.forEach(function(slot){
-      if(m && m[slot[0]]){ any=true;
+      var title = m ? slotTitle(m[slot[0]]) : "";
+      if(title){ any=true;
         var el=document.createElement("div"); el.className="m";
         var b=document.createElement("b"); b.textContent=slot[1];
-        el.appendChild(b); el.appendChild(document.createTextNode(m[slot[0]]));
+        el.appendChild(b); el.appendChild(document.createTextNode(title));
         strip.appendChild(el);
       }
     });
@@ -2266,7 +2496,21 @@
   $("mealsDone").addEventListener("click", function(){ closeOverlay("mealsOverlay"); render(); });
   $("mealsPrev").addEventListener("click", function(){ state.mealsWeek=addDays(startOfWeek(state.mealsWeek),-7); renderMeals(); });
   $("mealsNext").addEventListener("click", function(){ state.mealsWeek=addDays(startOfWeek(state.mealsWeek),7); renderMeals(); });
-  $("mealsToGrocery").addEventListener("click", mealsToGrocery);
+  $("mealsToGrocery").addEventListener("click", openGroceryPick);
+  $("mealTabs").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; showMealTab(b.dataset.mtab); });
+  $("addMeal").addEventListener("click", function(){
+    mealLibrary.push({ id:uid(), title:"New meal", ingredients:[{id:uid(), text:""}] });
+    saveMealLibrary(); renderMealLibrary();
+  });
+  $("mealPickClose").addEventListener("click", function(){ closeOverlay("mealPickOverlay"); });
+  $("mealPickCustomAdd").addEventListener("click", setSlotCustom);
+  $("mealPickCustom").addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); setSlotCustom(); } });
+  $("mealPickClear").addEventListener("click", clearSlot);
+  $("gpClose").addEventListener("click", function(){ closeOverlay("groceryPickOverlay"); });
+  $("gpCancel").addEventListener("click", function(){ closeOverlay("groceryPickOverlay"); });
+  $("gpAll").addEventListener("click", function(){ gpSetAll(true); });
+  $("gpNone").addEventListener("click", function(){ gpSetAll(false); });
+  $("gpAdd").addEventListener("click", gpCommit);
   $("fcClose").addEventListener("click", function(){ closeOverlay("fcOverlay"); });
 
   $("exportBtn").addEventListener("click", exportData);
