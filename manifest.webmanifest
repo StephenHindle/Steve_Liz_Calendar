@@ -2,7 +2,7 @@
   "name": "My Calendar",
   "short_name": "Calendar",
   "description": "A local, private calendar with tasks, lists, meals and weather.",
-  "start_url": "./calendar.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",

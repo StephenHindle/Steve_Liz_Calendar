@@ -1,7 +1,9 @@
-/* Simple offline cache for the calendar app. Bump CACHE to force an update. */
-var CACHE = "cal-cache-v1";
-var ASSETS = [
-  "./calendar.html",
+/* Offline cache for the calendar app.
+   IMPORTANT: bump the version below whenever you change any file, so devices pick up the update. */
+var CACHE = "cal-cache-v2";
+var CORE = [
+  "./",
+  "./index.html",
   "./manifest.webmanifest",
   "./icon-192.png",
   "./icon-512.png",
@@ -11,8 +13,8 @@ var ASSETS = [
 self.addEventListener("install", function(e){
   e.waitUntil(
     caches.open(CACHE).then(function(c){
-      // add each asset independently so one failure does not abort the whole install
-      return Promise.all(ASSETS.map(function(a){ return c.add(a).catch(function(){}); }));
+      // add each item independently so one missing file cannot abort the whole install
+      return Promise.all(CORE.map(function(a){ return c.add(a).catch(function(){}); }));
     })
   );
   self.skipWaiting();
@@ -33,20 +35,30 @@ self.addEventListener("fetch", function(e){
   var url;
   try { url = new URL(req.url); } catch(_){ return; }
 
-  // Live data (weather, geocoding): network first, fall back to cache if offline.
+  // Page loads: always try the network first, and only fall back to the cached
+  // app shell when offline. This never serves a stale 404.
+  if(req.mode === "navigate"){
+    e.respondWith(
+      fetch(req).catch(function(){
+        return caches.match("./index.html").then(function(r){ return r || caches.match("./"); });
+      })
+    );
+    return;
+  }
+
+  // Live data (weather, geocoding): network first.
   if(/open-meteo\.com$|bigdatacloud\.net$|geocoding-api\.open-meteo\.com$/.test(url.hostname)){
     e.respondWith(fetch(req).catch(function(){ return caches.match(req); }));
     return;
   }
 
-  // App shell and fonts: cache first, then network, and cache new same-origin/font responses.
+  // Other assets and fonts: cache first, then network. Only cache good responses.
   e.respondWith(
     caches.match(req).then(function(cached){
       if(cached) return cached;
       return fetch(req).then(function(res){
         try {
-          var host = url.hostname;
-          if(url.origin === self.location.origin || /gstatic\.com$|googleapis\.com$/.test(host)){
+          if(res && res.ok && (url.origin === self.location.origin || /gstatic\.com$|googleapis\.com$/.test(url.hostname))){
             var copy = res.clone();
             caches.open(CACHE).then(function(c){ c.put(req, copy); });
           }
