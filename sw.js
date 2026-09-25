@@ -1,6 +1,6 @@
 /* Offline cache for the calendar app.
    IMPORTANT: bump the version below whenever you change any file, so devices pick up the update. */
-var CACHE = "cal-cache-v3";
+var CACHE = "cal-cache-v5";
 var CORE = [
   "./",
   "./index.html",
