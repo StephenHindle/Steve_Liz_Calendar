@@ -889,6 +889,123 @@
   .ww-ev .wx-alert.icon-only{margin-left:-2px;}
   .ww-more,.ww-none{font-size:13px;font-weight:600;color:var(--muted-2);}
 
+  /* ---------- Animated weather background (whole calendar column) ---------- */
+  :root{
+    --veil:rgba(246,247,249,.66); --veil-wall:rgba(246,247,249,.28); --veil-strong:rgba(246,247,249,.9);
+    --glass:rgba(255,255,255,.6); --glass-panel:rgba(255,255,255,.58); --card-glass:rgba(255,255,255,.86);
+    --outside-glass:rgba(236,239,244,.45); --sky-fog:rgba(255,255,255,.72);
+  }
+  [data-theme="dark"]{
+    --veil:rgba(15,17,22,.66); --veil-wall:rgba(15,17,22,.3); --veil-strong:rgba(15,17,22,.9);
+    --glass:rgba(23,26,33,.58); --glass-panel:rgba(23,26,33,.55); --card-glass:rgba(23,26,33,.84);
+    --outside-glass:rgba(8,10,14,.35); --sky-fog:rgba(220,228,245,.07);
+  }
+  .content{position:relative;isolation:isolate;}
+  .content > :not(.sky){position:relative;}
+  .sky{
+    position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;display:none;
+    background:linear-gradient(180deg,var(--sky-top,#c6e0fb) 0%,var(--sky-bot,#edf4fb) 72%);
+  }
+  html.sky-on .sky{display:block;}
+  .sky .sl{position:absolute;inset:0;}
+  .sky .sky-glow{background:radial-gradient(circle at var(--gx,50%) var(--gy,18%),var(--glow,transparent) 0,transparent 42vmax);animation:sky-breathe 11s ease-in-out infinite alternate;}
+  .sky .sky-stars{opacity:var(--stars,0);transition:opacity 3s;}
+  .sky .sky-stars::before,.sky .sky-stars::after{content:"";position:absolute;inset:0;background-image:var(--fx-stars);background-size:120px 60px;animation:fx-twinkle 5s ease-in-out infinite alternate;}
+  .sky .sky-stars::after{background-size:190px 95px;background-position:60px 30px;animation-duration:7.5s;animation-delay:-3s;}
+  .sky .sky-clouds{
+    right:auto;width:200%;opacity:var(--clouds,.35);transition:opacity 3s;will-change:transform;
+    background:
+      radial-gradient(ellipse 260px 64px at 10% 9%,var(--cloud,rgba(255,255,255,.7)),transparent 70%),
+      radial-gradient(ellipse 340px 80px at 38% 20%,var(--cloud,rgba(255,255,255,.7)),transparent 70%),
+      radial-gradient(ellipse 200px 50px at 66% 7%,var(--cloud,rgba(255,255,255,.7)),transparent 70%),
+      radial-gradient(ellipse 300px 70px at 88% 26%,var(--cloud,rgba(255,255,255,.7)),transparent 70%);
+    background-size:50% 100%;background-repeat:repeat-x;
+    animation:sky-drift 260s linear infinite;
+  }
+  .sky .sky-clouds.c2{
+    opacity:calc(var(--clouds,.35) * .75);animation-duration:420s;
+    background:
+      radial-gradient(ellipse 420px 90px at 22% 34%,var(--cloud,rgba(255,255,255,.7)),transparent 70%),
+      radial-gradient(ellipse 280px 60px at 55% 14%,var(--cloud,rgba(255,255,255,.7)),transparent 70%),
+      radial-gradient(ellipse 380px 86px at 80% 44%,var(--cloud,rgba(255,255,255,.7)),transparent 70%);
+    background-size:50% 100%;background-repeat:repeat-x;
+  }
+  .sky .sky-rain,.sky .sky-rain2,.sky .sky-snow,.sky .sky-snow2,.sky .sky-fog,.sky .sky-flash{display:none;}
+  /* precipitation layers move by whole tiles so the loop is seamless; transforms keep it on the GPU */
+  .sky .sky-rain{top:-320px;right:-80px;background-image:var(--fx-rain);background-size:80px 80px;opacity:.6;will-change:transform;animation:sky-rain 1.2s linear infinite;}
+  .sky .sky-rain2{top:-440px;right:-110px;background-image:var(--fx-rain2);background-size:110px 110px;opacity:.6;will-change:transform;animation:sky-rain2 2s linear infinite;}
+  .sky .sky-snow{top:-180px;background-image:var(--fx-snow);background-size:90px 90px;will-change:transform;animation:sky-snow 11s linear infinite;}
+  .sky .sky-snow2{top:-280px;background-image:var(--fx-snow);background-size:140px 140px;opacity:.7;will-change:transform;animation:sky-snow2 17s linear infinite;}
+  .sky .sky-fog{
+    right:auto;width:200%;will-change:transform;animation:sky-drift 140s linear infinite;
+    background:
+      radial-gradient(ellipse 42% 11% at 22% 22%,var(--sky-fog),transparent 72%),
+      radial-gradient(ellipse 50% 13% at 68% 44%,var(--sky-fog),transparent 72%),
+      radial-gradient(ellipse 44% 11% at 36% 70%,var(--sky-fog),transparent 72%),
+      radial-gradient(ellipse 36% 9% at 82% 86%,var(--sky-fog),transparent 72%);
+    background-size:50% 100%;background-repeat:repeat-x;
+  }
+  .sky .sky-flash{opacity:0;background:var(--fx-flash);}
+  .sky[data-precip="drizzle"] .sky-rain2{display:block;opacity:.45;animation-duration:2.8s;}
+  .sky[data-precip="rain"] .sky-rain,.sky[data-precip="rain"] .sky-rain2,
+  .sky[data-precip="storm"] .sky-rain,.sky[data-precip="storm"] .sky-rain2{display:block;}
+  .sky[data-precip="storm"] .sky-rain{animation-duration:.9s;}
+  .sky[data-precip="storm"] .sky-flash{display:block;animation:fx-flash 12s linear infinite;}
+  .sky[data-precip="snow"] .sky-snow,.sky[data-precip="snow"] .sky-snow2{display:block;}
+  .sky[data-fog="1"] .sky-fog{display:block;}
+  @keyframes sky-drift{to{transform:translate3d(-50%,0,0);}}
+  @keyframes sky-breathe{from{opacity:.78;}to{opacity:1;}}
+  @keyframes sky-rain{to{transform:translate3d(-80px,320px,0);}}
+  @keyframes sky-rain2{to{transform:translate3d(-110px,440px,0);}}
+  @keyframes sky-snow{to{transform:translate3d(0,180px,0);}}
+  @keyframes sky-snow2{to{transform:translate3d(0,280px,0);}}
+
+  /* panels become frosted so the scene shows through softly */
+  html.sky-on .wx-bar{background:transparent;border-bottom-color:transparent;}
+  html.sky-on .wx-fx{display:none;}
+  html.sky-on header,html.sky-on .filter-bar{background:var(--glass);-webkit-backdrop-filter:blur(16px) saturate(1.15);backdrop-filter:blur(16px) saturate(1.15);}
+  html.sky-on main{background:var(--veil);}
+  html.sky-on .content[data-view="wall"] main{background:var(--veil-wall);}
+  html.sky-on .weekday-head,html.sky-on .grid-head,html.sky-on .allday-row,html.sky-on .time-gutter{background:var(--glass-panel);}
+  html.sky-on .day-cell.outside{background-color:var(--outside-glass);}
+  html.sky-on .agenda-day{background:var(--veil-strong);}
+  html.sky-on .wall-card,html.sky-on .ww-row,html.sky-on .wall-tag{background-color:var(--card-glass);}
+  html.sky-on .wall-card.past{background-color:transparent;}
+  html.sky-on .wall-tag.hol{background-color:color-mix(in srgb,var(--hol) 12%,var(--card-glass));}
+  html.sky-on .wall-tag.hols{background-color:color-mix(in srgb,var(--schol) 12%,var(--card-glass));}
+
+  /* ---------- Google Calendar ---------- */
+  .g-pill{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 13px;border-radius:999px;flex:0 0 auto;
+    font-size:13px;font-weight:650;color:var(--alert-fg);background:var(--alert-bg);border:1px solid var(--alert-bd);}
+  .g-pill svg{width:15px;height:15px;}
+  .g-pill.hidden{display:none;}
+  .g-ic{opacity:.65;}
+  .event.g-ev{cursor:pointer;touch-action:auto;}
+  .g-accounts{display:flex;flex-direction:column;gap:10px;}
+  .g-acct{border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;}
+  .g-acct-head{display:flex;align-items:center;gap:8px;min-width:0;}
+  .g-email{font-weight:700;font-size:14.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .g-status{font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap;}
+  .g-status.ok{color:#1d7a4f;background:rgba(34,160,107,.12);}
+  .g-status.warn{color:var(--alert-fg);background:var(--alert-bg);}
+  .g-row{display:flex;align-items:center;gap:10px;}
+  .g-row label{font-size:13px;font-weight:600;color:var(--muted);flex:0 0 auto;}
+  .g-row .select{padding-top:8px;padding-bottom:8px;}
+  .g-cals{display:flex;flex-direction:column;gap:2px;}
+  .g-cal{display:flex;align-items:center;gap:10px;padding:5px 2px;}
+  .g-cal input[type=checkbox]{width:19px;height:19px;accent-color:var(--accent);flex:0 0 auto;margin:0;}
+  .g-cal input[type=color]{width:24px;height:24px;border:none;padding:0;background:none;border-radius:6px;cursor:pointer;flex:0 0 auto;}
+  .g-cal input[type=color]::-webkit-color-swatch-wrapper{padding:0;}
+  .g-cal input[type=color]::-webkit-color-swatch{border:none;border-radius:6px;}
+  .g-cal label{font-size:14px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;}
+  .gev-cal{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted);}
+  .gev-cal .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;}
+  .gev-row{font-size:15px;line-height:1.45;}
+  .gev-row:empty,.gev-desc:empty{display:none;}
+  .gev-desc{font-size:14px;line-height:1.5;color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere;max-height:40vh;overflow:auto;padding:10px 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--border);}
+  a.btn{text-decoration:none;}
+  .wc-gcal{font-size:12.5px;font-weight:600;color:var(--muted);}
+
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 
   @media (max-width:640px){
@@ -985,6 +1102,19 @@
 </nav>
 <div class="content">
 
+<div class="sky" id="sky" aria-hidden="true">
+  <div class="sl sky-glow"></div>
+  <div class="sl sky-stars"></div>
+  <div class="sl sky-clouds"></div>
+  <div class="sl sky-clouds c2"></div>
+  <div class="sl sky-fog"></div>
+  <div class="sl sky-rain"></div>
+  <div class="sl sky-rain2"></div>
+  <div class="sl sky-snow"></div>
+  <div class="sl sky-snow2"></div>
+  <div class="sl sky-flash"></div>
+</div>
+
 <div class="wx-bar hidden" id="wxBar" data-wx="">
   <div class="wx-fx" aria-hidden="true"></div>
   <div class="wx-inner">
@@ -1021,6 +1151,10 @@
     <div class="term-chip hidden" id="termChip"></div>
     </div>
     <div class="spacer"></div>
+    <button class="g-pill hidden" id="gPill" title="Google Calendar sign-in has expired. Tap to refresh.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+      <span>Refresh Google</span>
+    </button>
     <div class="segmented" id="viewSwitch">
       <button data-view="wall">Wall</button>
       <button data-view="day">Day</button>
@@ -1217,6 +1351,13 @@
           </div>
           <div class="switch" id="kioskToggle" role="switch" aria-checked="false" tabindex="0"></div>
         </div>
+        <div class="switch-row">
+          <div>
+            <div class="lbl-main">Animated weather background</div>
+            <div class="lbl-sub">A gentle sky behind the calendar that follows the weather and time of day</div>
+          </div>
+          <div class="switch" id="skyToggle" role="switch" aria-checked="false" tabindex="0"></div>
+        </div>
       </div>
       <div class="set-section">
         <h3>Week starts on</h3>
@@ -1284,6 +1425,20 @@
             <button data-u="f">°F</button>
           </div>
         </div>
+      </div>
+      <div class="set-section">
+        <h3>Google Calendar</h3>
+        <p class="empty-note">Show events from your Google calendars alongside your own. They stay in sync, and you edit them in Google Calendar.</p>
+        <div class="field">
+          <label for="gClientId">Google client ID</label>
+          <input type="text" class="name-input" id="gClientId" placeholder="Paste the client ID from Google Cloud" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="g-accounts" id="gAccounts"></div>
+        <div class="data-btns">
+          <button class="btn btn-primary" id="gConnectBtn">Connect a Google account</button>
+          <button class="btn btn-ghost" id="gRefreshBtn">Refresh now</button>
+        </div>
+        <p class="empty-note" id="gHint"></p>
       </div>
       <div class="set-section">
         <h3>Your data</h3>
@@ -1437,6 +1592,28 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<!-- Google event details (read-only) -->
+<div class="overlay" id="gEvOverlay">
+  <div class="sheet scope-sheet" role="dialog" aria-modal="true" aria-labelledby="gEvTitle">
+    <div class="sheet-head">
+      <h2 id="gEvTitle">Event</h2>
+      <button class="icon-btn" id="gEvClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body">
+      <div class="gev-cal" id="gEvCal"></div>
+      <div class="gev-row" id="gEvWhen"></div>
+      <div class="gev-row" id="gEvWhere"></div>
+      <div class="gev-desc" id="gEvDesc"></div>
+      <p class="empty-note">This event comes from Google Calendar. Change it there and it will update here.</p>
+    </div>
+    <div class="sheet-foot">
+      <a class="btn btn-primary" id="gEvOpen" target="_blank" rel="noopener">Open in Google Calendar</a>
+    </div>
+  </div>
+</div>
+
 <!-- Recurring scope chooser -->
 <div class="overlay" id="scopeOverlay">
   <div class="sheet scope-sheet" role="dialog" aria-modal="true" aria-labelledby="scopeTitle">
@@ -1484,6 +1661,9 @@
   if(typeof settings.reminders!=="boolean") settings.reminders = false;
   if(!settings.theme) settings.theme = "light";
   if(typeof settings.kiosk!=="boolean") settings.kiosk = false;
+  if(typeof settings.skyAnim!=="boolean") settings.skyAnim = true;
+  if(!settings.google || typeof settings.google!=="object") settings.google = { clientId:"", accounts:[] };
+  if(!Array.isArray(settings.google.accounts)) settings.google.accounts = [];
   if(typeof settings.publicHolidays!=="boolean") settings.publicHolidays = true;
   if(typeof settings.schoolTerms!=="boolean") settings.schoolTerms = true;
   if(!settings.weatherDefaultApplied){ settings.weather.on = true; settings.weatherDefaultApplied = true; saveSettings(); }
@@ -1552,6 +1732,7 @@
     return null;
   }
   function catColour(id){ var c=catById(id); return c?c.colour:"#8b9099"; }
+  function taskColour(t){ return (t && t.gcolor) || catColour(t && t.categoryId); }
   function hexA(hex,a){
     hex=hex.replace("#",""); if(hex.length===3) hex=hex.split("").map(function(c){return c+c;}).join("");
     var r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16);
@@ -1595,7 +1776,7 @@
   }
   function makeTick(t){
     var tk=document.createElement("span"); tk.className="tick"+(taskDone(t)?" on":"");
-    var col=catColour(t.categoryId); tk.style.setProperty("--tick-c", col);
+    var col=taskColour(t); tk.style.setProperty("--tick-c", col);
     tk.innerHTML=CHECK_SVG;
     tk.addEventListener("click", function(e){ e.stopPropagation(); toggleDone(t); render(); });
     return tk;
@@ -1637,6 +1818,7 @@
       if(t.repeat && t.repeat!=="none"){ if(occursOn(t,d)) out.push(occView(t,k)); }
       else if(t.date===k){ out.push(t); }
     });
+    out=out.concat(gEventsOn(k));
     if(state.personFilter){
       out=out.filter(function(t){
         var ppl=t.people||[];
@@ -1789,7 +1971,85 @@
     document.documentElement.classList.toggle("kiosk", !!settings.kiosk);
     var meta=document.querySelector('meta[name="theme-color"]');
     if(meta) meta.setAttribute("content", dark?"#0f1116":"#f6f7f9");
+    document.documentElement.classList.toggle("sky-on", settings.skyAnim!==false);
     applyAccent();
+    updateSky();
+  }
+
+  /* ---------- Animated weather background ---------- */
+  // Sky colours [top, bottom] for each part of the day, plus the tones weather pulls them towards.
+  var SKY_PAL={
+    light:{ night:["#c5c9e6","#e0e3f2"], dawn:["#c6d3f0","#fbe0cf"], day:["#c4defa","#ecf3fb"], dusk:["#c8c0ea","#f8d4c4"],
+            grey:["#d2d7de","#e8ebef"], storm:["#bbbdce","#dbdce6"], snow:["#e0e8f2","#f4f7fb"] },
+    dark:{  night:["#0a0f22","#121629"], dawn:["#1a2240","#3a2b34"], day:["#16263c","#121922"], dusk:["#201c3c","#3a2631"],
+            grey:["#1b1f26","#15181d"], storm:["#17152a","#121118"], snow:["#1f2734","#181d27"] }
+  };
+  // how each kind of weather changes the scene
+  var SKY_WX={
+    sun:    { grey:0,   clouds:.28, glow:1,   stars:1 },
+    moon:   { grey:0,   clouds:.28, glow:1,   stars:1 },
+    "partly-day":   { grey:.15, clouds:.75, glow:.75, stars:.6 },
+    "partly-night": { grey:.15, clouds:.75, glow:.75, stars:.6 },
+    cloud:  { grey:.55, clouds:1,   glow:.22, stars:.1 },
+    fog:    { grey:.5,  clouds:.5,  glow:.15, stars:0, fog:1 },
+    drizzle:{ grey:.45, clouds:1,   glow:.1,  stars:0, precip:"drizzle" },
+    rain:   { grey:.6,  clouds:1,   glow:0,   stars:0, precip:"rain" },
+    snow:   { grey:.55, clouds:.9,  glow:.1,  stars:0, precip:"snow", tone:"snow" },
+    storm:  { grey:.75, clouds:1,   glow:0,   stars:0, precip:"storm", tone:"storm" }
+  };
+  function hexMix(a,b,t){
+    var x=parseInt(a.slice(1),16), y=parseInt(b.slice(1),16);
+    function ch(s){ return Math.round(((x>>s)&255)*(1-t)+((y>>s)&255)*t); }
+    return "#"+((1<<24)|(ch(16)<<16)|(ch(8)<<8)|ch(0)).toString(16).slice(1);
+  }
+  function hhmmToMin(s){ return s ? (+s.slice(11,13))*60+(+s.slice(14,16)) : null; }
+  function skyTime(now){
+    var d=wxDaily[keyOf(now)], m=now.getHours()*60+now.getMinutes();
+    var sr=(d&&d.sr!=null)?d.sr:390, ss=(d&&d.ss!=null)?d.ss:1140, W=50, a, b, t=0;
+    if(m<sr-W || m>ss+W){ a=b="night"; }
+    else if(m<sr){ a="night"; b="dawn"; t=(m-(sr-W))/W; }
+    else if(m<sr+W){ a="dawn"; b="day"; t=(m-sr)/W; }
+    else if(m<ss-W){ a=b="day"; }
+    else if(m<ss){ a="day"; b="dusk"; t=(m-(ss-W))/W; }
+    else { a="dusk"; b="night"; t=(m-ss)/W; }
+    var night = a==="night"&&b==="night" ? 1 : (b==="night" ? t : (a==="night" ? 1-t : 0));
+    return { a:a, b:b, t:t, night:night, p:(m-sr)/(ss-sr) };
+  }
+  function updateSky(){
+    var el=document.getElementById("sky");
+    if(!el || settings.skyAnim===false) return;
+    var dark=document.documentElement.getAttribute("data-theme")==="dark";
+    var pal=SKY_PAL[dark?"dark":"light"], now=new Date(), tm=skyTime(now);
+    var hasWx=settings.weather.on && wxCurrent;
+    var kind=hasWx ? wxKind(wxCurrent.code, tm.night<.5) : (tm.night<.5?"sun":"moon");
+    var fx=SKY_WX[kind]||SKY_WX.sun;
+    // time of day first, then weather pulls the colours towards grey (or storm / snow tones)
+    var top=hexMix(pal[tm.a][0], pal[tm.b][0], tm.t), bot=hexMix(pal[tm.a][1], pal[tm.b][1], tm.t);
+    var tone=pal[fx.tone||"grey"];
+    top=hexMix(top, tone[0], fx.grey); bot=hexMix(bot, tone[1], fx.grey);
+    el.style.setProperty("--sky-top", top);
+    el.style.setProperty("--sky-bot", bot);
+    // sun travels across the top while it is up; the moon sits high on the right at night
+    var gx, gy, glow;
+    if(tm.night<.5 && tm.p>=-.05 && tm.p<=1.05){
+      var p=Math.max(0,Math.min(1,tm.p)), low=p<.12||p>.88;
+      gx=(8+84*p)+"%"; gy=(30-24*Math.sin(Math.PI*p))+"%";
+      glow=(low?"rgba(255,168,110,":"rgba(255,224,140,")+((dark?.24:.75)*fx.glow).toFixed(3)+")";
+    } else {
+      gx="78%"; gy="12%";
+      glow="rgba(214,222,255,"+((dark?.16:.34)*fx.glow).toFixed(3)+")";
+    }
+    el.style.setProperty("--gx", gx); el.style.setProperty("--gy", gy); el.style.setProperty("--glow", glow);
+    // clouds take on the light of the moment
+    var warm=(tm.a==="dawn"||tm.b==="dawn"||tm.a==="dusk"||tm.b==="dusk") && tm.night<.8;
+    var cloud = dark ? ("rgba(190,200,228,"+(fx.grey>.4?.09:.07)+")")
+              : fx.grey>.4 ? "rgba(226,231,238,.72)" : tm.night>.5 ? "rgba(234,237,250,.55)" : warm ? "rgba(255,229,214,.72)" : "rgba(255,255,255,.75)";
+    el.style.setProperty("--cloud", cloud);
+    el.style.setProperty("--clouds", fx.clouds);
+    el.style.setProperty("--stars", (tm.night*fx.stars).toFixed(2));
+    el.setAttribute("data-precip", fx.precip||"");
+    el.setAttribute("data-fog", fx.fog?"1":"0");
+    el.setAttribute("data-phase", tm.night>=.5?"night":tm.a);
   }
   function applyAccent(){
     document.documentElement.style.setProperty("--accent", settings.accent);
@@ -1824,6 +2084,7 @@
     else renderAgenda();
     updatePeriodLabel();
     maybeShowHint();
+    if(settings.google.accounts.length) setTimeout(function(){ gRefresh(false); }, 0);
   }
 
   function renderFilterBar(){
@@ -1934,7 +2195,7 @@
     grid.appendChild(frag);
   }
   function monthChip(t){
-    var c=catColour(t.categoryId);
+    var c=taskColour(t);
     var chip=document.createElement("div"); chip.className="chip"+(taskDone(t)?" done":"");
     chip.style.setProperty("--chip-bg", hexA(c,0.12));
     chip.style.setProperty("--chip-fg", "#2a2d34");
@@ -1945,7 +2206,7 @@
     if(t.todo && t.time){ var tm2=document.createElement("span"); tm2.className="tm"; tm2.textContent=fmtTime(t.time); chip.appendChild(tm2); }
     var al=wxAlertFor(t); if(al) chip.appendChild(alertEl(al,true));
     var tspan=document.createElement("span"); tspan.className="t";
-    tspan.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "");
+    tspan.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "")+(t.source==="google"? " "+gSVG : "");
     chip.appendChild(tspan);
     chip.dataset.tid=t._masterId||t.id;
     chip.addEventListener("click", function(ev){ ev.stopPropagation(); editTask(t); });
@@ -1997,7 +2258,7 @@
     }
     var placed=layout(tasksOn(d));
     placed.forEach(function(it){
-      var t=it.task, c=catColour(t.categoryId);
+      var t=it.task, c=taskColour(t);
       var ev=document.createElement("div"); ev.className="event"+(taskDone(t)?" done":"")+((it.end-it.start)<45?" short":"");
       ev.style.top=(it.start/60*HOUR_PX)+"px";
       ev.style.height=Math.max((it.end-it.start)/60*HOUR_PX - 3, 20)+"px";
@@ -2007,7 +2268,7 @@
       ev.style.setProperty("--ev-bg", hexA(c,0.14));
       ev.style.setProperty("--ev-dot", c);
       var tt=document.createElement("div"); tt.className="ev-t";
-      tt.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "");
+      tt.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "")+(t.source==="google"? " "+gSVG : "");
       var mm=document.createElement("div"); mm.className="ev-m";
       mm.textContent = (t.endTime && (it.end-it.start)>=45) ? (fmtTime(t.time)+"–"+fmtTime(t.endTime)) : fmtTime(t.time);
       if(t.endTime) ev.title=(t.title||"")+", "+fmtTime(t.time)+"–"+fmtTime(t.endTime);
@@ -2017,6 +2278,11 @@
       if(t.todo){ var tk=makeTick(t); tk.classList.add("ev-tick"); ev.appendChild(tk); ev.classList.add("has-tick"); }
       var al=wxAlertFor(t); if(al){ ev.appendChild(alertEl(al,true)); ev.classList.add("has-alert"); }
       ev.dataset.tid=t._masterId||t.id;
+      if(t.source==="google"){
+        ev.classList.add("g-ev"); ev.title=(t.gcal?t.gcal+": ":"")+(t.title||"");
+        (function(task){ ev.addEventListener("click", function(e){ e.stopPropagation(); openGEvent(task); }); })(t);
+        colEl.appendChild(ev); return;
+      }
       var rz=document.createElement("div"); rz.className="ev-resize"; ev.appendChild(rz);
       (function(task, el){
         el.addEventListener("pointerdown", function(e){
@@ -2140,14 +2406,14 @@
     box.appendChild(frag);
   }
   function agendaRow(t){
-    var c=catColour(t.categoryId);
+    var c=taskColour(t);
     var row=document.createElement("div"); row.className="agenda-row"+(taskDone(t)?" done":"");
     row.style.setProperty("--row-c", c);
     var time=document.createElement("div"); time.className="ar-time";
     time.textContent = t.time ? fmtTime(t.time) : "All day";
     var main=document.createElement("div"); main.className="ar-main";
     var title=document.createElement("div"); title.className="ar-title";
-    title.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "");
+    title.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "")+(t.source==="google"? " "+gSVG : "");
     main.appendChild(title);
     if(t.time && t.endTime){ var sub=document.createElement("div"); sub.className="ar-sub"; sub.textContent=fmtTime(t.time)+"–"+fmtTime(t.endTime); main.appendChild(sub); }
     var badges=personBadges(t.people); if(badges) main.appendChild(badges);
@@ -2160,14 +2426,14 @@
   }
 
   function alldayChip(t, container){
-    var c=catColour(t.categoryId);
+    var c=taskColour(t);
     var chip=document.createElement("div"); chip.className="allday-chip"+(taskDone(t)?" done":"");
     chip.style.setProperty("--chip-bg", hexA(c,0.14));
     chip.style.setProperty("--chip-fg", "#26292f");
     if(t.todo){ chip.appendChild(makeTick(t)); }
     else { var dot=document.createElement("span"); dot.className="dot"; dot.style.background=c; chip.appendChild(dot); }
     var span=document.createElement("span"); span.className="txt";
-    span.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "");
+    span.innerHTML=escapeHtml(t.title||"(untitled)") + (t._recurring? " "+recurSVG : "")+(t.source==="google"? " "+gSVG : "");
     chip.appendChild(span);
     var badges=personBadges(t.people);
     if(badges){ badges.style.marginLeft="4px"; chip.appendChild(badges); }
@@ -2344,6 +2610,7 @@
     setTimeout(function(){ $("fTitle").focus(); }, 60);
   }
   function editTask(rt){
+    if(rt.source==="google"){ openGEvent(rt); return; }
     var recurring=!!rt._recurring;
     state.editing={ id: recurring?rt._masterId:rt.id, occDate: rt.date, recurring: recurring };
     $("taskTitle").textContent="Edit task";
@@ -2509,7 +2776,9 @@
     });
     $("themeToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b.dataset.themeOpt===settings.theme); });
     setSwitch("kioskToggle", settings.kiosk);
+    setSwitch("skyToggle", settings.skyAnim);
     setSwitch("holToggle", settings.publicHolidays);
+    renderGoogleSettings();
     setSwitch("termToggle", settings.schoolTerms);
     renderSetCats();
     renderSetPeople();
@@ -2583,6 +2852,7 @@
           settings=Object.assign(settings,data.settings);
           if(!settings.categories||!settings.categories.length) settings.categories=clone(DEFAULT_CATS);
           if(!settings.people) settings.people=[];
+          if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
           if(typeof settings.reminders!=="boolean") settings.reminders=false;
         }
@@ -2688,6 +2958,7 @@
   function shortPlace(p){ return (p||"").split(",")[0].trim(); }
   function renderWeatherChip(){
     var bar=$("wxBar");
+    updateSky();
     if(!settings.weather.on || wxCurrent==null){ bar.classList.add("hidden"); bar.setAttribute("data-wx",""); return; }
     bar.classList.remove("hidden");
     var info=wxInfo(wxCurrent.code), isDay=wxCurrent.isDay!==false;
@@ -2717,7 +2988,9 @@
       j.daily.time.forEach(function(dk, i){
         wxDaily[dk]={ code:j.daily.weather_code[i], max:j.daily.temperature_2m_max[i], min:j.daily.temperature_2m_min[i],
           p:j.daily.precipitation_probability_max ? j.daily.precipitation_probability_max[i] : null,
-          g:j.daily.wind_gusts_10m_max ? j.daily.wind_gusts_10m_max[i] : null };
+          g:j.daily.wind_gusts_10m_max ? j.daily.wind_gusts_10m_max[i] : null,
+          sr:j.daily.sunrise ? hhmmToMin(j.daily.sunrise[i]) : null,
+          ss:j.daily.sunset ? hhmmToMin(j.daily.sunset[i]) : null };
       });
     }
     wxHourly={};
@@ -2741,7 +3014,7 @@
     if(!w.on || w.lat==null || w.lon==null){ renderWeatherChip(); return; }
     var url="https://api.open-meteo.com/v1/forecast?latitude="+w.lat+"&longitude="+w.lon
       +"&current=temperature_2m,weather_code,is_day"
-      +"&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_gusts_10m_max"
+      +"&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_gusts_10m_max,sunrise,sunset"
       +"&hourly=temperature_2m,precipitation_probability,weather_code,wind_gusts_10m"
       +"&timezone=auto&forecast_days=14&wind_speed_unit=kmh&temperature_unit="+wxUnitParam();
     fetch(url).then(function(r){ if(!r.ok) throw new Error("weather "+r.status); return r.json(); }).then(function(j){
@@ -3109,6 +3382,14 @@
       else d=fromKey(t.date);
       hits.push({ t:t, d:d, rep:rep, cat:cat, ppl:ppl });
     });
+    // Google events: one result per event, at its next (or latest) day
+    var gSeen={};
+    Object.keys(gIndex).forEach(function(k){ gIndex[k].forEach(function(v){
+      if([v.title,v.notes,v.location,v.gcal].join("\n").toLowerCase().indexOf(q)<0) return;
+      var d=fromKey(v.date), p=gSeen[v.gid];
+      if(!p || (d>=today && (p.d<today || d<p.d)) || (d<today && p.d<today && d>p.d)) gSeen[v.gid]={ t:v, d:d, rep:false, cat:null, ppl:"" };
+    }); });
+    Object.keys(gSeen).forEach(function(id){ hits.push(gSeen[id]); });
     hits.sort(function(a,b){
       var af=a.d>=today, bf=b.d>=today;
       if(af!==bf) return af?-1:1;
@@ -3133,13 +3414,14 @@
         var t=h.t, parts=[];
         if(t.time) parts.push(fmtTime(t.time)+(t.endTime?"–"+fmtTime(t.endTime):"")); else parts.push("All day");
         if(h.rep) parts.push(REPEAT_LABEL[t.repeat]||"Repeats");
+        if(t.source==="google") parts.push(t.gcal||"Google");
         var sub=escapeHtml(parts.join(" · "));
         var titleHit=(t.title||"").toLowerCase().indexOf(q)>=0;
         if(!titleHit && (t.notes||"").toLowerCase().indexOf(q)>=0) sub=snippet(t.notes,q);
         else if(!titleHit && h.ppl.toLowerCase().indexOf(q)>=0) sub+=" · "+hlText(h.ppl,q);
         else if(!titleHit && h.cat && h.cat.name.toLowerCase().indexOf(q)>=0) sub+=" · "+hlText(h.cat.name,q);
         box.appendChild(srItem({
-          colour:catColour(t.categoryId), title:hlText(t.title||"(untitled)",q), sub:sub,
+          colour:taskColour(t), title:hlText(t.title||"(untitled)",q), sub:sub,
           when:relDay(h.d), past:h.d<today,
           pick:function(){ jumpToTask(t.id, h.d); }
         }));
@@ -3249,7 +3531,7 @@
     var nextMarked=false;
     list.forEach(function(t){
       var card=document.createElement("div"); card.className="wall-card";
-      card.style.setProperty("--wc", catColour(t.categoryId));
+      card.style.setProperty("--wc", taskColour(t));
       card.dataset.tid=t._masterId||t.id;
       var status="";
       if(t.time){
@@ -3271,6 +3553,7 @@
       if(status==="now"){ var f=document.createElement("span"); f.className="wc-flag"; f.textContent="Now"; meta.appendChild(f); }
       if(status==="next"){ var f2=document.createElement("span"); f2.className="wc-flag next"; f2.textContent="Next"; meta.appendChild(f2); }
       var badges=personBadges(t.people); if(badges) meta.appendChild(badges);
+      if(t.source==="google" && t.gcal){ var gc=document.createElement("span"); gc.className="wc-gcal"; gc.textContent=t.gcal; meta.appendChild(gc); }
       var al=wxAlertFor(t); if(al) meta.appendChild(alertEl(al,false));
       mainEl.appendChild(meta);
       card.appendChild(time); card.appendChild(mainEl);
@@ -3281,9 +3564,11 @@
     // keep what is happening now (or next) in view, unless someone has just scrolled the list themselves
     if(Date.now()-wallUserScrollAt < 90000){ cards.scrollTop=prevTop; }
     else {
+      // only scroll when the Now (or Next) card would otherwise sit below the fold
       var focusCard=cards.querySelector(".wall-card.now")||cards.querySelector(".wall-card.next");
+      var fits = !focusCard || (focusCard.offsetTop+focusCard.offsetHeight <= cards.clientHeight);
       wallAutoScroll=true;
-      cards.scrollTop = focusCard ? Math.max(0, focusCard.offsetTop-52) : 0;
+      cards.scrollTop = fits ? 0 : Math.max(0, focusCard.offsetTop-52);
       setTimeout(function(){ wallAutoScroll=false; }, 60);
     }
     // the next seven days
@@ -3312,7 +3597,7 @@
         dl.slice(0,show).forEach(function(t){
           var ev=document.createElement("div"); ev.className="ww-ev"+(taskDone(t)?" done":"");
           ev.innerHTML='<span class="dot"></span><span class="tm"></span><span class="tt"></span>';
-          ev.querySelector(".dot").style.setProperty("--dc", catColour(t.categoryId));
+          ev.querySelector(".dot").style.setProperty("--dc", taskColour(t));
           ev.querySelector(".tm").textContent=t.time?fmtTime(t.time):"All day";
           ev.querySelector(".tt").textContent=t.title||"(untitled)";
           var a=wxAlertFor(t); if(a) ev.appendChild(alertEl(a,true));
@@ -3325,6 +3610,282 @@
       })(addDays(today,i));
     }
     $("wallLegend").hidden=!anyHols;
+  }
+
+  /* ---------- Google Calendar (read-only merge) ---------- */
+  var G_SCOPE="https://www.googleapis.com/auth/calendar.readonly";
+  var G_API="https://www.googleapis.com/calendar/v3";
+  var gTokens=load("cal.gtok", {});                          // email -> {token, exp}
+  var gCache=load("cal.gev", { from:"", to:"", events:{} });  // "email|calendarId" -> [events]
+  if(!gCache.events) gCache.events={};
+  var gIndex={}, gTokenClient=null, gPending=null, gLoading=false, gLastFetch=0;
+  var gSVG='<svg class="recur-ic g-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  function saveGTokens(){ store.set("cal.gtok", JSON.stringify(gTokens)); }
+  function saveGCache(){ try{ store.set("cal.gev", JSON.stringify(gCache)); }catch(e){} }
+  function gAccount(email){ return settings.google.accounts.filter(function(a){ return a.email===email; })[0]; }
+  function gTokenOk(email){ var t=gTokens[email]; return !!(t && t.token && t.exp>Date.now()); }
+  function gTone(hex){
+    // Google's calendar colours are pastel; deepen light ones so text and bars stay readable
+    var n=parseInt((hex||"#5b6ee1").slice(1),16), r=(n>>16)&255, g=(n>>8)&255, b=n&255;
+    var lum=(0.299*r+0.587*g+0.114*b)/255;
+    return lum>0.72 ? hexMix(hex,"#000000",.32) : lum>0.6 ? hexMix(hex,"#000000",.18) : hex;
+  }
+  function gLibReady(){ return !!(window.google && google.accounts && google.accounts.oauth2); }
+  function gLoadLib(){
+    if(gLibReady() || document.getElementById("gsiScript") || location.protocol==="file:") return;
+    var s=document.createElement("script"); s.id="gsiScript"; s.src="https://accounts.google.com/gsi/client"; s.async=true; s.defer=true;
+    document.head.appendChild(s);
+  }
+  function gClient(){
+    if(gTokenClient) return gTokenClient;
+    if(!gLibReady() || !settings.google.clientId) return null;
+    gTokenClient=google.accounts.oauth2.initTokenClient({
+      client_id:settings.google.clientId, scope:G_SCOPE, prompt:"",
+      callback:gOnToken,
+      error_callback:function(err){
+        gPending=null;
+        toast(err && err.type==="popup_failed_to_open" ? "Allow pop-ups for this site, then try again" : "Google sign-in was cancelled");
+      }
+    });
+    return gTokenClient;
+  }
+  // must run straight from a tap, because Google opens a sign-in pop-up
+  function gConnect(email){
+    if(location.protocol==="file:"){ toast("Google sign-in only works from your website address"); return; }
+    if(!settings.google.clientId){ toast("Add your Google client ID first"); try{ $("gClientId").focus(); }catch(e){} return; }
+    var c=gClient();
+    if(!c){ gLoadLib(); toast("Google sign-in is loading. Tap again in a moment."); return; }
+    gPending={ email:email||null };
+    c.requestAccessToken(email ? { prompt:"", login_hint:email } : { prompt:"select_account" });
+  }
+  function gApi(token, path){
+    return fetch(G_API+path, { headers:{ Authorization:"Bearer "+token } }).then(function(r){
+      if(r.status===401){ var e=new Error("auth"); e.auth=true; throw e; }
+      if(!r.ok) throw new Error("Google returned "+r.status);
+      return r.json();
+    });
+  }
+  function gOnToken(resp){
+    var pend=gPending; gPending=null;
+    if(!resp || resp.error){ toast("Google sign-in did not finish"+(resp && resp.error ? " ("+resp.error+")" : "")); return; }
+    if(google.accounts.oauth2.hasGrantedAllScopes && !google.accounts.oauth2.hasGrantedAllScopes(resp, G_SCOPE)){
+      toast("Calendar access was not ticked, so no events can be shown"); return;
+    }
+    var token=resp.access_token, exp=Date.now()+(Math.max(300,(+resp.expires_in||3600))-120)*1000;
+    gApi(token, "/users/me/calendarList?maxResults=250").then(function(j){
+      var items=(j.items||[]).filter(function(c){ return !c.deleted; });
+      var prim=items.filter(function(c){ return c.primary; })[0];
+      var email=(prim && prim.id) || (pend && pend.email) || "Google account";
+      var acc=gAccount(email), isNew=!acc;
+      if(isNew){ acc={ email:email, person:"", calendars:[] }; settings.google.accounts.push(acc); }
+      var old={}; (acc.calendars||[]).forEach(function(c){ old[c.id]=c; });
+      acc.calendars=items.map(function(c){
+        var o=old[c.id];
+        return { id:c.id, summary:c.summaryOverride||c.summary||c.id, role:c.accessRole||"",
+                 color: o ? o.color : gTone(c.backgroundColor||"#5b6ee1"),
+                 on: o ? o.on : !!(c.selected || c.primary) };
+      });
+      gTokens[email]={ token:token, exp:exp };
+      saveGTokens(); saveSettings();
+      toast(isNew ? ("Connected "+email) : "Google Calendar refreshed");
+      renderGoogleSettings(); updateGPill(); gRefresh(true);
+    }).catch(function(){ toast("Could not read your Google calendars. Try again."); });
+  }
+  function gViewRange(){
+    var d=atMidnight(state.date), t=atMidnight(new Date());
+    if(state.view==="month"){ var f=startOfWeek(new Date(d.getFullYear(),d.getMonth(),1)); return [f, addDays(f,42)]; }
+    if(state.view==="week"){ var s=startOfWeek(d); return [s, addDays(s,7)]; }
+    if(state.view==="agenda") return [d, addDays(d,120)];
+    if(state.view==="wall") return [t, addDays(t,8)];
+    return [d, addDays(d,1)];
+  }
+  function gFetchCal(acc, cal, token, from, to){
+    var key=acc.email+"|"+cal.id, all=[];
+    function page(pt){
+      var q="/calendars/"+encodeURIComponent(cal.id)+"/events?singleEvents=true&orderBy=startTime&maxResults=2500"
+        +"&timeMin="+encodeURIComponent(from.toISOString())+"&timeMax="+encodeURIComponent(to.toISOString())
+        +"&fields="+encodeURIComponent("nextPageToken,items(id,iCalUID,status,summary,description,location,htmlLink,start,end)")
+        +(pt ? "&pageToken="+encodeURIComponent(pt) : "");
+      return gApi(token, q).then(function(j){
+        (j.items||[]).forEach(function(it){
+          if(it.status==="cancelled" || !it.start) return;
+          var allDay=!!it.start.date;
+          all.push({ id:it.id, uid:it.iCalUID||"", title:it.summary||"", desc:it.description||"", location:it.location||"", link:it.htmlLink||"",
+            allDay:allDay, start: allDay ? it.start.date : it.start.dateTime,
+            end: allDay ? ((it.end && it.end.date) || it.start.date) : ((it.end && it.end.dateTime) || it.start.dateTime) });
+        });
+        return (j.nextPageToken && all.length<10000) ? page(j.nextPageToken) : { key:key, events:all };
+      });
+    }
+    return page(null).catch(function(e){ return { failed:true, auth:!!(e && e.auth), email:acc.email }; });
+  }
+  // fetch every ticked calendar for a window around today and the date being viewed
+  function gRefresh(force){
+    if(!settings.google.accounts.length || gLoading || location.protocol==="file:") return;
+    var t=atMidnight(new Date()), v=gViewRange();
+    var from=addDays(v[0]<t ? v[0] : t, -14), to=addDays(v[1]>addDays(t,120) ? v[1] : addDays(t,120), 14);
+    var covered=gCache.from && keyOf(v[0])>=gCache.from && keyOf(v[1])<=gCache.to;
+    if(!force && covered && Date.now()-gLastFetch < 10*60*1000) return;
+    var jobs=[];
+    settings.google.accounts.forEach(function(acc){
+      if(!gTokenOk(acc.email)) return;
+      acc.calendars.forEach(function(cal){ if(cal.on) jobs.push(gFetchCal(acc, cal, gTokens[acc.email].token, from, to)); });
+    });
+    updateGPill();
+    if(!jobs.length) return;
+    gLoading=true;
+    Promise.all(jobs).then(function(res){
+      gLoading=false; gLastFetch=Date.now();
+      gCache.from=keyOf(from); gCache.to=keyOf(to);
+      res.forEach(function(r){
+        if(r.failed){ if(r.auth){ delete gTokens[r.email]; } return; }
+        gCache.events[r.key]=r.events;
+      });
+      saveGCache(); saveGTokens(); rebuildGIndex(); render(); updateGPill();
+      if($("searchOverlay").classList.contains("open")) runSearch();
+    });
+  }
+  // turn one Google event into one item per day it touches (all-day, overnight and multi-day events)
+  function gExpand(ev, acc, cal){
+    var out=[], base={ source:"google", gid:ev.id, title:ev.title||"Busy", notes:ev.desc||"", location:ev.location||"", link:ev.link||"",
+      gcolor:cal.color, gcal:gCalLabel(acc, cal), gacct:acc.email, gstart:ev.start, gend:ev.end, gallDay:ev.allDay,
+      people: acc.person ? [acc.person] : [], categoryId:null, repeat:"none", todo:false };
+    var n=0;
+    if(ev.allDay){
+      var d=fromKey(ev.start), end=fromKey(ev.end); if(!(end>d)) end=addDays(d,1);
+      for(; d<end && n<62; d=addDays(d,1), n++) out.push(Object.assign({}, base, { id:"g_"+ev.id+"_"+keyOf(d), date:keyOf(d), time:"", endTime:"" }));
+    } else {
+      var s=new Date(ev.start), e=new Date(ev.end); if(!(e>s)) e=new Date(s.getTime()+3600000);
+      for(var day=atMidnight(s); day<e && n<62; n++){
+        var next=addDays(day,1), ps=s>day?s:day, pe=e<next?e:next;
+        var piece={ id:"g_"+ev.id+"_"+keyOf(day), date:keyOf(day) };
+        if(ps.getTime()===day.getTime() && pe.getTime()===next.getTime()){ piece.time=""; piece.endTime=""; }
+        else {
+          piece.time=pad(ps.getHours())+":"+pad(ps.getMinutes());
+          var em = pe.getTime()===next.getTime() ? "23:59" : pad(pe.getHours())+":"+pad(pe.getMinutes());
+          piece.endTime = em>piece.time ? em : "";
+        }
+        out.push(Object.assign({}, base, piece));
+        day=next;
+      }
+    }
+    return out;
+  }
+  function rebuildGIndex(){
+    gIndex={};
+    var seenCal={}, pick={}, order=[];
+    settings.google.accounts.forEach(function(acc){
+      (acc.calendars||[]).forEach(function(cal){
+        if(!cal.on || seenCal[cal.id]) return;            // a calendar shared into two accounts shows once
+        seenCal[cal.id]=1;
+        (gCache.events[acc.email+"|"+cal.id]||[]).forEach(function(ev){
+          // the same invite in two people's calendars shows once, keeping the copy with the most detail
+          var u=(ev.uid||ev.id)+"|"+ev.start, rich=(ev.desc||"").length+(ev.location||"").length;
+          if(!pick[u]){ pick[u]={ ev:ev, acc:acc, cal:cal, rich:rich, people:{} }; order.push(u); }
+          else if(rich>pick[u].rich){ var keep=pick[u].people; pick[u]={ ev:ev, acc:acc, cal:cal, rich:rich, people:keep }; }
+          if(acc.person) pick[u].people[acc.person]=1;
+        });
+      });
+    });
+    order.forEach(function(u){
+      var x=pick[u], ppl=Object.keys(x.people);
+      // an invite that reached an unassigned account belongs to everyone
+      var shared=settings.google.accounts.some(function(a){ return !a.person && (gCache.events[a.email+"|"+a.email]||[]).some(function(e){ return (e.uid||e.id)+"|"+e.start===u; }); });
+      gExpand(x.ev, x.acc, x.cal).forEach(function(v){ v.people = shared ? [] : ppl; (gIndex[v.date]||(gIndex[v.date]=[])).push(v); });
+    });
+  }
+  function gCalLabel(acc, cal){
+    // someone's main calendar is named after their email: show their name instead
+    if(cal.id!==acc.email) return cal.summary;
+    var p=acc.person && personById(acc.person);
+    return p ? p.name : acc.email.split("@")[0];
+  }
+  function gEventsOn(k){ return gIndex[k]||[]; }
+  function updateGPill(){
+    var stale=settings.google.accounts.filter(function(a){ return !gTokenOk(a.email); });
+    var pill=$("gPill");
+    pill.classList.toggle("hidden", !stale.length || location.protocol==="file:");
+    pill.lastElementChild.textContent = stale.length>1 ? "Refresh Google ("+stale.length+")" : "Refresh Google";
+  }
+  function gFmtWhen(v){
+    if(v.gallDay){
+      var a=fromKey(v.gstart), b=addDays(fromKey(v.gend),-1);
+      return b>a ? (shortDate(a)+" – "+shortDate(b)) : (shortDate(a)+", all day");
+    }
+    var s=new Date(v.gstart), e=new Date(v.gend);
+    var st=fmtTime(pad(s.getHours())+":"+pad(s.getMinutes())), et=fmtTime(pad(e.getHours())+":"+pad(e.getMinutes()));
+    return sameDay(s,e) ? (shortDate(s)+", "+st+"–"+et) : (shortDate(s)+" "+st+" – "+shortDate(e)+" "+et);
+  }
+  function openGEvent(v){
+    $("gEvTitle").textContent=v.title||"Busy";
+    var cal=$("gEvCal"); cal.innerHTML='<span class="dot"></span><span></span>';
+    cal.firstChild.style.background=v.gcolor||"#8b9099";
+    cal.lastChild.textContent=(v.gcal||"Google Calendar")+(v.gcal!==v.gacct ? " · "+v.gacct : "");
+    $("gEvWhen").textContent=gFmtWhen(v);
+    $("gEvWhere").textContent=v.location ? "Where: "+v.location : "";
+    // descriptions can contain HTML: show them as plain text only
+    var txt="";
+    if(v.notes){ try{
+      var doc=new DOMParser().parseFromString(v.notes.replace(/<br\s*\/?>/gi,"\n").replace(/<\/p>/gi,"\n"),"text/html");
+      doc.querySelectorAll("script,style,noscript,template").forEach(function(n){ n.remove(); });
+      txt=doc.body.textContent.replace(/\n{3,}/g,"\n\n").trim();
+    }catch(e){ txt=""; } }
+    $("gEvDesc").textContent=txt;
+    var open=$("gEvOpen");
+    if(v.link && /^https:\/\/(www\.)?google\.com\//.test(v.link)){ open.href=v.link; open.style.display=""; } else open.style.display="none";
+    openOverlay("gEvOverlay");
+  }
+  function renderGoogleSettings(){
+    $("gClientId").value=settings.google.clientId||"";
+    var box=$("gAccounts"); box.innerHTML="";
+    settings.google.accounts.forEach(function(acc){
+      var card=document.createElement("div"); card.className="g-acct";
+      var ok=gTokenOk(acc.email);
+      var head=document.createElement("div"); head.className="g-acct-head";
+      head.innerHTML='<span class="g-email"></span><span class="g-status '+(ok?'ok':'warn')+'">'+(ok?'Connected':'Needs refresh')+'</span>';
+      head.firstChild.textContent=acc.email; card.appendChild(head);
+      if(settings.people.length){
+        var row=document.createElement("div"); row.className="g-row";
+        row.innerHTML='<label>Belongs to</label>';
+        var sel=document.createElement("select"); sel.className="select";
+        sel.innerHTML='<option value="">Everyone</option>';
+        settings.people.forEach(function(p){ var o=document.createElement("option"); o.value=p.id; o.textContent=p.name; if(acc.person===p.id) o.selected=true; sel.appendChild(o); });
+        sel.addEventListener("change", function(){ acc.person=sel.value; saveSettings(); rebuildGIndex(); render(); });
+        row.appendChild(sel); card.appendChild(row);
+      }
+      var cals=document.createElement("div"); cals.className="g-cals";
+      (acc.calendars||[]).forEach(function(cal, ci){
+        var r=document.createElement("div"); r.className="g-cal";
+        var id="gc_"+acc.email.replace(/\W/g,"")+"_"+ci;
+        var cb=document.createElement("input"); cb.type="checkbox"; cb.id=id; cb.checked=!!cal.on;
+        cb.addEventListener("change", function(){ cal.on=cb.checked; saveSettings(); rebuildGIndex(); render(); if(cal.on) gRefresh(true); });
+        var col=document.createElement("input"); col.type="color"; col.value=cal.color||"#5b6ee1"; col.setAttribute("aria-label","Colour for "+cal.summary);
+        col.addEventListener("change", function(){ cal.color=col.value; saveSettings(); rebuildGIndex(); render(); });
+        var lb=document.createElement("label"); lb.htmlFor=id; lb.textContent=cal.summary;
+        r.appendChild(cb); r.appendChild(col); r.appendChild(lb); cals.appendChild(r);
+      });
+      card.appendChild(cals);
+      var tools=document.createElement("div"); tools.className="list-tools";
+      var re=document.createElement("button"); re.className="link-btn"; re.textContent=ok?"Refresh calendar list":"Refresh sign-in";
+      re.addEventListener("click", function(){ gConnect(acc.email); });
+      var rm=document.createElement("button"); rm.className="link-btn danger"; rm.textContent="Remove";
+      rm.addEventListener("click", function(){
+        if(!confirm("Remove "+acc.email+" from this calendar? Its events will disappear here (nothing changes in Google).")) return;
+        var tk=gTokens[acc.email];
+        if(tk && gLibReady() && google.accounts.oauth2.revoke){ try{ google.accounts.oauth2.revoke(tk.token, function(){}); }catch(e){} }
+        delete gTokens[acc.email];
+        Object.keys(gCache.events).forEach(function(k){ if(k.indexOf(acc.email+"|")===0) delete gCache.events[k]; });
+        settings.google.accounts=settings.google.accounts.filter(function(a){ return a!==acc; });
+        saveGTokens(); saveGCache(); saveSettings(); rebuildGIndex(); render(); renderGoogleSettings(); updateGPill();
+        toast("Removed "+acc.email);
+      });
+      tools.appendChild(re); tools.appendChild(rm); card.appendChild(tools);
+      box.appendChild(card);
+    });
+    $("gConnectBtn").textContent = settings.google.accounts.length ? "Add another Google account" : "Connect a Google account";
+    $("gRefreshBtn").style.display = settings.google.accounts.length ? "" : "none";
+    $("gHint").textContent = location.protocol==="file:" ? "Google sign-in only works from your website address, not from a file opened on this computer."
+      : !settings.google.clientId ? "First time? The README walks you through getting a client ID (about 10 minutes, once)." : "";
   }
 
   /* ---------- Reminders ---------- */
@@ -3445,6 +4006,25 @@
     var b=e.target.closest("button"); if(!b) return;
     settings.theme=b.dataset.themeOpt; saveSettings(); applyTheme();
     $("themeToggle").querySelectorAll("button").forEach(function(x){ x.classList.toggle("active", x===b); });
+  });
+  $("gClientId").addEventListener("change", function(){
+    var v=$("gClientId").value.trim();
+    if(v===settings.google.clientId) return;
+    settings.google.clientId=v; gTokenClient=null; saveSettings(); gLoadLib(); renderGoogleSettings();
+    if(v) toast("Client ID saved");
+  });
+  $("gConnectBtn").addEventListener("click", function(){ gConnect(null); });
+  $("gRefreshBtn").addEventListener("click", function(){
+    var stale=settings.google.accounts.filter(function(a){ return !gTokenOk(a.email); })[0];
+    if(stale) gConnect(stale.email); else { gRefresh(true); toast("Refreshing Google events"); }
+  });
+  $("gPill").addEventListener("click", function(){
+    var stale=settings.google.accounts.filter(function(a){ return !gTokenOk(a.email); })[0];
+    if(stale) gConnect(stale.email);
+  });
+  $("gEvClose").addEventListener("click", function(){ closeOverlay("gEvOverlay"); });
+  $("skyToggle").addEventListener("click", function(){
+    settings.skyAnim=!getSwitch("skyToggle"); saveSettings(); setSwitch("skyToggle", settings.skyAnim); applyTheme();
   });
   $("kioskToggle").addEventListener("click", function(){
     settings.kiosk=!getSwitch("kioskToggle"); saveSettings();
@@ -3580,6 +4160,8 @@
   setInterval(checkReminders, 30000);
   setInterval(function(){ if(state.view==="wall") updateWallClock(); }, 5000);
   setInterval(function(){ if(settings.weather.on) refreshWeather(); }, 30*60*1000);
+  setInterval(function(){ if(settings.google.accounts.length){ updateGPill(); gRefresh(false); } }, 60000);
+  document.addEventListener("visibilitychange", function(){ if(!document.hidden && settings.google.accounts.length){ updateGPill(); gRefresh(false); } });
   document.addEventListener("visibilitychange", function(){ if(!document.hidden && state.view==="wall"){ renderWall(); } });
 
   // register service worker for offline / installable app
@@ -3588,10 +4170,13 @@
   }
 
   /* ---------- Init ---------- */
+  rebuildGIndex();
+  if(settings.google.clientId) gLoadLib();
   applyTheme();
   updateGreeting();
   loadWeatherCache();
   render();
+  updateGPill();
   if(settings.weather.on){ if(settings.weather.lat!=null) refreshWeather(); else geolocate(true); }
   setTimeout(checkReminders, 2000);
 })();

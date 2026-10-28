@@ -1,6 +1,6 @@
 /* Offline cache for the calendar app.
    IMPORTANT: bump the version below whenever you change any file, so devices pick up the update. */
-var CACHE = "cal-cache-v5";
+var CACHE = "cal-cache-v7";
 var CORE = [
   "./",
   "./index.html",
@@ -46,6 +46,9 @@ self.addEventListener("fetch", function(e){
     return;
   }
 
+  // Google sign-in and Google Calendar data must never be cached: let the browser go straight to the network.
+  if(/(^|\.)google\.com$/.test(url.hostname) || url.hostname === "www.googleapis.com" || url.hostname === "oauth2.googleapis.com" || req.headers.get("Authorization")) return;
+
   // Live data (weather, geocoding): network first.
   if(/open-meteo\.com$|bigdatacloud\.net$|geocoding-api\.open-meteo\.com$/.test(url.hostname)){
     e.respondWith(fetch(req).catch(function(){ return caches.match(req); }));
@@ -58,7 +61,7 @@ self.addEventListener("fetch", function(e){
       if(cached) return cached;
       return fetch(req).then(function(res){
         try {
-          if(res && res.ok && (url.origin === self.location.origin || /gstatic\.com$|googleapis\.com$/.test(url.hostname))){
+          if(res && res.ok && (url.origin === self.location.origin || /^fonts\.(googleapis|gstatic)\.com$/.test(url.hostname))){
             var copy = res.clone();
             caches.open(CACHE).then(function(c){ c.put(req, copy); });
           }
