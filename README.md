@@ -42,7 +42,38 @@ Once it is online, each person can add it to their device so it opens full scree
 - **Search:** tap Search in the left rail, or press `/` (or Ctrl+K) on a keyboard. It finds tasks (including words in their notes), list items and saved meals, and jumps straight to the match.
 - **Undo:** after adding, editing, moving or deleting something, tap **Undo** on the message at the bottom of the screen. On a keyboard, Ctrl+Z (Cmd+Z on a Mac) works too.
 - **Outdoor tasks:** switch on **Outdoors** in a task, and it will show a warning if rain, storms, heat (35° and above) or strong wind are forecast. The forecast reaches about two weeks ahead.
+- **Animated background:** choose a moving wallpaper in Settings under Appearance. **Weather sky** follows the time of day (dawn, day, dusk and night, using real sunrise and sunset times) and the current weather (drifting cloud, rain, storm flashes, fog, snow, stars on clear nights). **Colour flow** has soft colours drifting slowly in shades of your accent colour. **Aurora** has ribbons of light rippling across the screen. Choose **Off** to save battery. Devices set to reduce motion get a still version.
+- **Glass event tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
+
+## Connect Google Calendar
+
+Events from your Google calendars can appear alongside your own tasks. They stay in Google (nothing is copied), so any change you make in Google Calendar shows up here on the next refresh. Google events are read only in this app: tap one to see its details, then **Open in Google Calendar** to change it. You can connect as many Google accounts as you like, and each account can be set to belong to a person so the person filter works.
+
+### One-time setup in Google Cloud (about 10 minutes, free)
+
+1. Go to console.cloud.google.com and sign in. Create a new project (any name, such as `My Calendar`).
+2. Open the menu, choose **APIs & Services**, then **Library**. Search for **Google Calendar API** and click **Enable**.
+3. Open the menu, choose **Google Auth platform**. If asked, click **Get started** and fill in the app name and your email. Choose **External** for the audience.
+4. Under **Audience**, leave it in **Testing** and add every Google account you want to connect (yours, Liz's and so on) as **Test users**.
+5. Under **Clients**, click **Create client**. Choose **Web application**. Under **Authorized JavaScript origins**, add `https://stephenhindle.github.io` (just the address, no folder and no slash at the end). Click **Create**.
+6. Copy the **Client ID** (it ends in `.apps.googleusercontent.com`).
+
+### Connect in the app
+
+1. Open the calendar from its GitHub Pages address (sign-in does not work from a file opened on your computer).
+2. Go to **Settings**, then **Google Calendar**, and paste the Client ID.
+3. Tap **Connect Google account**, pick the account, and allow access.
+4. Untick any calendars you do not want to see, set a colour if you like, and choose who the account **Belongs to**.
+5. To add someone else, tap **Add another Google account** and sign in with their account.
+
+### Good to know
+
+- Google sign-ins last about an hour. Events already loaded stay on screen, and when a fresh sign-in is needed a **Refresh Google** button appears at the top. Tap it to update.
+- The app checks for changes every few minutes while it is open.
+- Each device connects separately, since nothing is stored on a server.
+- Reminders and outdoor weather warnings apply to the app's own tasks, not to Google events.
+- To disconnect an account, tap **Remove** on its card in Settings.
 
 ## Using it as a wall display
 
@@ -58,7 +89,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v5";`, so change it to `"cal-cache-v6"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v8";`, so change it to `"cal-cache-v9"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
@@ -92,7 +123,7 @@ You can use the same steps to hand someone a ready-made starting calendar: send 
 
 ## Your privacy
 
-Everything you enter stays on your own device in the browser's local storage. It is not uploaded anywhere and no one else can see it. The only outside connections the app makes are to fetch the weather and to turn your location into a place name, both from free services and only when you have weather turned on. If you clear your browser data or use private browsing, the calendar on that device is wiped, so keep a backup file if the data matters to you.
+Everything you enter stays on your own device in the browser's local storage. It is not uploaded anywhere and no one else can see it. The only outside connections the app makes are to fetch the weather and to turn your location into a place name, both from free services and only when you have weather turned on. If you connect Google Calendar, the app reads your events directly from Google with read-only access; they go straight from Google to your device and nowhere else. If you clear your browser data or use private browsing, the calendar on that device is wiped, so keep a backup file if the data matters to you.
 
 ## Troubleshooting
 
@@ -102,4 +133,7 @@ Everything you enter stays on your own device in the browser's local storage. It
 - **I cannot find the Wall view.** It only appears when **Kiosk display** is switched on in Settings.
 - **My changes to the app are not showing up.** Bump the version in `sw.js` as described in Updating, then close and reopen the app.
 - **The page will not load properly, or install and offline do not work.** These features need the secure GitHub Pages address, not a file opened directly from your computer. Make sure you are opening the `https://...github.io/...` link.
+- **Google sign-in shows an error about the origin or redirect.** Check the Authorized JavaScript origin is exactly `https://stephenhindle.github.io` and wait a few minutes after saving it.
+- **Google says the app is not verified or access is blocked.** Add that Google account as a test user under Google Auth platform, Audience.
+- **Google events stopped updating.** Tap **Refresh Google** at the top of the screen, or **Refresh now** in Settings.
 - **My tasks disappeared.** The browser cleared its storage. Restore from your most recent backup file, and back up now and then to be safe.

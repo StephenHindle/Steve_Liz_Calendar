@@ -455,8 +455,8 @@
   .empty-note{font-size:12.5px;color:var(--muted-2);line-height:1.4;}
 
   .switch-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 0;}
-  .switch-row .lbl-main{font-size:14.5px;font-weight:600;}
-  .switch-row .lbl-sub{font-size:12.5px;color:var(--muted-2);margin-top:2px;}
+  .switch-row .lbl-main,.wp-set .lbl-main{font-size:14.5px;font-weight:600;}
+  .switch-row .lbl-sub,.wp-set .lbl-sub{font-size:12.5px;color:var(--muted-2);margin-top:2px;}
   .switch{position:relative;width:44px;height:26px;border-radius:999px;background:var(--border-strong);transition:background .15s;flex:0 0 auto;cursor:pointer;}
   .switch.on{background:var(--accent);}
   .switch::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.2);}
@@ -891,12 +891,12 @@
 
   /* ---------- Animated weather background (whole calendar column) ---------- */
   :root{
-    --veil:rgba(246,247,249,.66); --veil-wall:rgba(246,247,249,.28); --veil-strong:rgba(246,247,249,.9);
+    --veil:rgba(246,247,249,.34); --veil-wall:rgba(246,247,249,.28); --veil-strong:rgba(246,247,249,.9);
     --glass:rgba(255,255,255,.6); --glass-panel:rgba(255,255,255,.58); --card-glass:rgba(255,255,255,.86);
     --outside-glass:rgba(236,239,244,.45); --sky-fog:rgba(255,255,255,.72);
   }
   [data-theme="dark"]{
-    --veil:rgba(15,17,22,.66); --veil-wall:rgba(15,17,22,.3); --veil-strong:rgba(15,17,22,.9);
+    --veil:rgba(15,17,22,.42); --veil-wall:rgba(15,17,22,.3); --veil-strong:rgba(15,17,22,.9);
     --glass:rgba(23,26,33,.58); --glass-panel:rgba(23,26,33,.55); --card-glass:rgba(23,26,33,.84);
     --outside-glass:rgba(8,10,14,.35); --sky-fog:rgba(220,228,245,.07);
   }
@@ -973,6 +973,86 @@
   html.sky-on .wall-card.past{background-color:transparent;}
   html.sky-on .wall-tag.hol{background-color:color-mix(in srgb,var(--hol) 12%,var(--card-glass));}
   html.sky-on .wall-tag.hols{background-color:color-mix(in srgb,var(--schol) 12%,var(--card-glass));}
+
+
+  /* ---------- Wallpapers: colour flow and aurora ---------- */
+  .sky .wp-flow,.sky .wp-aurora{display:none;}
+  .sky[data-wp="flow"] .wp-flow,.sky[data-wp="aurora"] .wp-aurora{display:block;}
+  .sky[data-wp="flow"] > .sl:not(.wp-flow),.sky[data-wp="aurora"] > .sl:not(.wp-aurora){display:none!important;}
+  .wp-flow i{position:absolute;display:block;width:78vmax;height:78vmax;border-radius:50%;will-change:transform;
+    background:radial-gradient(circle at center,var(--c) 0,color-mix(in srgb,var(--c) 55%,transparent) 32%,transparent 68%);}
+  [data-theme="dark"] .wp-flow i{opacity:.8;}
+  .wp-flow i:nth-child(1){--c:var(--f1,#9fb0f5);left:-24vmax;top:-30vmax;animation:wp-a 36s ease-in-out infinite alternate;}
+  .wp-flow i:nth-child(2){--c:var(--f2,#e7a7e8);right:-28vmax;top:-18vmax;animation:wp-b 44s ease-in-out infinite alternate;}
+  .wp-flow i:nth-child(3){--c:var(--f3,#8fd3f0);left:4vmax;bottom:-42vmax;animation:wp-c 50s ease-in-out infinite alternate;}
+  .wp-flow i:nth-child(4){--c:var(--f4,#f4d39b);right:-14vmax;bottom:-36vmax;width:62vmax;height:62vmax;animation:wp-d 31s ease-in-out infinite alternate;}
+  @keyframes wp-a{0%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(22vmax,12vmax,0) scale(1.18);}100%{transform:translate3d(10vmax,28vmax,0) scale(.92);}}
+  @keyframes wp-b{0%{transform:translate3d(0,0,0) scale(1.05);}50%{transform:translate3d(-20vmax,18vmax,0) scale(.9);}100%{transform:translate3d(-30vmax,4vmax,0) scale(1.12);}}
+  @keyframes wp-c{0%{transform:translate3d(0,0,0) scale(.95);}50%{transform:translate3d(26vmax,-14vmax,0) scale(1.15);}100%{transform:translate3d(8vmax,-26vmax,0) scale(1);}}
+  @keyframes wp-d{0%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(-24vmax,-10vmax,0) scale(1.2);}100%{transform:translate3d(-8vmax,-22vmax,0) scale(.9);}}
+  .wp-aurora i{position:absolute;display:block;left:-35%;width:170%;height:46%;will-change:transform;
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 38%,#000 52%,transparent 100%);
+            mask-image:linear-gradient(to bottom,transparent 0,#000 38%,#000 52%,transparent 100%);}
+  .wp-aurora i:nth-child(1){top:2%;opacity:.9;transform-origin:30% 50%;
+    background:linear-gradient(90deg,transparent 4%,var(--a1) 22%,var(--a2) 42%,var(--a1) 60%,var(--a3) 78%,transparent 96%);
+    animation:au-a 26s ease-in-out infinite alternate;}
+  .wp-aurora i:nth-child(2){top:20%;opacity:.75;transform-origin:70% 50%;
+    background:linear-gradient(90deg,transparent 6%,var(--a3) 24%,var(--a1) 46%,var(--a2) 66%,transparent 92%);
+    animation:au-b 34s ease-in-out infinite alternate;}
+  .wp-aurora i:nth-child(3){top:44%;height:40%;opacity:.6;transform-origin:50% 50%;
+    background:linear-gradient(90deg,transparent 8%,var(--a2) 30%,var(--a4) 52%,var(--a1) 72%,transparent 94%);
+    animation:au-c 42s ease-in-out infinite alternate;}
+  .wp-aurora{--a1:#5ad8b4;--a2:#7cb6f4;--a3:#b18cf4;--a4:#f29cc9;}
+  [data-theme="dark"] .wp-aurora{--a1:#22d39b;--a2:#2aa9de;--a3:#7c4fe8;--a4:#d24f9f;}
+  @keyframes au-a{0%{transform:translate3d(-6%,0,0) skewY(-5deg) scaleY(.9);}50%{transform:translate3d(4%,3%,0) skewY(3deg) scaleY(1.15);}100%{transform:translate3d(10%,-2%,0) skewY(-2deg) scaleY(1);}}
+  @keyframes au-b{0%{transform:translate3d(8%,0,0) skewY(4deg) scaleY(1);}50%{transform:translate3d(-4%,-4%,0) skewY(-4deg) scaleY(1.25);}100%{transform:translate3d(-10%,2%,0) skewY(2deg) scaleY(.9);}}
+  @keyframes au-c{0%{transform:translate3d(-8%,0,0) skewY(3deg);}50%{transform:translate3d(6%,-5%,0) skewY(-3deg) scaleY(1.2);}100%{transform:translate3d(12%,0,0) skewY(1deg);}}
+  .wp-toggle{flex-wrap:wrap;margin-top:10px;}
+  .wp-toggle button{padding:8px 14px;}
+  .wp-set{padding:14px 0 4px;}
+  html.sky-on .grid-head,html.sky-on .allday-row,html.sky-on .weekday-head{-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);}
+
+  /* ---------- Liquid glass event tiles ---------- */
+  :root{
+    --lg-tint:22%; --lg-base:rgba(255,255,255,.26); --lg-rim:rgba(255,255,255,.95); --lg-rim2:rgba(255,255,255,.6);
+    --lg-sheen:rgba(255,255,255,.7); --lg-edge:rgba(255,255,255,.6); --lg-shadow:rgba(16,24,40,.08);
+  }
+  [data-theme="dark"]{
+    --lg-tint:32%; --lg-base:rgba(34,38,50,.42); --lg-rim:rgba(255,255,255,.3); --lg-rim2:rgba(255,255,255,.08);
+    --lg-sheen:rgba(255,255,255,.13); --lg-edge:rgba(255,255,255,.13); --lg-shadow:rgba(0,0,0,.35);
+  }
+  html .event{--gc:var(--ev-dot,#8b9099);}
+  html .chip,html .allday-chip{--gc:var(--chip-dot,#8b9099);}
+  html .wall-card{--gc:var(--wc,#8b9099);}
+  html .event,html .allday-chip,html .chip,html .wall-card:not(.past){
+    background:
+      linear-gradient(162deg,var(--lg-sheen) 0%,transparent 40%,transparent 78%,color-mix(in srgb,var(--lg-sheen) 45%,transparent) 100%),
+      radial-gradient(120% 90% at 100% 110%,color-mix(in srgb,var(--gc) 22%,transparent),transparent 60%),
+      color-mix(in srgb,var(--gc) var(--lg-tint),var(--lg-base));
+    -webkit-backdrop-filter:blur(14px) saturate(1.8);
+            backdrop-filter:blur(14px) saturate(1.8);
+    border:1px solid var(--lg-edge);
+    box-shadow:
+      inset 1.5px 1.5px 1px -0.5px var(--lg-rim),
+      inset -1.5px -1.5px 1px -0.5px var(--lg-rim2),
+      inset 0 0 6px color-mix(in srgb,var(--lg-rim) 35%,transparent),
+      0 8px 18px -8px color-mix(in srgb,var(--gc) 60%,transparent),
+      0 1px 3px var(--lg-shadow);
+  }
+  html .chip{-webkit-backdrop-filter:blur(8px) saturate(1.6);backdrop-filter:blur(8px) saturate(1.6);border-radius:8px;}
+  html .allday-chip{border-radius:9px;}
+  html .event{border-radius:12px;padding-left:12px;transition:transform .15s,box-shadow .15s;}
+  html .event::before{content:"";position:absolute;left:4px;top:5px;bottom:5px;width:3.5px;border-radius:4px;background:var(--gc);
+    box-shadow:0 0 6px color-mix(in srgb,var(--gc) 55%,transparent);pointer-events:none;}
+  html .event.short::before{top:3px;bottom:3px;}
+  @media (hover:hover){ html .event:not(.dragging):hover{transform:translateY(-1px);} }
+  html .event.dragging{box-shadow:var(--shadow-lg);}
+  html .wall-card::before{left:9px;top:12px;bottom:12px;width:6px;border-radius:6px;box-shadow:0 0 8px color-mix(in srgb,var(--gc) 50%,transparent);}
+  html .wall-card:not(.past){border-radius:20px;}
+  html .wall-card.now{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),inset 0 1px 0 var(--lg-rim),0 10px 24px -10px color-mix(in srgb,var(--gc) 60%,transparent);}
+  @media (prefers-reduced-transparency:reduce){
+    html .event,html .allday-chip,html .chip,html .wall-card:not(.past){-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
+  }
 
   /* ---------- Google Calendar ---------- */
   .g-pill{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 13px;border-radius:999px;flex:0 0 auto;
@@ -1113,6 +1193,8 @@
   <div class="sl sky-snow"></div>
   <div class="sl sky-snow2"></div>
   <div class="sl sky-flash"></div>
+  <div class="sl wp-flow"><i></i><i></i><i></i><i></i></div>
+  <div class="sl wp-aurora"><i></i><i></i><i></i></div>
 </div>
 
 <div class="wx-bar hidden" id="wxBar" data-wx="">
@@ -1351,12 +1433,15 @@
           </div>
           <div class="switch" id="kioskToggle" role="switch" aria-checked="false" tabindex="0"></div>
         </div>
-        <div class="switch-row">
-          <div>
-            <div class="lbl-main">Animated weather background</div>
-            <div class="lbl-sub">A gentle sky behind the calendar that follows the weather and time of day</div>
+        <div class="wp-set">
+          <div class="lbl-main">Animated background</div>
+          <div class="lbl-sub" id="wpSub">A moving wallpaper behind your events</div>
+          <div class="toggle-group wp-toggle" id="wpToggle">
+            <button data-wp="sky">Weather sky</button>
+            <button data-wp="flow">Colour flow</button>
+            <button data-wp="aurora">Aurora</button>
+            <button data-wp="off">Off</button>
           </div>
-          <div class="switch" id="skyToggle" role="switch" aria-checked="false" tabindex="0"></div>
         </div>
       </div>
       <div class="set-section">
@@ -1662,6 +1747,7 @@
   if(!settings.theme) settings.theme = "light";
   if(typeof settings.kiosk!=="boolean") settings.kiosk = false;
   if(typeof settings.skyAnim!=="boolean") settings.skyAnim = true;
+  if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
   if(!settings.google || typeof settings.google!=="object") settings.google = { clientId:"", accounts:[] };
   if(!Array.isArray(settings.google.accounts)) settings.google.accounts = [];
   if(typeof settings.publicHolidays!=="boolean") settings.publicHolidays = true;
@@ -1971,7 +2057,7 @@
     document.documentElement.classList.toggle("kiosk", !!settings.kiosk);
     var meta=document.querySelector('meta[name="theme-color"]');
     if(meta) meta.setAttribute("content", dark?"#0f1116":"#f6f7f9");
-    document.documentElement.classList.toggle("sky-on", settings.skyAnim!==false);
+    document.documentElement.classList.toggle("sky-on", settings.wallpaper!=="off");
     applyAccent();
     updateSky();
   }
@@ -2017,8 +2103,11 @@
   }
   function updateSky(){
     var el=document.getElementById("sky");
-    if(!el || settings.skyAnim===false) return;
+    if(!el || settings.wallpaper==="off") return;
     var dark=document.documentElement.getAttribute("data-theme")==="dark";
+    el.setAttribute("data-wp", settings.wallpaper);
+    if(settings.wallpaper==="flow"){ paintFlow(el, dark); return; }
+    if(settings.wallpaper==="aurora"){ paintAurora(el, dark); return; }
     var pal=SKY_PAL[dark?"dark":"light"], now=new Date(), tm=skyTime(now);
     var hasWx=settings.weather.on && wxCurrent;
     var kind=hasWx ? wxKind(wxCurrent.code, tm.night<.5) : (tm.night<.5?"sun":"moon");
@@ -2050,6 +2139,29 @@
     el.setAttribute("data-precip", fx.precip||"");
     el.setAttribute("data-fog", fx.fog?"1":"0");
     el.setAttribute("data-phase", tm.night>=.5?"night":tm.a);
+  }
+  // Colour flow: soft blobs in shades around the accent colour
+  function hexToHsl(h){
+    var n=parseInt(h.slice(1),16), r=(n>>16&255)/255, g=(n>>8&255)/255, b=(n&255)/255;
+    var mx=Math.max(r,g,b), mn=Math.min(r,g,b), l=(mx+mn)/2, d=mx-mn, hh=0, ss=0;
+    if(d){ ss=d/(1-Math.abs(2*l-1));
+      hh = mx===r ? ((g-b)/d)%6 : mx===g ? (b-r)/d+2 : (r-g)/d+4; hh*=60; if(hh<0) hh+=360; }
+    return [hh, ss*100, l*100];
+  }
+  function hsl(h,s,l){ return "hsl("+(((h%360)+360)%360).toFixed(0)+" "+s+"% "+l+"%)"; }
+  function paintFlow(el, dark){
+    var h=hexToHsl(settings.accent||"#5b6ee1")[0];
+    var L=dark?[10,8,46,42,44,40]:[93,96,76,79,77,82], S=dark?62:78;
+    el.style.setProperty("--sky-top", hsl(h,dark?35:45,L[0]));
+    el.style.setProperty("--sky-bot", hsl(h+30,dark?30:50,L[1]));
+    el.style.setProperty("--f1", hsl(h,S,L[2]));
+    el.style.setProperty("--f2", hsl(h+55,S,L[3]));
+    el.style.setProperty("--f3", hsl(h-50,S,L[4]));
+    el.style.setProperty("--f4", hsl(h+165,S-10,L[5]));
+  }
+  function paintAurora(el, dark){
+    el.style.setProperty("--sky-top", dark?"#060d1f":"#d9e6f6");
+    el.style.setProperty("--sky-bot", dark?"#0e1a2c":"#f3f0fa");
   }
   function applyAccent(){
     document.documentElement.style.setProperty("--accent", settings.accent);
@@ -2430,6 +2542,7 @@
     var chip=document.createElement("div"); chip.className="allday-chip"+(taskDone(t)?" done":"");
     chip.style.setProperty("--chip-bg", hexA(c,0.14));
     chip.style.setProperty("--chip-fg", "#26292f");
+    chip.style.setProperty("--chip-dot", c);
     if(t.todo){ chip.appendChild(makeTick(t)); }
     else { var dot=document.createElement("span"); dot.className="dot"; dot.style.background=c; chip.appendChild(dot); }
     var span=document.createElement("span"); span.className="txt";
@@ -2765,7 +2878,7 @@
       var b=document.createElement("button"); b.className="swatch-btn"+(hex===settings.accent?" sel":"");
       b.style.background=hex; b.setAttribute("aria-label","Accent "+hex);
       b.addEventListener("click", function(){
-        settings.accent=hex; saveSettings(); applyAccent();
+        settings.accent=hex; saveSettings(); applyAccent(); updateSky();
         row.querySelectorAll(".swatch-btn").forEach(function(x){x.classList.remove("sel");});
         b.classList.add("sel");
       });
@@ -2776,7 +2889,7 @@
     });
     $("themeToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b.dataset.themeOpt===settings.theme); });
     setSwitch("kioskToggle", settings.kiosk);
-    setSwitch("skyToggle", settings.skyAnim);
+    markWp();
     setSwitch("holToggle", settings.publicHolidays);
     renderGoogleSettings();
     setSwitch("termToggle", settings.schoolTerms);
@@ -2852,6 +2965,7 @@
           settings=Object.assign(settings,data.settings);
           if(!settings.categories||!settings.categories.length) settings.categories=clone(DEFAULT_CATS);
           if(!settings.people) settings.people=[];
+          if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
           if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
           if(typeof settings.reminders!=="boolean") settings.reminders=false;
@@ -4023,8 +4137,14 @@
     if(stale) gConnect(stale.email);
   });
   $("gEvClose").addEventListener("click", function(){ closeOverlay("gEvOverlay"); });
-  $("skyToggle").addEventListener("click", function(){
-    settings.skyAnim=!getSwitch("skyToggle"); saveSettings(); setSwitch("skyToggle", settings.skyAnim); applyTheme();
+  var WP_SUB={ sky:"A gentle sky that follows the weather and time of day", flow:"Soft colours drifting slowly, in shades of your accent colour", aurora:"Ribbons of light rippling across the sky", off:"A plain background, which also saves battery" };
+  function markWp(){
+    $("wpToggle").querySelectorAll("button").forEach(function(x){ x.classList.toggle("active", x.dataset.wp===settings.wallpaper); });
+    $("wpSub").textContent=WP_SUB[settings.wallpaper];
+  }
+  $("wpToggle").addEventListener("click", function(e){
+    var b=e.target.closest("button"); if(!b) return;
+    settings.wallpaper=b.dataset.wp; settings.skyAnim=settings.wallpaper!=="off"; saveSettings(); markWp(); applyTheme();
   });
   $("kioskToggle").addEventListener("click", function(){
     settings.kiosk=!getSwitch("kioskToggle"); saveSettings();
