@@ -1022,10 +1022,11 @@
   html .chip,html .allday-chip{--gc:var(--chip-dot,#8b9099);}
   html .wall-card{--gc:var(--wc,#8b9099);}
   html .ww-row{--gc:var(--accent);--lg-amt:5%;}
+  html .wg{--gc:var(--accent);--lg-amt:4%;}
   html .wall-tag{--gc:var(--tag-c,var(--accent));--lg-amt:8%;}
   html .wall-tag.hol{--gc:var(--hol);--lg-amt:14%;}
   html .wall-tag.hols{--gc:var(--schol);--lg-amt:14%;}
-  html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag{
+  html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg{
     background:
       linear-gradient(162deg,var(--lg-sheen) 0%,transparent 40%,transparent 78%,color-mix(in srgb,var(--lg-sheen) 45%,transparent) 100%),
       radial-gradient(120% 90% at 100% 110%,color-mix(in srgb,var(--gc) 22%,transparent),transparent 60%),
@@ -1056,9 +1057,134 @@
   html .wall-card:not(.past){border-radius:20px;}
   html .wall-card.now{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),inset 0 1px 0 var(--lg-rim),0 10px 24px -10px color-mix(in srgb,var(--gc) 60%,transparent);}
   @media (prefers-reduced-transparency:reduce){
-    html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
+    html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
   }
 
+  /* ---------- Widget panel ---------- */
+  .app{position:relative;isolation:isolate;}
+  .app > .rail{position:relative;}
+  .content{container-type:inline-size;}
+  .rail-btn.on{background:var(--accent-soft);color:var(--accent);}
+  .wg-panel{flex:0 0 300px;width:300px;display:flex;flex-direction:column;min-height:0;position:relative;z-index:14;
+    background:var(--surface);border-left:1px solid var(--border);}
+  html.sky-on .wg-panel{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);border-left-color:rgba(255,255,255,.45);}
+  html.sky-on[data-theme="dark"] .wg-panel{border-left-color:rgba(255,255,255,.08);}
+  .wg-head{display:flex;align-items:center;justify-content:space-between;padding:16px 14px 8px 18px;flex:0 0 auto;}
+  .wg-head h2{margin:0;font-family:var(--font-display);font-optical-sizing:auto;font-size:18px;font-weight:700;letter-spacing:-.02em;}
+  .wg-list{flex:1 1 auto;overflow-y:auto;padding:6px 14px 20px;display:flex;flex-direction:column;gap:12px;overscroll-behavior:contain;}
+  .wg{border-radius:20px;padding:14px;position:relative;flex:0 0 auto;}
+  .wg.hidden{display:none;}
+  .wg-title{display:flex;align-items:center;justify-content:space-between;min-height:28px;margin:-2px 0 8px;
+    font-size:11.5px;font-weight:750;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);}
+  .wg-ibtn{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;color:var(--muted);flex:0 0 auto;transition:background .15s,color .15s;}
+  .wg-ibtn:hover{background:var(--accent-soft);color:var(--text);}
+  .wg-ibtn svg{width:18px;height:18px;}
+  .wg-ibtn.sm{width:28px;height:28px;}
+  .wg-ibtn.sm svg{width:15px;height:15px;}
+  html.wg-closed .wg-panel{display:none;}
+  .wg-scrim{display:none;}
+  @media (max-width:1099px){
+    .wg-panel{position:fixed;top:0;right:0;bottom:0;width:min(330px,88vw);z-index:60;transform:translateX(104%);
+      transition:transform .3s cubic-bezier(.2,.8,.2,1);box-shadow:-18px 0 40px -18px rgba(16,24,40,.35);
+      padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);}
+    html.sky-on .wg-panel{background:var(--veil-strong);}
+    html.wg-closed .wg-panel{display:flex;}
+    html.wg-drawer .wg-panel{transform:none;}
+    html.wg-drawer .wg-scrim{display:block;position:fixed;inset:0;z-index:59;background:rgba(10,12,18,.28);}
+  }
+
+  /* mini month */
+  .mm-head{display:flex;align-items:center;gap:2px;margin:-4px -4px 6px 2px;}
+  .mm-title{flex:1;font-family:var(--font-display);font-optical-sizing:auto;font-size:16px;font-weight:700;letter-spacing:-.015em;cursor:pointer;}
+  .mm-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;}
+  .mm-dow{font-size:10.5px;font-weight:750;color:var(--muted-2);padding:2px 0 5px;}
+  .mm-day{position:relative;height:34px;border-radius:10px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--text);transition:background .12s;}
+  .mm-day:hover{background:var(--accent-soft);}
+  .mm-day.out{color:var(--muted-2);}
+  .mm-day.out .mm-dots{opacity:.5;}
+  .mm-day.hol span:first-child{color:var(--hol);}
+  .mm-day.sel{box-shadow:inset 0 0 0 1.5px var(--accent);}
+  .mm-day.today{background:var(--accent);color:#fff;box-shadow:0 4px 12px -4px var(--accent);}
+  .mm-day.today span:first-child{color:#fff;}
+  .mm-dots{position:absolute;left:0;right:0;bottom:3px;display:flex;justify-content:center;gap:2px;pointer-events:none;}
+  .mm-dots i{width:4px;height:4px;border-radius:50%;background:var(--d);}
+  .mm-day.today .mm-dots i{background:#fff;}
+
+  /* bin day */
+  :root{--bin-body:#2f3b35;--bin-wheel:#1d2420;}
+  [data-theme="dark"]{--bin-body:#55635b;--bin-wheel:#2a312d;}
+  .bin{width:30px;height:40px;flex:0 0 auto;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18));}
+  .bin-main{display:flex;align-items:center;gap:14px;}
+  .bin-icons{display:flex;gap:4px;}
+  .bin-when{font-family:var(--font-display);font-optical-sizing:auto;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.2;}
+  .bin-main.soon .bin-when{color:var(--accent);}
+  .bin-sub{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .bin-next{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;}
+  .bin-nl{flex:1 0 100%;}
+  .bin-tag{display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--text);}
+  .bin-dot{width:9px;height:9px;border-radius:3px;}
+  .bin-setup{display:flex;flex-direction:column;gap:8px;}
+  .bin-lbl{font-size:12.5px;font-weight:650;color:var(--muted);margin-top:2px;}
+  .bin-setup .select{padding:9px 36px 9px 12px;font-size:15px;}
+  .bin-pick{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .bin-pick button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px;border-radius:14px;border:1.5px solid var(--border);font-size:12.5px;font-weight:650;background:rgba(255,255,255,.18);}
+  .bin-pick button.on{border-color:var(--accent);background:var(--accent-soft);}
+  .bin-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:4px;}
+
+  /* notes */
+  .notes-list{display:flex;flex-direction:column;gap:8px;max-height:300px;overflow-y:auto;margin:0 -4px;padding:2px 4px;}
+  .notes-empty{font-size:13px;color:var(--muted-2);padding:4px 2px 2px;}
+  .note{position:relative;padding:10px 34px 9px 12px;border-radius:14px;
+    background:linear-gradient(162deg,rgba(255,255,255,.55),transparent 55%),color-mix(in srgb,var(--nc) 30%,var(--lg-base));
+    border:1px solid color-mix(in srgb,var(--nc) 40%,var(--lg-edge));
+    box-shadow:inset 1px 1px 0 var(--lg-rim),0 6px 14px -8px color-mix(in srgb,var(--nc) 70%,transparent);}
+  [data-theme="dark"] .note{background:linear-gradient(162deg,rgba(255,255,255,.1),transparent 55%),color-mix(in srgb,var(--nc) 28%,var(--lg-base));}
+  .note::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3.5px;border-radius:0 4px 4px 0;background:var(--nc);}
+  .note-t{font-size:14px;line-height:1.35;overflow-wrap:anywhere;white-space:pre-wrap;}
+  .note-m{font-size:11px;color:var(--muted);margin-top:3px;}
+  .note-x{position:absolute;top:6px;right:6px;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;color:var(--muted);}
+  .note-x:hover{background:rgba(0,0,0,.08);color:var(--text);}
+  .note-x svg{width:13px;height:13px;}
+  .note-add{margin-top:10px;display:flex;flex-direction:column;gap:8px;}
+  .note-add input{width:100%;box-sizing:border-box;padding:10px 12px;border-radius:12px;border:1px solid var(--border-strong);background:rgba(255,255,255,.5);outline:none;font-size:15px;}
+  [data-theme="dark"] .note-add input{background:rgba(0,0,0,.2);}
+  .note-add input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .note-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .note-cols{display:flex;gap:6px;}
+  .note-col{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);}
+  .note-col.on{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--text);}
+  .note-btn{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 16px;border-radius:11px;background:var(--accent);color:#fff;font-size:14px;font-weight:650;cursor:pointer;}
+  .note-btn:hover{filter:brightness(1.06);}
+  .note-btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);}
+
+  /* photo frame */
+  .ph-frame{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.18);}
+  [data-theme="dark"] .ph-frame{background:rgba(0,0,0,.18);}
+  .ph-frame.has{cursor:pointer;box-shadow:0 10px 24px -14px rgba(16,24,40,.5);}
+  .ph-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease;}
+  .ph-frame img.on{opacity:1;}
+  .ph-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;
+    border:1.5px dashed var(--border-strong);border-radius:14px;color:var(--muted);text-align:center;padding:10px;}
+  .ph-empty svg{width:30px;height:30px;margin-bottom:4px;}
+  .ph-empty b{font-size:14px;color:var(--text);}
+  .ph-empty span{font-size:12px;}
+  .ph-empty:hover{background:var(--accent-soft);}
+  .ph-frame.has .ph-empty{display:none;}
+  .ph-manage{display:none;margin-top:10px;}
+  .wg.managing .ph-manage{display:block;}
+  .ph-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;}
+  .ph-thumb{position:relative;aspect-ratio:1;border-radius:9px;background-size:cover;background-position:center;}
+  .ph-thumb .note-x{top:2px;right:2px;width:22px;height:22px;background:rgba(0,0,0,.55);color:#fff;}
+  .ph-add{width:100%;box-sizing:border-box;}
+
+  /* the wall layout reacts to the space left beside the panel */
+  @container (max-width:900px){
+    .wall{display:flex;flex-direction:column;overflow-y:auto;gap:18px;padding:16px 14px 24px;}
+    .wall-col{flex:0 0 auto;min-height:auto;}
+    .wall-cards{overflow:visible;flex:0 0 auto;}
+    .wall-week{flex:0 0 auto;}
+    .ww-row{flex:0 0 auto;min-height:64px;}
+  }
   /* ---------- Google Calendar ---------- */
   .g-pill{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 13px;border-radius:999px;flex:0 0 auto;
     font-size:13px;font-weight:650;color:var(--alert-fg);background:var(--alert-bg);border:1px solid var(--alert-bd);}
@@ -1158,6 +1284,20 @@
 <body>
 
 <div class="app">
+<div class="sky" id="sky" aria-hidden="true">
+  <div class="sl sky-glow"></div>
+  <div class="sl sky-stars"></div>
+  <div class="sl sky-clouds"></div>
+  <div class="sl sky-clouds c2"></div>
+  <div class="sl sky-fog"></div>
+  <div class="sl sky-rain"></div>
+  <div class="sl sky-rain2"></div>
+  <div class="sl sky-snow"></div>
+  <div class="sl sky-snow2"></div>
+  <div class="sl sky-flash"></div>
+  <div class="sl wp-flow"><i></i><i></i><i></i><i></i></div>
+  <div class="sl wp-aurora"><i></i><i></i><i></i></div>
+</div>
 <nav class="rail" aria-label="Main actions">
   <button class="rail-btn primary" id="addBtn">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -1175,6 +1315,10 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a3 3 0 0 0 3 3v10M6 2v6M9 2v6M18 2c-1.5 0-3 1.5-3 5s1.5 4 3 4v9"/></svg>
     <span>Meals</span>
   </button>
+  <button class="rail-btn" id="wgBtn" aria-label="Show or hide widgets">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+    <span>Widgets</span>
+  </button>
   <div class="rail-spacer"></div>
   <button class="rail-btn" id="fsBtn" aria-label="Toggle full screen">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
@@ -1187,20 +1331,6 @@
 </nav>
 <div class="content">
 
-<div class="sky" id="sky" aria-hidden="true">
-  <div class="sl sky-glow"></div>
-  <div class="sl sky-stars"></div>
-  <div class="sl sky-clouds"></div>
-  <div class="sl sky-clouds c2"></div>
-  <div class="sl sky-fog"></div>
-  <div class="sl sky-rain"></div>
-  <div class="sl sky-rain2"></div>
-  <div class="sl sky-snow"></div>
-  <div class="sl sky-snow2"></div>
-  <div class="sl sky-flash"></div>
-  <div class="sl wp-flow"><i></i><i></i><i></i><i></i></div>
-  <div class="sl wp-aurora"><i></i><i></i><i></i></div>
-</div>
 
 <div class="wx-bar hidden" id="wxBar" data-wx="">
   <div class="wx-fx" aria-hidden="true"></div>
@@ -1305,6 +1435,53 @@
   <div class="empty-hint" id="emptyHint">Tap any day to add a task</div>
 </main>
 </div><!-- content -->
+<div class="wg-scrim" id="wgScrim"></div>
+<aside class="wg-panel" id="wgPanel" aria-label="Widgets">
+  <div class="wg-head">
+    <h2>Widgets</h2>
+    <button class="wg-ibtn" id="wgClose" aria-label="Hide widgets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div>
+  <div class="wg-list">
+    <section class="wg" id="wg-month">
+      <div class="mm-head">
+        <div class="mm-title" id="mmTitle"></div>
+        <button class="wg-ibtn" id="mmPrev" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="wg-ibtn" id="mmNext" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="mm-grid" id="mmGrid"></div>
+    </section>
+    <section class="wg" id="wg-bins">
+      <div class="wg-title"><span>Bin day</span><button class="wg-ibtn sm" id="binEdit" aria-label="Set up bin day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button></div>
+      <div id="binBody"></div>
+    </section>
+    <section class="wg" id="wg-notes">
+      <div class="wg-title"><span>Family notes</span></div>
+      <div class="notes-list" id="notesList"></div>
+      <form class="note-add" id="noteForm" autocomplete="off">
+        <input id="noteInput" maxlength="240" placeholder="Leave a note" aria-label="New note">
+        <div class="note-foot">
+          <div class="note-cols" id="noteCols" role="radiogroup" aria-label="Note colour"></div>
+          <button type="submit" class="note-btn">Add</button>
+        </div>
+      </form>
+    </section>
+    <section class="wg" id="wg-photos">
+      <div class="wg-title"><span>Photo frame</span><button class="wg-ibtn sm" id="phManage" aria-label="Manage photos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></button></div>
+      <div class="ph-frame" id="phFrame">
+        <img id="phA" alt=""><img id="phB" alt="">
+        <label class="ph-empty" id="phEmpty" for="phInput">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg>
+          <b>Add photos</b><span>They stay on this device</span>
+        </label>
+      </div>
+      <div class="ph-manage" id="phManagePane">
+        <div class="ph-thumbs" id="phThumbs"></div>
+        <label class="note-btn ph-add" for="phInput">Add photos</label>
+      </div>
+      <input type="file" id="phInput" accept="image/*" multiple hidden>
+    </section>
+  </div>
+</aside>
 </div><!-- app -->
 
 <!-- Task editor -->
@@ -1448,6 +1625,13 @@
             <button data-wp="off">Off</button>
           </div>
         </div>
+      </div>
+      <div class="set-section">
+        <h3>Widgets</h3>
+        <div class="switch-row"><div><div class="lbl-main">Mini calendar</div><div class="lbl-sub">A small month with dots on busy days. Tap a day to jump to it.</div></div><div class="switch" id="wgOn-month" role="switch" aria-checked="false" tabindex="0"></div></div>
+        <div class="switch-row"><div><div class="lbl-main">Bin day</div><div class="lbl-sub">Which bins go out this week</div></div><div class="switch" id="wgOn-bins" role="switch" aria-checked="false" tabindex="0"></div></div>
+        <div class="switch-row"><div><div class="lbl-main">Family notes</div><div class="lbl-sub">Quick sticky notes for everyone in the house</div></div><div class="switch" id="wgOn-notes" role="switch" aria-checked="false" tabindex="0"></div></div>
+        <div class="switch-row"><div><div class="lbl-main">Photo frame</div><div class="lbl-sub">A slow slideshow of photos you add</div></div><div class="switch" id="wgOn-photos" role="switch" aria-checked="false" tabindex="0"></div></div>
       </div>
       <div class="set-section">
         <h3>Week starts on</h3>
@@ -1754,6 +1938,9 @@
   if(typeof settings.skyAnim!=="boolean") settings.skyAnim = true;
   if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
   if(!settings.google || typeof settings.google!=="object") settings.google = { clientId:"", accounts:[] };
+  if(!settings.wg || typeof settings.wg!=="object") settings.wg = { month:true, bins:true, notes:true, photos:true };
+  if(typeof settings.wgOpen!=="boolean") settings.wgOpen = true;
+  if(!settings.bins || typeof settings.bins!=="object") settings.bins = { day:null, refMonday:"", refBin:"yellow" };
   if(!Array.isArray(settings.google.accounts)) settings.google.accounts = [];
   if(typeof settings.publicHolidays!=="boolean") settings.publicHolidays = true;
   if(typeof settings.schoolTerms!=="boolean") settings.schoolTerms = true;
@@ -1774,6 +1961,8 @@
     });
   });
 
+  var notes = load("cal.notes", []);
+  function saveNotes(){ store.set("cal.notes", JSON.stringify(notes)); }
   var state = { view: settings.kiosk ? "wall" : "week", date:new Date(), editing:null, personFilter:null, mealsWeek:new Date() };
   var firedReminders = {};   // { dateKey: { triggerKey:true } }
 
@@ -2201,6 +2390,7 @@
     else renderAgenda();
     updatePeriodLabel();
     maybeShowHint();
+    renderWidgets(true);
     if(settings.google.accounts.length) setTimeout(function(){ gRefresh(false); }, 0);
   }
 
@@ -2895,6 +3085,7 @@
     $("themeToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b.dataset.themeOpt===settings.theme); });
     setSwitch("kioskToggle", settings.kiosk);
     markWp();
+    ["month","bins","notes","photos"].forEach(function(w){ setSwitch("wgOn-"+w, settings.wg[w]!==false); });
     setSwitch("holToggle", settings.publicHolidays);
     renderGoogleSettings();
     setSwitch("termToggle", settings.schoolTerms);
@@ -2949,7 +3140,7 @@
 
   /* ---------- Data backup ---------- */
   function exportData(){
-    var payload={tasks:tasks,settings:settings,lists:lists,meals:meals,mealLibrary:mealLibrary,version:3};
+    var payload={tasks:tasks,settings:settings,lists:lists,meals:meals,mealLibrary:mealLibrary,notes:notes,version:4};
     var blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
     var url=URL.createObjectURL(blob);
     var a=document.createElement("a");
@@ -2964,13 +3155,16 @@
       try{
         var data=JSON.parse(reader.result);
         if(!data || typeof data!=="object") throw new Error("bad backup");
-        pushUndo("Restore backup",["tasks","lists","meals","mealLibrary","settings"]);
+        pushUndo("Restore backup",["tasks","lists","meals","mealLibrary","settings","notes"]);
         if(data.tasks) tasks=data.tasks;
         if(data.settings){
           settings=Object.assign(settings,data.settings);
           if(!settings.categories||!settings.categories.length) settings.categories=clone(DEFAULT_CATS);
           if(!settings.people) settings.people=[];
           if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
+          if(!settings.wg || typeof settings.wg!=="object") settings.wg={ month:true, bins:true, notes:true, photos:true };
+          if(typeof settings.wgOpen!=="boolean") settings.wgOpen=true;
+          if(!settings.bins || typeof settings.bins!=="object") settings.bins={ day:null, refMonday:"", refBin:"yellow" };
           if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
           if(typeof settings.reminders!=="boolean") settings.reminders=false;
@@ -2978,6 +3172,7 @@
         if(data.lists) lists=data.lists;
         if(data.meals) meals=data.meals;
         if(data.mealLibrary) mealLibrary=data.mealLibrary;
+        if(Array.isArray(data.notes)){ notes=data.notes; saveNotes(); }
         // migrate any legacy string slots in the imported meals
         Object.keys(meals).forEach(function(k){
           var day=meals[k]; if(!day || typeof day!=="object"){ meals[k]={}; return; }
@@ -3032,7 +3227,8 @@
     lists:{ get:function(){ return lists; }, set:function(v){ lists=v; }, save:function(){ saveLists(); } },
     meals:{ get:function(){ return meals; }, set:function(v){ meals=v; }, save:function(){ saveMeals(); } },
     mealLibrary:{ get:function(){ return mealLibrary; }, set:function(v){ mealLibrary=v; }, save:function(){ saveMealLibrary(); } },
-    settings:{ get:function(){ return settings; }, set:function(v){ settings=v; }, save:function(){ saveSettings(); applyTheme(); updateGreeting(); } }
+    settings:{ get:function(){ return settings; }, set:function(v){ settings=v; }, save:function(){ saveSettings(); applyTheme(); updateGreeting(); } },
+    notes:{ get:function(){ return notes; }, set:function(v){ notes=v; }, save:function(){ saveNotes(); } }
   };
   function pushUndo(label, domains){
     var snap={};
@@ -3731,6 +3927,205 @@
     $("wallLegend").hidden=!anyHols;
   }
 
+  /* ---------- Widget panel ---------- */
+  var WG_WIDE=1100, mmMonth=null, wgLastDay="";
+  function wgWide(){ return window.innerWidth>=WG_WIDE; }
+  function wgIsOpen(){ return wgWide() ? settings.wgOpen : document.documentElement.classList.contains("wg-drawer"); }
+  function applyWgLayout(){
+    var root=document.documentElement, wide=wgWide();
+    root.classList.toggle("wg-closed", wide && !settings.wgOpen);
+    if(wide) root.classList.remove("wg-drawer");
+    var open=wgIsOpen();
+    $("wgBtn").classList.toggle("on", open);
+    $("wgBtn").setAttribute("aria-pressed", open?"true":"false");
+    ["month","bins","notes","photos"].forEach(function(w){ $("wg-"+w).classList.toggle("hidden", settings.wg[w]===false); });
+    phTick();
+  }
+  function toggleWidgets(){
+    if(wgWide()){ settings.wgOpen=!settings.wgOpen; saveSettings(); }
+    else document.documentElement.classList.toggle("wg-drawer");
+    applyWgLayout();
+  }
+  function renderWidgets(fromRender){
+    if(fromRender || !mmMonth){ mmMonth=new Date(state.date.getFullYear(), state.date.getMonth(), 1); }
+    wgLastDay=keyOf(new Date());
+    renderMiniMonth(); renderBins(); renderNotes();
+  }
+
+  // Mini month
+  function renderMiniMonth(){
+    $("mmTitle").textContent=MONTHS[mmMonth.getMonth()]+" "+mmMonth.getFullYear();
+    var g=$("mmGrid"), frag=document.createDocumentFragment(), todayK=keyOf(new Date()), selK=keyOf(state.date);
+    orderedDows().forEach(function(d){ var h=document.createElement("div"); h.className="mm-dow"; h.textContent=DOWS_SHORT[d].charAt(0); h.title=DOWS[d]; frag.appendChild(h); });
+    var start=addDays(mmMonth, -((mmMonth.getDay()-settings.weekStart+7)%7));
+    for(var i=0;i<42;i++){
+      var d=addDays(start,i), k=keyOf(d);
+      if(i===35 && d.getMonth()!==mmMonth.getMonth()) break;
+      var b=document.createElement("button"); b.type="button";
+      var cls="mm-day"; if(d.getMonth()!==mmMonth.getMonth()) cls+=" out"; if(k===todayK) cls+=" today"; if(k===selK) cls+=" sel";
+      var hol=holidayOn(k); if(hol) cls+=" hol";
+      b.className=cls;
+      var num=document.createElement("span"); num.textContent=d.getDate(); b.appendChild(num);
+      var items=tasksOn(d), cols=[];
+      items.forEach(function(t){ var c=taskColour(t); if(cols.indexOf(c)<0) cols.push(c); });
+      b.setAttribute("aria-label", DOWS[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()]+(items.length?", "+items.length+(items.length===1?" item":" items"):"")+(hol?", "+hol.name:""));
+      if(cols.length){ var dots=document.createElement("span"); dots.className="mm-dots";
+        cols.slice(0,3).forEach(function(c){ var x=document.createElement("i"); x.style.setProperty("--d", c); dots.appendChild(x); }); b.appendChild(dots); }
+      (function(day){ b.addEventListener("click", function(){
+        state.date=new Date(day);
+        if(state.view!=="week" && state.view!=="day" && state.view!=="agenda") state.view="day";
+        if(!wgWide()) document.documentElement.classList.remove("wg-drawer");
+        render(); applyWgLayout();
+      }); })(d);
+      frag.appendChild(b);
+    }
+    g.innerHTML=""; g.appendChild(frag);
+  }
+
+  // Bin day (Adelaide style: red every week, yellow and green on alternate weeks)
+  var BIN_COL={ red:"#d8433f", yellow:"#f2bf2c", green:"#3ea85a" };
+  var BIN_NAME={ red:"General waste", yellow:"Recycling", green:"Green organics" };
+  var binEditing=false;
+  function binSVG(c){ return '<svg class="bin" viewBox="0 0 30 40" aria-hidden="true"><rect x="2" y="3" width="26" height="6" rx="2.2" fill="'+BIN_COL[c]+'"/><path d="M4.5 10.5h21l-2 23.5h-17z" fill="var(--bin-body)"/><path d="M9.5 14v16M15 14v16M20.5 14v16" stroke="rgba(255,255,255,.14)" stroke-width="1.6"/><circle cx="9" cy="36" r="2.6" fill="var(--bin-wheel)"/><circle cx="21" cy="36" r="2.6" fill="var(--bin-wheel)"/></svg>'; }
+  function binsFor(c){
+    var b=settings.bins; if(!b.refMonday) return ["red", b.refBin||"yellow"];
+    var weeks=Math.round(dayDiff(fromKey(b.refMonday), mondayOf(c))/7);
+    var other = b.refBin==="yellow" ? "green" : "yellow";
+    return ["red", (Math.abs(weeks)%2===0) ? b.refBin : other];
+  }
+  function nextCollection(now){
+    var day=settings.bins.day, t=atMidnight(now), diff=(day-t.getDay()+7)%7;
+    if(diff===0 && now.getHours()>=12) diff=7;
+    return addDays(t, diff);
+  }
+  function renderBins(){
+    var body=$("binBody"), b=settings.bins;
+    if(binEditing || b.day==null){ renderBinSetup(body); return; }
+    var now=new Date(), c=nextCollection(now), off=dayDiff(now, c), set=binsFor(c), nxt=binsFor(addDays(c,7));
+    var when = off===0 ? "Collection today" : off===1 ? "Bins out tonight" : off===2 ? "Bins out tomorrow night" : "Bins out "+DOWS[addDays(c,-1).getDay()]+" night";
+    body.innerHTML='<div class="bin-main'+(off<=1?' soon':'')+'"><div class="bin-icons">'+set.map(binSVG).join("")+'</div><div class="bin-txt"><div class="bin-when">'+when+'</div><div class="bin-sub">'+set.map(function(x){return BIN_NAME[x];}).join(" and ")+'</div><div class="bin-sub">Collected '+shortDate(c)+'</div></div></div>'+
+      '<div class="bin-next"><span class="bin-nl">Following week</span>'+nxt.map(function(x){ return '<span class="bin-tag"><span class="bin-dot" style="background:'+BIN_COL[x]+'"></span>'+BIN_NAME[x]+'</span>'; }).join("")+'</div>';
+  }
+  function renderBinSetup(body){
+    var b=settings.bins, day=b.day==null?2:b.day;
+    var opts=[1,2,3,4,5,6,0].map(function(d){ return '<option value="'+d+'"'+(d===day?' selected':'')+'>'+DOWS[d]+'</option>'; }).join("");
+    var cur = b.day==null ? (b.refBin||"yellow") : binsFor(nextCollection(new Date()))[1];
+    body.innerHTML='<div class="bin-setup"><label class="bin-lbl" for="binDaySel">Collection day</label><select class="select" id="binDaySel">'+opts+'</select>'+
+      '<div class="bin-lbl">Second bin at the next collection</div><div class="bin-pick" id="binPick"><button type="button" data-b="yellow"'+(cur==="yellow"?' class="on"':'')+'>'+binSVG("yellow")+'<span>Recycling</span></button><button type="button" data-b="green"'+(cur==="green"?' class="on"':'')+'>'+binSVG("green")+'<span>Green organics</span></button></div>'+
+      '<div class="bin-actions">'+(b.day!=null?'<button type="button" class="note-btn ghost" id="binCancel">Cancel</button>':'')+'<button type="button" class="note-btn" id="binSave">Save</button></div></div>';
+    $("binPick").addEventListener("click", function(e){ var x=e.target.closest("button"); if(!x) return; $("binPick").querySelectorAll("button").forEach(function(y){ y.classList.toggle("on", y===x); }); });
+    $("binSave").addEventListener("click", function(){
+      var d=+$("binDaySel").value, on=$("binPick").querySelector(".on"), pick=on?on.dataset.b:"yellow";
+      settings.bins.day=d; var c=nextCollection(new Date());
+      settings.bins.refMonday=keyOf(mondayOf(c)); settings.bins.refBin=pick; saveSettings();
+      binEditing=false; renderBins(); toast("Bin day saved");
+    });
+    if($("binCancel")) $("binCancel").addEventListener("click", function(){ binEditing=false; renderBins(); });
+  }
+
+  // Family notes
+  var NOTE_COLS=["#f5c542","#6fb8f2","#f28bb0","#6fd48a","#b79cf5"], noteCol=NOTE_COLS[0];
+  function timeAgo(ts){
+    var m=Math.round((Date.now()-ts)/60000);
+    if(m<1) return "just now"; if(m<60) return m+" min ago";
+    var h=Math.round(m/60); if(h<24) return h+(h===1?" hour ago":" hours ago");
+    var d=Math.round(h/24); return d===1?"yesterday":d+" days ago";
+  }
+  function renderNoteCols(){
+    var w=$("noteCols"); w.innerHTML="";
+    NOTE_COLS.forEach(function(c){ var b=document.createElement("button"); b.type="button"; b.className="note-col"+(c===noteCol?" on":""); b.style.background=c;
+      b.setAttribute("role","radio"); b.setAttribute("aria-checked", c===noteCol?"true":"false"); b.setAttribute("aria-label","Note colour");
+      b.addEventListener("click", function(){ noteCol=c; renderNoteCols(); }); w.appendChild(b); });
+  }
+  function renderNotes(){
+    var list=$("notesList"); list.innerHTML="";
+    if(!notes.length){ list.innerHTML='<div class="notes-empty">No notes yet</div>'; return; }
+    notes.forEach(function(n){
+      var el=document.createElement("div"); el.className="note"; el.style.setProperty("--nc", n.c||NOTE_COLS[0]);
+      var t=document.createElement("div"); t.className="note-t"; t.textContent=n.text;
+      var m=document.createElement("div"); m.className="note-m"; m.textContent=timeAgo(n.at||Date.now());
+      var x=document.createElement("button"); x.type="button"; x.className="note-x"; x.setAttribute("aria-label","Remove note");
+      x.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+      x.addEventListener("click", function(){ pushUndo("Remove note",["notes"]); notes=notes.filter(function(y){ return y.id!==n.id; }); saveNotes(); renderNotes(); toastUndo("Note removed"); });
+      el.appendChild(t); el.appendChild(m); el.appendChild(x); list.appendChild(el);
+    });
+  }
+
+  // Photo frame (photos kept in this browser's IndexedDB)
+  var PH={ db:null, items:[], idx:0, timer:null, front:"phA", managing:false };
+  function phDB(){
+    return new Promise(function(res, rej){
+      if(PH.db) return res(PH.db);
+      if(!window.indexedDB) return rej(new Error("no idb"));
+      var rq=indexedDB.open("cal-photos",1);
+      rq.onupgradeneeded=function(){ rq.result.createObjectStore("photos",{keyPath:"id"}); };
+      rq.onsuccess=function(){ PH.db=rq.result; res(PH.db); };
+      rq.onerror=function(){ rej(rq.error); };
+    });
+  }
+  function phTx(mode, fn){ return phDB().then(function(db){ return new Promise(function(res, rej){ var tx=db.transaction("photos",mode), st=tx.objectStore("photos"), rq=fn(st); tx.oncomplete=function(){ res(rq ? rq.result : undefined); }; tx.onerror=function(){ rej(tx.error); }; }); }); }
+  function phLoad(){
+    return phTx("readonly", function(st){ return st.getAll(); }).then(function(rows){
+      PH.items.forEach(function(it){ URL.revokeObjectURL(it.url); });
+      PH.items=(rows||[]).sort(function(a,b){ return a.at-b.at; }).map(function(r){ return { id:r.id, url:URL.createObjectURL(r.blob) }; });
+      if(PH.idx>=PH.items.length) PH.idx=0;
+      $("phA").removeAttribute("src"); $("phB").removeAttribute("src");
+      renderPhotos();
+    }).catch(function(){ PH.items=[]; renderPhotos(true); });
+  }
+  function phResize(file){
+    return new Promise(function(res, rej){
+      var u=URL.createObjectURL(file), img=new Image();
+      img.onload=function(){
+        var M=1400, w=img.naturalWidth, h=img.naturalHeight, k=Math.min(1, M/Math.max(w,h));
+        var cv=document.createElement("canvas"); cv.width=Math.max(1,Math.round(w*k)); cv.height=Math.max(1,Math.round(h*k));
+        cv.getContext("2d").drawImage(img,0,0,cv.width,cv.height); URL.revokeObjectURL(u);
+        cv.toBlob(function(b){ if(b) res(b); else rej(new Error("encode")); }, "image/jpeg", .85);
+      };
+      img.onerror=function(){ URL.revokeObjectURL(u); rej(new Error("decode")); };
+      img.src=u;
+    });
+  }
+  function phAdd(files){
+    files=Array.prototype.slice.call(files||[]).filter(function(f){ return /^image\//.test(f.type); });
+    if(!files.length) return;
+    var room=40-PH.items.length; if(room<=0){ toast("The photo frame holds up to 40 photos"); return; }
+    files=files.slice(0, room); toast("Adding "+files.length+(files.length===1?" photo":" photos"));
+    var bad=0;
+    files.reduce(function(p, f){ return p.then(function(){ return phResize(f).then(function(blob){ return phTx("readwrite", function(st){ st.put({ id:uid(), at:Date.now(), blob:blob }); }); }).catch(function(){ bad++; }); }); }, Promise.resolve())
+      .then(function(){ return phLoad(); }).then(function(){ toast(bad ? bad+(bad===1?" photo":" photos")+" could not be added" : "Photos added"); });
+  }
+  function phRemove(id){ phTx("readwrite", function(st){ st.delete(id); }).then(phLoad); }
+  function phShow(i, instant){
+    if(!PH.items.length) return;
+    PH.idx=(i+PH.items.length)%PH.items.length;
+    var backId = PH.front==="phA" ? "phB" : "phA", back=$(backId), front=$(PH.front), url=PH.items[PH.idx].url;
+    if(instant || !front.getAttribute("src")){ front.src=url; front.classList.add("on"); back.classList.remove("on"); return; }
+    if(front.getAttribute("src")===url) return;
+    back.onload=function(){ back.classList.add("on"); front.classList.remove("on"); PH.front=backId; back.onload=null; };
+    back.src=url;
+  }
+  function renderPhotos(failed){
+    var has=PH.items.length>0;
+    $("phFrame").classList.toggle("has", has);
+    $("phEmpty").querySelector("span").textContent = failed ? "Photos can't be saved in this browser" : "They stay on this device";
+    if(has){ phShow(PH.idx, true); } else { $("phA").classList.remove("on"); $("phB").classList.remove("on"); }
+    $("wg-photos").classList.toggle("managing", PH.managing);
+    var th=$("phThumbs"); th.innerHTML="";
+    PH.items.forEach(function(it){
+      var d=document.createElement("div"); d.className="ph-thumb"; d.style.backgroundImage='url("'+it.url+'")';
+      var x=document.createElement("button"); x.type="button"; x.className="note-x"; x.setAttribute("aria-label","Remove photo");
+      x.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+      x.addEventListener("click", function(){ phRemove(it.id); }); d.appendChild(x); th.appendChild(d);
+    });
+    phTick();
+  }
+  function phTick(){
+    var on = PH.items.length>1 && settings.wg.photos!==false && !document.hidden && wgIsOpen();
+    if(on && !PH.timer) PH.timer=setInterval(function(){ phShow(PH.idx+1); }, 12000);
+    if(!on && PH.timer){ clearInterval(PH.timer); PH.timer=null; }
+  }
+
   /* ---------- Google Calendar (read-only merge) ---------- */
   var G_SCOPE="https://www.googleapis.com/auth/calendar.readonly";
   var G_API="https://www.googleapis.com/calendar/v3";
@@ -4293,6 +4688,30 @@
   if("serviceWorker" in navigator){
     window.addEventListener("load", function(){ navigator.serviceWorker.register("./sw.js").catch(function(){}); });
   }
+
+  // widget panel wiring
+  $("wgBtn").addEventListener("click", toggleWidgets);
+  $("wgClose").addEventListener("click", toggleWidgets);
+  $("wgScrim").addEventListener("click", function(){ document.documentElement.classList.remove("wg-drawer"); applyWgLayout(); });
+  window.addEventListener("resize", function(){ applyWgLayout(); });
+  $("mmPrev").addEventListener("click", function(){ mmMonth=new Date(mmMonth.getFullYear(), mmMonth.getMonth()-1, 1); renderMiniMonth(); });
+  $("mmNext").addEventListener("click", function(){ mmMonth=new Date(mmMonth.getFullYear(), mmMonth.getMonth()+1, 1); renderMiniMonth(); });
+  $("mmTitle").addEventListener("click", function(){ mmMonth=new Date(state.date.getFullYear(), state.date.getMonth(), 1); renderMiniMonth(); });
+  $("binEdit").addEventListener("click", function(){ binEditing=!binEditing; renderBins(); });
+  $("noteForm").addEventListener("submit", function(e){
+    e.preventDefault(); var v=$("noteInput").value.trim(); if(!v) return;
+    pushUndo("Add note",["notes"]); notes.unshift({ id:uid(), text:v, c:noteCol, at:Date.now() }); saveNotes();
+    $("noteInput").value=""; renderNotes();
+  });
+  $("phInput").addEventListener("change", function(e){ phAdd(e.target.files); e.target.value=""; });
+  $("phManage").addEventListener("click", function(){ PH.managing=!PH.managing; renderPhotos(); });
+  $("phFrame").addEventListener("click", function(e){ if(PH.items.length>1 && !e.target.closest(".ph-empty")) phShow(PH.idx+1); });
+  ["month","bins","notes","photos"].forEach(function(w){
+    $("wgOn-"+w).addEventListener("click", function(){ settings.wg[w]=!getSwitch("wgOn-"+w); saveSettings(); setSwitch("wgOn-"+w, settings.wg[w]); applyWgLayout(); });
+  });
+  document.addEventListener("visibilitychange", phTick);
+  setInterval(function(){ if(keyOf(new Date())!==wgLastDay) renderWidgets(false); else { if(!binEditing && settings.bins.day!=null) renderBins(); if(notes.length) renderNotes(); } }, 60000);
+  renderNoteCols(); applyWgLayout(); phLoad();
 
   /* ---------- Init ---------- */
   rebuildGIndex();

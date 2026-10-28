@@ -43,8 +43,19 @@ Once it is online, each person can add it to their device so it opens full scree
 - **Undo:** after adding, editing, moving or deleting something, tap **Undo** on the message at the bottom of the screen. On a keyboard, Ctrl+Z (Cmd+Z on a Mac) works too.
 - **Outdoor tasks:** switch on **Outdoors** in a task, and it will show a warning if rain, storms, heat (35° and above) or strong wind are forecast. The forecast reaches about two weeks ahead.
 - **Animated background:** choose a moving wallpaper in Settings under Appearance. **Weather sky** follows the time of day (dawn, day, dusk and night, using real sunrise and sunset times) and the current weather (drifting cloud, rain, storm flashes, fog, snow, stars on clear nights). **Colour flow** has soft colours drifting slowly in shades of your accent colour. **Aurora** has ribbons of light rippling across the screen. Choose **Off** to save battery. Devices set to reduce motion get a still version.
-- **Glass event tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
+- **Glass tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
+
+## Widget panel
+
+A panel on the right holds handy widgets. Tap **Widgets** in the left rail (or the arrow at the top of the panel) to show or hide it. On computers and large tablets it sits beside the calendar. On phones and smaller tablets it slides in from the right and closes when you tap outside it. Turn individual widgets on or off in Settings under Widgets.
+
+- **Mini calendar:** a small month with coloured dots on busy days and public holidays in red. Tap a day to jump to it, or use the arrows to look ahead.
+- **Bin day:** tap the pencil, pick your collection day and which second bin goes out next time (recycling or green organics). It then shows which bins to put out and when, following the usual Adelaide pattern: general waste every week, recycling and green organics on alternate weeks.
+- **Family notes:** leave quick sticky notes in five colours. Tap the cross to remove one (Undo brings it back).
+- **Photo frame:** add photos and they fade from one to the next every 12 seconds. Tap the photo to skip ahead, or tap the three dots to add or remove photos. Up to 40 photos are kept, resized to save space.
+
+Notes and photos are stored on each device, like the rest of your calendar. Notes are included in **Back up to file**, but photos are not, so keep the originals.
 
 ## Connect Google Calendar
 
@@ -89,7 +100,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v9";`, so change it to `"cal-cache-v10"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v10";`, so change it to `"cal-cache-v11"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
