@@ -1217,6 +1217,37 @@
     .wall-week{flex:0 0 auto;}
     .ww-row{flex:0 0 auto;min-height:64px;}
   }
+  /* ---------- News ticker ---------- */
+  .ticker{flex:0 0 auto;height:40px;display:flex;align-items:stretch;position:relative;z-index:12;
+    background:var(--surface);border-top:1px solid var(--border);overflow:hidden;}
+  .ticker.hidden{display:none;}
+  html.sky-on .ticker{background:var(--glass);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);border-top-color:rgba(255,255,255,.4);}
+  html.sky-on[data-theme="dark"] .ticker{border-top-color:rgba(255,255,255,.08);}
+  .tk-badge{flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:0 14px 0 16px;font-size:12px;font-weight:800;letter-spacing:.06em;
+    color:#fff;background:linear-gradient(135deg,#1f2937,#111827);position:relative;}
+  [data-theme="dark"] .tk-badge{background:linear-gradient(135deg,#f1f3f7,#d9dde5);color:#111827;}
+  .tk-badge::after{content:"";position:absolute;right:-12px;top:0;bottom:0;width:12px;background:inherit;clip-path:polygon(0 0,100% 50%,0 100%);}
+  .tk-live{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 0 rgba(239,68,68,.6);animation:tk-pulse 2s ease-out infinite;}
+  @keyframes tk-pulse{0%{box-shadow:0 0 0 0 rgba(239,68,68,.55);}70%{box-shadow:0 0 0 7px rgba(239,68,68,0);}100%{box-shadow:0 0 0 0 rgba(239,68,68,0);}}
+  .tk-view{flex:1 1 auto;min-width:0;overflow:hidden;position:relative;padding-left:12px;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34px,#000 calc(100% - 34px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 34px,#000 calc(100% - 34px),transparent 100%);}
+  .tk-track{display:flex;width:max-content;height:100%;align-items:center;will-change:transform;animation:tk-roll var(--tk-dur,90s) linear infinite;}
+  .ticker:hover .tk-track{animation-play-state:paused;}
+  .tk-half{display:flex;align-items:center;flex:0 0 auto;}
+  .tk-item{display:inline-flex;align-items:baseline;gap:7px;padding:0 22px;white-space:nowrap;font-size:14px;font-weight:550;color:var(--text);position:relative;}
+  .tk-item::after{content:"";position:absolute;right:-3px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--accent);opacity:.7;}
+  .tk-m{font-size:11.5px;font-weight:650;color:var(--muted);font-variant-numeric:tabular-nums;}
+  .tk-track.still{animation:none;width:auto;}
+  .tk-track.still .tk-item{animation:tk-fade .5s ease;}
+  .tk-track.still .tk-item::after{display:none;}
+  .tk-track.still .tk-t{overflow:hidden;text-overflow:ellipsis;}
+  @keyframes tk-roll{to{transform:translate3d(-50%,0,0);}}
+  @keyframes tk-fade{from{opacity:0;}to{opacity:1;}}
+  html.kiosk .ticker{height:48px;}
+  html.kiosk .tk-item{font-size:17px;}
+  html.kiosk .tk-badge{font-size:13.5px;}
+  @media (max-width:640px){ .ticker{height:36px;} .tk-item{font-size:13px;padding:0 16px;} .tk-badge{padding:0 10px 0 12px;font-size:11px;} }
+
   /* ---------- Google Calendar ---------- */
   .g-pill{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 13px;border-radius:999px;flex:0 0 auto;
     font-size:13px;font-weight:650;color:var(--alert-fg);background:var(--alert-bg);border:1px solid var(--alert-bd);}
@@ -1468,6 +1499,10 @@
 
   <div class="empty-hint" id="emptyHint">Tap any day to add a task</div>
 </main>
+<div class="ticker hidden" id="ticker" aria-label="ABC News South Australia headlines">
+  <div class="tk-badge"><span class="tk-live"></span>ABC SA</div>
+  <div class="tk-view" id="tkView"><div class="tk-track" id="tkTrack"></div></div>
+</div>
 </div><!-- content -->
 <div class="wg-scrim" id="wgScrim"></div>
 <aside class="wg-panel" id="wgPanel" aria-label="Widgets">
@@ -1665,6 +1700,7 @@
         <div class="switch-row"><div><div class="lbl-main">Mini calendar</div><div class="lbl-sub">A small month with dots on busy days. Tap a day to jump to it.</div></div><div class="switch" id="wgOn-month" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">Bin day</div><div class="lbl-sub">Which bins go out this week</div></div><div class="switch" id="wgOn-bins" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">Family notes</div><div class="lbl-sub">Quick sticky notes for everyone in the house</div></div><div class="switch" id="wgOn-notes" role="switch" aria-checked="false" tabindex="0"></div></div>
+        <div class="switch-row"><div><div class="lbl-main">News ticker</div><div class="lbl-sub">Rolling ABC News headlines for South Australia along the bottom</div></div><div class="switch" id="newsToggle" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">Photo frame</div><div class="lbl-sub">A slow slideshow of photos you add</div></div><div class="switch" id="wgOn-photos" role="switch" aria-checked="false" tabindex="0"></div></div>
       </div>
       <div class="set-section">
@@ -1974,6 +2010,7 @@
   if(!settings.google || typeof settings.google!=="object") settings.google = { clientId:"", accounts:[] };
   if(!settings.wg || typeof settings.wg!=="object") settings.wg = { month:true, bins:true, notes:true, photos:true };
   if(typeof settings.wgOpen!=="boolean") settings.wgOpen = true;
+  if(typeof settings.news!=="boolean") settings.news = true;
   if(!settings.bins || typeof settings.bins!=="object") settings.bins = { day:null, refMonday:"", refBin:"yellow" };
   if(!Array.isArray(settings.google.accounts)) settings.google.accounts = [];
   if(typeof settings.publicHolidays!=="boolean") settings.publicHolidays = true;
@@ -3125,6 +3162,7 @@
     setSwitch("kioskToggle", settings.kiosk);
     markWp();
     ["month","bins","notes","photos"].forEach(function(w){ setSwitch("wgOn-"+w, settings.wg[w]!==false); });
+    setSwitch("newsToggle", settings.news);
     setSwitch("holToggle", settings.publicHolidays);
     renderGoogleSettings();
     setSwitch("termToggle", settings.schoolTerms);
@@ -3203,6 +3241,7 @@
           if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
           if(!settings.wg || typeof settings.wg!=="object") settings.wg={ month:true, bins:true, notes:true, photos:true };
           if(typeof settings.wgOpen!=="boolean") settings.wgOpen=true;
+          if(typeof settings.news!=="boolean") settings.news=true;
           if(!settings.bins || typeof settings.bins!=="object") settings.bins={ day:null, refMonday:"", refBin:"yellow" };
           if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
@@ -4165,6 +4204,86 @@
     if(!on && PH.timer){ clearInterval(PH.timer); PH.timer=null; }
   }
 
+
+  /* ---------- News ticker (ABC News SA Top Stories) ---------- */
+  var NEWS_FEED="https://www.abc.net.au/news/feed/5633084/rss.xml";
+  var news=(function(){ try{ return JSON.parse(store.get("cal.news")||"null"); }catch(e){ return null; } })();
+  var newsBusy=false, newsSig="", newsRot=null, newsRotIdx=0;
+  var reduceMotionMQ = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches:false };
+  function newsFromXml(txt){
+    var doc=new DOMParser().parseFromString(txt,"text/xml"), out=[];
+    Array.prototype.slice.call(doc.getElementsByTagName("item"),0,20).forEach(function(it){
+      function g(n){ var e=it.getElementsByTagName(n)[0]; return e ? (e.textContent||"").trim() : ""; }
+      var t=g("title"); if(!t) return;
+      var d=new Date(g("pubDate")); out.push({ title:t, published:isNaN(d)?"":d.toISOString() });
+    });
+    return out;
+  }
+  function newsFetch(){
+    var bust="t="+Math.floor(Date.now()/300000);
+    function timeout(p){ return Promise.race([p, new Promise(function(_,rej){ setTimeout(function(){ rej(new Error("timeout")); }, 12000); })]); }
+    // 1. the copy kept next to the app by the GitHub job (same site, so never blocked)
+    return timeout(fetch("news.json?"+bust,{cache:"no-store"})).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(j){
+      if(!j || !j.items || !j.items.length) throw 0;
+      var age=Date.now()-new Date(j.updated||0).getTime();
+      if(age>3*3600000) throw { stale:j };
+      return j.items;
+    }).catch(function(err){
+      var stale=err && err.stale ? err.stale.items : null;
+      // 2. backup: free relays
+      return timeout(fetch("https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(NEWS_FEED))).then(function(r){ return r.json(); }).then(function(j){
+        if(!j || j.status!=="ok" || !j.items || !j.items.length) throw 0;
+        return j.items.slice(0,20).map(function(it){ var d=new Date((it.pubDate||"").replace(" ","T")+"Z"); return { title:String(it.title||"").trim(), published:isNaN(d)?"":d.toISOString() }; }).filter(function(x){ return x.title; });
+      }).catch(function(){
+        return timeout(fetch("https://api.allorigins.win/get?url="+encodeURIComponent(NEWS_FEED)+"&"+bust)).then(function(r){ return r.json(); }).then(function(j){
+          var items=newsFromXml(j && j.contents || ""); if(!items.length) throw 0; return items;
+        });
+      }).catch(function(){ if(stale) return stale; throw new Error("no news"); });
+    });
+  }
+  function refreshNews(){
+    if(!settings.news || newsBusy) return;
+    newsBusy=true;
+    newsFetch().then(function(items){
+      news={ at:Date.now(), items:items.map(function(x){ return { title:x.title, published:x.published||"" }; }) };
+      store.set("cal.news", JSON.stringify(news));
+    }).catch(function(){}).then(function(){ newsBusy=false; renderTicker(); });
+  }
+  function newsAgo(iso){
+    if(!iso) return "";
+    var m=Math.round((Date.now()-new Date(iso).getTime())/60000);
+    if(isNaN(m) || m<0) return ""; if(m<60) return Math.max(1,m)+"m"; var h=Math.round(m/60); if(h<24) return h+"h"; return Math.round(h/24)+"d";
+  }
+  function tkItem(it){
+    var el=document.createElement("span"); el.className="tk-item";
+    var t=document.createElement("span"); t.className="tk-t"; t.textContent=it.title; el.appendChild(t);
+    var a=newsAgo(it.published); if(a){ var m=document.createElement("span"); m.className="tk-m"; m.textContent=a; el.appendChild(m); }
+    return el;
+  }
+  function renderTicker(){
+    var bar=$("ticker"), track=$("tkTrack");
+    var items = settings.news && news && news.items && news.items.length && (Date.now()-news.at < 24*3600000) ? news.items : null;
+    bar.classList.toggle("hidden", !items);
+    if(newsRot){ clearInterval(newsRot); newsRot=null; }
+    if(!items){ track.innerHTML=""; newsSig=""; return; }
+    var sig=items.map(function(x){ return x.title; }).join("|")+"|"+reduceMotionMQ.matches+"|"+Math.floor(Date.now()/600000);
+    if(sig===newsSig) return;
+    newsSig=sig; track.innerHTML="";
+    if(reduceMotionMQ.matches){
+      // no scrolling: show one headline at a time
+      track.className="tk-track still"; newsRotIdx=newsRotIdx % items.length;
+      var show=function(){ track.innerHTML=""; track.appendChild(tkItem(items[newsRotIdx])); newsRotIdx=(newsRotIdx+1)%items.length; };
+      show(); newsRot=setInterval(show, 8000); return;
+    }
+    track.className="tk-track";
+    var half=document.createElement("div"); half.className="tk-half";
+    items.forEach(function(it){ half.appendChild(tkItem(it)); });
+    track.appendChild(half); track.appendChild(half.cloneNode(true));
+    requestAnimationFrame(function(){
+      var w=half.getBoundingClientRect().width || 2000;
+      track.style.setProperty("--tk-dur", Math.max(30, w/55).toFixed(1)+"s");
+    });
+  }
   /* ---------- Google Calendar (read-only merge) ---------- */
   var G_SCOPE="https://www.googleapis.com/auth/calendar.readonly";
   var G_API="https://www.googleapis.com/calendar/v3";
@@ -4751,6 +4870,13 @@
   document.addEventListener("visibilitychange", phTick);
   setInterval(function(){ if(keyOf(new Date())!==wgLastDay) renderWidgets(false); else { if(!binEditing && settings.bins.day!=null) renderBins(); if(notes.length) renderNotes(); } }, 60000);
   renderNoteCols(); applyWgLayout(); phLoad();
+
+  // news ticker wiring
+  $("newsToggle").addEventListener("click", function(){ settings.news=!getSwitch("newsToggle"); saveSettings(); setSwitch("newsToggle", settings.news); renderTicker(); if(settings.news) refreshNews(); });
+  setInterval(function(){ if(!document.hidden) refreshNews(); }, 15*60*1000);
+  setInterval(renderTicker, 10*60*1000);
+  document.addEventListener("visibilitychange", function(){ if(!document.hidden && news && Date.now()-news.at>15*60*1000) refreshNews(); });
+  renderTicker(); refreshNews();
 
   /* ---------- Init ---------- */
   rebuildGIndex();

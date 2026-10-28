@@ -10,6 +10,8 @@ Keep all of these files together in the same place. They work as a set.
 - `manifest.webmanifest` (lets the app install to a home screen)
 - `sw.js` (the service worker that makes it work offline)
 - `icon-192.png`, `icon-512.png`, `icon-180.png` (the app icons)
+- `news.yml` (the job that fetches news headlines. It goes into GitHub in a special place, see News ticker below)
+- `news.json` (created automatically by that job, you do not need to make it)
 
 If your repository still has an old `calendar.html`, you can delete it. The app now lives in `index.html`.
 
@@ -57,6 +59,21 @@ A panel on the right holds handy widgets. Tap **Widgets** in the left rail (or t
 
 Notes and photos are stored on each device, like the rest of your calendar. Notes are included in **Back up to file**, but photos are not, so keep the originals.
 
+## News ticker
+
+A slim strip along the bottom of the calendar rolls the latest ABC News headlines for South Australia (the ABC's SA Top Stories feed). Hover over it to pause. Headlines are for reading only, so tapping does nothing (handy on a wall tablet). Devices set to reduce motion show one headline at a time instead of scrolling. Switch it off in Settings under Widgets.
+
+### One-time setup so headlines load reliably
+
+ABC's feed can't be read directly by a web page, so a small automatic job in your GitHub repository copies the headlines into a file called `news.json` every 30 minutes. The app reads that file. Until the job is set up, the app tries a free relay service instead, which may not always work.
+
+1. In your repository on github.com, click **Add file**, then **Create new file**.
+2. For the name, type `.github/workflows/news.yml` (typing the slashes creates the folders).
+3. Open the `news.yml` file from the app folder, copy everything in it, and paste it into the big text box. Click **Commit changes**.
+4. Click the **Actions** tab, choose **Update news headlines** on the left, then **Run workflow**. After a minute a `news.json` file appears in the repository, and from then on it refreshes itself.
+
+If GitHub ever pauses the job (it can after long quiet periods), it shows a button on the Actions tab to switch it back on.
+
 ## Connect Google Calendar
 
 Events from your Google calendars can appear alongside your own tasks. They stay in Google (nothing is copied), so any change you make in Google Calendar shows up here on the next refresh. Google events are read only in this app: tap one to see its details, then **Open in Google Calendar** to change it. You can connect as many Google accounts as you like, and each account can be set to belong to a person so the person filter works.
@@ -100,7 +117,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v11";`, so change it to `"cal-cache-v12"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v12";`, so change it to `"cal-cache-v13"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.

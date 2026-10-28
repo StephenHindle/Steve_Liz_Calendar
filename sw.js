@@ -1,6 +1,6 @@
 /* Offline cache for the calendar app.
    IMPORTANT: bump the version below whenever you change any file, so devices pick up the update. */
-var CACHE = "cal-cache-v11";
+var CACHE = "cal-cache-v12";
 var CORE = [
   "./",
   "./index.html",
@@ -48,6 +48,10 @@ self.addEventListener("fetch", function(e){
 
   // Google sign-in and Google Calendar data must never be cached: let the browser go straight to the network.
   if(/(^|\.)google\.com$/.test(url.hostname) || url.hostname === "www.googleapis.com" || url.hostname === "oauth2.googleapis.com" || req.headers.get("Authorization")) return;
+
+  // News headlines: always fetch fresh, never cache.
+  if(url.origin === self.location.origin && /\/news\.json$/.test(url.pathname)) return;
+  if(/rss2json\.com$|allorigins\.win$/.test(url.hostname)) return;
 
   // Live data (weather, geocoding): network first.
   if(/open-meteo\.com$|bigdatacloud\.net$|geocoding-api\.open-meteo\.com$/.test(url.hostname)){
