@@ -1035,10 +1035,11 @@
   html .wall-card{--gc:var(--wc,#8b9099);}
   html .ww-row{--gc:var(--accent);--lg-amt:5%;}
   html .wg{--gc:var(--accent);--lg-amt:4%;}
+  html .rd-tile{--gc:var(--c1);}
   html .wall-tag{--gc:var(--tag-c,var(--accent));--lg-amt:8%;}
   html .wall-tag.hol{--gc:var(--hol);--lg-amt:14%;}
   html .wall-tag.hols{--gc:var(--schol);--lg-amt:14%;}
-  html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg{
+  html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg,html .rd-tile{
     background:
       linear-gradient(162deg,var(--lg-sheen) 0%,transparent 40%,transparent 78%,color-mix(in srgb,var(--lg-sheen) 45%,transparent) 100%),
       radial-gradient(120% 90% at 100% 110%,color-mix(in srgb,var(--gc) 22%,transparent),transparent 60%),
@@ -1069,7 +1070,7 @@
   html .wall-card:not(.past){border-radius:20px;}
   html .wall-card.now{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),inset 0 1px 0 var(--lg-rim),0 10px 24px -10px color-mix(in srgb,var(--gc) 60%,transparent);}
   @media (prefers-reduced-transparency:reduce){
-    html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
+    html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag,html .wg,html .rd-tile{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
   }
 
   /* ---------- Widget panel ---------- */
@@ -1122,6 +1123,47 @@
   .mm-dots i{width:4px;height:4px;border-radius:50%;background:var(--d);}
   .mm-day.today .mm-dots i{background:#fff;}
 
+  /* radio */
+  .wg-radio{flex:0 0 auto;}
+  .wg-radio.hidden{display:none;}
+  .rd-title{margin:0 4px 8px;}
+  .rd-now{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.06em;color:var(--muted);}
+  .rd-now.live{color:#e5484d;}
+  .rd-now.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#e5484d;animation:tk-pulse 2s ease-out infinite;}
+  .rd-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .rd-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;min-height:96px;padding:12px;border-radius:18px;overflow:hidden;
+    color:var(--text);--gc:var(--c1);--lg-amt:16%;cursor:pointer;transition:transform .15s;}
+  .rd-tile:active{transform:scale(.97);}
+  .rd-badge{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;font-size:15px;font-weight:800;color:#fff;margin-bottom:8px;
+    background:linear-gradient(140deg,var(--c1),var(--c2));box-shadow:0 4px 10px -4px var(--c2),inset 0 1px 0 rgba(255,255,255,.4);}
+  .rd-name{font-size:14px;font-weight:750;letter-spacing:-.01em;line-height:1.15;}
+  .rd-sub{font-size:11.5px;color:var(--muted);font-weight:550;}
+  .rd-ctl{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:var(--c2);
+    background:rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 2px 6px -2px rgba(0,0,0,.2);}
+  [data-theme="dark"] .rd-ctl{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.15);}
+  .rd-ctl svg{width:14px;height:14px;grid-area:1/1;}
+  .rd-ctl .i-stop,.rd-ctl .i-spin{display:none;}
+  .i-spin{grid-area:1/1;width:14px;height:14px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:rd-spin .8s linear infinite;}
+  @keyframes rd-spin{to{transform:rotate(360deg);}}
+  .rd-tile.on .rd-ctl{background:var(--c2);color:#fff;}
+  .rd-tile.on .i-play{display:none;}
+  .rd-tile.live .i-stop{display:block;}
+  .rd-tile.loading .i-spin{display:block;}
+  .rd-tile.on{--lg-amt:34%;box-shadow:0 0 0 2px var(--c1),inset 1.5px 1.5px 1px -0.5px var(--lg-rim),0 10px 22px -10px var(--c2)!important;}
+  .rd-eq{position:absolute;right:12px;bottom:12px;display:none;align-items:flex-end;gap:2px;height:16px;}
+  .rd-eq i{width:3px;border-radius:2px;background:var(--c2);height:30%;animation:rd-eq 1s ease-in-out infinite alternate;}
+  [data-theme="dark"] .rd-eq i{background:#fff;}
+  .rd-eq i:nth-child(2){animation-duration:.7s;animation-delay:-.3s;}
+  .rd-eq i:nth-child(3){animation-duration:.9s;animation-delay:-.6s;}
+  .rd-eq i:nth-child(4){animation-duration:.6s;animation-delay:-.1s;}
+  @keyframes rd-eq{from{height:20%;}to{height:100%;}}
+  .rd-tile.live .rd-eq{display:flex;}
+  .rd-vol{display:none;align-items:center;gap:10px;margin:10px 4px 0;color:var(--muted);}
+  .wg-radio.active .rd-vol{display:flex;}
+  .rd-vol svg{width:18px;height:18px;flex:0 0 auto;}
+  .rd-vol input{flex:1;accent-color:var(--accent);height:24px;}
+  .rail-btn.radio-on{position:relative;}
+  .rail-btn.radio-on::after{content:"";position:absolute;top:8px;right:14px;width:8px;height:8px;border-radius:50%;background:#e5484d;box-shadow:0 0 0 2px var(--surface);animation:tk-pulse 2s ease-out infinite;}
   /* bin day */
   :root{--bin-body:#2f3b35;--bin-wheel:#1d2420;}
   [data-theme="dark"]{--bin-body:#55635b;--bin-wheel:#2a312d;}
@@ -1519,6 +1561,14 @@
       </div>
       <div class="mm-grid" id="mmGrid"></div>
     </section>
+    <section class="wg-radio" id="wg-radio" aria-label="Radio">
+      <div class="wg-title rd-title"><span>Radio</span><span class="rd-now" id="rdNow"></span></div>
+      <div class="rd-grid" id="rdGrid"></div>
+      <div class="rd-vol" id="rdVolRow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+        <input type="range" id="rdVol" min="0" max="100" step="1" aria-label="Radio volume">
+      </div>
+    </section>
     <section class="wg" id="wg-bins">
       <div class="wg-title"><span>Bin day</span><button class="wg-ibtn sm" id="binEdit" aria-label="Set up bin day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button></div>
       <div id="binBody"></div>
@@ -1698,6 +1748,7 @@
       <div class="set-section">
         <h3>Widgets</h3>
         <div class="switch-row"><div><div class="lbl-main">Mini calendar</div><div class="lbl-sub">A small month with dots on busy days. Tap a day to jump to it.</div></div><div class="switch" id="wgOn-month" role="switch" aria-checked="false" tabindex="0"></div></div>
+        <div class="switch-row"><div><div class="lbl-main">Radio</div><div class="lbl-sub">Tap a station to listen live, tap again to stop</div></div><div class="switch" id="wgOn-radio" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">Bin day</div><div class="lbl-sub">Which bins go out this week</div></div><div class="switch" id="wgOn-bins" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">Family notes</div><div class="lbl-sub">Quick sticky notes for everyone in the house</div></div><div class="switch" id="wgOn-notes" role="switch" aria-checked="false" tabindex="0"></div></div>
         <div class="switch-row"><div><div class="lbl-main">News ticker</div><div class="lbl-sub">Rolling ABC News headlines for South Australia along the bottom</div></div><div class="switch" id="newsToggle" role="switch" aria-checked="false" tabindex="0"></div></div>
@@ -2008,7 +2059,9 @@
   if(typeof settings.skyAnim!=="boolean") settings.skyAnim = true;
   if(["sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
   if(!settings.google || typeof settings.google!=="object") settings.google = { clientId:"", accounts:[] };
-  if(!settings.wg || typeof settings.wg!=="object") settings.wg = { month:true, bins:true, notes:true, photos:true };
+  if(!settings.wg || typeof settings.wg!=="object") settings.wg = { month:true, radio:true, bins:true, notes:true, photos:true };
+  if(typeof settings.wg.radio!=="boolean") settings.wg.radio = true;
+  if(typeof settings.radioVol!=="number") settings.radioVol = 80;
   if(typeof settings.wgOpen!=="boolean") settings.wgOpen = true;
   if(typeof settings.news!=="boolean") settings.news = true;
   if(!settings.bins || typeof settings.bins!=="object") settings.bins = { day:null, refMonday:"", refBin:"yellow" };
@@ -3161,7 +3214,7 @@
     $("themeToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b.dataset.themeOpt===settings.theme); });
     setSwitch("kioskToggle", settings.kiosk);
     markWp();
-    ["month","bins","notes","photos"].forEach(function(w){ setSwitch("wgOn-"+w, settings.wg[w]!==false); });
+    ["month","radio","bins","notes","photos"].forEach(function(w){ setSwitch("wgOn-"+w, settings.wg[w]!==false); });
     setSwitch("newsToggle", settings.news);
     setSwitch("holToggle", settings.publicHolidays);
     renderGoogleSettings();
@@ -4016,7 +4069,7 @@
     var open=wgIsOpen();
     $("wgBtn").classList.toggle("on", open);
     $("wgBtn").setAttribute("aria-pressed", open?"true":"false");
-    ["month","bins","notes","photos"].forEach(function(w){ $("wg-"+w).classList.toggle("hidden", settings.wg[w]===false); });
+    ["month","radio","bins","notes","photos"].forEach(function(w){ $("wg-"+w).classList.toggle("hidden", settings.wg[w]===false); });
     phTick();
   }
   function toggleWidgets(){
@@ -4205,6 +4258,90 @@
   }
 
 
+
+  /* ---------- Radio ---------- */
+  var STATIONS=[
+    { id:"gold",   name:"GOLD 1323",  sub:"1323 AM",          c1:"#f5b72e", c2:"#d9822b",
+      urls:["https://playerservices.streamtheworld.com/api/livestream-redirect/ARN_CRUISE1323.mp3","https://playerservices.streamtheworld.com/api/livestream-redirect/ARN_CRUISE1323AAC.aac","https://ais-arn.streamguys1.com/au_008_icy"] },
+    { id:"fiveaa", name:"FIVEaa",     sub:"1395 AM",          c1:"#e2463f", c2:"#a3242a",
+      urls:["https://playerservices.streamtheworld.com/api/livestream-redirect/FIVEAA_AAC128.aac","https://playerservices.streamtheworld.com/api/livestream-redirect/FIVEAA.mp3"] },
+    { id:"kiis",   name:"KIIS 1023",  sub:"was Mix 102.3",    c1:"#ec4fa0", c2:"#8b3fd9",
+      urls:["https://playerservices.streamtheworld.com/api/livestream-redirect/ARN_MIX1023.mp3","https://playerservices.streamtheworld.com/api/livestream-redirect/ARN_MIX1023AAC.aac","https://ais-arn.streamguys1.com/au_003_icy"] },
+    { id:"smooth", name:"Smooth FM",  sub:"Adelaide",         c1:"#3aa7c9", c2:"#2d5fa8",
+      urls:["https://playerservices.streamtheworld.com/api/livestream-redirect/SMOOTH_ADELAIDE_AAC128.aac","https://playerservices.streamtheworld.com/api/livestream-redirect/SMOOTH_ADELAIDE.mp3"] }
+  ];
+  var RD={ audio:null, id:null, state:"idle", urlIdx:0, retries:0, watchdog:null };
+  function rdAudio(){
+    if(RD.audio) return RD.audio;
+    var a=new Audio(); a.preload="none"; a.volume=settings.radioVol/100;
+    a.addEventListener("playing", function(){ RD.state="playing"; RD.retries=0; clearTimeout(RD.watchdog); renderRadio(); });
+    a.addEventListener("waiting", function(){ if(RD.id){ RD.state="loading"; renderRadio(); rdArmWatchdog(); } });
+    a.addEventListener("error", function(){ if(RD.id) rdNextUrl(); });
+    a.addEventListener("pause", function(){ if(RD.id && RD.state!=="loading"){ rdStop(true); } });
+    RD.audio=a; return a;
+  }
+  function rdArmWatchdog(){ clearTimeout(RD.watchdog); RD.watchdog=setTimeout(function(){ if(RD.id && RD.state==="loading") rdNextUrl(); }, 15000); }
+  function rdStation(id){ for(var i=0;i<STATIONS.length;i++) if(STATIONS[i].id===id) return STATIONS[i]; return null; }
+  function rdStart(){
+    var st=rdStation(RD.id), a=rdAudio(); if(!st) return;
+    RD.state="loading"; renderRadio(); rdArmWatchdog();
+    a.src=st.urls[RD.urlIdx % st.urls.length];
+    var p=a.play(); if(p && p.catch) p.catch(function(e){ if(e && e.name==="NotAllowedError"){ rdStop(); toast("Tap the station again to start playing"); } });
+    if("mediaSession" in navigator){
+      try{ navigator.mediaSession.metadata=new MediaMetadata({ title:st.name, artist:"Live radio", album:"My Calendar", artwork:[{src:"icon-512.png",sizes:"512x512",type:"image/png"}] });
+        navigator.mediaSession.setActionHandler("pause", function(){ rdStop(); });
+        navigator.mediaSession.setActionHandler("stop", function(){ rdStop(); });
+        navigator.mediaSession.setActionHandler("play", function(){ if(!RD.id && RD.last){ rdPlay(RD.last); } });
+      }catch(e){}
+    }
+  }
+  function rdNextUrl(){
+    var st=rdStation(RD.id); if(!st) return;
+    RD.retries++;
+    if(RD.retries>st.urls.length*2){ var n=st.name; rdStop(); toast("Couldn't play "+n+". Check your internet connection."); return; }
+    RD.urlIdx++; rdStart();
+  }
+  function rdPlay(id){
+    if(RD.id===id){ rdStop(); return; }
+    RD.id=id; RD.last=id; RD.urlIdx=0; RD.retries=0; rdStart();
+  }
+  function rdStop(fromPause){
+    clearTimeout(RD.watchdog);
+    var a=RD.audio; RD.id=null; RD.state="idle";
+    if(a && !fromPause){ try{ a.pause(); }catch(e){} }
+    if(a){ a.removeAttribute("src"); try{ a.load(); }catch(e){} }
+    if("mediaSession" in navigator){ try{ navigator.mediaSession.playbackState="none"; }catch(e){} }
+    renderRadio();
+  }
+  function renderRadio(){
+    var g=$("rdGrid");
+    if(!g.firstChild){
+      STATIONS.forEach(function(st){
+        var b=document.createElement("button"); b.type="button"; b.className="rd-tile"; b.dataset.id=st.id;
+        b.style.setProperty("--c1", st.c1); b.style.setProperty("--c2", st.c2);
+        b.innerHTML='<span class="rd-badge" aria-hidden="true"></span><span class="rd-name"></span><span class="rd-sub"></span>'+
+          '<span class="rd-ctl" aria-hidden="true"><svg class="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>'+
+          '<svg class="i-stop" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor"/></svg><span class="i-spin"></span></span>'+
+          '<span class="rd-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>';
+        b.querySelector(".rd-name").textContent=st.name; b.querySelector(".rd-sub").textContent=st.sub;
+        b.querySelector(".rd-badge").textContent=st.name.replace(/[^A-Za-z0-9]/g,"").slice(0,1);
+        b.addEventListener("click", function(){ rdPlay(st.id); });
+        g.appendChild(b);
+      });
+    }
+    g.querySelectorAll(".rd-tile").forEach(function(b){
+      var st=rdStation(b.dataset.id), on=RD.id===b.dataset.id;
+      b.classList.toggle("on", on); b.classList.toggle("loading", on && RD.state==="loading"); b.classList.toggle("live", on && RD.state==="playing");
+      b.setAttribute("aria-pressed", on?"true":"false");
+      b.setAttribute("aria-label", (on?"Stop ":"Play ")+st.name);
+    });
+    var cur=rdStation(RD.id);
+    $("rdNow").textContent = cur ? (RD.state==="playing" ? "Live" : "Connecting") : "";
+    $("rdNow").classList.toggle("live", RD.state==="playing");
+    $("wg-radio").classList.toggle("active", !!cur);
+    $("wgBtn").classList.toggle("radio-on", RD.state==="playing");
+    if("mediaSession" in navigator){ try{ navigator.mediaSession.playbackState = cur ? "playing" : "none"; }catch(e){} }
+  }
   /* ---------- News ticker (ABC News SA Top Stories) ---------- */
   var NEWS_FEED="https://www.abc.net.au/news/feed/5633084/rss.xml";
   var news=(function(){ try{ return JSON.parse(store.get("cal.news")||"null"); }catch(e){ return null; } })();
@@ -4864,12 +5001,18 @@
   $("phInput").addEventListener("change", function(e){ phAdd(e.target.files); e.target.value=""; });
   $("phManage").addEventListener("click", function(){ PH.managing=!PH.managing; renderPhotos(); });
   $("phFrame").addEventListener("click", function(e){ if(PH.items.length>1 && !e.target.closest(".ph-empty")) phShow(PH.idx+1); });
-  ["month","bins","notes","photos"].forEach(function(w){
-    $("wgOn-"+w).addEventListener("click", function(){ settings.wg[w]=!getSwitch("wgOn-"+w); saveSettings(); setSwitch("wgOn-"+w, settings.wg[w]); applyWgLayout(); });
+  ["month","radio","bins","notes","photos"].forEach(function(w){
+    $("wgOn-"+w).addEventListener("click", function(){ settings.wg[w]=!getSwitch("wgOn-"+w); saveSettings(); setSwitch("wgOn-"+w, settings.wg[w]); if(w==="radio" && !settings.wg.radio && RD.id) rdStop(); applyWgLayout(); });
   });
   document.addEventListener("visibilitychange", phTick);
   setInterval(function(){ if(keyOf(new Date())!==wgLastDay) renderWidgets(false); else { if(!binEditing && settings.bins.day!=null) renderBins(); if(notes.length) renderNotes(); } }, 60000);
   renderNoteCols(); applyWgLayout(); phLoad();
+
+  // radio wiring
+  $("rdVol").value=settings.radioVol;
+  $("rdVol").addEventListener("input", function(){ settings.radioVol=+this.value; if(RD.audio) RD.audio.volume=settings.radioVol/100; });
+  $("rdVol").addEventListener("change", function(){ saveSettings(); });
+  renderRadio();
 
   // news ticker wiring
   $("newsToggle").addEventListener("click", function(){ settings.news=!getSwitch("newsToggle"); saveSettings(); setSwitch("newsToggle", settings.news); renderTicker(); if(settings.news) refreshNews(); });

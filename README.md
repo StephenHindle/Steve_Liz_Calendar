@@ -53,6 +53,7 @@ Once it is online, each person can add it to their device so it opens full scree
 A panel on the right holds handy widgets. Tap **Widgets** in the left rail (or the arrow at the top of the panel) to show or hide it. On computers and large tablets it sits beside the calendar. On phones and smaller tablets it slides in from the right and closes when you tap outside it. Turn individual widgets on or off in Settings under Widgets.
 
 - **Mini calendar:** a small month with coloured dots on busy days and public holidays in red. Tap a day to jump to it, or use the arrows to look ahead.
+- **Radio:** four station tiles: GOLD 1323, FIVEaa, KIIS 1023 (formerly Mix 102.3) and Smooth FM Adelaide. Tap a tile to listen live, tap it again to stop, or tap another station to switch. A volume slider appears while something is playing, and a red dot on the Widgets button shows the radio is on even when the panel is hidden. On phones and tablets the lock screen shows the station with a pause button. These are the stations' own internet streams, so they need an internet connection, and a phone or tablet may stop the sound if the app is closed.
 - **Bin day:** tap the pencil, pick your collection day and which second bin goes out next time (recycling or green organics). It then shows which bins to put out and when, following the usual Adelaide pattern: general waste every week, recycling and green organics on alternate weeks.
 - **Family notes:** leave quick sticky notes in five colours. Tap the cross to remove one (Undo brings it back).
 - **Photo frame:** add photos and they fade from one to the next every 12 seconds. Tap the photo to skip ahead, or tap the three dots to add or remove photos. Up to 40 photos are kept, resized to save space.
@@ -117,7 +118,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v12";`, so change it to `"cal-cache-v13"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v13";`, so change it to `"cal-cache-v14"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
