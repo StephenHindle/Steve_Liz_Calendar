@@ -969,10 +969,7 @@
   html.sky-on .weekday-head,html.sky-on .grid-head,html.sky-on .allday-row,html.sky-on .time-gutter{background:var(--glass-panel);}
   html.sky-on .day-cell.outside{background-color:var(--outside-glass);}
   html.sky-on .agenda-day{background:var(--veil-strong);}
-  html.sky-on .wall-card,html.sky-on .ww-row,html.sky-on .wall-tag{background-color:var(--card-glass);}
   html.sky-on .wall-card.past{background-color:transparent;}
-  html.sky-on .wall-tag.hol{background-color:color-mix(in srgb,var(--hol) 12%,var(--card-glass));}
-  html.sky-on .wall-tag.hols{background-color:color-mix(in srgb,var(--schol) 12%,var(--card-glass));}
 
 
   /* ---------- Wallpapers: colour flow and aurora ---------- */
@@ -1014,23 +1011,27 @@
 
   /* ---------- Liquid glass event tiles ---------- */
   :root{
-    --lg-tint:22%; --lg-base:rgba(255,255,255,.26); --lg-rim:rgba(255,255,255,.95); --lg-rim2:rgba(255,255,255,.6);
+    --lg-tint:16%; --lg-base:rgba(255,255,255,.14); --lg-rim:rgba(255,255,255,.95); --lg-rim2:rgba(255,255,255,.6);
     --lg-sheen:rgba(255,255,255,.7); --lg-edge:rgba(255,255,255,.6); --lg-shadow:rgba(16,24,40,.08);
   }
   [data-theme="dark"]{
-    --lg-tint:32%; --lg-base:rgba(34,38,50,.42); --lg-rim:rgba(255,255,255,.3); --lg-rim2:rgba(255,255,255,.08);
+    --lg-tint:24%; --lg-base:rgba(30,34,44,.26); --lg-rim:rgba(255,255,255,.3); --lg-rim2:rgba(255,255,255,.08);
     --lg-sheen:rgba(255,255,255,.13); --lg-edge:rgba(255,255,255,.13); --lg-shadow:rgba(0,0,0,.35);
   }
   html .event{--gc:var(--ev-dot,#8b9099);}
   html .chip,html .allday-chip{--gc:var(--chip-dot,#8b9099);}
   html .wall-card{--gc:var(--wc,#8b9099);}
-  html .event,html .allday-chip,html .chip,html .wall-card:not(.past){
+  html .ww-row{--gc:var(--accent);--lg-amt:5%;}
+  html .wall-tag{--gc:var(--tag-c,var(--accent));--lg-amt:8%;}
+  html .wall-tag.hol{--gc:var(--hol);--lg-amt:14%;}
+  html .wall-tag.hols{--gc:var(--schol);--lg-amt:14%;}
+  html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag{
     background:
       linear-gradient(162deg,var(--lg-sheen) 0%,transparent 40%,transparent 78%,color-mix(in srgb,var(--lg-sheen) 45%,transparent) 100%),
       radial-gradient(120% 90% at 100% 110%,color-mix(in srgb,var(--gc) 22%,transparent),transparent 60%),
-      color-mix(in srgb,var(--gc) var(--lg-tint),var(--lg-base));
-    -webkit-backdrop-filter:blur(14px) saturate(1.8);
-            backdrop-filter:blur(14px) saturate(1.8);
+      color-mix(in srgb,var(--gc) var(--lg-amt,var(--lg-tint)),var(--lg-base));
+    -webkit-backdrop-filter:blur(6px) saturate(1.8) brightness(1.04);
+            backdrop-filter:blur(6px) saturate(1.8) brightness(1.04);
     border:1px solid var(--lg-edge);
     box-shadow:
       inset 1.5px 1.5px 1px -0.5px var(--lg-rim),
@@ -1039,7 +1040,11 @@
       0 8px 18px -8px color-mix(in srgb,var(--gc) 60%,transparent),
       0 1px 3px var(--lg-shadow);
   }
-  html .chip{-webkit-backdrop-filter:blur(8px) saturate(1.6);backdrop-filter:blur(8px) saturate(1.6);border-radius:8px;}
+  html .chip{border-radius:8px;}
+  html .ww-row,html .wall-tag{box-shadow:inset 1.5px 1.5px 1px -0.5px var(--lg-rim),inset -1.5px -1.5px 1px -0.5px var(--lg-rim2),0 6px 16px -8px var(--lg-shadow);}
+  html.sky-on .ww-date{background:rgba(255,255,255,.42);box-shadow:inset 1px 1px 0 rgba(255,255,255,.8);}
+  html.sky-on[data-theme="dark"] .ww-date{background:rgba(255,255,255,.07);box-shadow:inset 1px 1px 0 rgba(255,255,255,.12);}
+  html .ww-row.schol{background-image:repeating-linear-gradient(135deg,var(--schol-soft) 0 5px,transparent 5px 11px),linear-gradient(162deg,var(--lg-sheen) 0%,transparent 40%);}
   html .allday-chip{border-radius:9px;}
   html .event{border-radius:12px;padding-left:12px;transition:transform .15s,box-shadow .15s;}
   html .event::before{content:"";position:absolute;left:4px;top:5px;bottom:5px;width:3.5px;border-radius:4px;background:var(--gc);
@@ -1051,7 +1056,7 @@
   html .wall-card:not(.past){border-radius:20px;}
   html .wall-card.now{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),inset 0 1px 0 var(--lg-rim),0 10px 24px -10px color-mix(in srgb,var(--gc) 60%,transparent);}
   @media (prefers-reduced-transparency:reduce){
-    html .event,html .allday-chip,html .chip,html .wall-card:not(.past){-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
+    html .event,html .allday-chip,html .chip,html .wall-card:not(.past),html .ww-row,html .wall-tag{-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--gc) 18%,var(--surface));}
   }
 
   /* ---------- Google Calendar ---------- */
@@ -2065,7 +2070,7 @@
   /* ---------- Animated weather background ---------- */
   // Sky colours [top, bottom] for each part of the day, plus the tones weather pulls them towards.
   var SKY_PAL={
-    light:{ night:["#c5c9e6","#e0e3f2"], dawn:["#c6d3f0","#fbe0cf"], day:["#c4defa","#ecf3fb"], dusk:["#c8c0ea","#f8d4c4"],
+    light:{ night:["#b4bbe8","#dcdbf4"], dawn:["#c6d3f0","#fbe0cf"], day:["#c4defa","#ecf3fb"], dusk:["#c8c0ea","#f8d4c4"],
             grey:["#d2d7de","#e8ebef"], storm:["#bbbdce","#dbdce6"], snow:["#e0e8f2","#f4f7fb"] },
     dark:{  night:["#0a0f22","#121629"], dawn:["#1a2240","#3a2b34"], day:["#16263c","#121922"], dusk:["#201c3c","#3a2631"],
             grey:["#1b1f26","#15181d"], storm:["#17152a","#121118"], snow:["#1f2734","#181d27"] }

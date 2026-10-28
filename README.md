@@ -89,7 +89,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v8";`, so change it to `"cal-cache-v9"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v9";`, so change it to `"cal-cache-v10"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
