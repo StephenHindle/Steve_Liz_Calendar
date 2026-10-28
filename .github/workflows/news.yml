@@ -1,0 +1,68 @@
+# Fetches ABC News SA Top Stories every 30 minutes and saves them as news.json
+# next to the app, so the news ticker can read them without being blocked.
+name: Update news headlines
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news
+  cancel-in-progress: true
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download the feed and build news.json
+        run: |
+          curl -fsSL --retry 3 -A "Mozilla/5.0 (calendar news ticker)" \
+            "https://www.abc.net.au/news/feed/5633084/rss.xml" -o feed.xml
+          python3 - <<'PY'
+          import json, datetime, xml.etree.ElementTree as ET
+          from email.utils import parsedate_to_datetime
+          root = ET.parse("feed.xml").getroot()
+          items = []
+          for it in root.iter("item"):
+              title = (it.findtext("title") or "").strip()
+              if not title:
+                  continue
+              pub = it.findtext("pubDate") or ""
+              try:
+                  pub = parsedate_to_datetime(pub).astimezone(datetime.timezone.utc).isoformat()
+              except Exception:
+                  pub = ""
+              items.append({"title": title, "link": (it.findtext("link") or "").strip(), "published": pub})
+              if len(items) >= 20:
+                  break
+          if not items:
+              raise SystemExit("No headlines found, keeping the old file")
+          data = {"source": "ABC News SA Top Stories", "items": items}
+          try:
+              old = json.load(open("news.json"))
+          except Exception:
+              old = {}
+          if old.get("items") == items:
+              print("No change")
+          else:
+              data["updated"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+              json.dump(data, open("news.json", "w"), ensure_ascii=False, indent=1)
+              print("Saved", len(items), "headlines")
+          PY
+          rm -f feed.xml
+
+      - name: Save the file if it changed
+        run: |
+          if [ -n "$(git status --porcelain news.json)" ]; then
+            git config user.name "news-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add news.json
+            git commit -m "Update news headlines"
+            git push
+          fi
