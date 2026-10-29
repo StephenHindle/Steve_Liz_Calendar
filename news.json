@@ -2,24 +2,29 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
+   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
+   "published": "2026-10-28T19:47:05+00:00"
+  },
+  {
    "title": "ATSB confirms plane landed on Lake Eyre after pilot became unwell",
    "link": "https://www.abc.net.au/news/2026-10-29/plane-lands-on-kati-thanda-lake-eyre/107312924",
    "published": "2026-10-29T00:42:29+00:00"
   },
   {
-   "title": "Police fatally shoot woman allegedly armed with axe in Adelaide's east",
-   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
-   "published": "2026-10-28T19:47:05+00:00"
-  },
-  {
-   "title": "End in sight for controversial snapper fishing ban in SA",
-   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
-   "published": "2026-10-28T23:30:53+00:00"
+   "title": "Adelaide parklands campaigner 'doxxed' as home address shared on social media",
+   "link": "https://www.abc.net.au/news/2026-10-29/parklands-campaigner-has-home-address-doxxed-social-media/107323334",
+   "published": "2026-10-29T05:12:13+00:00"
   },
   {
    "title": "Surgeon disqualified for fraudulent overtime pay claims",
    "link": "https://www.abc.net.au/news/2026-10-29/surgeon-james-ian-spark-banned-deceptive-overtime-claims/107316164",
    "published": "2026-10-28T19:08:41+00:00"
+  },
+  {
+   "title": "End in sight for controversial snapper fishing ban in SA",
+   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
+   "published": "2026-10-28T23:30:53+00:00"
   },
   {
    "title": "Lawyer suggests 'excessive self-defence' in fatal stabbing",
@@ -42,14 +47,14 @@
    "published": "2026-10-28T03:55:02+00:00"
   },
   {
-   "title": "Triple-fatal plane crash 'likely' followed instructor's mid-air rule breach",
-   "link": "https://www.abc.net.au/news/2026-10-28/goolwa-triple-fatal-plane-crash-likely-followed-spin-violation/107318258",
-   "published": "2026-10-28T04:31:12+00:00"
-  },
-  {
    "title": "Fossil fuel ad ban could 'jeopardise' TDU village, SA government says",
    "link": "https://www.abc.net.au/news/2026-10-28/adelaide-city-council-bans-oil-coal-and-gas-ads/107317088",
    "published": "2026-10-27T23:23:01+00:00"
+  },
+  {
+   "title": "Triple-fatal plane crash 'likely' followed instructor's mid-air rule breach",
+   "link": "https://www.abc.net.au/news/2026-10-28/goolwa-triple-fatal-plane-crash-likely-followed-spin-violation/107318258",
+   "published": "2026-10-28T04:31:12+00:00"
   },
   {
    "title": "One Nation colouring book intended for kids depicts Bluey being robbed",
@@ -57,50 +62,45 @@
    "published": "2026-10-27T20:00:58+00:00"
   },
   {
-   "title": "Live: Albanese warns inflation challenges 'won't be solved overnight'",
+   "title": "Website reporting on crime in Victoria staffed by Philippines workers",
+   "link": "https://www.abc.net.au/news/2026-10-29/crime-in-victoria-philippines-workers-pink-slime/107314166",
+   "published": "2026-10-29T01:16:44+00:00"
+  },
+  {
+   "title": "Police uncover usernames allegedly directing Melbourne arson attacks",
+   "link": "https://www.abc.net.au/news/2026-10-29/vic-police-uncover-arson-taskmasters-usernames/107322946",
+   "published": "2026-10-29T03:10:25+00:00"
+  },
+  {
+   "title": "New figures show the only way out of inflation is through",
+   "link": "https://www.abc.net.au/news/2026-10-29/bad-inflation-result-political-pressure/107318484",
+   "published": "2026-10-28T18:00:00+00:00"
+  },
+  {
+   "title": "Actor's death may be first confirmed fatality linked to unapproved peptides",
+   "link": "https://www.abc.net.au/news/2026-10-29/victoria-peptide-death-coroners-report-richard-norton/107320590",
+   "published": "2026-10-28T18:00:00+00:00"
+  },
+  {
+   "title": "Federal politics: PM says police called to his Canberra home over security concern — as it happened",
    "link": "https://www.abc.net.au/news/2026-10-29/federal-politics-live-blog-oct-29/107320104",
    "published": "2026-10-28T20:29:46+00:00"
   },
   {
-   "title": "See how the price of everything has changed with inflation",
-   "link": "https://www.abc.net.au/news/2026-10-29/prices-cost-of-living-inflation-tracker/107296304",
-   "published": "2026-10-28T18:40:12+00:00"
+   "title": "Australia records highest rates of anorexia and bulimia globally",
+   "link": "https://www.abc.net.au/news/health/2026-10-29/anorexia-bulimia-cases-rising-90s-australia/107315546",
+   "published": "2026-10-29T01:00:22+00:00"
   },
   {
-   "title": "Faster, deadlier Russian drones shift warfare into horrifying new phase",
-   "link": "https://www.abc.net.au/news/2026-10-29/russia-jet-powered-shahed-geran-drones-ukraine-war-kyiv-attacks/107232266",
-   "published": "2026-10-28T18:40:57+00:00"
-  },
-  {
-   "title": "Scrapped Firmus float casts doubt on billions in AI data centre builds",
-   "link": "https://www.abc.net.au/news/2026-10-29/firmus-funding-ai-computer-chips-stock-market/107322200",
-   "published": "2026-10-29T00:15:55+00:00"
-  },
-  {
-   "title": "CSIRO criticised over handling of gas leak",
-   "link": "https://www.abc.net.au/news/2026-10-29/csiro-transparency-santos-lng-gas-leak/107317740",
-   "published": "2026-10-28T18:00:00+00:00"
-  },
-  {
-   "title": "Live: Star Casino enters trading halt as it responds to $260m money laundering fine",
+   "title": "Corporate watchdog looking into failed Firmus float – as it happened",
    "link": "https://www.abc.net.au/news/2026-10-29/asx-markets-business-live-news-29-october-2026/107321622",
    "published": "2026-10-28T20:23:36+00:00"
   },
   {
-   "title": "Israel's president urges 'open mind' as election rivals struggle for majority",
-   "link": "https://www.abc.net.au/news/2026-10-29/herzog-netanyahu-israel-election/107321418",
-   "published": "2026-10-28T19:32:05+00:00"
-  },
-  {
-   "title": "A three-ball statement gives Australia hope of a flourishing future",
-   "link": "https://www.abc.net.au/news/2026-10-29/australian-batters-take-control-of-cape-town-test-south-africa/107321570",
-   "published": "2026-10-28T20:36:43+00:00"
-  },
-  {
-   "title": "How the Mongrel Mob became an issue in the NZ election",
-   "link": "https://www.abc.net.au/news/2026-10-29/how-the-mongrel-mob-became-an-nz-election-issue/107315046",
-   "published": "2026-10-28T18:00:00+00:00"
+   "title": "Relentless modern-day blitz as Russia rains jet-fuelled death on Ukrainians",
+   "link": "https://www.abc.net.au/news/2026-10-29/russia-jet-powered-shahed-geran-drones-ukraine-war-kyiv-attacks/107232266",
+   "published": "2026-10-28T18:40:57+00:00"
   }
  ],
- "updated": "2026-10-29T02:23:17.026145+00:00"
+ "updated": "2026-10-29T08:53:28.773562+00:00"
 }
