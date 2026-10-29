@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "ATSB confirms plane landed on Lake Eyre after pilot became unwell",
+   "link": "https://www.abc.net.au/news/2026-10-29/plane-lands-on-kati-thanda-lake-eyre/107312924",
+   "published": "2026-10-29T00:42:29+00:00"
+  },
+  {
    "title": "Police fatally shoot woman allegedly armed with axe in Adelaide's east",
    "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
    "published": "2026-10-28T19:47:05+00:00"
+  },
+  {
+   "title": "End in sight for controversial snapper fishing ban in SA",
+   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
+   "published": "2026-10-28T23:30:53+00:00"
   },
   {
    "title": "Surgeon disqualified for fraudulent overtime pay claims",
@@ -22,14 +32,14 @@
    "published": "2026-10-28T05:53:59+00:00"
   },
   {
-   "title": "Treasurer not ready to 'put up white flag' on troubled hospital's $3.2b budget",
-   "link": "https://www.abc.net.au/news/2026-10-28/cost-blowout-call-imminent-on-womens-and-childrens-hospital/107318930",
-   "published": "2026-10-28T03:55:02+00:00"
-  },
-  {
    "title": "Outback pools to open unsupervised after struggling to find lifeguards",
    "link": "https://www.abc.net.au/news/2026-10-28/outback-pools-to-open-without-lifeguards/107309646",
    "published": "2026-10-28T05:34:31+00:00"
+  },
+  {
+   "title": "Treasurer not ready to 'put up white flag' on troubled hospital's $3.2b budget",
+   "link": "https://www.abc.net.au/news/2026-10-28/cost-blowout-call-imminent-on-womens-and-childrens-hospital/107318930",
+   "published": "2026-10-28T03:55:02+00:00"
   },
   {
    "title": "Triple-fatal plane crash 'likely' followed instructor's mid-air rule breach",
@@ -47,44 +57,14 @@
    "published": "2026-10-27T20:00:58+00:00"
   },
   {
-   "title": "A watered down ICAC gets called up for a full-bodied political scandal",
-   "link": "https://www.abc.net.au/news/2026-10-28/watered-down-icac-gets-call-up-for-full-bodied-political-scandal/107314764",
-   "published": "2026-10-27T19:04:15+00:00"
+   "title": "Live: Albanese warns inflation challenges 'won't be solved overnight'",
+   "link": "https://www.abc.net.au/news/2026-10-29/federal-politics-live-blog-oct-29/107320104",
+   "published": "2026-10-28T20:29:46+00:00"
   },
   {
-   "title": "MusicSA chair on 'post-apocalypse' industry ahead of Good Music Month",
-   "link": "https://www.abc.net.au/news/2026-10-28/musicsa-chair-good-music-month-streaming-local-bands/107315268",
-   "published": "2026-10-27T21:35:46+00:00"
-  },
-  {
-   "title": "Community opposes proposed data centre near dark sky reserve",
-   "link": "https://www.abc.net.au/news/2026-10-27/community-opposes-proposed-data-centre-near-dark-sky-reserve/107312876",
-   "published": "2026-10-27T04:53:49+00:00"
-  },
-  {
-   "title": "What's going on with the price of everything? We've tracked the data",
+   "title": "See how the price of everything has changed with inflation",
    "link": "https://www.abc.net.au/news/2026-10-29/prices-cost-of-living-inflation-tracker/107296304",
    "published": "2026-10-28T18:40:12+00:00"
-  },
-  {
-   "title": "Israel's president urges 'open mind' as election rivals struggle for majority",
-   "link": "https://www.abc.net.au/news/2026-10-29/herzog-netanyahu-israel-election/107321418",
-   "published": "2026-10-28T19:32:05+00:00"
-  },
-  {
-   "title": "Defence official asked minister for support to keep evidence off social media",
-   "link": "https://www.abc.net.au/news/2026-10-28/defence-official-flagged-plans-for-social-media-ban-request/107320790",
-   "published": "2026-10-28T10:33:20+00:00"
-  },
-  {
-   "title": "Trump's immigration policies helped him win but now threaten to backfire",
-   "link": "https://www.abc.net.au/news/2026-10-29/how-ice-immigration-crackdown-could-impact-midterms/107315220",
-   "published": "2026-10-28T18:46:44+00:00"
-  },
-  {
-   "title": "CSIRO criticised over handling of gas leak",
-   "link": "https://www.abc.net.au/news/2026-10-29/csiro-transparency-santos-lng-gas-leak/107317740",
-   "published": "2026-10-28T18:00:00+00:00"
   },
   {
    "title": "Faster, deadlier Russian drones shift warfare into horrifying new phase",
@@ -92,9 +72,29 @@
    "published": "2026-10-28T18:40:57+00:00"
   },
   {
-   "title": "Monster Carey-Inglis stand puts Australia in driver's seat in Cape Town",
-   "link": "https://www.abc.net.au/news/2026-10-28/cricket-south-africa-vs-australia-third-test-day-two-live-blog/107320620",
-   "published": "2026-10-28T07:30:17+00:00"
+   "title": "Scrapped Firmus float casts doubt on billions in AI data centre builds",
+   "link": "https://www.abc.net.au/news/2026-10-29/firmus-funding-ai-computer-chips-stock-market/107322200",
+   "published": "2026-10-29T00:15:55+00:00"
+  },
+  {
+   "title": "CSIRO criticised over handling of gas leak",
+   "link": "https://www.abc.net.au/news/2026-10-29/csiro-transparency-santos-lng-gas-leak/107317740",
+   "published": "2026-10-28T18:00:00+00:00"
+  },
+  {
+   "title": "Live: Star Casino enters trading halt as it responds to $260m money laundering fine",
+   "link": "https://www.abc.net.au/news/2026-10-29/asx-markets-business-live-news-29-october-2026/107321622",
+   "published": "2026-10-28T20:23:36+00:00"
+  },
+  {
+   "title": "Israel's president urges 'open mind' as election rivals struggle for majority",
+   "link": "https://www.abc.net.au/news/2026-10-29/herzog-netanyahu-israel-election/107321418",
+   "published": "2026-10-28T19:32:05+00:00"
+  },
+  {
+   "title": "A three-ball statement gives Australia hope of a flourishing future",
+   "link": "https://www.abc.net.au/news/2026-10-29/australian-batters-take-control-of-cape-town-test-south-africa/107321570",
+   "published": "2026-10-28T20:36:43+00:00"
   },
   {
    "title": "How the Mongrel Mob became an issue in the NZ election",
@@ -102,5 +102,5 @@
    "published": "2026-10-28T18:00:00+00:00"
   }
  ],
- "updated": "2026-10-28T22:50:32.902475+00:00"
+ "updated": "2026-10-29T02:23:17.026145+00:00"
 }
