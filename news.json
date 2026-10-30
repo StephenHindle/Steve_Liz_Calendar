@@ -2,14 +2,14 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "SA child protection authority reports sharp rise in deaths in past year",
-   "link": "https://www.abc.net.au/news/2026-10-30/sharp-rise-in-deaths-of-children-in-state-care-reported/107325568",
-   "published": "2026-10-29T19:02:44+00:00"
-  },
-  {
    "title": "Restaurateurs fend off fake online review 'extortion' attempt",
    "link": "https://www.abc.net.au/news/2026-10-30/adelaide-restaurant-negative-review-extortion-scam-google/107319834",
    "published": "2026-10-29T18:59:47+00:00"
+  },
+  {
+   "title": "Youth want a voice amid controversial fracking and mining proposals",
+   "link": "https://www.abc.net.au/news/2026-10-30/limestone-coast-mining-fracking-youth-future/107016874",
+   "published": "2026-10-29T23:10:54+00:00"
   },
   {
    "title": "It's the only cafe in town, but it's changing lives and Tripadvisor loves it",
@@ -17,14 +17,14 @@
    "published": "2026-10-29T20:02:24+00:00"
   },
   {
+   "title": "SA child protection authority reports sharp rise in deaths in past year",
+   "link": "https://www.abc.net.au/news/2026-10-30/sharp-rise-in-deaths-of-children-in-state-care-reported/107325568",
+   "published": "2026-10-29T19:02:44+00:00"
+  },
+  {
    "title": "ATSB confirms plane landed on Lake Eyre after pilot became unwell",
    "link": "https://www.abc.net.au/news/2026-10-29/plane-lands-on-kati-thanda-lake-eyre/107312924",
    "published": "2026-10-29T00:42:29+00:00"
-  },
-  {
-   "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
-   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
-   "published": "2026-10-28T19:47:05+00:00"
   },
   {
    "title": "Adelaide parklands campaigner 'doxxed' as home address shared on social media",
@@ -32,9 +32,9 @@
    "published": "2026-10-29T05:12:13+00:00"
   },
   {
-   "title": "Surgeon disqualified for fraudulent overtime pay claims",
-   "link": "https://www.abc.net.au/news/2026-10-29/surgeon-james-ian-spark-banned-deceptive-overtime-claims/107316164",
-   "published": "2026-10-28T19:08:41+00:00"
+   "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
+   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
+   "published": "2026-10-28T19:47:05+00:00"
   },
   {
    "title": "End in sight for controversial snapper fishing ban in SA",
@@ -42,44 +42,54 @@
    "published": "2026-10-28T23:30:53+00:00"
   },
   {
+   "title": "Surgeon disqualified for fraudulent overtime pay claims",
+   "link": "https://www.abc.net.au/news/2026-10-29/surgeon-james-ian-spark-banned-deceptive-overtime-claims/107316164",
+   "published": "2026-10-28T19:08:41+00:00"
+  },
+  {
    "title": "Lawyer suggests 'excessive self-defence' in fatal stabbing",
    "link": "https://www.abc.net.au/news/2026-10-28/lawyer-suggests-excessive-self-defence-in-fatal-stabbing/107319600",
    "published": "2026-10-28T08:07:51+00:00"
   },
   {
-   "title": "SA MP recounts 'non-stop' messages and being followed to her car",
-   "link": "https://www.abc.net.au/news/2026-10-28/sa-mps-lucy-hood-and-ella-shaw-stalking-experiences/107318454",
-   "published": "2026-10-28T05:53:59+00:00"
+   "title": "Live: ASX set to edge up despite $US500b Alphabet share slump overnight",
+   "link": "https://www.abc.net.au/news/2026-10-30/asx-markets-business-live-news-oct-30/107326558",
+   "published": "2026-10-29T21:16:19+00:00"
   },
   {
-   "title": "Outback pools to open unsupervised after struggling to find lifeguards",
-   "link": "https://www.abc.net.au/news/2026-10-28/outback-pools-to-open-without-lifeguards/107309646",
-   "published": "2026-10-28T05:34:31+00:00"
+   "title": "Live: One Nation accuses PM of playing 'dirty games' with staffing",
+   "link": "https://www.abc.net.au/news/2026-10-30/federal-politics-live-blog-oct-30/107324978",
+   "published": "2026-10-29T21:20:59+00:00"
   },
   {
-   "title": "Treasurer not ready to 'put up white flag' on troubled hospital's $3.2b budget",
-   "link": "https://www.abc.net.au/news/2026-10-28/cost-blowout-call-imminent-on-womens-and-childrens-hospital/107318930",
-   "published": "2026-10-28T03:55:02+00:00"
+   "title": "Australian recession now a coin toss, says major bank",
+   "link": "https://www.abc.net.au/news/2026-10-30/could-more-rate-rises-tip-us-into-recession/107322554",
+   "published": "2026-10-29T18:00:00+00:00"
   },
   {
-   "title": "One Nation colouring book intended for kids depicts Bluey being robbed",
-   "link": "https://www.abc.net.au/news/2026-10-28/one-nation-colouring-book-generates-controversy/107313670",
-   "published": "2026-10-27T20:00:58+00:00"
+   "title": "Australians priced out of comfortable retirement call for higher pension",
+   "link": "https://www.abc.net.au/news/2026-10-30/retirees-call-for-age-pension-increase/107322008",
+   "published": "2026-10-29T18:39:55+00:00"
   },
   {
-   "title": "Triple-fatal plane crash 'likely' followed instructor's mid-air rule breach",
-   "link": "https://www.abc.net.au/news/2026-10-28/goolwa-triple-fatal-plane-crash-likely-followed-spin-violation/107318258",
-   "published": "2026-10-28T04:31:12+00:00"
+   "title": "First Guardian investors dealt another 'utterly devastating' blow",
+   "link": "https://www.abc.net.au/news/2026-10-30/first-guardian-investors-dealt-a-blow-after-liquidator-update/107324738",
+   "published": "2026-10-29T21:00:29+00:00"
   },
   {
-   "title": "Triple-murderer Erin Patterson to learn her appeal fate today",
-   "link": "https://www.abc.net.au/news/2026-10-30/erin-patterson-appeal-decision-to-be-handed-down-today/107320498",
-   "published": "2026-10-29T13:00:05+00:00"
+   "title": "The thunderstorm that arrives like clockwork at 3pm every day",
+   "link": "https://www.abc.net.au/news/2026-10-30/nt-hector-thunderstorm-at-tiwi-islands-top-end-wet-season/107319826",
+   "published": "2026-10-29T22:45:46+00:00"
   },
   {
-   "title": "Late Lyon wicket puts Australia in control of deciding Test",
-   "link": "https://www.abc.net.au/news/2026-10-29/test-cricket-live-updates-south-africa-vs-australia-cape-town/107324412",
-   "published": "2026-10-29T07:35:22+00:00"
+   "title": "Bluebottle drones that never sleep level the playing field in Pacific drug war",
+   "link": "https://www.abc.net.au/news/2026-10-30/how-sea-drones-could-even-playing-field-in-drug-crisis/107297868",
+   "published": "2026-10-29T18:47:12+00:00"
+  },
+  {
+   "title": "Australia's Cape Town desperation evident on another pulsating Test day",
+   "link": "https://www.abc.net.au/news/2026-10-30/cape-town-test-set-up-for-thrilling-finale/107326410",
+   "published": "2026-10-29T20:39:18+00:00"
   },
   {
    "title": "ATO and ASIC feared data was sent offshore in 2025, internal emails reveal",
@@ -87,20 +97,10 @@
    "published": "2026-10-29T18:39:55+00:00"
   },
   {
-   "title": "One Nation MP rejects $200,000 staffer as Hanson accuses PM of meddling",
-   "link": "https://www.abc.net.au/news/2026-10-29/one-nation-mp-turns-down-extra-staffer-from-pm/107325240",
-   "published": "2026-10-29T07:50:20+00:00"
-  },
-  {
-   "title": "Trains in Europe are getting safer despite recent tragedies in Spain",
-   "link": "https://www.abc.net.au/news/2026-10-30/europe-trains-safe-spain-tragedies/107324128",
-   "published": "2026-10-29T18:49:16+00:00"
-  },
-  {
-   "title": "Australians priced out of comfortable retirement call for higher pension",
-   "link": "https://www.abc.net.au/news/2026-10-30/retirees-call-for-age-pension-increase/107322008",
-   "published": "2026-10-29T18:39:55+00:00"
+   "title": "One Nation might not win Victoria, but NSW is where the real fight is",
+   "link": "https://www.abc.net.au/news/2026-10-30/michelle-grattan-one-nation-nsw-election/107323786",
+   "published": "2026-10-29T18:00:00+00:00"
   }
  ],
- "updated": "2026-10-29T21:03:33.178325+00:00"
+ "updated": "2026-10-30T00:54:44.586380+00:00"
 }
