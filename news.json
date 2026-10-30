@@ -2,9 +2,9 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
-   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
-   "published": "2026-10-30T06:32:25+00:00"
+   "title": "Court hears suspended Torrens to Darlington contractor still awaiting $2m",
+   "link": "https://www.abc.net.au/news/2026-10-30/court-hears-suspended-t2d-contractor-still-awaiting-2m/107327046",
+   "published": "2026-10-30T07:47:26+00:00"
   },
   {
    "title": "Youth want a voice amid controversial fracking and mining proposals",
@@ -15,6 +15,11 @@
    "title": "Restaurateurs fend off fake online review 'extortion' attempt",
    "link": "https://www.abc.net.au/news/2026-10-30/adelaide-restaurant-negative-review-extortion-scam-google/107319834",
    "published": "2026-10-29T18:59:47+00:00"
+  },
+  {
+   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
+   "published": "2026-10-30T06:32:25+00:00"
   },
   {
    "title": "It's the only cafe in town, but it's changing lives and Tripadvisor loves it",
@@ -37,19 +42,14 @@
    "published": "2026-10-29T00:42:29+00:00"
   },
   {
-   "title": "Adelaide parklands campaigner 'doxxed' as home address shared on social media",
-   "link": "https://www.abc.net.au/news/2026-10-29/parklands-campaigner-has-home-address-doxxed-social-media/107323334",
-   "published": "2026-10-29T05:12:13+00:00"
-  },
-  {
    "title": "End in sight for controversial snapper fishing ban in SA",
    "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
    "published": "2026-10-28T23:30:53+00:00"
   },
   {
-   "title": "Dream shakes off scheduling controversy to force WNBA Finals decider",
-   "link": "https://www.abc.net.au/news/2026-10-30/wnba-finals-game-six-izzy-borlase-angel-reese/107326500",
-   "published": "2026-10-29T23:19:24+00:00"
+   "title": "Adelaide parklands campaigner 'doxxed' as home address shared on social media",
+   "link": "https://www.abc.net.au/news/2026-10-29/parklands-campaigner-has-home-address-doxxed-social-media/107323334",
+   "published": "2026-10-29T05:12:13+00:00"
   },
   {
    "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
@@ -67,24 +67,14 @@
    "published": "2026-10-28T08:07:51+00:00"
   },
   {
+   "title": "India's PM cracks down on journalists 'to stamp out the protests'",
+   "link": "https://www.abc.net.au/news/2026-10-30/journalists-accuse-indian-pm-modi-of-crackdown-over-protests/107313104",
+   "published": "2026-10-30T04:06:13+00:00"
+  },
+  {
    "title": "Retiring Swan Rampe 'hurt' over Pullman Hotel saga",
    "link": "https://www.abc.net.au/news/2026-10-30/retiring-sydney-swans-dane-rampe-admits-hurt-pullman-hotel-saga/107329700",
    "published": "2026-10-30T05:52:45+00:00"
-  },
-  {
-   "title": "Finland launches criminal probe into Google data centre land clearance",
-   "link": "https://www.abc.net.au/news/2026-10-30/google-data-centre-land-clearance-ai-finland-criminal-probe/107327336",
-   "published": "2026-10-30T06:31:33+00:00"
-  },
-  {
-   "title": "Texans turn against Trump over ICE's 'terrible' actions",
-   "link": "https://www.abc.net.au/news/2026-10-30/ice-impacts-texan-latino-vote-to-democrats-us-midterms/107312888",
-   "published": "2026-10-29T18:44:36+00:00"
-  },
-  {
-   "title": "Australian thunderstorm Hector wakes from hibernation",
-   "link": "https://www.abc.net.au/news/2026-10-30/nt-hector-thunderstorm-at-tiwi-islands-top-end-wet-season/107319826",
-   "published": "2026-10-29T22:45:46+00:00"
   },
   {
    "title": "From Picard to Professor X: Sir Patrick Stewart remembered",
@@ -92,9 +82,19 @@
    "published": "2026-10-30T03:31:43+00:00"
   },
   {
-   "title": "Hefty legal bill predicted in civil claim against ex-NRL star Jarryd Hayne",
-   "link": "https://www.abc.net.au/news/2026-10-30/jarryd-hayne-civil-court-case/107308890",
-   "published": "2026-10-30T03:24:45+00:00"
+   "title": "Fans reflect on the legacy of Patrick Stewart",
+   "link": "https://www.abc.net.au/news/2026-10-30/sa-vv-patrick-stewart-tributes/107330144",
+   "published": "2026-10-30T06:31:28+00:00"
+  },
+  {
+   "title": "Texans turn against Trump over ICE's 'terrible' actions",
+   "link": "https://www.abc.net.au/news/2026-10-30/ice-impacts-texan-latino-vote-to-democrats-us-midterms/107312888",
+   "published": "2026-10-29T18:44:36+00:00"
+  },
+  {
+   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
+   "published": "2026-10-30T06:32:25+00:00"
   },
   {
    "title": "Antisemitism envoy proposes mask ban and visa review measures",
@@ -102,5 +102,5 @@
    "published": "2026-10-29T20:12:02+00:00"
   }
  ],
- "updated": "2026-10-30T07:03:12.062717+00:00"
+ "updated": "2026-10-30T14:04:18.658166+00:00"
 }
