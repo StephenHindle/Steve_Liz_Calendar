@@ -2,9 +2,39 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Mother shares 'forever' grief of losing daughter in crash while driving",
+   "link": "https://www.abc.net.au/news/2026-10-31/kat-brown-road-safety-plea-as-sa-road-toll-climbs/107322702",
+   "published": "2026-10-30T20:29:43+00:00"
+  },
+  {
+   "title": "Tiny town calls for parliamentary inquiry into SA Ambulance service",
+   "link": "https://www.abc.net.au/news/2026-10-31/pinnaroo-sa-ambulance-volunteer-treatment-inquiry-/107326874",
+   "published": "2026-10-30T22:01:00+00:00"
+  },
+  {
+   "title": "Fears blue whale decline signals changes in Bonney Upwelling ocean current",
+   "link": "https://www.abc.net.au/news/2026-10-31/blue-whale-decline-signals-shift-in-victorian-bonney-upwelling/107309462",
+   "published": "2026-10-30T19:34:34+00:00"
+  },
+  {
    "title": "Court hears suspended Torrens to Darlington contractor still awaiting $2m",
    "link": "https://www.abc.net.au/news/2026-10-30/court-hears-suspended-t2d-contractor-still-awaiting-2m/107327046",
    "published": "2026-10-30T07:47:26+00:00"
+  },
+  {
+   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
+   "published": "2026-10-30T06:32:25+00:00"
+  },
+  {
+   "title": "Fans reflect on the legacy of Patrick Stewart",
+   "link": "https://www.abc.net.au/news/2026-10-30/sa-vv-patrick-stewart-tributes/107330144",
+   "published": "2026-10-30T06:31:28+00:00"
+  },
+  {
+   "title": "Boater rescues tired wallaby swimming out to sea more than 100m offshore",
+   "link": "https://www.abc.net.au/news/2026-10-30/wallaby-found-swimming-off-portland-coast/107327332",
+   "published": "2026-10-30T03:30:56+00:00"
   },
   {
    "title": "Youth want a voice amid controversial fracking and mining proposals",
@@ -17,14 +47,14 @@
    "published": "2026-10-29T18:59:47+00:00"
   },
   {
-   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
-   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
-   "published": "2026-10-30T06:32:25+00:00"
-  },
-  {
    "title": "It's the only cafe in town, but it's changing lives and Tripadvisor loves it",
    "link": "https://www.abc.net.au/news/2026-10-30/wilcannia-cafe-employment-and-tourism-opportunities-/107269816",
    "published": "2026-10-29T20:02:24+00:00"
+  },
+  {
+   "title": "End in sight for controversial snapper fishing ban in SA",
+   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
+   "published": "2026-10-28T23:30:53+00:00"
   },
   {
    "title": "SA child protection authority reports sharp rise in deaths in past year",
@@ -32,19 +62,9 @@
    "published": "2026-10-29T19:02:44+00:00"
   },
   {
-   "title": "Boater rescues tired wallaby swimming out to sea more than 100m offshore",
-   "link": "https://www.abc.net.au/news/2026-10-30/wallaby-found-swimming-off-portland-coast/107327332",
-   "published": "2026-10-30T03:30:56+00:00"
-  },
-  {
    "title": "ATSB confirms plane landed on Lake Eyre after pilot became unwell",
    "link": "https://www.abc.net.au/news/2026-10-29/plane-lands-on-kati-thanda-lake-eyre/107312924",
    "published": "2026-10-29T00:42:29+00:00"
-  },
-  {
-   "title": "End in sight for controversial snapper fishing ban in SA",
-   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
-   "published": "2026-10-28T23:30:53+00:00"
   },
   {
    "title": "Adelaide parklands campaigner 'doxxed' as home address shared on social media",
@@ -67,40 +87,20 @@
    "published": "2026-10-28T08:07:51+00:00"
   },
   {
-   "title": "India's PM cracks down on journalists 'to stamp out the protests'",
-   "link": "https://www.abc.net.au/news/2026-10-30/journalists-accuse-indian-pm-modi-of-crackdown-over-protests/107313104",
-   "published": "2026-10-30T04:06:13+00:00"
+   "title": "Politics is an image game, and the government needs to find better visuals",
+   "link": "https://www.abc.net.au/news/2026-10-31/question-time-albanese-chalmers-jacob-greber/107327714",
+   "published": "2026-10-30T18:00:00+00:00"
   },
   {
-   "title": "Retiring Swan Rampe 'hurt' over Pullman Hotel saga",
-   "link": "https://www.abc.net.au/news/2026-10-30/retiring-sydney-swans-dane-rampe-admits-hurt-pullman-hotel-saga/107329700",
-   "published": "2026-10-30T05:52:45+00:00"
+   "title": "'Opportunistic frauds': How spooky women made themselves rich and famous",
+   "link": "https://www.abc.net.au/news/2026-10-31/kaz-cooke-new-book-spooky-ladies-women-world-of-magic/107328160",
+   "published": "2026-10-30T18:30:00+00:00"
   },
   {
-   "title": "From Picard to Professor X: Sir Patrick Stewart remembered",
-   "link": "https://www.abc.net.au/news/2026-10-30/sir-patrick-stewart-dies-aged-86-tributes-obit/107326708",
-   "published": "2026-10-30T03:31:43+00:00"
-  },
-  {
-   "title": "Fans reflect on the legacy of Patrick Stewart",
-   "link": "https://www.abc.net.au/news/2026-10-30/sa-vv-patrick-stewart-tributes/107330144",
-   "published": "2026-10-30T06:31:28+00:00"
-  },
-  {
-   "title": "Texans turn against Trump over ICE's 'terrible' actions",
-   "link": "https://www.abc.net.au/news/2026-10-30/ice-impacts-texan-latino-vote-to-democrats-us-midterms/107312888",
-   "published": "2026-10-29T18:44:36+00:00"
-  },
-  {
-   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
-   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
-   "published": "2026-10-30T06:32:25+00:00"
-  },
-  {
-   "title": "Antisemitism envoy proposes mask ban and visa review measures",
-   "link": "https://www.abc.net.au/news/2026-10-30/jillian-segal-antisemitism-report-ban-face-coverings/107325604",
-   "published": "2026-10-29T20:12:02+00:00"
+   "title": "Before the Enterprise, Patrick Stewart cut his stage teeth in Australia",
+   "link": "https://www.abc.net.au/news/2026-10-31/patrick-stewart-theatre-obituary-macbeth-godot-christmas-carol/107327188",
+   "published": "2026-10-30T19:36:59+00:00"
   }
  ],
- "updated": "2026-10-30T14:04:18.658166+00:00"
+ "updated": "2026-10-30T23:12:03.455619+00:00"
 }
