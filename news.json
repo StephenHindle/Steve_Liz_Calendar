@@ -2,14 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Restaurateurs fend off fake online review 'extortion' attempt",
-   "link": "https://www.abc.net.au/news/2026-10-30/adelaide-restaurant-negative-review-extortion-scam-google/107319834",
-   "published": "2026-10-29T18:59:47+00:00"
+   "title": "Adelaide Crows star avoids jail for running red light and hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-10-30/josh-worrell-adelaide-crows-guilty-plea/107327056",
+   "published": "2026-10-30T06:32:25+00:00"
   },
   {
    "title": "Youth want a voice amid controversial fracking and mining proposals",
    "link": "https://www.abc.net.au/news/2026-10-30/limestone-coast-mining-fracking-youth-future/107016874",
    "published": "2026-10-29T23:10:54+00:00"
+  },
+  {
+   "title": "Restaurateurs fend off fake online review 'extortion' attempt",
+   "link": "https://www.abc.net.au/news/2026-10-30/adelaide-restaurant-negative-review-extortion-scam-google/107319834",
+   "published": "2026-10-29T18:59:47+00:00"
   },
   {
    "title": "It's the only cafe in town, but it's changing lives and Tripadvisor loves it",
@@ -22,6 +27,11 @@
    "published": "2026-10-29T19:02:44+00:00"
   },
   {
+   "title": "Boater rescues tired wallaby swimming out to sea more than 100m offshore",
+   "link": "https://www.abc.net.au/news/2026-10-30/wallaby-found-swimming-off-portland-coast/107327332",
+   "published": "2026-10-30T03:30:56+00:00"
+  },
+  {
    "title": "ATSB confirms plane landed on Lake Eyre after pilot became unwell",
    "link": "https://www.abc.net.au/news/2026-10-29/plane-lands-on-kati-thanda-lake-eyre/107312924",
    "published": "2026-10-29T00:42:29+00:00"
@@ -32,14 +42,19 @@
    "published": "2026-10-29T05:12:13+00:00"
   },
   {
-   "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
-   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
-   "published": "2026-10-28T19:47:05+00:00"
-  },
-  {
    "title": "End in sight for controversial snapper fishing ban in SA",
    "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
    "published": "2026-10-28T23:30:53+00:00"
+  },
+  {
+   "title": "Dream shakes off scheduling controversy to force WNBA Finals decider",
+   "link": "https://www.abc.net.au/news/2026-10-30/wnba-finals-game-six-izzy-borlase-angel-reese/107326500",
+   "published": "2026-10-29T23:19:24+00:00"
+  },
+  {
+   "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
+   "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
+   "published": "2026-10-28T19:47:05+00:00"
   },
   {
    "title": "Surgeon disqualified for fraudulent overtime pay claims",
@@ -52,55 +67,40 @@
    "published": "2026-10-28T08:07:51+00:00"
   },
   {
-   "title": "Live: ASX set to edge up despite $US500b Alphabet share slump overnight",
-   "link": "https://www.abc.net.au/news/2026-10-30/asx-markets-business-live-news-oct-30/107326558",
-   "published": "2026-10-29T21:16:19+00:00"
+   "title": "Retiring Swan Rampe 'hurt' over Pullman Hotel saga",
+   "link": "https://www.abc.net.au/news/2026-10-30/retiring-sydney-swans-dane-rampe-admits-hurt-pullman-hotel-saga/107329700",
+   "published": "2026-10-30T05:52:45+00:00"
   },
   {
-   "title": "Live: One Nation accuses PM of playing 'dirty games' with staffing",
-   "link": "https://www.abc.net.au/news/2026-10-30/federal-politics-live-blog-oct-30/107324978",
-   "published": "2026-10-29T21:20:59+00:00"
+   "title": "Finland launches criminal probe into Google data centre land clearance",
+   "link": "https://www.abc.net.au/news/2026-10-30/google-data-centre-land-clearance-ai-finland-criminal-probe/107327336",
+   "published": "2026-10-30T06:31:33+00:00"
   },
   {
-   "title": "Australian recession now a coin toss, says major bank",
-   "link": "https://www.abc.net.au/news/2026-10-30/could-more-rate-rises-tip-us-into-recession/107322554",
-   "published": "2026-10-29T18:00:00+00:00"
+   "title": "Texans turn against Trump over ICE's 'terrible' actions",
+   "link": "https://www.abc.net.au/news/2026-10-30/ice-impacts-texan-latino-vote-to-democrats-us-midterms/107312888",
+   "published": "2026-10-29T18:44:36+00:00"
   },
   {
-   "title": "Australians priced out of comfortable retirement call for higher pension",
-   "link": "https://www.abc.net.au/news/2026-10-30/retirees-call-for-age-pension-increase/107322008",
-   "published": "2026-10-29T18:39:55+00:00"
-  },
-  {
-   "title": "First Guardian investors dealt another 'utterly devastating' blow",
-   "link": "https://www.abc.net.au/news/2026-10-30/first-guardian-investors-dealt-a-blow-after-liquidator-update/107324738",
-   "published": "2026-10-29T21:00:29+00:00"
-  },
-  {
-   "title": "The thunderstorm that arrives like clockwork at 3pm every day",
+   "title": "Australian thunderstorm Hector wakes from hibernation",
    "link": "https://www.abc.net.au/news/2026-10-30/nt-hector-thunderstorm-at-tiwi-islands-top-end-wet-season/107319826",
    "published": "2026-10-29T22:45:46+00:00"
   },
   {
-   "title": "Bluebottle drones that never sleep level the playing field in Pacific drug war",
-   "link": "https://www.abc.net.au/news/2026-10-30/how-sea-drones-could-even-playing-field-in-drug-crisis/107297868",
-   "published": "2026-10-29T18:47:12+00:00"
+   "title": "From Picard to Professor X: Sir Patrick Stewart remembered",
+   "link": "https://www.abc.net.au/news/2026-10-30/sir-patrick-stewart-dies-aged-86-tributes-obit/107326708",
+   "published": "2026-10-30T03:31:43+00:00"
   },
   {
-   "title": "Australia's Cape Town desperation evident on another pulsating Test day",
-   "link": "https://www.abc.net.au/news/2026-10-30/cape-town-test-set-up-for-thrilling-finale/107326410",
-   "published": "2026-10-29T20:39:18+00:00"
+   "title": "Hefty legal bill predicted in civil claim against ex-NRL star Jarryd Hayne",
+   "link": "https://www.abc.net.au/news/2026-10-30/jarryd-hayne-civil-court-case/107308890",
+   "published": "2026-10-30T03:24:45+00:00"
   },
   {
-   "title": "ATO and ASIC feared data was sent offshore in 2025, internal emails reveal",
-   "link": "https://www.abc.net.au/news/2026-10-30/ato-asic-viq-solutions-data-breach-2025/107317532",
-   "published": "2026-10-29T18:39:55+00:00"
-  },
-  {
-   "title": "One Nation might not win Victoria, but NSW is where the real fight is",
-   "link": "https://www.abc.net.au/news/2026-10-30/michelle-grattan-one-nation-nsw-election/107323786",
-   "published": "2026-10-29T18:00:00+00:00"
+   "title": "Antisemitism envoy proposes mask ban and visa review measures",
+   "link": "https://www.abc.net.au/news/2026-10-30/jillian-segal-antisemitism-report-ban-face-coverings/107325604",
+   "published": "2026-10-29T20:12:02+00:00"
   }
  ],
- "updated": "2026-10-30T00:54:44.586380+00:00"
+ "updated": "2026-10-30T07:03:12.062717+00:00"
 }
