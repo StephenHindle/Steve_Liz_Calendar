@@ -2,6 +2,21 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Locals protest against proposed AI data centre in Adelaide Hills",
+   "link": "https://www.abc.net.au/news/2026-10-31/ai-data-centre-protest-adelaide-hills/107332222",
+   "published": "2026-10-31T08:31:46+00:00"
+  },
+  {
+   "title": "Dead dolphin tests positive for H5 bird flu",
+   "link": "https://www.abc.net.au/news/2026-10-31/dead-dolphin-returns-positive-result-for-h5-bird-flu/107331772",
+   "published": "2026-10-31T02:39:10+00:00"
+  },
+  {
+   "title": "RFDS pilots continue risky highway landings as Nullarbor airstrip sits unsealed",
+   "link": "https://www.abc.net.au/news/2026-10-31/eucla-airstrip-awaiting-upgrades-rfds-challenges/107318480",
+   "published": "2026-10-31T02:34:29+00:00"
+  },
+  {
    "title": "Person in life-threatening condition with meningococcal B infection",
    "link": "https://www.abc.net.au/news/2026-10-31/sa-meningococcal-b-infection/107331664",
    "published": "2026-10-31T01:26:47+00:00"
@@ -42,11 +57,6 @@
    "published": "2026-10-30T06:32:25+00:00"
   },
   {
-   "title": "Fans reflect on the legacy of Patrick Stewart",
-   "link": "https://www.abc.net.au/news/2026-10-30/sa-vv-patrick-stewart-tributes/107330144",
-   "published": "2026-10-30T06:31:28+00:00"
-  },
-  {
    "title": "Boater rescues tired wallaby swimming out to sea more than 100m offshore",
    "link": "https://www.abc.net.au/news/2026-10-30/wallaby-found-swimming-off-portland-coast/107327332",
    "published": "2026-10-30T03:30:56+00:00"
@@ -57,6 +67,11 @@
    "published": "2026-10-29T23:10:54+00:00"
   },
   {
+   "title": "End in sight for controversial snapper fishing ban in SA",
+   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
+   "published": "2026-10-28T23:30:53+00:00"
+  },
+  {
    "title": "Restaurateurs fend off fake online review 'extortion' attempt",
    "link": "https://www.abc.net.au/news/2026-10-30/adelaide-restaurant-negative-review-extortion-scam-google/107319834",
    "published": "2026-10-29T18:59:47+00:00"
@@ -65,11 +80,6 @@
    "title": "It's the only cafe in town, but it's changing lives and Tripadvisor loves it",
    "link": "https://www.abc.net.au/news/2026-10-30/wilcannia-cafe-employment-and-tourism-opportunities-/107269816",
    "published": "2026-10-29T20:02:24+00:00"
-  },
-  {
-   "title": "End in sight for controversial snapper fishing ban in SA",
-   "link": "https://www.abc.net.au/news/2026-10-29/sa-government-hopes-to-reopen-snapper-fishery/107249278",
-   "published": "2026-10-28T23:30:53+00:00"
   },
   {
    "title": "SA child protection authority reports sharp rise in deaths in past year",
@@ -90,17 +100,7 @@
    "title": "Fatal shooting of axe-wielding woman 'appropriate', top cop says",
    "link": "https://www.abc.net.au/news/2026-10-29/police-fatally-shoot-woman-at-firle-in-adelaide/107321572",
    "published": "2026-10-28T19:47:05+00:00"
-  },
-  {
-   "title": "Politics is an image game, and the government needs to find better visuals",
-   "link": "https://www.abc.net.au/news/2026-10-31/question-time-albanese-chalmers-jacob-greber/107327714",
-   "published": "2026-10-30T18:00:00+00:00"
-  },
-  {
-   "title": "G20 foreign ministers skip 'family' photo amid objections over Russia",
-   "link": "https://www.abc.net.au/news/2026-10-31/g20-family-photo-skipped-over-russia/107331466",
-   "published": "2026-10-30T23:19:07+00:00"
   }
  ],
- "updated": "2026-10-31T02:41:57.432228+00:00"
+ "updated": "2026-10-31T09:31:13.953530+00:00"
 }
