@@ -10,8 +10,6 @@ Keep all of these files together in the same place. They work as a set.
 - `manifest.webmanifest` (lets the app install to a home screen)
 - `sw.js` (the service worker that makes it work offline)
 - `icon-192.png`, `icon-512.png`, `icon-180.png` (the app icons)
-- `news.yml` (the job that fetches news headlines. It goes into GitHub in a special place, see News ticker below)
-- `news.json` (created automatically by that job, you do not need to make it)
 
 If your repository still has an old `calendar.html`, you can delete it. The app now lives in `index.html`.
 
@@ -48,32 +46,44 @@ Once it is online, each person can add it to their device so it opens full scree
 - **Glass tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
 
-## Widget panel
+## Widget panels and the bottom bar
 
-A panel on the right holds handy widgets. Tap **Widgets** in the left rail (or the arrow at the top of the panel) to show or hide it. On computers and large tablets it sits beside the calendar. On phones and smaller tablets it slides in from the right and closes when you tap outside it. Turn individual widgets on or off in Settings under Widgets.
+The main buttons (Add, Search, Lists, Meals, Fullscreen and Settings) sit in a bar along the bottom. There is a widget panel on each side of the calendar, with a **Widgets** button at each end of the bottom bar to show or hide it. On wide screens both panels sit beside the calendar. On a laptop or iPad in landscape the right panel stays open and the left one slides in, and on phones and smaller tablets both slide in from the edge and close when you tap outside them.
 
+In Settings under Widgets you can switch each widget on or off and choose whether it sits in the left or right panel. Under Appearance, **Smooth mode** uses lighter glass effects and a calmer background so tablets stay quick. It is on automatically for iPads.
+
+- **Ask AI:** talk to Claude. Say "Hey Claude" followed by your question, tap the orange microphone, or type in the box. Claude answers out loud and in writing, and knows today's date, the weather and (if you allow it) the next week of your calendar, so you can ask things like "Hey Claude, what's on tomorrow?". It can read the calendar but not change it. See **Setting up Ask AI** below.
+- **YouTube:** search for videos, or paste any YouTube link (a video, a playlist or a live stream). Tap a result to play it in the widget. The expand button opens it in a large window over the calendar, and the shrink button or Escape puts it back. Playing a video stops the radio, and starting the radio pauses the video. Recently played videos are listed for quick replay. Searching needs a free key, see **Setting up YouTube search** below.
 - **Mini calendar:** a small month with coloured dots on busy days and public holidays in red. Tap a day to jump to it, or use the arrows to look ahead.
 - **Radio:** four station tiles: GOLD 1323, FIVEaa, KIIS 1023 (formerly Mix 102.3) and Smooth FM Adelaide. Tap a tile to listen live, tap it again to stop, or tap another station to switch. A volume slider appears while something is playing, and a red dot on the Widgets button shows the radio is on even when the panel is hidden. On phones and tablets the lock screen shows the station with a pause button. These are the stations' own internet streams, so they need an internet connection, and a phone or tablet may stop the sound if the app is closed.
 - **Bin day:** tap the pencil, pick your collection day and which second bin goes out next time (recycling or green organics). It then shows which bins to put out and when, following the usual Adelaide pattern: general waste every week, recycling and green organics on alternate weeks.
-- **Family notes:** leave quick sticky notes in five colours. Tap the cross to remove one (Undo brings it back).
 - **Photo frame:** add photos and they fade from one to the next every 12 seconds. Tap the photo to skip ahead, or tap the three dots to add or remove photos. Up to 40 photos are kept, resized to save space.
 
-Notes and photos are stored on each device, like the rest of your calendar. Notes are included in **Back up to file**, but photos are not, so keep the originals.
+Photos are stored on each device, like the rest of your calendar, and are not included in **Back up to file**, so keep the originals.
 
-## News ticker
+## Setting up Ask AI
 
-A slim strip along the bottom of the calendar rolls the latest ABC News headlines for South Australia (the ABC's SA Top Stories feed). Hover over it to pause. Headlines are for reading only, so tapping does nothing (handy on a wall tablet). Devices set to reduce motion show one headline at a time instead of scrolling. Switch it off in Settings under Widgets.
+Ask AI uses Anthropic's API rather than your claude.ai subscription, because a website cannot sign in to a Claude account. The API is pay as you go, usually around a cent or two per question with the fast model.
 
-### One-time setup so headlines load reliably
+1. Go to console.anthropic.com and sign in (you can use the same email as your Claude account).
+2. Add a little credit under **Billing** (the minimum top up is enough for a very long time).
+3. Open **API keys**, click **Create key**, give it a name such as `Calendar`, and copy the key (it starts with `sk-ant-`).
+4. In the calendar, open **Settings**, go to **Ask AI and YouTube**, and paste the key.
 
-ABC's feed can't be read directly by a web page, so a small automatic job in your GitHub repository copies the headlines into a file called `news.json` every 30 minutes. The app reads that file. Until the job is set up, the app tries a free relay service instead, which may not always work.
+The key is saved only on that device and is not included in backup files. Anyone who can use that device can use the key, so keep that in mind on a shared tablet. You can also set a monthly spending limit in the Anthropic console.
 
-1. In your repository on github.com, click **Add file**, then **Create new file**.
-2. For the name, type `.github/workflows/news.yml` (typing the slashes creates the folders).
-3. Open the `news.yml` file from the app folder, copy everything in it, and paste it into the big text box. Click **Commit changes**.
-4. Click the **Actions** tab, choose **Update news headlines** on the left, then **Run workflow**. After a minute a `news.json` file appears in the repository, and from then on it refreshes itself.
+**Voice and "Hey Claude":** the wake word works best in Chrome or Edge on a computer or Android tablet. The browser asks to use the microphone the first time. The microphone stays on while the app is open and the setting is on, and the browser's own speech service turns what you say into text. On an iPad, Safari stops listening from time to time, so you may need to tap the microphone. Spoken replies work everywhere. Switch the wake word, spoken replies or calendar sharing off in Settings.
 
-If GitHub ever pauses the job (it can after long quiet periods), it shows a button on the Actions tab to switch it back on.
+## Setting up YouTube search
+
+Pasting YouTube links works without any setup. To search, you need a free YouTube key from the same Google Cloud project you used for Google Calendar.
+
+1. In console.cloud.google.com, open **APIs & Services**, then **Library**, search for **YouTube Data API v3** and click **Enable**.
+2. Open **APIs & Services**, then **Credentials**, click **Create credentials**, then **API key**, and copy it.
+3. Click the new key to edit it. Under **Application restrictions** choose **Websites** and add `https://stephenhindle.github.io/*`. Under **API restrictions** choose **Restrict key** and tick **YouTube Data API v3**. Save.
+4. In the calendar, paste the key into **Settings**, **Ask AI and YouTube**, **YouTube search key**.
+
+The free allowance covers about 100 searches a day.
 
 ## Connect Google Calendar
 
@@ -118,7 +128,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v13";`, so change it to `"cal-cache-v14"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v14";`, so change it to `"cal-cache-v15"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
@@ -156,6 +166,8 @@ Everything you enter stays on your own device in the browser's local storage. It
 
 ## Troubleshooting
 
+- **"Hey Claude" isn't responding.** Check that the wake word is on in Settings, that the microphone is allowed for the site, and that you are using Chrome or Edge. On an iPad, tap the microphone on the Ask AI widget.
+- **Ask AI says the key wasn't accepted or the account is out of credit.** Check the key in Settings, and your credit at console.anthropic.com.
 - **Weather is not showing.** Turn it on in Settings, then either allow location or type a town in the search box. It needs an internet connection. The last forecast stays on screen for a few hours if the connection drops.
 - **Outdoor warnings are not appearing.** They need weather switched on, and they only show for dates within the forecast range (about two weeks).
 - **Reminders are not appearing.** Turn on reminders in Settings and allow notifications. On iPhone you must add the app to the Home Screen first. The app or its tab also needs to be open for a reminder to fire.
