@@ -42,13 +42,17 @@ Once it is online, each person can add it to their device so it opens full scree
 - **Search:** tap Search in the left rail, or press `/` (or Ctrl+K) on a keyboard. It finds tasks (including words in their notes), list items and saved meals, and jumps straight to the match.
 - **Undo:** after adding, editing, moving or deleting something, tap **Undo** on the message at the bottom of the screen. On a keyboard, Ctrl+Z (Cmd+Z on a Mac) works too.
 - **Outdoor tasks:** switch on **Outdoors** in a task, and it will show a warning if rain, storms, heat (35° and above) or strong wind are forecast. The forecast reaches about two weeks ahead.
-- **Animated background:** choose a moving wallpaper in Settings under Appearance. **Weather sky** follows the time of day (dawn, day, dusk and night, using real sunrise and sunset times) and the current weather (drifting cloud, rain, storm flashes, fog, snow, stars on clear nights). **Colour flow** has soft colours drifting slowly in shades of your accent colour. **Aurora** has ribbons of light rippling across the screen. Choose **Off** to save battery. Devices set to reduce motion get a still version.
+- **Animated background:** choose a moving wallpaper in Settings under Appearance.
+  - **Weather scenes** shows a full scene that matches the weather: bright sun with soft rays (and a moon and stars on clear nights, with the odd shooting star), drifting clouds when it is overcast, showers with drops on the glass, rain running down a window, a dark storm with lightning, and drifting fog. It follows the current weather and the next couple of hours, so a storm shows as soon as one is forecast, and every scene changes for dawn, dusk and night. Under **Scene** you can leave it on **Auto** or lock one scene.
+  - **Weather sky** is the gentler sky that follows the weather and time of day.
+  - **Colour flow** has soft colours drifting slowly in shades of your accent colour, and **Aurora** has ribbons of light rippling across the screen.
+  - **Off** saves battery. Devices set to reduce motion get a still version.
 - **Glass tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
 
 ## Widget panels and the bottom bar
 
-The main buttons (Add, Search, Lists, Meals, Fullscreen and Settings) sit in a bar along the bottom. There is a widget panel on each side of the calendar, with a **Widgets** button at each end of the bottom bar to show or hide it. On wide screens both panels sit beside the calendar. On a laptop or iPad in landscape the right panel stays open and the left one slides in, and on phones and smaller tablets both slide in from the edge and close when you tap outside them.
+The main buttons (Add, Search, Lists, Meals, Fullscreen and Settings) sit in a bar along the bottom. There is a widget panel on each side of the calendar, and both are open every time the app starts. On computers and tablets (including an iPad in portrait) they sit beside the calendar, getting a little slimmer on smaller screens. The **Widgets** button at each end of the bottom bar hides or shows its panel for the moment, and both open again next time. On phones the panels slide in from the edge and close when you tap outside them.
 
 In Settings under Widgets you can switch each widget on or off and choose whether it sits in the left or right panel. Under Appearance, **Smooth mode** uses lighter glass effects and a calmer background so tablets stay quick. It is on automatically for iPads.
 
@@ -128,7 +132,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v14";`, so change it to `"cal-cache-v15"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v16";`, so change it to `"cal-cache-v17"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
