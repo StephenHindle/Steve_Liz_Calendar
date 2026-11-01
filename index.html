@@ -265,6 +265,11 @@
   .col-head.today .dow{color:var(--accent);}
 
   .grid-scroll{flex:1 1 auto;overflow:auto;position:relative;}
+  .grid-scroll,.month-grid,.agenda-scroll,.allday-row,.wall,.wall-cards,main .view{scrollbar-width:none;-ms-overflow-style:none;}
+  .grid-scroll::-webkit-scrollbar,.month-grid::-webkit-scrollbar,.agenda-scroll::-webkit-scrollbar,.allday-row::-webkit-scrollbar,.wall::-webkit-scrollbar,.wall-cards::-webkit-scrollbar,main .view::-webkit-scrollbar{display:none;width:0;height:0;}
+  html.hours-tight .event{font-size:11px;padding-top:2px;padding-bottom:2px;}
+  html.hours-tight .event .ev-m{font-size:10px;}
+  html.hours-tight .hour-label{font-size:10px;}
   .grid-body{display:grid;position:relative;}
   .time-gutter{border-right:1px solid var(--border);position:relative;background:var(--surface);}
   .hour-label{
@@ -847,7 +852,7 @@
   .wall-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:4px 2px 10px;flex:0 0 auto;}
   .wall-head h3{margin:0;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);}
   .wall-head span{font-size:13px;font-weight:600;color:var(--muted-2);}
-  .wall-cards{position:relative;flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:2px 2px 6px;scrollbar-width:thin;}
+  .wall-cards{position:relative;flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:2px 2px 6px;}
   .wall-card{
     position:relative;display:flex;align-items:center;gap:16px;flex:0 0 auto;
     padding:14px 16px 14px 22px;border-radius:18px;background:var(--surface);border:1px solid var(--border);
@@ -3056,6 +3061,11 @@
     else if(state.view==="wall") renderWall();
     else renderAgenda();
     updatePeriodLabel();
+    // the header can change height once its label is set, so check the hours still fill the panel exactly
+    if((state.view==="week"||state.view==="day") && !render._refit){
+      var se=$(state.view==="week"?"weekScroll":"dayScroll");
+      if(se && se.clientHeight && Math.max(22, Math.floor((se.clientHeight-10)/(FIT.end-FIT.start)))!==HOUR_PX){ render._refit=true; try{ render(); } finally{ render._refit=false; } return; }
+    }
     maybeShowHint();
     renderWidgets(true);
     if(settings.google.accounts.length) setTimeout(function(){ gRefresh(false); }, 0);
@@ -3088,7 +3098,8 @@
 
   var narrowMQ = window.matchMedia ? window.matchMedia("(max-width:640px)") : { matches:false };
   function updatePeriodLabel(){
-    var d=state.date, label, narrow=narrowMQ.matches;
+    var cw=document.querySelector(".content").clientWidth, d=state.date, label, narrow=narrowMQ.matches || (cw && cw<700);
+    var mid = !narrow && cw && cw<1000;
     if(state.view==="month"){ label=(narrow?MONTHS[d.getMonth()].slice(0,3):MONTHS[d.getMonth()])+" "+d.getFullYear(); }
     else if(state.view==="week"){
       var s=startOfWeek(d), e=addDays(s,6);
@@ -3098,7 +3109,7 @@
       else if(s.getFullYear()===e.getFullYear()) label=s.getDate()+" "+MONTHS[s.getMonth()].slice(0,3)+" – "+e.getDate()+" "+MONTHS[e.getMonth()].slice(0,3)+" "+s.getFullYear();
       else label=s.getDate()+" "+MONTHS[s.getMonth()].slice(0,3)+" "+s.getFullYear()+" – "+e.getDate()+" "+MONTHS[e.getMonth()].slice(0,3)+" "+e.getFullYear();
     } else if(state.view==="day"){
-      label = narrow ? shortDate(d) : (DOWS[d.getDay()]+", "+d.getDate()+" "+MONTHS[d.getMonth()]+" "+d.getFullYear());
+      label = narrow ? shortDate(d) : mid ? (DOWS_SHORT[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()].slice(0,3)+" "+d.getFullYear()) : (DOWS[d.getDay()]+", "+d.getDate()+" "+MONTHS[d.getMonth()]+" "+d.getFullYear());
     } else {
       label = isToday(d) ? "Upcoming" : ("From "+d.getDate()+" "+MONTHS[d.getMonth()].slice(0,3));
     }
@@ -3194,7 +3205,19 @@
 
   /* ---------- Time grid shared ---------- */
   var HOURS=24;
-  var HOUR_PX=52;
+  var HOUR_PX=52, FIT={ start:6, end:22 };
+  // Size the hours so the whole of the day's activity fits the panel without scrolling:
+  // 6 am to 10 pm, stretched earlier or later when an event sits outside that.
+  function fitHours(days, scrollEl){
+    var lo=6*60, hi=22*60;
+    days.forEach(function(d){ tasksOn(d).forEach(function(t){ if(!t.time) return; var p=t.time.split(":"), st=(+p[0])*60+(+p[1]); lo=Math.min(lo,st); hi=Math.max(hi,taskEndMin(t,st)); }); });
+    var now=new Date(); if(days.some(function(d){ return keyOf(d)===keyOf(now); })){ var nm=now.getHours()*60+now.getMinutes(); lo=Math.min(lo,nm-30); hi=Math.max(hi,nm+30); }
+    FIT.start=Math.max(0,Math.floor(lo/60)); FIT.end=Math.min(24,Math.ceil(hi/60));
+    var avail = scrollEl && scrollEl.clientHeight ? scrollEl.clientHeight : 0;
+    HOUR_PX = avail ? Math.max(22, Math.floor((avail-10)/(FIT.end-FIT.start))) : 52;
+    document.documentElement.style.setProperty("--hour-h", HOUR_PX+"px");
+    document.documentElement.classList.toggle("hours-tight", HOUR_PX<34);
+  }
   var SNAP=15;
   function taskEndMin(t, startMin){
     if(t.endTime){ var p=t.endTime.split(":"); var e=(+p[0])*60+(+p[1]); if(e>startMin) return Math.min(e,24*60); }
@@ -3437,6 +3460,7 @@
     var s=startOfWeek(state.date);
     var days=[]; for(var i=0;i<7;i++) days.push(addDays(s,i));
     var cols="64px repeat(7,minmax(0,1fr))";
+    fitHours(days, $("weekScroll"));
 
     var head=$("weekHead"); head.style.gridTemplateColumns=cols; head.innerHTML='<div class="corner"></div>';
     days.forEach(function(d){
@@ -3474,6 +3498,7 @@
   /* ---------- Day ---------- */
   function renderDay(){
     var d=state.date;
+    fitHours([d], $("dayScroll"));
     renderDayMeals(d);
     var head=$("dayHead"); head.innerHTML='<div class="corner"></div>';
     var ch=document.createElement("div");
@@ -3501,21 +3526,16 @@
     restoreScroll($("dayScroll"));
   }
 
-  // Keep the user's scroll position across refreshes; on first view, land on the morning.
-  var savedScroll={week:0,day:0};
+  // The fitted hours fill the panel exactly, so it opens on the first fitted hour.
+  // (Hours outside the fitted range can still be reached with a swipe or the mouse wheel.)
   function restoreScroll(scrollEl){
-    var key = state.view;
-    var want = savedScroll[key];
-    requestAnimationFrame(function(){
-      if(!scrollEl) return;
-      if(want>0){ scrollEl.scrollTop=want; }
-      else { scrollEl.scrollTop = 7*52 - 8; savedScroll[key]=scrollEl.scrollTop; }
-    });
+    if(!scrollEl) return;
+    var top=Math.max(0, FIT.start*HOUR_PX-10);
+    scrollEl.scrollTop=top;
+    requestAnimationFrame(function(){ scrollEl.scrollTop=top; });
   }
-  ["weekScroll","dayScroll"].forEach(function(id){
-    var el=document.getElementById(id);
-    if(el) el.addEventListener("scroll", function(){ savedScroll[id==="weekScroll"?"week":"day"]=el.scrollTop; });
-  });
+  var fitTimer=null;
+  window.addEventListener("resize", function(){ clearTimeout(fitTimer); fitTimer=setTimeout(function(){ if(state.view==="week"||state.view==="day") render(); }, 200); });
 
   /* ---------- Empty hint ---------- */
   function maybeShowHint(){

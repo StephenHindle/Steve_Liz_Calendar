@@ -118,6 +118,10 @@ Events from your Google calendars can appear alongside your own tasks. They stay
 - Reminders and outdoor weather warnings apply to the app's own tasks, not to Google events.
 - To disconnect an account, tap **Remove** on its card in Settings.
 
+## Fitted day and week views
+
+The Day and Week views size their hours so your whole day fits on screen with no scroll bars: 6 am to 10 pm, stretched earlier or later automatically when an event sits outside those hours. To see the small hours, swipe or use the mouse wheel on the calendar. Scroll bars are hidden throughout the calendar, but every list still scrolls with a swipe or the wheel.
+
 ## Using it as a wall display
 
 For a tablet mounted on the wall or sitting on a bench:
@@ -132,7 +136,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v16";`, so change it to `"cal-cache-v17"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v17";`, so change it to `"cal-cache-v18"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
