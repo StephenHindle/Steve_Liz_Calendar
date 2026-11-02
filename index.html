@@ -543,6 +543,58 @@
   .meal-pick-btn.empty{color:var(--muted-2);}
   .meal-pick-btn:hover{border-color:var(--accent);}
 
+  /* My Meals list */
+  .ml-search input{width:100%;box-sizing:border-box;padding:10px 13px;border:1px solid var(--border-strong);border-radius:11px;background:var(--surface);outline:none;font-size:15px;margin-bottom:10px;}
+  .ml-search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .ml-list{display:flex;flex-direction:column;gap:8px;}
+  .ml-item{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:11px 12px;border-radius:14px;border:1px solid var(--border);background:var(--surface);transition:background .12s,border-color .12s;}
+  .ml-item:hover{background:var(--surface-2);border-color:var(--border-strong);}
+  .ml-badge{width:40px;height:40px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;font-weight:800;font-size:16px;color:#fff;background:linear-gradient(140deg,#f2a65a,#e0752f);box-shadow:inset 0 1px 0 rgba(255,255,255,.35);}
+  .ml-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+  .ml-txt b{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ml-txt span{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ml-chev{color:var(--muted-2);flex:0 0 auto;}
+  .ml-empty{text-align:center;padding:30px 12px 18px;color:var(--muted);}
+  .ml-empty b{display:block;font-size:16px;color:var(--text);margin:8px 0 4px;}
+  .ml-empty svg{width:44px;height:44px;color:var(--muted-2);}
+  /* recipe view and editor */
+  .meal-sheet{max-width:560px;}
+  .mv-meta{font-size:13px;color:var(--muted);margin:-4px 0 6px;}
+  .mv-sec{margin-top:16px;}
+  .mv-sec h3,.me-sec h3{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-family:var(--font-display);font-optical-sizing:auto;font-size:16px;font-weight:700;letter-spacing:-.01em;}
+  .mv-ic{width:26px;height:26px;border-radius:8px;display:inline-grid;place-items:center;flex:0 0 auto;}
+  .mv-ic.ing{background:#e8f5ec;} .mv-ic.meth{background:#fdf0e3;}
+  [data-theme="dark"] .mv-ic.ing{background:rgba(34,160,107,.2);} [data-theme="dark"] .mv-ic.meth{background:rgba(224,145,47,.2);}
+  .mv-ic.ing::before{content:"";width:14px;height:14px;background:#22a06b;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6h11M9 12h11M9 18h11'/%3E%3Ccircle cx='4.5' cy='6' r='1.2'/%3E%3Ccircle cx='4.5' cy='12' r='1.2'/%3E%3Ccircle cx='4.5' cy='18' r='1.2'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6h11M9 12h11M9 18h11'/%3E%3Ccircle cx='4.5' cy='6' r='1.2'/%3E%3Ccircle cx='4.5' cy='12' r='1.2'/%3E%3Ccircle cx='4.5' cy='18' r='1.2'/%3E%3C/svg%3E") center/contain no-repeat;}
+  .mv-ic.meth::before{content:"";width:14px;height:14px;background:#e0912f;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11h18M5 11v6a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-6M9 7c0-1 1-1.5 1-3M13 7c0-1 1-1.5 1-3'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11h18M5 11v6a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-6M9 7c0-1 1-1.5 1-3M13 7c0-1 1-1.5 1-3'/%3E%3C/svg%3E") center/contain no-repeat;}
+  .mv-ings{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+  .mv-ings li{display:flex;align-items:flex-start;gap:11px;padding:9px 2px;border-bottom:1px solid var(--border);font-size:15px;line-height:1.4;cursor:pointer;}
+  .mv-ings li:last-child{border-bottom:none;}
+  .mv-ings li .tick{margin-top:1px;flex:0 0 auto;}
+  .mv-ings li.got span.t{text-decoration:line-through;color:var(--muted-2);}
+  .mv-steps{list-style:none;counter-reset:st;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .mv-steps li{counter-increment:st;display:flex;gap:12px;font-size:15px;line-height:1.5;}
+  .mv-steps li::before{content:counter(st);flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;background:#e0912f;margin-top:1px;}
+  .mv-steps li span{white-space:pre-wrap;overflow-wrap:anywhere;}
+  .mv-none{font-size:13.5px;color:var(--muted-2);}
+  .danger-btn{color:#d64545;}
+  .me-name{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--border-strong);border-radius:12px;background:var(--surface);outline:none;font-size:17px;font-weight:650;}
+  .me-name:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .me-sec{margin-top:18px;padding:14px;border:1px solid var(--border);border-radius:16px;background:var(--surface-2);}
+  .me-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;}
+  .me-sec-head h3{margin-bottom:10px;}
+  .me-hint{font-size:12px;color:var(--muted-2);}
+  .me-rows{display:flex;flex-direction:column;gap:7px;}
+  .me-row{display:flex;align-items:flex-start;gap:8px;}
+  .me-row .me-num{flex:0 0 auto;width:24px;height:24px;margin-top:8px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff;background:#e0912f;}
+  .me-row .me-dot{flex:0 0 auto;width:7px;height:7px;margin:16px 6px 0 9px;border-radius:50%;background:#22a06b;}
+  .me-row input,.me-row textarea{flex:1;min-width:0;box-sizing:border-box;padding:9px 11px;border:1px solid var(--border-strong);border-radius:10px;background:var(--surface);outline:none;font-size:15px;font-family:inherit;line-height:1.4;}
+  .me-row textarea{resize:none;overflow:hidden;min-height:40px;}
+  .me-row input:focus,.me-row textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .me-row .li-del{width:32px;height:32px;margin-top:4px;border-radius:8px;display:grid;place-items:center;color:var(--muted-2);flex:0 0 auto;}
+  .me-row .li-del:hover{background:#fdecec;color:#d64545;}
+  .me-add{margin-top:9px;font-size:13.5px;font-weight:650;color:var(--accent);padding:7px 10px;border-radius:9px;}
+  .me-add:hover{background:var(--accent-soft);}
   .lib-meal{border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:9px;}
   .lib-title{font-size:15px;font-weight:700;border:none;border-bottom:1px solid var(--border);padding:5px 2px;outline:none;background:none;color:var(--text);}
   .lib-title:focus{border-color:var(--accent);}
@@ -1986,10 +2038,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
     <span>Search</span>
   </button>
-  <button class="rail-btn" id="listsBtn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
-    <span>Lists</span>
-  </button>
   <button class="rail-btn" id="mealsBtn">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a3 3 0 0 0 3 3v10M6 2v6M9 2v6M18 2c-1.5 0-3 1.5-3 5s1.5 4 3 4v9"/></svg>
     <span>Meals</span>
@@ -2304,43 +2352,19 @@
   </div>
 </div>
 
-<!-- Lists -->
-<div class="overlay" id="listsOverlay">
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="listsTitle">
-    <div class="sheet-head">
-      <h2 id="listsTitle">Lists</h2>
-      <button class="icon-btn" id="listsClose" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="sheet-body">
-      <div class="tabs" id="listTabs"></div>
-      <div class="list-items" id="listItems"></div>
-      <div class="li-add">
-        <input type="text" id="listItemInput" placeholder="Add an item" autocomplete="off">
-        <button class="btn btn-primary" id="listItemAdd">Add</button>
-      </div>
-      <div class="list-tools">
-        <button class="link-btn" id="listClearDone">Clear ticked</button>
-        <button class="link-btn danger" id="listDelete">Delete list</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Meal planner -->
 <div class="overlay" id="mealsOverlay">
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mealsTitle">
     <div class="sheet-head">
-      <h2 id="mealsTitle">Meal planner</h2>
+      <h2 id="mealsTitle">My Meals</h2>
       <button class="icon-btn" id="mealsClose" aria-label="Close">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="sheet-body">
       <div class="tabs" id="mealTabs">
-        <button class="tab sel" data-mtab="planner">Planner</button>
-        <button class="tab" data-mtab="library">My meals</button>
+        <button class="tab sel" data-mtab="library">My meals</button>
+        <button class="tab" data-mtab="planner">Week plan</button>
       </div>
       <div id="mealPlannerPane">
         <div class="nav" style="justify-content:center;">
@@ -2351,14 +2375,66 @@
         <div class="meal-days" id="mealDays"></div>
       </div>
       <div id="mealLibraryPane" style="display:none">
-        <p class="empty-note">Save meals with their ingredients here, then pick them on any day. When you add a day's meals to the grocery list, those ingredients are offered for you to tick.</p>
-        <div class="cat-list" id="mealLibraryList"></div>
-        <button class="add-cat" id="addMeal">+ Add meal</button>
+        <div class="ml-search"><input id="mealFilter" type="search" placeholder="Find a meal or ingredient" aria-label="Find a meal" autocomplete="off"></div>
+        <div class="ml-list" id="mealLibraryList"></div>
       </div>
     </div>
     <div class="sheet-foot">
-      <button class="btn btn-ghost" id="mealsToGrocery" style="flex:1;">Add ingredients to grocery</button>
-      <button class="btn btn-primary" id="mealsDone">Done</button>
+      <button class="btn btn-ghost" id="mealsDone" style="flex:0 0 auto;padding:0 20px;">Done</button>
+      <button class="btn btn-primary" id="addMeal" style="flex:1;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add Meal</button>
+    </div>
+  </div>
+</div>
+
+<!-- Meal recipe view -->
+<div class="overlay" id="mealViewOverlay">
+  <div class="sheet meal-sheet" role="dialog" aria-modal="true" aria-labelledby="mvTitle">
+    <div class="sheet-head">
+      <h2 id="mvTitle">Meal</h2>
+      <button class="icon-btn" id="mvClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="sheet-body">
+      <div class="mv-meta" id="mvMeta"></div>
+      <section class="mv-sec">
+        <h3><span class="mv-ic ing"></span>Ingredients</h3>
+        <ul class="mv-ings" id="mvIngs"></ul>
+      </section>
+      <section class="mv-sec">
+        <h3><span class="mv-ic meth"></span>Method</h3>
+        <ol class="mv-steps" id="mvSteps"></ol>
+      </section>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn btn-ghost danger-btn" id="mvDelete" style="flex:0 0 auto;padding:0 16px;">Delete</button>
+      <button class="btn btn-primary" id="mvEdit" style="flex:1;">Edit meal</button>
+    </div>
+  </div>
+</div>
+
+<!-- Meal editor -->
+<div class="overlay" id="mealEditOverlay">
+  <div class="sheet meal-sheet" role="dialog" aria-modal="true" aria-labelledby="meTitle">
+    <div class="sheet-head">
+      <h2 id="meTitle">Add Meal</h2>
+      <button class="icon-btn" id="meClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="sheet-body">
+      <label class="field-lbl" for="meName">Meal name</label>
+      <input class="me-name" id="meName" maxlength="120" placeholder="Spaghetti bolognese" autocomplete="off">
+      <section class="me-sec">
+        <div class="me-sec-head"><h3><span class="mv-ic ing"></span>Ingredients</h3><span class="me-hint">One per line, with the amount</span></div>
+        <div class="me-rows" id="meIngs"></div>
+        <button type="button" class="me-add" id="meAddIng">+ Add ingredient</button>
+      </section>
+      <section class="me-sec">
+        <div class="me-sec-head"><h3><span class="mv-ic meth"></span>Method</h3><span class="me-hint">Each step in order</span></div>
+        <div class="me-rows" id="meSteps"></div>
+        <button type="button" class="me-add" id="meAddStep">+ Add step</button>
+      </section>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn btn-ghost" id="meCancel" style="flex:0 0 auto;padding:0 18px;">Cancel</button>
+      <button class="btn btn-primary" id="meSave" style="flex:1;">Save meal</button>
     </div>
   </div>
 </div>
@@ -2386,29 +2462,6 @@
 </div>
 
 <!-- Grocery selection -->
-<div class="overlay" id="groceryPickOverlay">
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="gpTitle">
-    <div class="sheet-head">
-      <h2 id="gpTitle">Add to grocery list</h2>
-      <button class="icon-btn" id="gpClose" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="sheet-body">
-      <p class="empty-note" id="gpNote">Tick the ingredients to add to your Grocery list.</p>
-      <div class="gp-tools">
-        <button class="link-btn" id="gpAll">Select all</button>
-        <button class="link-btn" id="gpNone">Select none</button>
-      </div>
-      <div id="gpList"></div>
-    </div>
-    <div class="sheet-foot">
-      <button class="btn btn-ghost" id="gpCancel" style="flex:0 0 auto;padding:0 18px;">Cancel</button>
-      <button class="btn btn-primary" id="gpAdd" style="flex:1;">Add ticked</button>
-    </div>
-  </div>
-</div>
-
 <!-- Forecast -->
 <div class="overlay" id="fcOverlay">
   <div class="sheet scope-sheet" role="dialog" aria-modal="true" aria-labelledby="fcTitle">
@@ -3942,12 +3995,8 @@
     toast("Undone: "+u.label.toLowerCase());
   }
   function refreshOpenPanels(){
-    if($("listsOverlay").classList.contains("open")){
-      if(!lists.length){ lists=[{id:"grocery",name:"Grocery",items:[]}]; saveLists(); }
-      if(!activeList()) activeListId=lists[0].id;
-      renderListTabs(); renderListItems();
-    }
     if($("mealsOverlay").classList.contains("open")){ if(mealTab==="library") renderMealLibrary(); else renderMeals(); }
+    if($("mealViewOverlay").classList.contains("open") && mealViewId){ if(libMealById(mealViewId)) renderMealView(); else closeOverlay("mealViewOverlay"); }
     if($("searchOverlay").classList.contains("open")) runSearch();
   }
 
@@ -4089,65 +4138,9 @@
     }).catch(function(){ toast("Could not search right now"); });
   }
 
-  /* ---------- Lists ---------- */
-  var activeListId=null;
-  function openLists(){
-    if(!lists.length){ lists=[{id:"grocery",name:"Grocery",items:[]}]; saveLists(); }
-    if(!activeListId || !lists.filter(function(l){return l.id===activeListId;}).length) activeListId=lists[0].id;
-    renderListTabs(); renderListItems();
-    openOverlay("listsOverlay");
-  }
-  function renderListTabs(){
-    var tabs=$("listTabs"); tabs.innerHTML="";
-    lists.forEach(function(l){
-      var b=document.createElement("button"); b.className="tab"+(l.id===activeListId?" sel":"");
-      b.textContent=l.name;
-      b.addEventListener("click", function(){ activeListId=l.id; renderListTabs(); renderListItems(); });
-      tabs.appendChild(b);
-    });
-    var add=document.createElement("button"); add.className="tab add"; add.textContent="+ New list";
-    add.addEventListener("click", function(){
-      var l={id:uid(), name:"New list", items:[]}; lists.push(l); activeListId=l.id; saveLists();
-      renderListTabs(); renderListItems();
-      setTimeout(function(){ $("listName").focus(); $("listName").select(); }, 40);
-    });
-    tabs.appendChild(add);
-  }
-  function activeList(){ return lists.filter(function(l){return l.id===activeListId;})[0]; }
-  function renderListItems(){
-    var box=$("listItems"); box.innerHTML="";
-    var l=activeList(); if(!l) return;
-    var head=document.createElement("input"); head.type="text"; head.id="listName"; head.value=l.name;
-    head.style.cssText="width:100%;font-size:16px;font-weight:700;border:none;outline:none;padding:2px 2px 8px;background:none;";
-    head.addEventListener("input", function(){ l.name=head.value; saveLists(); renderListTabsLabelsOnly(); });
-    box.appendChild(head);
-    l.items.forEach(function(it, idx){
-      var row=document.createElement("div"); row.className="li-row"+(it.done?" done":"");
-      row.dataset.iid=it.id||"";
-      var tk=document.createElement("span"); tk.className="tick"+(it.done?" on":""); tk.style.setProperty("--tick-c", settings.accent);
-      tk.innerHTML=CHECK_SVG;
-      tk.addEventListener("click", function(){ it.done=!it.done; saveLists(); renderListItems(); });
-      var txt=document.createElement("span"); txt.className="li-text"; txt.textContent=it.text;
-      var del=document.createElement("button"); del.className="li-del"; del.setAttribute("aria-label","Remove item");
-      del.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
-      del.addEventListener("click", function(){ pushUndo("Remove item",["lists"]); l.items.splice(idx,1); saveLists(); renderListItems(); toastUndo("Removed "+it.text); });
-      row.appendChild(tk); row.appendChild(txt); row.appendChild(del);
-      box.appendChild(row);
-    });
-  }
-  function renderListTabsLabelsOnly(){
-    var tabs=$("listTabs").querySelectorAll(".tab:not(.add)");
-    lists.forEach(function(l,i){ if(tabs[i]) tabs[i].textContent=l.name; });
-  }
-  function addListItem(){
-    var inp=$("listItemInput"); var v=inp.value.trim(); if(!v) return;
-    var l=activeList(); if(!l) return;
-    l.items.push({id:uid(), text:v, done:false}); saveLists(); inp.value=""; renderListItems(); inp.focus();
-  }
-
   /* ---------- Meal planner ---------- */
   var MEAL_SLOTS=[["breakfast","Breakfast"],["lunch","Lunch"],["dinner","Dinner"],["snack","Snack"]];
-  var mealTab="planner", mealPickTarget=null, gpItems=[];
+  var mealTab="library", mealPickTarget=null, mealViewId=null, mealEdit=null;
 
   function libMealById(id){ for(var i=0;i<mealLibrary.length;i++) if(mealLibrary[i].id===id) return mealLibrary[i]; return null; }
   function slotTitle(val){
@@ -4156,18 +4149,12 @@
     if(val.mealId){ var m=libMealById(val.mealId); return m ? m.title : "(removed meal)"; }
     return val.text||"";
   }
-  function groceryList(){
-    var g=lists.filter(function(l){return l.id==="grocery" || l.name.toLowerCase()==="grocery";})[0];
-    if(!g){ g={id:"grocery",name:"Grocery",items:[]}; lists.push(g); saveLists(); }
-    return g;
-  }
-
-  function openMeals(){ state.mealsWeek=new Date(state.date); showMealTab("planner"); openOverlay("mealsOverlay"); }
+  function openMeals(){ state.mealsWeek=new Date(state.date); $("mealFilter").value=""; showMealTab("library"); openOverlay("mealsOverlay"); }
   function showMealTab(name){
     mealTab=name;
     $("mealPlannerPane").style.display = name==="planner" ? "block" : "none";
     $("mealLibraryPane").style.display = name==="library" ? "block" : "none";
-    $("mealsToGrocery").style.display = name==="planner" ? "inline-flex" : "none";
+    $("addMeal").style.display = name==="library" ? "inline-flex" : "none";
     $("mealTabs").querySelectorAll("button").forEach(function(b){ b.classList.toggle("sel", b.dataset.mtab===name); });
     if(name==="library") renderMealLibrary(); else renderMeals();
   }
@@ -4195,34 +4182,113 @@
       })(addDays(s,i));
     }
   }
+  // My Meals: a list of saved meals; tap one to see its ingredients and method
+  function mealCounts(m){
+    var ni=(m.ingredients||[]).filter(function(x){ return (x.text||"").trim(); }).length;
+    var ns=(m.method||[]).filter(function(x){ return (x.text||"").trim(); }).length;
+    return ni+" ingredient"+(ni===1?"":"s")+" · "+(ns ? ns+" step"+(ns===1?"":"s") : "no method yet");
+  }
   function renderMealLibrary(){
     var box=$("mealLibraryList"); box.innerHTML="";
-    if(!mealLibrary.length){ var e=document.createElement("p"); e.className="mp-empty"; e.textContent="No saved meals yet. Add one to get started."; box.appendChild(e); }
-    mealLibrary.forEach(function(meal, mi){
-      if(!meal.ingredients) meal.ingredients=[];
-      var card=document.createElement("div"); card.className="lib-meal"; card.dataset.mid=meal.id||"";
-      var title=document.createElement("input"); title.className="lib-title"; title.value=meal.title||""; title.placeholder="Meal name";
-      title.addEventListener("input", function(){ meal.title=title.value; saveMealLibrary(); });
-      card.appendChild(title);
-      var ings=document.createElement("div"); ings.className="lib-ings";
-      meal.ingredients.forEach(function(ing, ii){
-        var r=document.createElement("div"); r.className="lib-ing";
-        var inp=document.createElement("input"); inp.value=ing.text||""; inp.placeholder="Ingredient";
-        inp.addEventListener("input", function(){ ing.text=inp.value; saveMealLibrary(); });
-        var del=document.createElement("button"); del.className="li-del"; del.setAttribute("aria-label","Remove ingredient");
-        del.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
-        del.addEventListener("click", function(){ meal.ingredients.splice(ii,1); saveMealLibrary(); renderMealLibrary(); });
-        r.appendChild(inp); r.appendChild(del); ings.appendChild(r);
-      });
-      card.appendChild(ings);
-      var addIng=document.createElement("button"); addIng.className="link-btn"; addIng.textContent="+ Add ingredient";
-      addIng.addEventListener("click", function(){ meal.ingredients.push({id:uid(), text:""}); saveMealLibrary(); renderMealLibrary(); });
-      var delMeal=document.createElement("button"); delMeal.className="link-btn danger"; delMeal.textContent="Delete meal";
-      delMeal.addEventListener("click", function(){ pushUndo("Delete meal",["mealLibrary"]); mealLibrary.splice(mi,1); saveMealLibrary(); renderMealLibrary(); toastUndo("Deleted "+(meal.title||"meal")); });
-      var foot=document.createElement("div"); foot.className="lib-meal-foot"; foot.appendChild(addIng); foot.appendChild(delMeal);
-      card.appendChild(foot);
-      box.appendChild(card);
+    var q=($("mealFilter").value||"").trim().toLowerCase();
+    var list=mealLibrary.slice().sort(function(a,b){ return (a.title||"").localeCompare(b.title||""); });
+    if(q) list=list.filter(function(m){ return (m.title||"").toLowerCase().indexOf(q)>=0 || (m.ingredients||[]).some(function(x){ return (x.text||"").toLowerCase().indexOf(q)>=0; }); });
+    $("mealFilter").parentNode.hidden = mealLibrary.length<6 && !q;
+    if(!list.length){
+      var e=document.createElement("div"); e.className="ml-empty";
+      e.innerHTML = q ? '<b>No meals match</b>Try another word.' :
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a3 3 0 0 0 3 3v10M6 2v6M9 2v6M18 2c-1.5 0-3 1.5-3 5s1.5 4 3 4v9"/></svg><b>No meals yet</b>Tap Add Meal to save your first recipe.';
+      box.appendChild(e); return;
+    }
+    list.forEach(function(m){
+      var b=document.createElement("button"); b.type="button"; b.className="ml-item"; b.dataset.mid=m.id||"";
+      var badge=document.createElement("span"); badge.className="ml-badge"; badge.textContent=((m.title||"?").trim().charAt(0)||"?").toUpperCase();
+      var tx=document.createElement("span"); tx.className="ml-txt";
+      var t=document.createElement("b"); t.textContent=m.title||"Untitled meal";
+      var c=document.createElement("span"); c.textContent=mealCounts(m);
+      tx.appendChild(t); tx.appendChild(c);
+      b.appendChild(badge); b.appendChild(tx);
+      b.insertAdjacentHTML("beforeend",'<svg class="ml-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>');
+      b.addEventListener("click", function(){ openMealView(m.id); });
+      box.appendChild(b);
     });
+  }
+  var mealGot={};   // ingredients ticked off while cooking (just for this visit)
+  function openMealView(id){ mealViewId=id; mealGot={}; renderMealView(); openOverlay("mealViewOverlay"); }
+  function renderMealView(){
+    var m=libMealById(mealViewId); if(!m) return;
+    $("mvTitle").textContent=m.title||"Untitled meal";
+    var next=nextPlanned(m.id);
+    $("mvMeta").textContent=mealCounts(m)+(next ? " · next planned "+relDay(next).toLowerCase() : "");
+    var ul=$("mvIngs"); ul.innerHTML="";
+    var ings=(m.ingredients||[]).filter(function(x){ return (x.text||"").trim(); });
+    if(!ings.length) ul.innerHTML='<li class="mv-none">No ingredients added.</li>';
+    ings.forEach(function(x){
+      var li=document.createElement("li"); if(mealGot[x.id]) li.classList.add("got");
+      var tk=document.createElement("span"); tk.className="tick"+(mealGot[x.id]?" on":""); tk.style.setProperty("--tick-c","#22a06b"); tk.innerHTML=CHECK_SVG;
+      var t=document.createElement("span"); t.className="t"; t.textContent=x.text;
+      li.appendChild(tk); li.appendChild(t);
+      li.addEventListener("click", function(){ mealGot[x.id]=!mealGot[x.id]; renderMealView(); });
+      ul.appendChild(li);
+    });
+    var ol=$("mvSteps"); ol.innerHTML="";
+    var steps=(m.method||[]).filter(function(x){ return (x.text||"").trim(); });
+    if(!steps.length) ol.innerHTML='<li class="mv-none" style="counter-increment:none">No method added yet. Tap Edit meal to add the steps.</li>';
+    steps.forEach(function(x){ var li=document.createElement("li"); var sp=document.createElement("span"); sp.textContent=x.text; li.appendChild(sp); ol.appendChild(li); });
+    var none=ol.querySelector(".mv-none"); if(none) none.style.setProperty("--x","0");
+  }
+  // Add / edit a meal: name, ingredients and method as separate sections
+  function openMealEditor(id){
+    var m=id ? libMealById(id) : null;
+    mealEdit={ id:m ? m.id : null };
+    $("meTitle").textContent = m ? "Edit Meal" : "Add Meal";
+    $("meName").value = m ? (m.title||"") : "";
+    $("meIngs").innerHTML=""; $("meSteps").innerHTML="";
+    var ings=m ? (m.ingredients||[]).filter(function(x){ return (x.text||"").trim(); }) : [];
+    var steps=m ? (m.method||[]).filter(function(x){ return (x.text||"").trim(); }) : [];
+    if(!ings.length) ings=[{text:""},{text:""},{text:""}];
+    if(!steps.length) steps=[{text:""},{text:""}];
+    ings.forEach(function(x){ meAddRow("ing", x.text, false); });
+    steps.forEach(function(x){ meAddRow("step", x.text, false); });
+    openOverlay("mealEditOverlay");
+    if(!m) setTimeout(function(){ $("meName").focus(); }, 60);
+  }
+  function meGrow(ta){ ta.style.height="auto"; ta.style.height=(ta.scrollHeight+2)+"px"; }
+  function meRenumber(){ $("meSteps").querySelectorAll(".me-num").forEach(function(n,i){ n.textContent=i+1; }); }
+  function meAddRow(kind, text, focus){
+    var box=$(kind==="ing" ? "meIngs" : "meSteps");
+    var row=document.createElement("div"); row.className="me-row";
+    var mark=document.createElement("span"); mark.className = kind==="ing" ? "me-dot" : "me-num";
+    var f;
+    if(kind==="ing"){ f=document.createElement("input"); f.placeholder="500 g beef mince"; f.maxLength=200;
+      f.addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); var nx=row.nextElementSibling; if(nx) nx.querySelector("input").focus(); else meAddRow("ing","",true); } });
+    } else { f=document.createElement("textarea"); f.rows=1; f.placeholder="Describe this step"; f.maxLength=1500;
+      f.addEventListener("input", function(){ meGrow(f); });
+    }
+    f.value=text||"";
+    var del=document.createElement("button"); del.type="button"; del.className="li-del"; del.setAttribute("aria-label", kind==="ing"?"Remove ingredient":"Remove step");
+    del.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+    del.addEventListener("click", function(){ row.remove(); meRenumber(); });
+    row.appendChild(mark); row.appendChild(f); row.appendChild(del); box.appendChild(row);
+    meRenumber();
+    if(kind==="step") requestAnimationFrame(function(){ meGrow(f); });
+    if(focus) f.focus();
+  }
+  function saveMealEditor(){
+    var name=$("meName").value.trim();
+    if(!name){ $("meName").focus(); toast("Give the meal a name"); return; }
+    var ings=[], steps=[];
+    $("meIngs").querySelectorAll("input").forEach(function(i){ var v=i.value.trim(); if(v) ings.push({ id:uid(), text:v }); });
+    $("meSteps").querySelectorAll("textarea").forEach(function(t){ var v=t.value.trim(); if(v) steps.push({ id:uid(), text:v }); });
+    pushUndo(mealEdit.id ? "Edit meal" : "Add meal", ["mealLibrary"]);
+    var m = mealEdit.id ? libMealById(mealEdit.id) : null;
+    if(m){ m.title=name; m.ingredients=ings; m.method=steps; }
+    else { m={ id:uid(), title:name, ingredients:ings, method:steps }; mealLibrary.push(m); }
+    saveMealLibrary();
+    closeOverlay("mealEditOverlay");
+    if($("mealsOverlay").classList.contains("open")){ showMealTab("library"); }
+    openMealView(m.id);
+    toastUndo((mealEdit.id ? "Saved " : "Added ")+name);
   }
   function openMealPicker(k, slotKey){
     mealPickTarget={ k:k, slot:slotKey };
@@ -4242,7 +4308,8 @@
       var b=document.createElement("button"); b.type="button"; b.className="mp-meal"+(meal.id===curId?" sel":"");
       var n=(meal.ingredients||[]).filter(function(x){return (x.text||"").trim();}).length;
       var t=document.createElement("span"); t.className="mp-t"; t.textContent=meal.title||"(untitled meal)";
-      var ic=document.createElement("span"); ic.className="mp-i"; ic.textContent=n+" ingredient"+(n===1?"":"s");
+      var ns=(meal.method||[]).filter(function(x){return (x.text||"").trim();}).length;
+      var ic=document.createElement("span"); ic.className="mp-i"; ic.textContent=n+" ingredient"+(n===1?"":"s")+(ns?" · "+ns+" step"+(ns===1?"":"s"):"");
       b.appendChild(t); b.appendChild(ic);
       b.addEventListener("click", function(){ setSlotFromMeal(meal.id); });
       box.appendChild(b);
@@ -4267,51 +4334,6 @@
     pushUndo("Clear meal",["meals"]);
     meals[t.k][t.slot]=null;
     saveMeals(); closeOverlay("mealPickOverlay"); renderMeals(); toastUndo("Meal cleared");
-  }
-  function openGroceryPick(){
-    var s=startOfWeek(state.mealsWeek), seen={}, items=[], g=groceryList();
-    for(var i=0;i<7;i++){
-      var k=keyOf(addDays(s,i)), m=meals[k]; if(!m) continue;
-      MEAL_SLOTS.forEach(function(slot){
-        var val=m[slot[0]]; if(!val) return;
-        var list=[];
-        if(val.mealId){ var meal=libMealById(val.mealId); if(meal){ (meal.ingredients||[]).forEach(function(ing){ var tx=(ing.text||"").trim(); if(tx) list.push(tx); }); } }
-        else if(val.text){ var tt=val.text.trim(); if(tt) list.push(tt); }
-        list.forEach(function(tx){
-          var key=tx.toLowerCase(); if(seen[key]) return; seen[key]=true;
-          var existing=g.items.some(function(it){ return it.text.toLowerCase()===key; });
-          items.push({ text:tx, existing:existing, checked:!existing });
-        });
-      });
-    }
-    if(!items.length){ toast("No ingredients found for this week"); return; }
-    gpItems=items; renderGroceryPick(); openOverlay("groceryPickOverlay");
-  }
-  function renderGroceryPick(){
-    var box=$("gpList"); box.innerHTML="";
-    gpItems.forEach(function(it){
-      var row=document.createElement("div"); row.className="gp-row"+(it.existing?" existing":"");
-      var tk=document.createElement("span"); tk.className="tick"+(it.checked?" on":""); tk.style.setProperty("--tick-c", settings.accent); tk.innerHTML=CHECK_SVG;
-      tk.addEventListener("click", function(){ it.checked=!it.checked; renderGroceryPick(); });
-      var txt=document.createElement("span"); txt.className="gp-text"; txt.textContent=it.text;
-      row.appendChild(tk); row.appendChild(txt);
-      if(it.existing){ var tag=document.createElement("span"); tag.className="gp-tag"; tag.textContent="on list"; row.appendChild(tag); }
-      box.appendChild(row);
-    });
-  }
-  function gpSetAll(v){ gpItems.forEach(function(it){ it.checked=v; }); renderGroceryPick(); }
-  function gpCommit(){
-    var g=groceryList();
-    var toAdd=gpItems.filter(function(it){
-      return it.checked && !g.items.some(function(x){ return x.text.toLowerCase()===it.text.toLowerCase(); });
-    });
-    closeOverlay("groceryPickOverlay");
-    if(!toAdd.length){ toast("Nothing new added"); return; }
-    pushUndo("Add to grocery",["lists"]);
-    g=groceryList();
-    toAdd.forEach(function(it){ g.items.push({id:uid(), text:it.text, done:false}); });
-    saveLists();
-    toastUndo(toAdd.length+" item"+(toAdd.length>1?"s":"")+" added to Grocery");
   }
   function renderDayMeals(d){
     var strip=$("dayMeals"); strip.innerHTML="";
@@ -4406,17 +4428,15 @@
       if(af!==bf) return af?-1:1;
       return af ? (a.d-b.d || (a.t.time||"").localeCompare(b.t.time||"")) : (b.d-a.d);
     });
-    // list items
-    var liHits=[];
-    lists.forEach(function(l){ (l.items||[]).forEach(function(it){ if((it.text||"").toLowerCase().indexOf(q)>=0) liHits.push({ l:l, it:it }); }); });
     // saved meals (title or ingredient)
     var mHits=[];
     mealLibrary.forEach(function(m){
       var inTitle=(m.title||"").toLowerCase().indexOf(q)>=0;
       var ing=(m.ingredients||[]).filter(function(x){ return (x.text||"").toLowerCase().indexOf(q)>=0; })[0];
-      if(inTitle||ing) mHits.push({ m:m, ing:inTitle?null:ing });
+      var step=(m.method||[]).filter(function(x){ return (x.text||"").toLowerCase().indexOf(q)>=0; })[0];
+      if(inTitle||ing||step) mHits.push({ m:m, ing:inTitle?null:ing, step:(inTitle||ing)?null:step });
     });
-    if(!hits.length && !liHits.length && !mHits.length){
+    if(!hits.length && !mHits.length){
       var e=document.createElement("div"); e.className="sr-empty"; e.textContent="No matches for “"+raw+"”."; box.appendChild(e); return;
     }
     if(hits.length){
@@ -4438,20 +4458,11 @@
         }));
       });
     }
-    if(liHits.length){
-      srGroup(box,"List items",liHits.length);
-      liHits.slice(0,20).forEach(function(h){
-        box.appendChild(srItem({
-          colour:settings.accent, title:hlText(h.it.text,q), sub:escapeHtml(h.l.name+(h.it.done?" · ticked":"")),
-          pick:function(){ jumpToListItem(h.l.id, h.it.id); }
-        }));
-      });
-    }
     if(mHits.length){
       srGroup(box,"Saved meals",mHits.length);
       mHits.slice(0,20).forEach(function(h){
         var n=(h.m.ingredients||[]).filter(function(x){ return (x.text||"").trim(); }).length;
-        var sub=h.ing ? ("Includes "+hlText(h.ing.text,q)) : escapeHtml(n+" ingredient"+(n===1?"":"s"));
+        var sub=h.ing ? ("Includes "+hlText(h.ing.text,q)) : h.step ? ("Method: "+snippet(h.step.text,q)) : escapeHtml(n+" ingredient"+(n===1?"":"s"));
         var next=nextPlanned(h.m.id);
         box.appendChild(srItem({
           colour:"#e0912f", title:hlText(h.m.title||"(untitled meal)",q), sub:sub, when:next?relDay(next):"",
@@ -4488,15 +4499,10 @@
       if(el){ el.scrollIntoView({block:"center", behavior:"smooth"}); flashEl(el); }
     }, 80);
   }
-  function jumpToListItem(listId, itemId){
-    closeOverlay("searchOverlay");
-    activeListId=listId; openLists();
-    setTimeout(function(){ var el=itemId ? document.querySelector('#listItems [data-iid="'+itemId+'"]') : null; if(el){ el.scrollIntoView({block:"center"}); flashEl(el); } }, 80);
-  }
   function jumpToMeal(mealId){
     closeOverlay("searchOverlay");
-    openMeals(); showMealTab("library");
-    setTimeout(function(){ var el=document.querySelector('#mealLibraryList [data-mid="'+mealId+'"]'); if(el){ el.scrollIntoView({block:"center"}); flashEl(el); } }, 80);
+    openMeals();
+    setTimeout(function(){ var el=document.querySelector('#mealLibraryList [data-mid="'+mealId+'"]'); if(el){ el.scrollIntoView({block:"center"}); flashEl(el); } openMealView(mealId); }, 80);
   }
 
   /* ---------- Wall display ---------- */
@@ -5575,7 +5581,6 @@
   $("addBtn").addEventListener("click", function(){ openNew(keyOf(state.date), ""); });
   $("fsBtn").addEventListener("click", toggleFs);
   $("setBtn").addEventListener("click", openSettings);
-  $("listsBtn").addEventListener("click", openLists);
   $("mealsBtn").addEventListener("click", openMeals);
   $("wxNow").addEventListener("click", openForecast);
   $("wxNow").addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openForecast(); } });
@@ -5710,45 +5715,30 @@
     refreshWeather();
   });
 
-  $("listsClose").addEventListener("click", function(){ closeOverlay("listsOverlay"); });
-  $("listItemAdd").addEventListener("click", addListItem);
-  $("listItemInput").addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); addListItem(); } });
-  $("listClearDone").addEventListener("click", function(){
-    var l=activeList(); if(!l) return;
-    var n=l.items.filter(function(it){ return it.done; }).length;
-    if(!n){ toast("Nothing ticked yet"); return; }
-    pushUndo("Clear ticked",["lists"]);
-    l.items=l.items.filter(function(it){ return !it.done; }); saveLists(); renderListItems();
-    toastUndo(n+" ticked item"+(n>1?"s":"")+" cleared");
-  });
-  $("listDelete").addEventListener("click", function(){
-    if(lists.length<=1){ toast("Keep at least one list"); return; }
-    var gone=activeList();
-    pushUndo("Delete list",["lists"]);
-    lists=lists.filter(function(l){ return l.id!==activeListId; }); activeListId=lists[0].id;
-    saveLists(); renderListTabs(); renderListItems();
-    toastUndo("Deleted "+(gone?gone.name:"list"));
-  });
-
   $("mealsClose").addEventListener("click", function(){ closeOverlay("mealsOverlay"); render(); });
   $("mealsDone").addEventListener("click", function(){ closeOverlay("mealsOverlay"); render(); });
   $("mealsPrev").addEventListener("click", function(){ state.mealsWeek=addDays(startOfWeek(state.mealsWeek),-7); renderMeals(); });
   $("mealsNext").addEventListener("click", function(){ state.mealsWeek=addDays(startOfWeek(state.mealsWeek),7); renderMeals(); });
-  $("mealsToGrocery").addEventListener("click", openGroceryPick);
   $("mealTabs").addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; showMealTab(b.dataset.mtab); });
-  $("addMeal").addEventListener("click", function(){
-    mealLibrary.push({ id:uid(), title:"New meal", ingredients:[{id:uid(), text:""}] });
-    saveMealLibrary(); renderMealLibrary();
+  $("addMeal").addEventListener("click", function(){ openMealEditor(null); });
+  $("mealFilter").addEventListener("input", renderMealLibrary);
+  $("mvClose").addEventListener("click", function(){ closeOverlay("mealViewOverlay"); });
+  $("mvEdit").addEventListener("click", function(){ var id=mealViewId; closeOverlay("mealViewOverlay"); openMealEditor(id); });
+  $("mvDelete").addEventListener("click", function(){
+    var m=libMealById(mealViewId); if(!m) return;
+    pushUndo("Delete meal",["mealLibrary"]);
+    mealLibrary=mealLibrary.filter(function(x){ return x.id!==m.id; }); saveMealLibrary();
+    closeOverlay("mealViewOverlay"); renderMealLibrary(); toastUndo("Deleted "+(m.title||"meal"));
   });
+  $("meClose").addEventListener("click", function(){ closeOverlay("mealEditOverlay"); });
+  $("meCancel").addEventListener("click", function(){ closeOverlay("mealEditOverlay"); });
+  $("meSave").addEventListener("click", saveMealEditor);
+  $("meAddIng").addEventListener("click", function(){ meAddRow("ing", "", true); });
+  $("meAddStep").addEventListener("click", function(){ meAddRow("step", "", true); });
   $("mealPickClose").addEventListener("click", function(){ closeOverlay("mealPickOverlay"); });
   $("mealPickCustomAdd").addEventListener("click", setSlotCustom);
   $("mealPickCustom").addEventListener("keydown", function(e){ if(e.key==="Enter"){ e.preventDefault(); setSlotCustom(); } });
   $("mealPickClear").addEventListener("click", clearSlot);
-  $("gpClose").addEventListener("click", function(){ closeOverlay("groceryPickOverlay"); });
-  $("gpCancel").addEventListener("click", function(){ closeOverlay("groceryPickOverlay"); });
-  $("gpAll").addEventListener("click", function(){ gpSetAll(true); });
-  $("gpNone").addEventListener("click", function(){ gpSetAll(false); });
-  $("gpAdd").addEventListener("click", gpCommit);
   $("fcClose").addEventListener("click", function(){ closeOverlay("fcOverlay"); });
 
   $("exportBtn").addEventListener("click", exportData);

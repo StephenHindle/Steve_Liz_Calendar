@@ -39,7 +39,7 @@ Once it is online, each person can add it to their device so it opens full scree
 
 ## Handy features
 
-- **Search:** tap Search in the left rail, or press `/` (or Ctrl+K) on a keyboard. It finds tasks (including words in their notes), list items and saved meals, and jumps straight to the match.
+- **Search:** tap Search in the bottom bar, or press `/` (or Ctrl+K) on a keyboard. It finds tasks (including words in their notes) and saved meals (by name, ingredient or method), and jumps straight to the match.
 - **Undo:** after adding, editing, moving or deleting something, tap **Undo** on the message at the bottom of the screen. On a keyboard, Ctrl+Z (Cmd+Z on a Mac) works too.
 - **Outdoor tasks:** switch on **Outdoors** in a task, and it will show a warning if rain, storms, heat (35° and above) or strong wind are forecast. The forecast reaches about two weeks ahead.
 - **Animated background:** choose a moving wallpaper in Settings under Appearance.
@@ -50,9 +50,18 @@ Once it is online, each person can add it to their device so it opens full scree
 - **Glass tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
 
+## My Meals
+
+Tap **Meals** in the bottom bar to open **My Meals**, a list of your saved recipes.
+
+- **Add Meal** opens a form with the meal's name and two separate sections: **Ingredients** (one per line, with the amount) and **Method** (each step in order, numbered for you). Add or remove rows as you go, then tap **Save meal**.
+- Tap any meal in the list to see the recipe. Tap ingredients to tick them off while you cook or shop. **Edit meal** changes it, and **Delete** removes it (Undo brings it back).
+- When you have a few meals, a search box appears at the top of the list so you can find one by name or ingredient.
+- The **Week plan** tab is still there if you want to put meals on particular days. Planned meals show on the Day view and the wall display.
+
 ## Widget panels and the bottom bar
 
-The main buttons (Add, Search, Lists, Meals, Fullscreen and Settings) sit in a bar along the bottom. There is a widget panel on each side of the calendar, and both are open every time the app starts. On computers and tablets (including an iPad in portrait) they sit beside the calendar, getting a little slimmer on smaller screens. The **Widgets** button at each end of the bottom bar hides or shows its panel for the moment, and both open again next time. On phones the panels slide in from the edge and close when you tap outside them.
+The main buttons (Add, Search, Meals, Fullscreen and Settings) sit in a bar along the bottom. There is a widget panel on each side of the calendar, and both are open every time the app starts. On computers and tablets (including an iPad in portrait) they sit beside the calendar, getting a little slimmer on smaller screens. The **Widgets** button at each end of the bottom bar hides or shows its panel for the moment, and both open again next time. On phones the panels slide in from the edge and close when you tap outside them.
 
 In Settings under Widgets you can switch each widget on or off and choose whether it sits in the left or right panel. Under Appearance, **Smooth mode** uses lighter glass effects and a calmer background so tablets stay quick. It is on automatically for iPads.
 
@@ -136,7 +145,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v17";`, so change it to `"cal-cache-v18"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v18";`, so change it to `"cal-cache-v19"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.
