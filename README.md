@@ -47,6 +47,7 @@ Once it is online, each person can add it to their device so it opens full scree
   - **Weather sky** is the gentler sky that follows the weather and time of day.
   - **Colour flow** has soft colours drifting slowly in shades of your accent colour, and **Aurora** has ribbons of light rippling across the screen.
   - **Off** saves battery. Devices set to reduce motion get a still version.
+- **Automatic dimming:** the screen fades down from about an hour before sunset to an hour after, stays at the overnight level through the night, and brightens again around sunrise, following real Adelaide sunrise and sunset times. By default daytime is 60% and overnight is 20%; change either in Settings under Appearance, or switch it off. When the screen is dimmed, the first tap just wakes it to the daytime level (so you can see what you are tapping), and it fades back down after a minute without touches. A web page cannot change a tablet's real backlight, so the app darkens the picture instead: set the device's own brightness fairly high and let the app do the dimming. In the Fully Kiosk Browser app on Android, the app controls the real screen brightness instead.
 - **Glass tiles:** events have a frosted glass look, so the wallpaper glows softly through them while the text stays easy to read. Devices set to reduce transparency get solid tiles instead.
 - **SA public holidays and school terms:** holidays are marked on the calendar, school holidays are shaded, and the header shows the current term and week. Both can be turned off in Settings under Holidays.
 
@@ -145,7 +146,7 @@ The wall view keeps itself up to date: the clock ticks, finished events fade, an
 
 When you want to change the app, replace the files in the repository with the new versions and commit. Because the app caches itself to work offline, there is one extra step so people actually receive the update:
 
-1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v18";`, so change it to `"cal-cache-v19"`, and so on each time.
+1. Open `sw.js` and change the version line near the top. It currently reads `var CACHE = "cal-cache-v19";`, so change it to `"cal-cache-v20"`, and so on each time.
 2. Commit the changed files.
 
 After that, the next time someone opens the app it will fetch the new version. If a device still shows the old one, close the app or tab fully and reopen it, or pull to refresh.

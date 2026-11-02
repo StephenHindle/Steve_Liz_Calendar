@@ -1428,6 +1428,16 @@
   .sky[data-scene="fog"] .sc-cloud.c3{opacity:.35;}
   html.lite .sc-slide i{animation-timing-function:steps(var(--n2,96));}
 
+  /* ---------- Automatic dimming ---------- */
+  .dimmer{position:fixed;inset:0;z-index:2147483000;background:#000;opacity:0;pointer-events:none;transition:opacity 4s linear;}
+  .dimmer.quick{transition:opacity .35s ease-out;}
+  .dim-set{display:flex;flex-direction:column;gap:6px;margin:0 0 6px;}
+  .dim-set[hidden]{display:none;}
+  .dim-row{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted);}
+  .dim-row span{flex:0 0 150px;}
+  .dim-row input{flex:1;accent-color:var(--accent);}
+  .dim-row b{flex:0 0 40px;text-align:right;color:var(--text);font-variant-numeric:tabular-nums;}
+
   /* ---------- Smooth mode: lighter effects for iPads and slower devices ---------- */
   html.lite .event,html.lite .allday-chip,html.lite .chip,html.lite .wall-card,html.lite .ww-row,html.lite .wall-tag,html.lite .wg,html.lite .rd-tile,html.lite .yt-res,html.lite .ai-msg{-webkit-backdrop-filter:none!important;backdrop-filter:none!important;}
   html.lite .event,html.lite .allday-chip,html.lite .chip,html.lite .wall-card:not(.past),html.lite .ww-row,html.lite .wall-tag,html.lite .wg,html.lite .rd-tile{--lg-base:rgba(255,255,255,.5);}
@@ -1807,6 +1817,7 @@
 </style>
 </head>
 <body>
+<div class="dimmer" id="dimmer" aria-hidden="true"></div>
 
 <div class="app">
 <div class="sky" id="sky" aria-hidden="true">
@@ -2200,6 +2211,17 @@
           </div>
           <div class="switch" id="kioskToggle" role="switch" aria-checked="false" tabindex="0"></div>
         </div>
+        <div class="switch-row">
+          <div>
+            <div class="lbl-main">Automatic dimming</div>
+            <div class="lbl-sub" id="dimSub">Fades the screen down after sunset and back up in the morning</div>
+          </div>
+          <div class="switch" id="dimToggle" role="switch" aria-checked="false" tabindex="0"></div>
+        </div>
+        <div class="dim-set" id="dimSet">
+          <label class="dim-row"><span>Daytime brightness</span><input type="range" id="dimMax" min="20" max="100" step="5" aria-label="Daytime brightness"><b id="dimMaxV"></b></label>
+          <label class="dim-row"><span>Overnight brightness</span><input type="range" id="dimMin" min="5" max="100" step="5" aria-label="Overnight brightness"><b id="dimMinV"></b></label>
+        </div>
         <div class="wp-set">
           <div class="lbl-main">Smooth mode</div>
           <div class="lbl-sub">Lighter glass effects and a calmer background so tablets stay quick. Auto turns it on for iPads.</div>
@@ -2576,6 +2598,7 @@
   if(["auto","on","off"].indexOf(settings.lite)<0) settings.lite = "auto";
   if(["auto","clear","cloudy","showers","rain","storm","fog"].indexOf(settings.scene)<0) settings.scene = "auto";
   if(typeof settings.aiWake!=="boolean") settings.aiWake = true;
+  if(!settings.dim || typeof settings.dim!=="object") settings.dim = { on:true, max:60, min:20 };
   if(typeof settings.aiSpeak!=="boolean") settings.aiSpeak = true;
   if(typeof settings.aiCal!=="boolean") settings.aiCal = true;
   if(settings.aiModel!=="smart") settings.aiModel = "fast";
@@ -3829,6 +3852,7 @@
     });
     $("themeToggle").querySelectorAll("button").forEach(function(b){ b.classList.toggle("active", b.dataset.themeOpt===settings.theme); });
     setSwitch("kioskToggle", settings.kiosk);
+    setSwitch("dimToggle", settings.dim.on); markDim();
     markWp();
     renderWgSettings(); markLite();
     $("aiKey").value=aiKey(); $("ytKey").value=ytKey(); $("aiModel").value=settings.aiModel;
@@ -3911,6 +3935,7 @@
           if(["scenes","sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
           if(!settings.wg || typeof settings.wg!=="object") settings.wg={ month:true, bins:true, notes:true, photos:true };
           if(typeof settings.wgOpen!=="boolean") settings.wgOpen=true;
+          if(!settings.dim || typeof settings.dim!=="object") settings.dim={ on:true, max:60, min:20 };
           if(!settings.bins || typeof settings.bins!=="object") settings.bins={ day:null, refMonday:"", refBin:"yellow" };
           if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
@@ -4627,6 +4652,59 @@
       })(addDays(today,i));
     }
     $("wallLegend").hidden=!anyHols;
+  }
+
+
+  /* ---------- Automatic dimming ----------
+     Browsers cannot change a tablet's real backlight, so a dark layer over the whole app does the dimming.
+     (In the Fully Kiosk Browser app on Android the real screen brightness is set instead.) */
+  var DIM={ boostUntil:0, last:-1, timer:null };
+  function dimSmooth(x){ x=Math.max(0,Math.min(1,x)); return x*x*(3-2*x); }
+  function dimLevel(now){
+    var max=settings.dim.max, min=Math.min(settings.dim.min, max);
+    var d=wxDaily[keyOf(now)], m=now.getHours()*60+now.getMinutes()+now.getSeconds()/60;
+    var sr=(d&&d.sr!=null)?d.sr:390, ss=(d&&d.ss!=null)?d.ss:1140;
+    var dark;   // 0 = full daytime brightness, 1 = overnight level
+    if(m>=ss-60 && m<ss+60) dark=dimSmooth((m-(ss-60))/120);        // evening: from an hour before sunset to an hour after
+    else if(m>=ss+60 || m<sr-45) dark=1;                             // night
+    else if(m<sr+45) dark=1-dimSmooth((m-(sr-45))/90);                // morning: 45 minutes either side of sunrise
+    else dark=0;                                                     // day
+    return Math.round(max-(max-min)*dark);
+  }
+  function applyDim(){
+    var el=$("dimmer"), on=settings.dim && settings.dim.on, now=new Date();
+    var lvl = on ? dimLevel(now) : 100;
+    var boosted = on && Date.now()<DIM.boostUntil && lvl<settings.dim.max;
+    if(boosted) lvl=settings.dim.max;
+    if(window.fully && typeof window.fully.setScreenBrightness==="function"){
+      if(lvl!==DIM.last){ try{ window.fully.setScreenBrightness(Math.round(lvl/100*255)); }catch(e){} }
+      el.style.opacity="0";
+    } else {
+      el.style.opacity=((100-lvl)/100).toFixed(3);
+    }
+    el.classList.toggle("quick", boosted && DIM.last!==-1 && DIM.last<lvl);
+    DIM.last=lvl;
+    var sub=$("dimSub"); if(sub) sub.textContent = on ? ("Now at "+lvl+"%"+(boosted?" for a minute after a tap":"")+". Fades down after sunset and back up in the morning.") : "Fades the screen down after sunset and back up in the morning";
+  }
+  // When the screen is dimmed, the first tap just wakes it (so you can see what you are tapping);
+  // taps while it is bright work as normal and keep it bright for another minute.
+  function dimBoost(e){
+    if(!settings.dim || !settings.dim.on) return;
+    if(dimLevel(new Date())>=settings.dim.max-2) return;
+    var wasBright = Date.now()<DIM.boostUntil;
+    DIM.boostUntil=Date.now()+60000; applyDim();
+    clearTimeout(DIM.timer); DIM.timer=setTimeout(applyDim, 60500);
+    if(!wasBright && e && e.type==="pointerdown"){
+      e.preventDefault(); e.stopPropagation();
+      var swallow=function(ev){ ev.preventDefault(); ev.stopPropagation(); document.removeEventListener("click", swallow, true); };
+      document.addEventListener("click", swallow, true);
+      setTimeout(function(){ document.removeEventListener("click", swallow, true); }, 700);
+    }
+  }
+  function markDim(){
+    $("dimSet").hidden=!settings.dim.on;
+    $("dimMax").value=settings.dim.max; $("dimMin").value=settings.dim.min;
+    $("dimMaxV").textContent=settings.dim.max+"%"; $("dimMinV").textContent=settings.dim.min+"%";
   }
 
   /* ---------- Widget panel ---------- */
@@ -5794,6 +5872,23 @@
   if("serviceWorker" in navigator){
     window.addEventListener("load", function(){ navigator.serviceWorker.register("./sw.js").catch(function(){}); });
   }
+
+  // automatic dimming wiring
+  $("dimToggle").addEventListener("click", function(){ settings.dim.on=!getSwitch("dimToggle"); saveSettings(); setSwitch("dimToggle", settings.dim.on); markDim(); applyDim(); });
+  ["dimMax","dimMin"].forEach(function(id){
+    $(id).addEventListener("input", function(){
+      var v=+this.value;
+      if(id==="dimMax"){ settings.dim.max=v; if(settings.dim.min>v){ settings.dim.min=v; } }
+      else { settings.dim.min=Math.min(v, settings.dim.max); }
+      markDim(); DIM.boostUntil=0; applyDim();
+    });
+    $(id).addEventListener("change", function(){ saveSettings(); });
+  });
+  document.addEventListener("pointerdown", dimBoost, true);
+  document.addEventListener("keydown", dimBoost, true);
+  document.addEventListener("visibilitychange", function(){ if(!document.hidden) applyDim(); });
+  setInterval(applyDim, 30000);
+  applyDim();
 
   // widget panel wiring
   $("wgBtn").addEventListener("click", function(){ toggleWidgets("right"); });
