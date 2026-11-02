@@ -2,9 +2,14 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "'Largest mass mortality' of sharks and rays recorded, expert says",
-   "link": "https://www.abc.net.au/news/2026-11-02/citizen-science-shows-8000-sharks-rays-killed-by-algal-bloom/107327852",
-   "published": "2026-11-01T19:23:37+00:00"
+   "title": "Reality TV contestant 'mentally incompetent' to commit murder, report finds",
+   "link": "https://www.abc.net.au/news/2026-11-02/tamika-chesser-mental-fitness-report-julian-story-murder/107336588",
+   "published": "2026-11-02T03:17:28+00:00"
+  },
+  {
+   "title": "Coach who sent teen 'inappropriate' messages banned from working with kids",
+   "link": "https://www.abc.net.au/news/2026-11-02/coach-prohibited-from-working-with-children-after-messaging-teen/107307682",
+   "published": "2026-11-02T05:36:54+00:00"
   },
   {
    "title": "Driver charged after pedestrian's death in Adelaide's north",
@@ -12,19 +17,29 @@
    "published": "2026-11-01T08:01:46+00:00"
   },
   {
+   "title": "'Largest mass mortality' of sharks and rays recorded, expert says",
+   "link": "https://www.abc.net.au/news/2026-11-02/citizen-science-shows-8000-sharks-rays-killed-by-algal-bloom/107327852",
+   "published": "2026-11-01T19:23:37+00:00"
+  },
+  {
+   "title": "Australia nears 'largest property downturn in 40 years' as prices plunge",
+   "link": "https://www.abc.net.au/news/2026-11-02/house-prices-fall-in-october-biggest-downturn-40-years-cotality/107325214",
+   "published": "2026-11-01T13:01:00+00:00"
+  },
+  {
    "title": "SA's historic Gladstone Gaol reopens with ghost tours",
    "link": "https://www.abc.net.au/news/2026-11-01/gladstone-gaol-reopens/107333388",
    "published": "2026-11-01T02:19:07+00:00"
   },
   {
-   "title": "Young woman dies after falling from balcony in Adelaide's CBD",
-   "link": "https://www.abc.net.au/news/2026-11-01/young-woman-dies-after-balcony-fall-hindley-street-adelaide/107333744",
-   "published": "2026-11-01T03:54:11+00:00"
-  },
-  {
    "title": "Ex-AFL star's spirit company is soaring, including in Asia",
    "link": "https://www.abc.net.au/news/2026-11-01/former-afl-player-daniel-motlop-spirits-company-looks-to-asia/107326806",
    "published": "2026-10-31T20:25:37+00:00"
+  },
+  {
+   "title": "Young woman dies after falling from balcony in Adelaide's CBD",
+   "link": "https://www.abc.net.au/news/2026-11-01/young-woman-dies-after-balcony-fall-hindley-street-adelaide/107333744",
+   "published": "2026-11-01T03:54:11+00:00"
   },
   {
    "title": "Tributes flow for 'flying doctor artist' who captured spirit of outback",
@@ -37,70 +52,55 @@
    "published": "2026-10-31T22:01:03+00:00"
   },
   {
-   "title": "Locals protest against proposed AI data centre in Adelaide Hills",
-   "link": "https://www.abc.net.au/news/2026-10-31/ai-data-centre-protest-adelaide-hills/107332222",
-   "published": "2026-10-31T08:31:46+00:00"
-  },
-  {
-   "title": "Mother shares 'forever' grief of losing daughter in crash while driving",
-   "link": "https://www.abc.net.au/news/2026-10-31/kat-brown-road-safety-plea-as-sa-road-toll-climbs/107322702",
-   "published": "2026-10-30T20:29:43+00:00"
-  },
-  {
-   "title": "Dead dolphin tests positive for H5 bird flu",
-   "link": "https://www.abc.net.au/news/2026-10-31/dead-dolphin-returns-positive-result-for-h5-bird-flu/107331772",
-   "published": "2026-10-31T02:39:10+00:00"
-  },
-  {
-   "title": "Person in life-threatening condition with meningococcal B infection",
-   "link": "https://www.abc.net.au/news/2026-10-31/sa-meningococcal-b-infection/107331664",
-   "published": "2026-10-31T01:26:47+00:00"
-  },
-  {
-   "title": "Little penguin numbers grow after near extinction",
-   "link": "https://www.abc.net.au/news/2026-10-31/granite-island-little-penguin-colony-birds-census/107322354",
-   "published": "2026-10-30T23:04:22+00:00"
-  },
-  {
-   "title": "Finding megafauna footprints holds special meaning for these students",
-   "link": "https://www.abc.net.au/news/2026-10-31/megafauna-footprints-fowlers-bay-maths-science-history-lesson/107092210",
-   "published": "2026-10-31T01:14:00+00:00"
-  },
-  {
-   "title": "Tiny town calls for parliamentary inquiry into SA Ambulance service",
-   "link": "https://www.abc.net.au/news/2026-10-31/pinnaroo-sa-ambulance-volunteer-treatment-inquiry-/107326874",
-   "published": "2026-10-30T22:01:00+00:00"
-  },
-  {
-   "title": "One in four young men now say violence for a cause can be justified",
-   "link": "https://www.abc.net.au/news/2026-11-02/rise-in-young-men-open-to-extreme-measures-for-a-cause/107326932",
-   "published": "2026-11-01T13:00:00+00:00"
-  },
-  {
-   "title": "Live: Albanese to seek tighter rules for British backpackers in UK PM meeting",
+   "title": "Government dismisses calls to means-test EV and battery schemes — as it happened",
    "link": "https://www.abc.net.au/news/2026-11-02/federal-politics-live-blog-albanese-chogm-nov-2/107334912",
    "published": "2026-11-01T20:04:08+00:00"
   },
   {
-   "title": "Mother exposes ways her DV abuser dodges paying child support",
-   "link": "https://www.abc.net.au/news/2026-11-02/financial-abuse-via-services-australias-child-support/107295686",
-   "published": "2026-11-01T19:43:33+00:00"
+   "title": "Australian batting 'stronger' despite repeat South Africa collapses",
+   "link": "https://www.abc.net.au/news/2026-11-02/australia-in-better-position-after-south-africa-defeat/107337552",
+   "published": "2026-11-02T04:40:04+00:00"
   },
   {
-   "title": "Gold Coast mayor took controversial Trump invoice out of office",
-   "link": "https://www.abc.net.au/news/2026-11-02/queensland-gold-coast-tom-tate-trump-invoice/107320816",
-   "published": "2026-11-01T19:48:27+00:00"
+   "title": "Westpac reports $6.8 billion profit, ASX slides ahead of RBA meeting, banks slash economic forecasts — as it happened",
+   "link": "https://www.abc.net.au/news/2026-11-02/asx-markets-business-live-news-nov-2/107334212",
+   "published": "2026-11-01T20:01:08+00:00"
   },
   {
-   "title": "Super funds issued with legal warning following regulator's damning report",
-   "link": "https://www.abc.net.au/news/2026-11-02/superannuation-funds-failing-members-retirement-savings-asic/107319026",
+   "title": "Group lost at sea for months found after drifting thousands of kilometres",
+   "link": "https://www.abc.net.au/news/2026-11-02/five-rescued-after-three-months-adrift-at-sea/107334486",
+   "published": "2026-11-01T23:45:15+00:00"
+  },
+  {
+   "title": "The F1 records Antonelli broke to become world champion",
+   "link": "https://www.abc.net.au/news/2026-11-02/f1-records-broken-by-kimi-antonelli-in-2026/107154478",
+   "published": "2026-11-02T00:02:53+00:00"
+  },
+  {
+   "title": "West Coast Eagles star suffers brutal injury news",
+   "link": "https://www.abc.net.au/news/2026-11-02/ella-roberts-aflw-west-coast-eagles-acl-injury/107337482",
+   "published": "2026-11-02T04:14:57+00:00"
+  },
+  {
+   "title": "What time is the Melbourne Cup? How to watch and the weather forecast",
+   "link": "https://www.abc.net.au/news/2026-11-02/melbourne-cup-time-how-to-watch-weather-forecast/107333664",
+   "published": "2026-11-01T18:38:39+00:00"
+  },
+  {
+   "title": "Thousands of public EV chargers may be unusable",
+   "link": "https://www.abc.net.au/news/science/2026-11-02/kerbside-electric-vehicle-ev-charger-rollout/107301990",
    "published": "2026-11-01T18:00:00+00:00"
   },
   {
-   "title": "Protesters loot shops, 100 officers injured as riots spread to Germany",
-   "link": "https://www.abc.net.au/news/2026-11-02/protests-europe-germany-frankfurt/107334774",
-   "published": "2026-11-01T19:31:10+00:00"
+   "title": "Eight arrested over alleged assault of off-duty police officer",
+   "link": "https://www.abc.net.au/news/2026-11-02/off-duty-officer-allegedly-assaulted-victoria-shepparton/107336606",
+   "published": "2026-11-02T02:20:22+00:00"
+  },
+  {
+   "title": "Ukrainian air raid alert app sends false warnings after being hacked",
+   "link": "https://www.abc.net.au/news/2026-11-02/ukraine-air-force-public-air-raid-alert-app-hacked-false-warning/107336062",
+   "published": "2026-11-02T02:05:47+00:00"
   }
  ],
- "updated": "2026-11-02T01:00:29.870283+00:00"
+ "updated": "2026-11-02T07:37:53.434181+00:00"
 }
