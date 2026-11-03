@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Reality TV contestant 'mentally incompetent' to commit murder, report finds",
-   "link": "https://www.abc.net.au/news/2026-11-02/tamika-chesser-mental-fitness-report-julian-story-murder/107336588",
-   "published": "2026-11-02T03:17:28+00:00"
+   "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-11-03/adelaide-crow-josh-worrell-convicted-and-fined/107340078",
+   "published": "2026-11-03T00:15:20+00:00"
+  },
+  {
+   "title": "Another SA council scraps Acknowledgement of Country",
+   "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
+   "published": "2026-11-02T20:01:59+00:00"
+  },
+  {
+   "title": "SA joins federal government in social media ban legal challenge",
+   "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
+   "published": "2026-11-02T19:43:45+00:00"
   },
   {
    "title": "Charity 'heartbroken' by theft of Christmas toys, shoes",
@@ -17,6 +27,16 @@
    "published": "2026-11-02T05:36:54+00:00"
   },
   {
+   "title": "WWII digger's photos from old camera found in drawer decades later",
+   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
+   "published": "2026-11-02T18:30:00+00:00"
+  },
+  {
+   "title": "Reality TV contestant 'mentally incompetent' to commit murder, report finds",
+   "link": "https://www.abc.net.au/news/2026-11-02/tamika-chesser-mental-fitness-report-julian-story-murder/107336588",
+   "published": "2026-11-02T03:17:28+00:00"
+  },
+  {
    "title": "'Largest mass mortality' of sharks and rays recorded, expert says",
    "link": "https://www.abc.net.au/news/2026-11-02/citizen-science-shows-8000-sharks-rays-killed-by-algal-bloom/107327852",
    "published": "2026-11-01T19:23:37+00:00"
@@ -25,11 +45,6 @@
    "title": "Driver charged after pedestrian's death in Adelaide's north",
    "link": "https://www.abc.net.au/news/2026-11-01/salisbury-north-fatal-pedestrian/107333956",
    "published": "2026-11-01T08:01:46+00:00"
-  },
-  {
-   "title": "Australia nears 'largest property downturn in 40 years' as prices plunge",
-   "link": "https://www.abc.net.au/news/2026-11-02/house-prices-fall-in-october-biggest-downturn-40-years-cotality/107325214",
-   "published": "2026-11-01T13:01:00+00:00"
   },
   {
    "title": "SA's historic Gladstone Gaol reopens with ghost tours",
@@ -42,65 +57,50 @@
    "published": "2026-10-31T20:25:37+00:00"
   },
   {
-   "title": "Young woman dies after falling from balcony in Adelaide's CBD",
-   "link": "https://www.abc.net.au/news/2026-11-01/young-woman-dies-after-balcony-fall-hindley-street-adelaide/107333744",
-   "published": "2026-11-01T03:54:11+00:00"
+   "title": "Florida plane crash victims include 20yo copilot, tech entrepreneur and family",
+   "link": "https://www.abc.net.au/news/2026-11-03/parts-of-jet-appear-to-have-broken-off-before-florida-crash/107339320",
+   "published": "2026-11-02T19:14:29+00:00"
   },
   {
-   "title": "Tributes flow for 'flying doctor artist' who captured spirit of outback",
-   "link": "https://www.abc.net.au/news/2026-11-01/broken-hill-flying-doctor-artist-howard-steer-dies/107330168",
-   "published": "2026-10-31T20:32:40+00:00"
+   "title": "Live: Albanese defends economic record ahead of rates decision",
+   "link": "https://www.abc.net.au/news/2026-11-03/federal-politics-live-blog-albanese-interest-rates-nov-3/107338214",
+   "published": "2026-11-02T19:59:23+00:00"
   },
   {
-   "title": "Sideshow operators offer cash discounts for rides amid soaring costs",
-   "link": "https://www.abc.net.au/news/2026-11-01/show-rides-cost-challenges/107300944",
-   "published": "2026-10-31T22:01:03+00:00"
+   "title": "One Nation condemns alleged baseball bat assault on volunteer",
+   "link": "https://www.abc.net.au/news/2026-11-03/vic-one-nation-volunteer-assault-torquay-geelong/107340162",
+   "published": "2026-11-03T00:08:37+00:00"
   },
   {
-   "title": "Canavan's seat switch might backfire, but does he have a better option?",
-   "link": "https://www.abc.net.au/news/2026-11-02/matt-canavan-capricornia-one-nation-casey-briggs/107301460",
-   "published": "2026-11-02T03:16:55+00:00"
+   "title": "Republicans worried voters will stay home in strongholds amid close midterms races",
+   "link": "https://www.abc.net.au/news/2026-11-03/us-midterms-donald-trump-campaign-appearances-tracked/107332788",
+   "published": "2026-11-02T18:38:56+00:00"
   },
   {
-   "title": "What time is the Melbourne Cup? How to watch and the weather forecast",
-   "link": "https://www.abc.net.au/news/2026-11-02/melbourne-cup-time-how-to-watch-weather-forecast/107333664",
-   "published": "2026-11-01T18:38:39+00:00"
+   "title": "Supercells forecast for Queensland and NSW after overnight hail dump",
+   "link": "https://www.abc.net.au/news/2026-11-03/qld-storm-supercells-after-overnight-hail-dump/107339454",
+   "published": "2026-11-02T21:43:08+00:00"
   },
   {
-   "title": "Ukrainian air raid alert app sends false warnings after being hacked",
-   "link": "https://www.abc.net.au/news/2026-11-02/ukraine-air-force-public-air-raid-alert-app-hacked-false-warning/107336062",
-   "published": "2026-11-02T02:05:47+00:00"
+   "title": "With leaders in jail, a tobacco empire is falling 'like a house of cards'",
+   "link": "https://www.abc.net.au/news/2026-11-03/kazem-hamad-civil-war-within-international-crime-empire/107335854",
+   "published": "2026-11-02T22:15:24+00:00"
   },
   {
-   "title": "Wanderers' chair calls out 'totally unacceptable' fan treatment by police",
-   "link": "https://www.abc.net.au/news/2026-11-02/western-sydney-wanderers-chair-slams-police-over-fan-treatment/107338162",
-   "published": "2026-11-02T06:43:46+00:00"
+   "title": "NAPLAN returns to pen and paper after digital backlash",
+   "link": "https://www.abc.net.au/news/2026-11-03/naplan-test-returns-to-pen-and-paper-/107339724",
+   "published": "2026-11-02T22:14:13+00:00"
   },
   {
-   "title": "The F1 records Antonelli broke to become world champion",
-   "link": "https://www.abc.net.au/news/2026-11-02/f1-records-broken-by-kimi-antonelli-in-2026/107154478",
-   "published": "2026-11-02T00:02:53+00:00"
+   "title": "NASA's Swift telescope predicted to plummet back to Earth tomorrow",
+   "link": "https://www.abc.net.au/news/science/2026-11-03/nasa-swift-telescope-crash-landing/100018476",
+   "published": "2026-11-03T00:45:49+00:00"
   },
   {
-   "title": "One-year-old dies in house fire south of Perth",
-   "link": "https://www.abc.net.au/news/2026-11-02/child-dies-collie-wa-house-fire/107338498",
-   "published": "2026-11-02T09:13:44+00:00"
-  },
-  {
-   "title": "Male nurse charged with raping three elderly women faces court",
-   "link": "https://www.abc.net.au/news/2026-11-02/greenslopes-hospital-nurse-charged-rape-elderly-women-court/107336684",
-   "published": "2026-11-02T08:16:17+00:00"
-  },
-  {
-   "title": "Group lost at sea for months found after drifting thousands of kilometres",
-   "link": "https://www.abc.net.au/news/2026-11-02/five-rescued-after-three-months-adrift-at-sea/107334486",
-   "published": "2026-11-01T23:45:15+00:00"
-  },
-  {
-   "title": "University cancels show by queer Aboriginal artist following complaint",
-   "link": "https://www.abc.net.au/news/2026-11-02/university-of-tas-cancels-queer-artist-exhibition-hobiennale/107336428",
-   "published": "2026-11-02T07:06:50+00:00"
+   "title": "Social media ban faces first major legal challenge in High Court",
+   "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
+   "published": "2026-11-02T19:43:45+00:00"
   }
  ],
- "updated": "2026-11-02T18:14:45.899113+00:00"
+ "updated": "2026-11-03T01:13:24.557058+00:00"
 }
