@@ -2,14 +2,39 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Car slams through supermarket wall 'like a sonic boom'",
+   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
+   "published": "2026-11-03T07:20:53+00:00"
+  },
+  {
    "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
    "link": "https://www.abc.net.au/news/2026-11-03/adelaide-crow-josh-worrell-convicted-and-fined/107340078",
    "published": "2026-11-03T00:15:20+00:00"
   },
   {
+   "title": "SA farmers fear wild dog boom if Wilkerr dingo population is protected",
+   "link": "https://www.abc.net.au/news/2026-11-03/wild-dog-fears-proposal-to-protect-wilkerr-dingoes/107297912",
+   "published": "2026-11-03T06:21:48+00:00"
+  },
+  {
+   "title": "Second company suspended from Torrens-to-Darlington road project",
+   "link": "https://www.abc.net.au/news/2026-11-03/torrens-to-darlington-alliance-cancels-career-boss-contract/107338688",
+   "published": "2026-11-03T01:33:28+00:00"
+  },
+  {
+   "title": "SA government backflips on locust management approach despite past concerns",
+   "link": "https://www.abc.net.au/news/2026-11-03/aerial-locust-spraying-mallee-backflip/107335362",
+   "published": "2026-11-03T05:22:39+00:00"
+  },
+  {
    "title": "Another SA council scraps Acknowledgement of Country",
    "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
    "published": "2026-11-02T20:01:59+00:00"
+  },
+  {
+   "title": "WWII digger's photos from old camera found in drawer decades later",
+   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
+   "published": "2026-11-02T18:30:00+00:00"
   },
   {
    "title": "SA joins federal government in social media ban legal challenge",
@@ -27,11 +52,6 @@
    "published": "2026-11-02T05:36:54+00:00"
   },
   {
-   "title": "WWII digger's photos from old camera found in drawer decades later",
-   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
-   "published": "2026-11-02T18:30:00+00:00"
-  },
-  {
    "title": "Reality TV contestant 'mentally incompetent' to commit murder, report finds",
    "link": "https://www.abc.net.au/news/2026-11-02/tamika-chesser-mental-fitness-report-julian-story-murder/107336588",
    "published": "2026-11-02T03:17:28+00:00"
@@ -42,19 +62,29 @@
    "published": "2026-11-01T19:23:37+00:00"
   },
   {
-   "title": "Driver charged after pedestrian's death in Adelaide's north",
-   "link": "https://www.abc.net.au/news/2026-11-01/salisbury-north-fatal-pedestrian/107333956",
-   "published": "2026-11-01T08:01:46+00:00"
+   "title": "Star trainer Maher claims second Melbourne Cup as Point of Law storms to win",
+   "link": "https://www.abc.net.au/news/2026-11-03/melbourne-cup-point-of-law-wins-for-ciaron-maher/107341548",
+   "published": "2026-11-03T04:25:17+00:00"
   },
   {
-   "title": "SA's historic Gladstone Gaol reopens with ghost tours",
-   "link": "https://www.abc.net.au/news/2026-11-01/gladstone-gaol-reopens/107333388",
-   "published": "2026-11-01T02:19:07+00:00"
+   "title": "US has hit Iranian targets in Strait of Hormuz, US official says",
+   "link": "https://www.abc.net.au/news/2026-11-03/us-official-confirms-strikes-on-iran/107341252",
+   "published": "2026-11-03T02:30:14+00:00"
   },
   {
-   "title": "Ex-AFL star's spirit company is soaring, including in Asia",
-   "link": "https://www.abc.net.au/news/2026-11-01/former-afl-player-daniel-motlop-spirits-company-looks-to-asia/107326806",
-   "published": "2026-10-31T20:25:37+00:00"
+   "title": "Lamarre-Condon asked police not to judge him, jury told",
+   "link": "https://www.abc.net.au/news/2026-11-03/beau-lamarre-condon-told-police-not-a-bad-person/107342440",
+   "published": "2026-11-03T06:57:17+00:00"
+  },
+  {
+   "title": "Victorian farmers blindsided by approval of 155-turbine wind farm ahead of election",
+   "link": "https://www.abc.net.au/news/2026-11-03/farmers-blindsided-by-approval-of-155-turbine-wind-farm/107341552",
+   "published": "2026-11-03T06:07:11+00:00"
+  },
+  {
+   "title": "Craig Silvey's online apology fails to address victims, advocates say",
+   "link": "https://www.abc.net.au/news/2026-11-03/craig-silvey-s-online-apology-fails-to-address-victims/107342544",
+   "published": "2026-11-03T06:47:16+00:00"
   },
   {
    "title": "Florida plane crash victims include 20yo copilot, tech entrepreneur and family",
@@ -62,45 +92,15 @@
    "published": "2026-11-02T19:14:29+00:00"
   },
   {
-   "title": "Live: Albanese defends economic record ahead of rates decision",
-   "link": "https://www.abc.net.au/news/2026-11-03/federal-politics-live-blog-albanese-interest-rates-nov-3/107338214",
-   "published": "2026-11-02T19:59:23+00:00"
+   "title": "Sam Wood files appeal after being denied bail on domestic violence charges",
+   "link": "https://www.abc.net.au/news/2026-11-03/qld-sam-wood-appeals-bail-decision/107341734",
+   "published": "2026-11-03T06:25:10+00:00"
   },
   {
-   "title": "One Nation condemns alleged baseball bat assault on volunteer",
-   "link": "https://www.abc.net.au/news/2026-11-03/vic-one-nation-volunteer-assault-torquay-geelong/107340162",
-   "published": "2026-11-03T00:08:37+00:00"
-  },
-  {
-   "title": "Republicans worried voters will stay home in strongholds amid close midterms races",
-   "link": "https://www.abc.net.au/news/2026-11-03/us-midterms-donald-trump-campaign-appearances-tracked/107332788",
-   "published": "2026-11-02T18:38:56+00:00"
-  },
-  {
-   "title": "Supercells forecast for Queensland and NSW after overnight hail dump",
-   "link": "https://www.abc.net.au/news/2026-11-03/qld-storm-supercells-after-overnight-hail-dump/107339454",
-   "published": "2026-11-02T21:43:08+00:00"
-  },
-  {
-   "title": "With leaders in jail, a tobacco empire is falling 'like a house of cards'",
-   "link": "https://www.abc.net.au/news/2026-11-03/kazem-hamad-civil-war-within-international-crime-empire/107335854",
-   "published": "2026-11-02T22:15:24+00:00"
-  },
-  {
-   "title": "NAPLAN returns to pen and paper after digital backlash",
-   "link": "https://www.abc.net.au/news/2026-11-03/naplan-test-returns-to-pen-and-paper-/107339724",
-   "published": "2026-11-02T22:14:13+00:00"
-  },
-  {
-   "title": "NASA's Swift telescope predicted to plummet back to Earth tomorrow",
-   "link": "https://www.abc.net.au/news/science/2026-11-03/nasa-swift-telescope-crash-landing/100018476",
-   "published": "2026-11-03T00:45:49+00:00"
-  },
-  {
-   "title": "Social media ban faces first major legal challenge in High Court",
-   "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
-   "published": "2026-11-02T19:43:45+00:00"
+   "title": "Saudi Arabia Asian Cup postponed due to conflict in Middle East",
+   "link": "https://www.abc.net.au/news/2026-11-03/asian-cup-postponed-due-to-unrest-in-saudi-arabia/107342724",
+   "published": "2026-11-03T06:24:50+00:00"
   }
  ],
- "updated": "2026-11-03T01:13:24.557058+00:00"
+ "updated": "2026-11-03T08:32:39.434003+00:00"
 }
