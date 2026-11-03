@@ -2,9 +2,14 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Car slams through supermarket wall 'like a sonic boom'",
-   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
-   "published": "2026-11-03T07:20:53+00:00"
+   "title": "Multiple bankruptcies surround businessman at centre of T2D dispute",
+   "link": "https://www.abc.net.au/news/2026-11-04/robert-cammarano-declared-bankrupt-four-times/107342368",
+   "published": "2026-11-03T19:24:57+00:00"
+  },
+  {
+   "title": "South Australians urged to prepare for next big earthquake",
+   "link": "https://www.abc.net.au/news/2026-11-04/after-earthquake-spate-preparedness-urged/107340220",
+   "published": "2026-11-03T21:08:56+00:00"
   },
   {
    "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
@@ -12,14 +17,14 @@
    "published": "2026-11-03T00:15:20+00:00"
   },
   {
+   "title": "Car slams through supermarket wall 'like a sonic boom'",
+   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
+   "published": "2026-11-03T07:20:53+00:00"
+  },
+  {
    "title": "SA farmers fear wild dog boom if Wilkerr dingo population is protected",
    "link": "https://www.abc.net.au/news/2026-11-03/wild-dog-fears-proposal-to-protect-wilkerr-dingoes/107297912",
    "published": "2026-11-03T06:21:48+00:00"
-  },
-  {
-   "title": "Second company suspended from Torrens-to-Darlington road project",
-   "link": "https://www.abc.net.au/news/2026-11-03/torrens-to-darlington-alliance-cancels-career-boss-contract/107338688",
-   "published": "2026-11-03T01:33:28+00:00"
   },
   {
    "title": "SA government backflips on locust management approach despite past concerns",
@@ -27,19 +32,24 @@
    "published": "2026-11-03T05:22:39+00:00"
   },
   {
+   "title": "Second company suspended from Torrens-to-Darlington road project",
+   "link": "https://www.abc.net.au/news/2026-11-03/torrens-to-darlington-alliance-cancels-career-boss-contract/107338688",
+   "published": "2026-11-03T01:33:28+00:00"
+  },
+  {
    "title": "Another SA council scraps Acknowledgement of Country",
    "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
    "published": "2026-11-02T20:01:59+00:00"
   },
   {
-   "title": "WWII digger's photos from old camera found in drawer decades later",
-   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
-   "published": "2026-11-02T18:30:00+00:00"
-  },
-  {
    "title": "SA joins federal government in social media ban legal challenge",
    "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
    "published": "2026-11-02T19:43:45+00:00"
+  },
+  {
+   "title": "WWII digger's photos from old camera found in drawer decades later",
+   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
+   "published": "2026-11-02T18:30:00+00:00"
   },
   {
    "title": "Charity 'heartbroken' by theft of Christmas toys, shoes",
@@ -62,45 +72,35 @@
    "published": "2026-11-01T19:23:37+00:00"
   },
   {
-   "title": "Star trainer Maher claims second Melbourne Cup as Point of Law storms to win",
-   "link": "https://www.abc.net.au/news/2026-11-03/melbourne-cup-point-of-law-wins-for-ciaron-maher/107341548",
-   "published": "2026-11-03T04:25:17+00:00"
+   "title": "Live: PM insists government will cut spending to combat rate rises",
+   "link": "https://www.abc.net.au/news/2026-11-04/federal-politics-live-blog-angus-taylor-rates/107342840",
+   "published": "2026-11-03T19:55:02+00:00"
   },
   {
-   "title": "US has hit Iranian targets in Strait of Hormuz, US official says",
-   "link": "https://www.abc.net.au/news/2026-11-03/us-official-confirms-strikes-on-iran/107341252",
-   "published": "2026-11-03T02:30:14+00:00"
+   "title": "'No need to sack the governor' and other reasons for the RBA's inflation target",
+   "link": "https://www.abc.net.au/news/2026-11-04/reserve-bank-australia-origins-of-inflation-target-2-3-per-cent/107322960",
+   "published": "2026-11-03T18:00:00+00:00"
   },
   {
-   "title": "Indian national killed, New Zealander injured in Mount Everest helicopter crash",
-   "link": "https://www.abc.net.au/news/2026-11-03/nepal-helicopter-crash/107342964",
-   "published": "2026-11-03T08:54:33+00:00"
+   "title": "Can anything break politics out of its inflation doom loop?",
+   "link": "https://www.abc.net.au/news/2026-11-04/can-anything-break-politics-out-of-its-inflation-doom-loop/107343140",
+   "published": "2026-11-03T18:00:00+00:00"
   },
   {
-   "title": "Florida plane crash victims include 20yo copilot, tech entrepreneur and family",
-   "link": "https://www.abc.net.au/news/2026-11-03/parts-of-jet-appear-to-have-broken-off-before-florida-crash/107339320",
-   "published": "2026-11-02T19:14:29+00:00"
+   "title": "Ticketek, Virgin and 'protein chips' win big at annual Shonky Awards",
+   "link": "https://www.abc.net.au/news/2026-11-04/choice-hands-shonky-awards-to-virgin-sony-ticketing-giants/107329220",
+   "published": "2026-11-03T17:04:55+00:00"
   },
   {
-   "title": "Beaconsfield miner Todd Russell to 'see out' last days at home amid health battle",
-   "link": "https://www.abc.net.au/news/2026-11-03/beaconsfield-miner-todd-russell-last-days-health-battle/107343156",
-   "published": "2026-11-03T09:22:01+00:00"
+   "title": "Two Australians dead after high-speed train crash in Spain",
+   "link": "https://www.abc.net.au/news/2026-11-03/grave-concerns-for-australians-in-spain/107340256",
+   "published": "2026-11-03T10:35:20+00:00"
   },
   {
-   "title": "Lamarre-Condon asked police not to judge him, jury told",
-   "link": "https://www.abc.net.au/news/2026-11-03/beau-lamarre-condon-told-police-not-a-bad-person/107342440",
-   "published": "2026-11-03T06:57:17+00:00"
-  },
-  {
-   "title": "'Horrified and aghast': Craig Silvey pens 9,000 word apology",
-   "link": "https://www.abc.net.au/news/2026-11-03/craig-silvey-s-online-apology-fails-to-address-victims/107342544",
-   "published": "2026-11-03T06:47:16+00:00"
-  },
-  {
-   "title": "Victorian farmers blindsided by approval of 155-turbine wind farm ahead of election",
-   "link": "https://www.abc.net.au/news/2026-11-03/farmers-blindsided-by-approval-of-155-turbine-wind-farm/107341552",
-   "published": "2026-11-03T06:07:11+00:00"
+   "title": "Shake-up of specialist healthcare proposed to cut prohibitive costs",
+   "link": "https://www.abc.net.au/news/2026-11-04/specialist-healthcare-costs-parliamentary-inquiry/107282470",
+   "published": "2026-11-03T18:00:00+00:00"
   }
  ],
- "updated": "2026-11-03T16:29:53.170801+00:00"
+ "updated": "2026-11-03T21:58:15.132941+00:00"
 }
