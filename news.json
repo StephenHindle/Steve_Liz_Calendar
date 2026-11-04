@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Live: Democrats flip North Carolina Senate seat in crucial midterm win",
+   "link": "https://www.abc.net.au/news/2026-11-04/us-midterm-elections-2026-live-updates/107335560",
+   "published": "2026-11-03T17:00:10+00:00"
+  },
+  {
    "title": "Multiple bankruptcies surround businessman at centre of T2D dispute",
    "link": "https://www.abc.net.au/news/2026-11-04/robert-cammarano-declared-bankrupt-four-times/107342368",
    "published": "2026-11-03T19:24:57+00:00"
+  },
+  {
+   "title": "SA woman among nationwide arrests for alleged NDIA rorts",
+   "link": "https://www.abc.net.au/news/2026-11-04/federal-police-five-charged-ndis-welfare-fraud/107344388",
+   "published": "2026-11-04T01:01:04+00:00"
   },
   {
    "title": "South Australians urged to prepare for next big earthquake",
@@ -12,17 +22,17 @@
    "published": "2026-11-03T21:08:56+00:00"
   },
   {
-   "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
-   "link": "https://www.abc.net.au/news/2026-11-03/adelaide-crow-josh-worrell-convicted-and-fined/107340078",
-   "published": "2026-11-03T00:15:20+00:00"
-  },
-  {
    "title": "Car slams through supermarket wall 'like a sonic boom'",
    "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
    "published": "2026-11-03T07:20:53+00:00"
   },
   {
-   "title": "SA farmers fear wild dog boom if Wilkerr dingo population is protected",
+   "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
+   "link": "https://www.abc.net.au/news/2026-11-03/adelaide-crow-josh-worrell-convicted-and-fined/107340078",
+   "published": "2026-11-03T00:15:20+00:00"
+  },
+  {
+   "title": "SA farmers fear livestock loss increase if Wilkerr dingo population protected",
    "link": "https://www.abc.net.au/news/2026-11-03/wild-dog-fears-proposal-to-protect-wilkerr-dingoes/107297912",
    "published": "2026-11-03T06:21:48+00:00"
   },
@@ -37,14 +47,14 @@
    "published": "2026-11-03T01:33:28+00:00"
   },
   {
-   "title": "Another SA council scraps Acknowledgement of Country",
-   "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
-   "published": "2026-11-02T20:01:59+00:00"
-  },
-  {
    "title": "SA joins federal government in social media ban legal challenge",
    "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
    "published": "2026-11-02T19:43:45+00:00"
+  },
+  {
+   "title": "Another SA council scraps Acknowledgement of Country",
+   "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
+   "published": "2026-11-02T20:01:59+00:00"
   },
   {
    "title": "WWII digger's photos from old camera found in drawer decades later",
@@ -72,35 +82,25 @@
    "published": "2026-11-01T19:23:37+00:00"
   },
   {
-   "title": "Live: PM insists government will cut spending to combat rate rises",
-   "link": "https://www.abc.net.au/news/2026-11-04/federal-politics-live-blog-angus-taylor-rates/107342840",
-   "published": "2026-11-03T19:55:02+00:00"
+   "title": "Uber to pay $81m in payroll tax after High Court ruling",
+   "link": "https://www.abc.net.au/news/2026-11-04/high-court-rules-on-uber-81-million-tax-bill/107344014",
+   "published": "2026-11-03T23:46:21+00:00"
   },
   {
-   "title": "'No need to sack the governor' and other reasons for the RBA's inflation target",
-   "link": "https://www.abc.net.au/news/2026-11-04/reserve-bank-australia-origins-of-inflation-target-2-3-per-cent/107322960",
-   "published": "2026-11-03T18:00:00+00:00"
+   "title": "Man on holiday to propose to girlfriend killed e-bike rider over stolen bag",
+   "link": "https://www.abc.net.au/news/2026-11-04/man-jailed-for-killing-e-bike-rider-over-bag-theft/107342976",
+   "published": "2026-11-03T21:19:39+00:00"
   },
   {
-   "title": "Can anything break politics out of its inflation doom loop?",
-   "link": "https://www.abc.net.au/news/2026-11-04/can-anything-break-politics-out-of-its-inflation-doom-loop/107343140",
-   "published": "2026-11-03T18:00:00+00:00"
+   "title": "Freed Hong Kong activists face 'punishment with no end date'",
+   "link": "https://www.abc.net.au/news/2026-11-04/hongkongers-struggle-to-start-new-life-after-protests/107222132",
+   "published": "2026-11-03T23:54:49+00:00"
   },
   {
-   "title": "Ticketek, Virgin and 'protein chips' win big at annual Shonky Awards",
-   "link": "https://www.abc.net.au/news/2026-11-04/choice-hands-shonky-awards-to-virgin-sony-ticketing-giants/107329220",
-   "published": "2026-11-03T17:04:55+00:00"
-  },
-  {
-   "title": "Two Australians dead after high-speed train crash in Spain",
-   "link": "https://www.abc.net.au/news/2026-11-03/grave-concerns-for-australians-in-spain/107340256",
-   "published": "2026-11-03T10:35:20+00:00"
-  },
-  {
-   "title": "Shake-up of specialist healthcare proposed to cut prohibitive costs",
-   "link": "https://www.abc.net.au/news/2026-11-04/specialist-healthcare-costs-parliamentary-inquiry/107282470",
-   "published": "2026-11-03T18:00:00+00:00"
+   "title": "Cybersecurity breach at NSW Health declared 'major incident'",
+   "link": "https://www.abc.net.au/news/2026-11-04/cyber-security-nsw-police-investigate-cyber-breach-at-nsw-health/107344174",
+   "published": "2026-11-03T21:46:03+00:00"
   }
  ],
- "updated": "2026-11-03T21:58:15.132941+00:00"
+ "updated": "2026-11-04T02:15:35.645980+00:00"
 }
