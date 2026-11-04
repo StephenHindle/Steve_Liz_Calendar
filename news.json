@@ -2,9 +2,29 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "LIV Golf future in doubt as premier says Australia event likely cancelled",
+   "link": "https://www.abc.net.au/news/2026-11-05/liv-golf-bc-partners-pull-out-of-backing/107348606",
+   "published": "2026-11-04T22:14:00+00:00"
+  },
+  {
+   "title": "Calls to install toilet to give Adelaide rough sleepers 'basic human right'",
+   "link": "https://www.abc.net.au/news/2026-11-05/parklands-public-toilet-call-for-rough-sleepers-in-adelaide/107345200",
+   "published": "2026-11-04T19:11:41+00:00"
+  },
+  {
+   "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
+   "link": "https://www.abc.net.au/news/2026-11-05/menindee-lakes-review-locals-view-fish-kills/107255566",
+   "published": "2026-11-04T21:09:53+00:00"
+  },
+  {
    "title": "Transport Minister forced to take back seat at his own press conference",
    "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
    "published": "2026-11-04T05:33:31+00:00"
+  },
+  {
+   "title": "Jailed former MP pleads guilty to misusing parliamentary allowance",
+   "link": "https://www.abc.net.au/news/2026-11-04/jailed-former-mp-pleads-guilty-to-15-charges-of-deception/107345016",
+   "published": "2026-11-04T02:36:40+00:00"
   },
   {
    "title": "SA woman among nationwide arrests for alleged NDIA rorts",
@@ -17,90 +37,70 @@
    "published": "2026-11-03T21:08:56+00:00"
   },
   {
-   "title": "Jailed former MP pleads guilty to misusing parliamentary allowance",
-   "link": "https://www.abc.net.au/news/2026-11-04/jailed-former-mp-pleads-guilty-to-15-charges-of-deception/107345016",
-   "published": "2026-11-04T02:36:40+00:00"
-  },
-  {
-   "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
-   "link": "https://www.abc.net.au/news/2026-11-03/adelaide-crow-josh-worrell-convicted-and-fined/107340078",
-   "published": "2026-11-03T00:15:20+00:00"
-  },
-  {
-   "title": "SA farmers fear livestock loss increase if Wilkerr dingo population protected",
-   "link": "https://www.abc.net.au/news/2026-11-03/wild-dog-fears-proposal-to-protect-wilkerr-dingoes/107297912",
-   "published": "2026-11-03T06:21:48+00:00"
-  },
-  {
-   "title": "Car slams through supermarket wall 'like a sonic boom'",
-   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
-   "published": "2026-11-03T07:20:53+00:00"
-  },
-  {
    "title": "SA government backflips on locust management approach despite past concerns",
    "link": "https://www.abc.net.au/news/2026-11-03/aerial-locust-spraying-mallee-backflip/107335362",
    "published": "2026-11-03T05:22:39+00:00"
   },
   {
-   "title": "Another SA council scraps Acknowledgement of Country",
-   "link": "https://www.abc.net.au/news/2026-11-03/lower-eyre-council-drops-acknowledgment-of-country/107283858",
-   "published": "2026-11-02T20:01:59+00:00"
+   "title": "Newcomer's meteoric rise could make her NZ election's 'kingmaker'",
+   "link": "https://www.abc.net.au/news/2026-11-05/qiulae-wong-new-zealand-election/107346856",
+   "published": "2026-11-04T19:26:42+00:00"
   },
   {
-   "title": "WWII digger's photos from old camera found in drawer decades later",
-   "link": "https://www.abc.net.au/news/2026-11-03/old-camera-gives-glimpse-into-wwii-history/107316524",
-   "published": "2026-11-02T18:30:00+00:00"
+   "title": "Education ministers agree to biggest school system shake-up in years",
+   "link": "https://www.abc.net.au/news/2026-11-05/education-ministers-agree-to-biggest-shake-up-in-years-of-school/107348312",
+   "published": "2026-11-04T21:16:07+00:00"
   },
   {
-   "title": "Charity 'heartbroken' by theft of Christmas toys, shoes",
-   "link": "https://www.abc.net.au/news/2026-11-02/charity-puddle-jumpers-warehouse-pre-christmas-toy-theft/107338198",
-   "published": "2026-11-02T08:49:20+00:00"
+   "title": "The outlook for shoppers as David Jones placed in receivership",
+   "link": "https://www.abc.net.au/news/2026-11-04/david-jones-possible-collapse-consumer-explainer/107347080",
+   "published": "2026-11-04T08:50:41+00:00"
   },
   {
-   "title": "Coach who sent teen 'inappropriate' messages banned from working with kids",
-   "link": "https://www.abc.net.au/news/2026-11-02/coach-prohibited-from-working-with-children-after-messaging-teen/107307682",
-   "published": "2026-11-02T05:36:54+00:00"
+   "title": "Live: 'We are copping it': Minister hopes fuel prices will drop after US midterms",
+   "link": "https://www.abc.net.au/news/2026-11-05/federal-politics-live-blog-screen-limits-nov-5/107346422",
+   "published": "2026-11-04T19:59:45+00:00"
   },
   {
-   "title": "Reality TV contestant 'mentally incompetent' to commit murder, report finds",
-   "link": "https://www.abc.net.au/news/2026-11-02/tamika-chesser-mental-fitness-report-julian-story-murder/107336588",
-   "published": "2026-11-02T03:17:28+00:00"
+   "title": "Skincare brand accused of using AI to copy competitors' imagery",
+   "link": "https://www.abc.net.au/news/2026-11-05/ai-copyright-issues-bodyblendz-accused-of-copying-images/107308168",
+   "published": "2026-11-04T19:52:30+00:00"
   },
   {
-   "title": "'Like they don't care': RBA's fifth rate hike a huge blow to mortgage borrowers",
-   "link": "https://www.abc.net.au/news/2026-11-04/interest-rates-putting-pressure-on-stressed-households/107340456",
-   "published": "2026-11-03T18:00:00+00:00"
+   "title": "Major survey finds Australia's social cohesion under strain",
+   "link": "https://www.abc.net.au/news/2026-11-05/scanlon-foundation-social-cohesion-survey/107342800",
+   "published": "2026-11-04T18:14:14+00:00"
   },
   {
-   "title": "Swans star returns positive drug test during roadside stop",
-   "link": "https://www.abc.net.au/news/2026-11-04/swans-tom-papley-returns-positive-drug-test-during-roadside-stop/107347338",
-   "published": "2026-11-04T07:17:25+00:00"
+   "title": "Essential workers being priced out of rental market, report shows",
+   "link": "https://www.abc.net.au/news/2026-11-05/essential-workers-priced-out-of-rental-market/107346978",
+   "published": "2026-11-04T14:01:00+00:00"
   },
   {
-   "title": "Journalist quizzed over 'nail in the coffin' remark at Jones trial",
-   "link": "https://www.abc.net.au/news/2026-11-04/alan-jones-trial-kate-mcclymont-messages/107344988",
-   "published": "2026-11-04T03:39:53+00:00"
+   "title": "Aussie stuns Djokovic to end tennis legend's ATP Finals chances",
+   "link": "https://www.abc.net.au/news/2026-11-05/rinky-hijikata-defeats-novak-djokovic-at-paris-masters/107348188",
+   "published": "2026-11-04T19:28:44+00:00"
   },
   {
-   "title": "Assault on One Nation volunteer not being treated as politically motivated",
-   "link": "https://www.abc.net.au/news/2026-11-04/one-nation-volunteer-assault-torquary-not-politically-motivated/107345346",
-   "published": "2026-11-04T02:25:01+00:00"
+   "title": "DV commissioner sounds alarm on manosphere threat",
+   "link": "https://www.abc.net.au/news/2026-11-05/dv-commissioner-warns-of-manosphere-threat/107341914",
+   "published": "2026-11-04T18:00:00+00:00"
   },
   {
-   "title": "Learjet tail part found kilometres from deadly Florida plane crash",
-   "link": "https://www.abc.net.au/news/2026-11-04/final-moments-aboard-learjet-flight/107344066",
-   "published": "2026-11-03T23:11:57+00:00"
+   "title": "Japanese consumers build appetite for Australian 'red-tipped' bananas",
+   "link": "https://www.abc.net.au/news/2026-11-05/ecoganic-red-tipped-bananas-exported-to-japan/107345990",
+   "published": "2026-11-04T20:31:00+00:00"
   },
   {
-   "title": "Freed Hong Kong activists face 'punishment with no end date'",
-   "link": "https://www.abc.net.au/news/2026-11-04/hongkongers-struggle-to-start-new-life-after-protests/107222132",
-   "published": "2026-11-03T23:54:49+00:00"
+   "title": "Menopause, social media triggering body image issues for older women",
+   "link": "https://www.abc.net.au/news/health/2026-11-05/body-image-concerns-eating-disorders-older-women/107259348",
+   "published": "2026-11-04T18:00:00+00:00"
   },
   {
-   "title": "Paedophile McKenna to be released despite being declared high risk offender",
-   "link": "https://www.abc.net.au/news/2026-11-04/dennis-mckenna-serial-paedophile-freed-within-weeks/107345760",
-   "published": "2026-11-04T07:18:27+00:00"
+   "title": "Keeper breaks silence after collision that led to Spanish player's death",
+   "link": "https://www.abc.net.au/news/2026-11-05/jesus-owono-makes-first-statement-after-jesus-de-miguel-death/107348264",
+   "published": "2026-11-04T20:15:08+00:00"
   }
  ],
- "updated": "2026-11-04T17:57:46.763479+00:00"
+ "updated": "2026-11-04T23:36:26.077726+00:00"
 }
