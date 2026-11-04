@@ -2,14 +2,14 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Live: Democrats flip North Carolina Senate seat in crucial midterm win",
+   "title": "Democrats win House and Senate",
    "link": "https://www.abc.net.au/news/2026-11-04/us-midterm-elections-2026-live-updates/107335560",
    "published": "2026-11-03T17:00:10+00:00"
   },
   {
-   "title": "Multiple bankruptcies surround businessman at centre of T2D dispute",
-   "link": "https://www.abc.net.au/news/2026-11-04/robert-cammarano-declared-bankrupt-four-times/107342368",
-   "published": "2026-11-03T19:24:57+00:00"
+   "title": "Transport Minister forced to take back seat at his own press conference",
+   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
+   "published": "2026-11-04T05:33:31+00:00"
   },
   {
    "title": "SA woman among nationwide arrests for alleged NDIA rorts",
@@ -22,9 +22,9 @@
    "published": "2026-11-03T21:08:56+00:00"
   },
   {
-   "title": "Car slams through supermarket wall 'like a sonic boom'",
-   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
-   "published": "2026-11-03T07:20:53+00:00"
+   "title": "Jailed former MP pleads guilty to misusing parliamentary allowance",
+   "link": "https://www.abc.net.au/news/2026-11-04/jailed-former-mp-pleads-guilty-to-15-charges-of-deception/107345016",
+   "published": "2026-11-04T02:36:40+00:00"
   },
   {
    "title": "Adelaide Crows star fined $2,400 and convicted for hitting pedestrian",
@@ -37,19 +37,14 @@
    "published": "2026-11-03T06:21:48+00:00"
   },
   {
+   "title": "Car slams through supermarket wall 'like a sonic boom'",
+   "link": "https://www.abc.net.au/news/2026-11-03/supermarket-owner-escape-after-car-reverses-through-wall/107342586",
+   "published": "2026-11-03T07:20:53+00:00"
+  },
+  {
    "title": "SA government backflips on locust management approach despite past concerns",
    "link": "https://www.abc.net.au/news/2026-11-03/aerial-locust-spraying-mallee-backflip/107335362",
    "published": "2026-11-03T05:22:39+00:00"
-  },
-  {
-   "title": "Second company suspended from Torrens-to-Darlington road project",
-   "link": "https://www.abc.net.au/news/2026-11-03/torrens-to-darlington-alliance-cancels-career-boss-contract/107338688",
-   "published": "2026-11-03T01:33:28+00:00"
-  },
-  {
-   "title": "SA joins federal government in social media ban legal challenge",
-   "link": "https://www.abc.net.au/news/2026-11-03/high-court-challenge-to-under-16s-social-media-ban/107336886",
-   "published": "2026-11-02T19:43:45+00:00"
   },
   {
    "title": "Another SA council scraps Acknowledgement of Country",
@@ -77,12 +72,12 @@
    "published": "2026-11-02T03:17:28+00:00"
   },
   {
-   "title": "'Largest mass mortality' of sharks and rays recorded, expert says",
-   "link": "https://www.abc.net.au/news/2026-11-02/citizen-science-shows-8000-sharks-rays-killed-by-algal-bloom/107327852",
-   "published": "2026-11-01T19:23:37+00:00"
+   "title": "ASX lower as traders await outcome of US midterms — as it happened",
+   "link": "https://www.abc.net.au/news/2026-11-04/asx-markets-business-live-news-nov-4/107343406",
+   "published": "2026-11-03T19:58:32+00:00"
   },
   {
-   "title": "Uber to pay $81m in payroll tax after High Court ruling",
+   "title": "'Time is up for gig behemoths': Uber to pay $81m in payroll tax",
    "link": "https://www.abc.net.au/news/2026-11-04/high-court-rules-on-uber-81-million-tax-bill/107344014",
    "published": "2026-11-03T23:46:21+00:00"
   },
@@ -92,15 +87,20 @@
    "published": "2026-11-03T21:19:39+00:00"
   },
   {
+   "title": "Cybersecurity breach at NSW Health declared 'major incident'",
+   "link": "https://www.abc.net.au/news/2026-11-04/cyber-security-nsw-police-investigate-cyber-breach-at-nsw-health/107344174",
+   "published": "2026-11-03T21:46:03+00:00"
+  },
+  {
    "title": "Freed Hong Kong activists face 'punishment with no end date'",
    "link": "https://www.abc.net.au/news/2026-11-04/hongkongers-struggle-to-start-new-life-after-protests/107222132",
    "published": "2026-11-03T23:54:49+00:00"
   },
   {
-   "title": "Cybersecurity breach at NSW Health declared 'major incident'",
-   "link": "https://www.abc.net.au/news/2026-11-04/cyber-security-nsw-police-investigate-cyber-breach-at-nsw-health/107344174",
-   "published": "2026-11-03T21:46:03+00:00"
+   "title": "Indonesia detains police generals suspected of wire-tapping president's phones",
+   "link": "https://www.abc.net.au/news/2026-11-04/indonesian-police-detained-over-alleged-wiretapping-of-president/107344464",
+   "published": "2026-11-04T02:35:08+00:00"
   }
  ],
- "updated": "2026-11-04T02:15:35.645980+00:00"
+ "updated": "2026-11-04T09:48:55.036920+00:00"
 }
