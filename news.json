@@ -2,6 +2,11 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Federal Court challenge to Adelaide MotoGP circuit falls over",
+   "link": "https://www.abc.net.au/news/2026-11-05/federal-court-challenge-to-adelaide-motogp-circuit-falls-over/107349314",
+   "published": "2026-11-05T00:57:31+00:00"
+  },
+  {
    "title": "LIV Golf future in doubt as premier says Australia event likely cancelled",
    "link": "https://www.abc.net.au/news/2026-11-05/liv-golf-bc-partners-pull-out-of-backing/107348606",
    "published": "2026-11-04T22:14:00+00:00"
@@ -12,14 +17,14 @@
    "published": "2026-11-04T19:11:41+00:00"
   },
   {
-   "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
-   "link": "https://www.abc.net.au/news/2026-11-05/menindee-lakes-review-locals-view-fish-kills/107255566",
-   "published": "2026-11-04T21:09:53+00:00"
-  },
-  {
    "title": "Transport Minister forced to take back seat at his own press conference",
    "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
    "published": "2026-11-04T05:33:31+00:00"
+  },
+  {
+   "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
+   "link": "https://www.abc.net.au/news/2026-11-05/menindee-lakes-review-locals-view-fish-kills/107255566",
+   "published": "2026-11-04T21:09:53+00:00"
   },
   {
    "title": "Jailed former MP pleads guilty to misusing parliamentary allowance",
@@ -42,29 +47,9 @@
    "published": "2026-11-03T05:22:39+00:00"
   },
   {
-   "title": "Newcomer's meteoric rise could make her NZ election's 'kingmaker'",
-   "link": "https://www.abc.net.au/news/2026-11-05/qiulae-wong-new-zealand-election/107346856",
-   "published": "2026-11-04T19:26:42+00:00"
-  },
-  {
-   "title": "Education ministers agree to biggest school system shake-up in years",
-   "link": "https://www.abc.net.au/news/2026-11-05/education-ministers-agree-to-biggest-shake-up-in-years-of-school/107348312",
-   "published": "2026-11-04T21:16:07+00:00"
-  },
-  {
-   "title": "The outlook for shoppers as David Jones placed in receivership",
-   "link": "https://www.abc.net.au/news/2026-11-04/david-jones-possible-collapse-consumer-explainer/107347080",
-   "published": "2026-11-04T08:50:41+00:00"
-  },
-  {
-   "title": "Live: 'We are copping it': Minister hopes fuel prices will drop after US midterms",
-   "link": "https://www.abc.net.au/news/2026-11-05/federal-politics-live-blog-screen-limits-nov-5/107346422",
-   "published": "2026-11-04T19:59:45+00:00"
-  },
-  {
-   "title": "Skincare brand accused of using AI to copy competitors' imagery",
-   "link": "https://www.abc.net.au/news/2026-11-05/ai-copyright-issues-bodyblendz-accused-of-copying-images/107308168",
-   "published": "2026-11-04T19:52:30+00:00"
+   "title": "Greens senator Jordon Steele-John's ex-partner charged with stalking",
+   "link": "https://www.abc.net.au/news/2026-11-05/greens-senator-jordon-steele-john-ex-partner-charged-stalking/107348424",
+   "published": "2026-11-04T23:11:19+00:00"
   },
   {
    "title": "Major survey finds Australia's social cohesion under strain",
@@ -72,9 +57,24 @@
    "published": "2026-11-04T18:14:14+00:00"
   },
   {
+   "title": "Meta is training its AI on millions of Australians, but now you can stop it",
+   "link": "https://www.abc.net.au/news/2026-11-05/meta-facebook-instagram-changes-using-data-to-train-ai/107335708",
+   "published": "2026-11-04T18:00:00+00:00"
+  },
+  {
+   "title": "Newcomer's meteoric rise could make her NZ election's 'kingmaker'",
+   "link": "https://www.abc.net.au/news/2026-11-05/qiulae-wong-new-zealand-election/107346856",
+   "published": "2026-11-04T19:26:42+00:00"
+  },
+  {
    "title": "Essential workers being priced out of rental market, report shows",
    "link": "https://www.abc.net.au/news/2026-11-05/essential-workers-priced-out-of-rental-market/107346978",
    "published": "2026-11-04T14:01:00+00:00"
+  },
+  {
+   "title": "More than 140 NT youths charged with domestic violence crimes in six months",
+   "link": "https://www.abc.net.au/news/2026-11-05/dv-youth-crime-data-domestic-violence-remote-nt-support-gap/107341866",
+   "published": "2026-11-05T00:17:47+00:00"
   },
   {
    "title": "Aussie stuns Djokovic to end tennis legend's ATP Finals chances",
@@ -82,25 +82,25 @@
    "published": "2026-11-04T19:28:44+00:00"
   },
   {
-   "title": "DV commissioner sounds alarm on manosphere threat",
-   "link": "https://www.abc.net.au/news/2026-11-05/dv-commissioner-warns-of-manosphere-threat/107341914",
-   "published": "2026-11-04T18:00:00+00:00"
+   "title": "Rugby league great Paul Langmack dies aged 61",
+   "link": "https://www.abc.net.au/news/2026-11-05/rugby-league-great-paul-langmack-dies-aged-61/107348920",
+   "published": "2026-11-04T23:35:40+00:00"
   },
   {
-   "title": "Japanese consumers build appetite for Australian 'red-tipped' bananas",
-   "link": "https://www.abc.net.au/news/2026-11-05/ecoganic-red-tipped-bananas-exported-to-japan/107345990",
-   "published": "2026-11-04T20:31:00+00:00"
+   "title": "NASA Swift telescope plummets to Earth over Indonesia",
+   "link": "https://www.abc.net.au/news/2026-11-05/nasa-telescope-plummets-to-earth-after-decades-long-mission/107348488",
+   "published": "2026-11-04T23:34:09+00:00"
   },
   {
-   "title": "Menopause, social media triggering body image issues for older women",
-   "link": "https://www.abc.net.au/news/health/2026-11-05/body-image-concerns-eating-disorders-older-women/107259348",
-   "published": "2026-11-04T18:00:00+00:00"
+   "title": "'Australia's loneliest echidna' no longer solo after trail-cam discoveries",
+   "link": "https://www.abc.net.au/news/2026-11-05/tas-lonely-echidna-on-lungtalanana-clarke-island-has-buddies/107344584",
+   "published": "2026-11-04T22:20:23+00:00"
   },
   {
-   "title": "Keeper breaks silence after collision that led to Spanish player's death",
-   "link": "https://www.abc.net.au/news/2026-11-05/jesus-owono-makes-first-statement-after-jesus-de-miguel-death/107348264",
-   "published": "2026-11-04T20:15:08+00:00"
+   "title": "Outback town abandoned after council 'drops the ball'",
+   "link": "https://www.abc.net.au/news/2026-11-05/urandangi-residents-cannot-return-three-years-after-floods/107342290",
+   "published": "2026-11-04T22:34:38+00:00"
   }
  ],
- "updated": "2026-11-04T23:36:26.077726+00:00"
+ "updated": "2026-11-05T03:44:17.515011+00:00"
 }
