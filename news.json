@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Federal Court challenge to Adelaide MotoGP circuit falls over",
-   "link": "https://www.abc.net.au/news/2026-11-05/federal-court-challenge-to-adelaide-motogp-circuit-falls-over/107349314",
-   "published": "2026-11-05T00:57:31+00:00"
+   "title": "Six childcare centres to close in SA after failing to find buyer",
+   "link": "https://www.abc.net.au/news/2026-11-05/six-edge-childcare-centres-to-close-in-sa/107349766",
+   "published": "2026-11-05T07:04:46+00:00"
+  },
+  {
+   "title": "Pilot died while trying to avoid power pole, final report finds",
+   "link": "https://www.abc.net.au/news/2026-11-05/jarred-wait-plane-crash-investigation/107350656",
+   "published": "2026-11-05T05:58:21+00:00"
+  },
+  {
+   "title": "Bandicoot research uncovers new subspecies amid conservation calls",
+   "link": "https://www.abc.net.au/news/2026-11-05/new-bandicoot-subspecies-south-australia/107350712",
+   "published": "2026-11-05T06:57:49+00:00"
   },
   {
    "title": "LIV Golf future in doubt as premier says Australia event likely cancelled",
@@ -17,9 +27,9 @@
    "published": "2026-11-04T19:11:41+00:00"
   },
   {
-   "title": "Transport Minister forced to take back seat at his own press conference",
-   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
-   "published": "2026-11-04T05:33:31+00:00"
+   "title": "Federal Court challenge to Adelaide MotoGP circuit falls over",
+   "link": "https://www.abc.net.au/news/2026-11-05/federal-court-challenge-to-adelaide-motogp-circuit-falls-over/107349314",
+   "published": "2026-11-05T00:57:31+00:00"
   },
   {
    "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
@@ -32,7 +42,12 @@
    "published": "2026-11-04T02:36:40+00:00"
   },
   {
-   "title": "SA woman among nationwide arrests for alleged NDIA rorts",
+   "title": "Transport Minister forced to take back seat at his own press conference",
+   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
+   "published": "2026-11-04T05:33:31+00:00"
+  },
+  {
+   "title": "Centrelink scam uncovered in multi-million-dollar welfare rort probe",
    "link": "https://www.abc.net.au/news/2026-11-04/federal-police-five-charged-ndis-welfare-fraud/107344388",
    "published": "2026-11-04T01:01:04+00:00"
   },
@@ -47,60 +62,45 @@
    "published": "2026-11-03T05:22:39+00:00"
   },
   {
-   "title": "Greens senator Jordon Steele-John's ex-partner charged with stalking",
-   "link": "https://www.abc.net.au/news/2026-11-05/greens-senator-jordon-steele-john-ex-partner-charged-stalking/107348424",
-   "published": "2026-11-04T23:11:19+00:00"
+   "title": "Pauline Hanson to appeal racial discrimination finding in High Court",
+   "link": "https://www.abc.net.au/news/2026-11-05/pauline-hanson-racial-discrimination-high-court-appeal/107139002",
+   "published": "2026-11-05T03:47:58+00:00"
   },
   {
-   "title": "Major survey finds Australia's social cohesion under strain",
-   "link": "https://www.abc.net.au/news/2026-11-05/scanlon-foundation-social-cohesion-survey/107342800",
-   "published": "2026-11-04T18:14:14+00:00"
+   "title": "How the Wegovy pill compares to weight-loss injections",
+   "link": "https://www.abc.net.au/news/2026-11-05/wegovy-pill-tablet-weight-loss-australia-peptide-safe-cheaper/107349394",
+   "published": "2026-11-05T04:18:14+00:00"
   },
   {
-   "title": "Meta is training its AI on millions of Australians, but now you can stop it",
-   "link": "https://www.abc.net.au/news/2026-11-05/meta-facebook-instagram-changes-using-data-to-train-ai/107335708",
-   "published": "2026-11-04T18:00:00+00:00"
+   "title": "The 90s anthem that used a 'stolen' lullaby to make millions",
+   "link": "https://www.abc.net.au/news/2026-11-05/deep-forest-sweet-lullaby-solomon-islands-afunakwa/107324780",
+   "published": "2026-11-05T05:50:35+00:00"
   },
   {
-   "title": "Newcomer's meteoric rise could make her NZ election's 'kingmaker'",
-   "link": "https://www.abc.net.au/news/2026-11-05/qiulae-wong-new-zealand-election/107346856",
-   "published": "2026-11-04T19:26:42+00:00"
+   "title": "Woodside to axe 500 jobs, sparking fears for WA workers",
+   "link": "https://www.abc.net.au/news/2026-11-05/woodside-energy-to-slash-more-than-500-jobs/107349938",
+   "published": "2026-11-05T03:53:31+00:00"
   },
   {
-   "title": "Essential workers being priced out of rental market, report shows",
-   "link": "https://www.abc.net.au/news/2026-11-05/essential-workers-priced-out-of-rental-market/107346978",
-   "published": "2026-11-04T14:01:00+00:00"
+   "title": "Woman dies from leptospirosis after hunting near Top End billabong",
+   "link": "https://www.abc.net.au/news/2026-11-05/woman-dies-of-leptospirosis-death-in-nt-top-end/107350400",
+   "published": "2026-11-05T04:42:36+00:00"
   },
   {
-   "title": "More than 140 NT youths charged with domestic violence crimes in six months",
-   "link": "https://www.abc.net.au/news/2026-11-05/dv-youth-crime-data-domestic-violence-remote-nt-support-gap/107341866",
-   "published": "2026-11-05T00:17:47+00:00"
+   "title": "Police 'aware' of allegation dog lost leg in incident involving alleged Helen Haines attacker",
+   "link": "https://www.abc.net.au/news/2026-11-05/brendan-nugent-linked-dog-incident-victoria-police-helen-haines/107349240",
+   "published": "2026-11-05T05:44:07+00:00"
   },
   {
-   "title": "Aussie stuns Djokovic to end tennis legend's ATP Finals chances",
-   "link": "https://www.abc.net.au/news/2026-11-05/rinky-hijikata-defeats-novak-djokovic-at-paris-masters/107348188",
-   "published": "2026-11-04T19:28:44+00:00"
+   "title": "Canadian police find remains of mother and daughter after bear attack",
+   "link": "https://www.abc.net.au/news/2026-11-05/mother-and-daughter-killed-in-bear-attack-in-canada/107349256",
+   "published": "2026-11-05T02:25:14+00:00"
   },
   {
-   "title": "Rugby league great Paul Langmack dies aged 61",
-   "link": "https://www.abc.net.au/news/2026-11-05/rugby-league-great-paul-langmack-dies-aged-61/107348920",
-   "published": "2026-11-04T23:35:40+00:00"
-  },
-  {
-   "title": "NASA Swift telescope plummets to Earth over Indonesia",
-   "link": "https://www.abc.net.au/news/2026-11-05/nasa-telescope-plummets-to-earth-after-decades-long-mission/107348488",
-   "published": "2026-11-04T23:34:09+00:00"
-  },
-  {
-   "title": "'Australia's loneliest echidna' no longer solo after trail-cam discoveries",
-   "link": "https://www.abc.net.au/news/2026-11-05/tas-lonely-echidna-on-lungtalanana-clarke-island-has-buddies/107344584",
-   "published": "2026-11-04T22:20:23+00:00"
-  },
-  {
-   "title": "Outback town abandoned after council 'drops the ball'",
-   "link": "https://www.abc.net.au/news/2026-11-05/urandangi-residents-cannot-return-three-years-after-floods/107342290",
-   "published": "2026-11-04T22:34:38+00:00"
+   "title": "Australian racing icon and F1 world champion Alan Jones dies",
+   "link": "https://www.abc.net.au/news/2026-11-05/australian-motor-racing-icon-alan-jones-dies-aged-80/107350036",
+   "published": "2026-11-05T01:56:23+00:00"
   }
  ],
- "updated": "2026-11-05T03:44:17.515011+00:00"
+ "updated": "2026-11-05T12:13:37.609053+00:00"
 }
