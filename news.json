@@ -2,6 +2,11 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Threatening, sexist messages scrawled on balloons left at MP's office",
+   "link": "https://www.abc.net.au/news/2026-11-06/threatening-sexist-messages-on-balloons-target-mp-jayne-stinson/107357628",
+   "published": "2026-11-06T08:48:08+00:00"
+  },
+  {
    "title": "Young victim of hotel fall died in 'tragic' accident, parents say",
    "link": "https://www.abc.net.au/news/2026-11-06/natasha-lawton-tribute-after-rosemont-hotel-fatal-fall/107356942",
    "published": "2026-11-06T06:13:52+00:00"
@@ -17,11 +22,6 @@
    "published": "2026-11-05T23:30:35+00:00"
   },
   {
-   "title": "LIV Golf to wind down after five years of rebel league",
-   "link": "https://www.abc.net.au/news/2026-11-06/liv-golf-to-wind-down-after-bc-partners-withdraw-support/107353732",
-   "published": "2026-11-05T20:00:42+00:00"
-  },
-  {
    "title": "A Batmobile, Wharfie Time and an elephant — the footy gimmicks gone wrong",
    "link": "https://www.abc.net.au/news/2026-11-06/afl-football-wharfie-time-gimmicks-go-wrong/107346228",
    "published": "2026-11-05T23:45:45+00:00"
@@ -32,14 +32,19 @@
    "published": "2026-11-05T19:19:25+00:00"
   },
   {
+   "title": "Brothers open Ceduna's first barber shop in 50 years",
+   "link": "https://www.abc.net.au/news/2026-11-06/aboriginal-brothers-open-ceduna-barber-shop/107344916",
+   "published": "2026-11-05T21:33:26+00:00"
+  },
+  {
    "title": "Pilot died while trying to avoid power pole, final report finds",
    "link": "https://www.abc.net.au/news/2026-11-05/jarred-wait-plane-crash-investigation/107350656",
    "published": "2026-11-05T05:58:21+00:00"
   },
   {
-   "title": "Brothers open Ceduna's first barber shop in 50 years",
-   "link": "https://www.abc.net.au/news/2026-11-06/aboriginal-brothers-open-ceduna-barber-shop/107344916",
-   "published": "2026-11-05T21:33:26+00:00"
+   "title": "LIV Golf to wind down after five years of rebel league",
+   "link": "https://www.abc.net.au/news/2026-11-06/liv-golf-to-wind-down-after-bc-partners-withdraw-support/107353732",
+   "published": "2026-11-05T20:00:42+00:00"
   },
   {
    "title": "Six childcare centres to close in SA after failing to find buyer",
@@ -72,35 +77,30 @@
    "published": "2026-11-04T19:11:41+00:00"
   },
   {
-   "title": "Israel's president set to hand Netanyahu rival first chance to form government",
-   "link": "https://www.abc.net.au/news/2026-11-06/israel-president-coalition-talks/107353572",
-   "published": "2026-11-05T20:00:19+00:00"
+   "title": "Court grants Kumanjayi Little Baby's mother 20-year full no-contact DVO",
+   "link": "https://www.abc.net.au/news/2026-11-06/kumanjayi-little-baby-father-raphael-granites-jailed-for-dv/107357838",
+   "published": "2026-11-06T07:37:04+00:00"
   },
   {
-   "title": "One Nation is taking the Nationals back in time",
-   "link": "https://www.abc.net.au/news/2026-11-06/michelle-grattan-are-nationals-on-life-support/107352856",
-   "published": "2026-11-05T18:00:00+00:00"
+   "title": "Asofa-Solomona leaps into crowd, apologises after 'frightening' Gallen KO",
+   "link": "https://www.abc.net.au/news/2026-11-06/paul-gallen-vs-nelson-asofa-solomona-live-heavyweight-boxing/107346162",
+   "published": "2026-11-06T07:57:37+00:00"
   },
   {
-   "title": "Marles says suburbs not right for data centres — as it happened",
-   "link": "https://www.abc.net.au/news/2026-11-06/federal-politics-live-blog-chalmers-productivity-nov-6/107353708",
-   "published": "2026-11-05T20:10:47+00:00"
+   "title": "Multimillionaire friend of Sam Wood offered surety in his bail application",
+   "link": "https://www.abc.net.au/news/2026-11-06/qld-sam-wood-sureties-offered-bail-application/107355576",
+   "published": "2026-11-06T06:00:56+00:00"
   },
   {
-   "title": "New cancer treatment adding years to patients' lives",
-   "link": "https://www.abc.net.au/news/2026-11-06/cancer-treatment-genomic-profiling-funding/107248844",
-   "published": "2026-11-05T18:47:08+00:00"
+   "title": "Ex-partner of disgraced author Craig Silvey speaks of 'great betrayal'",
+   "link": "https://www.abc.net.au/news/2026-11-06/craig-silvey-ex-partner-clare-testoni-speaks-of-betrayal/107357996",
+   "published": "2026-11-06T08:08:08+00:00"
   },
   {
-   "title": "What matters to NZ voters? Economy, living costs, and then daylight",
-   "link": "https://www.abc.net.au/news/2026-11-06/new-zealand-election-2026-inflation-wages-economy/107350046",
-   "published": "2026-11-05T18:00:00+00:00"
-  },
-  {
-   "title": "What will the NZ election mean for the future of Māori rights?",
-   "link": "https://www.abc.net.au/news/2026-11-06/new-zealand-election-2026-treaty-of-waitangi-and-maori-rights/107346020",
-   "published": "2026-11-05T18:47:39+00:00"
+   "title": "'We're not in Italy, we're in Australia': The story behind the firing of a pizza chef who rejected pineapple",
+   "link": "https://www.abc.net.au/news/2026-11-06/queensland-pineapple-pizza-firing/107357058",
+   "published": "2026-11-06T06:14:35+00:00"
   }
  ],
- "updated": "2026-11-06T07:54:54.263766+00:00"
+ "updated": "2026-11-06T15:52:47.682352+00:00"
 }
