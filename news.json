@@ -2,19 +2,39 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "LIV Golf to wind down after five years of rebel league",
+   "link": "https://www.abc.net.au/news/2026-11-06/liv-golf-to-wind-down-after-bc-partners-withdraw-support/107353732",
+   "published": "2026-11-05T20:00:42+00:00"
+  },
+  {
+   "title": "Women's pelvic health surgeon among SA's Australian of the Year winners",
+   "link": "https://www.abc.net.au/news/2026-11-06/gynaecologist-fariba-behnia-willison-sa-australian-of-the-year/107350856",
+   "published": "2026-11-05T23:30:35+00:00"
+  },
+  {
+   "title": "Aussie Rules has long history of footy gimmicks gone wrong",
+   "link": "https://www.abc.net.au/news/2026-11-06/afl-football-wharfie-time-gimmicks-go-wrong/107346228",
+   "published": "2026-11-05T23:45:45+00:00"
+  },
+  {
    "title": "Once-green SA landscape now 'barren' in efforts to stop pest",
    "link": "https://www.abc.net.au/news/2026-11-06/sa-pine-scale-residents-question-impact-of-pine-tree-removals/107340578",
    "published": "2026-11-05T19:19:25+00:00"
   },
   {
-   "title": "Six childcare centres to close in SA after failing to find buyer",
-   "link": "https://www.abc.net.au/news/2026-11-05/six-edge-childcare-centres-to-close-in-sa/107349766",
-   "published": "2026-11-05T07:04:46+00:00"
-  },
-  {
    "title": "Pilot died while trying to avoid power pole, final report finds",
    "link": "https://www.abc.net.au/news/2026-11-05/jarred-wait-plane-crash-investigation/107350656",
    "published": "2026-11-05T05:58:21+00:00"
+  },
+  {
+   "title": "Brothers open Ceduna's first barber shop in 50 years",
+   "link": "https://www.abc.net.au/news/2026-11-06/aboriginal-brothers-open-ceduna-barber-shop/107344916",
+   "published": "2026-11-05T21:33:26+00:00"
+  },
+  {
+   "title": "Six childcare centres to close in SA after failing to find buyer",
+   "link": "https://www.abc.net.au/news/2026-11-05/six-edge-childcare-centres-to-close-in-sa/107349766",
+   "published": "2026-11-05T07:04:46+00:00"
   },
   {
    "title": "Bandicoot research uncovers new subspecies amid conservation calls",
@@ -27,9 +47,14 @@
    "published": "2026-11-05T00:57:31+00:00"
   },
   {
-   "title": "LIV Golf future in doubt as premier says Australia event likely cancelled",
-   "link": "https://www.abc.net.au/news/2026-11-05/liv-golf-bc-partners-pull-out-of-backing/107348606",
-   "published": "2026-11-04T22:14:00+00:00"
+   "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
+   "link": "https://www.abc.net.au/news/2026-11-05/menindee-lakes-review-locals-view-fish-kills/107255566",
+   "published": "2026-11-04T21:09:53+00:00"
+  },
+  {
+   "title": "Transport minister forced to take back seat at his own press conference",
+   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
+   "published": "2026-11-04T05:33:31+00:00"
   },
   {
    "title": "Calls to install toilet to give Adelaide rough sleepers 'basic human right'",
@@ -37,70 +62,45 @@
    "published": "2026-11-04T19:11:41+00:00"
   },
   {
-   "title": "Menindee Lakes locals fear more fish kills as hot summer forecast",
-   "link": "https://www.abc.net.au/news/2026-11-05/menindee-lakes-review-locals-view-fish-kills/107255566",
-   "published": "2026-11-04T21:09:53+00:00"
+   "title": "Israel's president set to hand Netanyahu rival first chance to form government",
+   "link": "https://www.abc.net.au/news/2026-11-06/israel-president-coalition-talks/107353572",
+   "published": "2026-11-05T20:00:19+00:00"
   },
   {
-   "title": "Transport Minister forced to take back seat at his own press conference",
-   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
-   "published": "2026-11-04T05:33:31+00:00"
+   "title": "One Nation is taking the Nationals back in time",
+   "link": "https://www.abc.net.au/news/2026-11-06/michelle-grattan-are-nationals-on-life-support/107352856",
+   "published": "2026-11-05T18:00:00+00:00"
   },
   {
-   "title": "Jailed former MP pleads guilty to misusing parliamentary allowance",
-   "link": "https://www.abc.net.au/news/2026-11-04/jailed-former-mp-pleads-guilty-to-15-charges-of-deception/107345016",
-   "published": "2026-11-04T02:36:40+00:00"
+   "title": "Live: Marles says suburbs are not the right place for data centre development",
+   "link": "https://www.abc.net.au/news/2026-11-06/federal-politics-live-blog-chalmers-productivity-nov-6/107353708",
+   "published": "2026-11-05T20:10:47+00:00"
   },
   {
-   "title": "Centrelink scam uncovered in multi-million-dollar welfare rort probe",
-   "link": "https://www.abc.net.au/news/2026-11-04/federal-police-five-charged-ndis-welfare-fraud/107344388",
-   "published": "2026-11-04T01:01:04+00:00"
+   "title": "New cancer treatment adding years to patients' lives",
+   "link": "https://www.abc.net.au/news/2026-11-06/cancer-treatment-genomic-profiling-funding/107248844",
+   "published": "2026-11-05T18:47:08+00:00"
   },
   {
-   "title": "South Australians urged to prepare for next big earthquake",
-   "link": "https://www.abc.net.au/news/2026-11-04/after-earthquake-spate-preparedness-urged/107340220",
-   "published": "2026-11-03T21:08:56+00:00"
+   "title": "What matters to NZ voters? Economy, living costs, and then daylight",
+   "link": "https://www.abc.net.au/news/2026-11-06/new-zealand-election-2026-inflation-wages-economy/107350046",
+   "published": "2026-11-05T18:00:00+00:00"
   },
   {
-   "title": "SA government backflips on locust management approach despite past concerns",
-   "link": "https://www.abc.net.au/news/2026-11-03/aerial-locust-spraying-mallee-backflip/107335362",
-   "published": "2026-11-03T05:22:39+00:00"
+   "title": "What will the NZ election mean for the future of Māori rights?",
+   "link": "https://www.abc.net.au/news/2026-11-06/new-zealand-election-2026-treaty-of-waitangi-and-maori-rights/107346020",
+   "published": "2026-11-05T18:47:39+00:00"
   },
   {
-   "title": "Pauline Hanson to appeal racial discrimination finding in High Court",
-   "link": "https://www.abc.net.au/news/2026-11-05/pauline-hanson-racial-discrimination-high-court-appeal/107139002",
-   "published": "2026-11-05T03:47:58+00:00"
+   "title": "China wants workers to pay 'social insurance' but many cannot afford it",
+   "link": "https://www.abc.net.au/news/2026-11-06/china-to-fine-employers-not-paying-social-insurance/107326738",
+   "published": "2026-11-05T18:00:00+00:00"
   },
   {
-   "title": "How the Wegovy pill compares to weight-loss injections",
-   "link": "https://www.abc.net.au/news/2026-11-05/wegovy-pill-tablet-weight-loss-australia-peptide-safe-cheaper/107349394",
-   "published": "2026-11-05T04:18:14+00:00"
-  },
-  {
-   "title": "The 90s anthem that used a 'stolen' lullaby to make millions",
-   "link": "https://www.abc.net.au/news/2026-11-05/deep-forest-sweet-lullaby-solomon-islands-afunakwa/107324780",
-   "published": "2026-11-05T05:50:35+00:00"
-  },
-  {
-   "title": "Woodside to axe 500 jobs, sparking fears for WA workers",
-   "link": "https://www.abc.net.au/news/2026-11-05/woodside-energy-to-slash-more-than-500-jobs/107349938",
-   "published": "2026-11-05T03:53:31+00:00"
-  },
-  {
-   "title": "Woman dies from leptospirosis after hunting near Top End billabong",
-   "link": "https://www.abc.net.au/news/2026-11-05/woman-dies-of-leptospirosis-death-in-nt-top-end/107350400",
-   "published": "2026-11-05T04:42:36+00:00"
-  },
-  {
-   "title": "Police 'aware' of allegation dog lost leg in incident involving alleged Helen Haines attacker",
-   "link": "https://www.abc.net.au/news/2026-11-05/brendan-nugent-linked-dog-incident-victoria-police-helen-haines/107349240",
-   "published": "2026-11-05T05:44:07+00:00"
-  },
-  {
-   "title": "Canadian police find remains of mother and daughter after bear attack",
-   "link": "https://www.abc.net.au/news/2026-11-05/mother-and-daughter-killed-in-bear-attack-in-canada/107349256",
-   "published": "2026-11-05T02:25:14+00:00"
+   "title": "Government flips to side with mining company to scrap Indigenous heritage zone",
+   "link": "https://www.abc.net.au/news/2026-11-06/qld-government-land-court-traditional-owners-mining/107346356",
+   "published": "2026-11-05T19:38:44+00:00"
   }
  ],
- "updated": "2026-11-05T20:14:58.923463+00:00"
+ "updated": "2026-11-06T01:06:28.757976+00:00"
 }
