@@ -1504,6 +1504,20 @@
   /* radio */
   .wg-radio{flex:0 0 auto;}
   .wg-radio.hidden{display:none;}
+  .wg-radio:not(.open){display:none;}
+  .wg-radio.open{display:block;width:min(600px,calc(100% - 24px));align-self:center;margin:0 0 8px;max-height:40vh;overflow-y:auto;border-radius:22px;}
+  .rd-rail{display:contents;}
+  .rail-btn.rd-st{position:relative;min-width:84px;padding:6px 8px;border-radius:14px;color:var(--text);transition:background .15s,box-shadow .15s,transform .15s;}
+  .rail-btn.rd-st .rd-badge{width:24px;height:24px;border-radius:8px;font-size:12px;margin-bottom:3px;}
+  .rail-btn.rd-st .rd-name{font-size:12px;font-weight:750;}
+  .rail-btn.rd-st .rd-sub{font-size:10px;}
+  .rail-btn.rd-st .rd-ctl{display:none;}
+  .rail-btn.rd-st:hover{background:var(--surface-2);}
+  .rail-btn.rd-st:active{transform:scale(.96);}
+  .rail-btn.rd-st.on{background:color-mix(in srgb,var(--c1) 18%,var(--surface));box-shadow:0 0 0 1.5px var(--c1);}
+  .rail-btn.rd-st.loading .rd-badge{opacity:.55;}
+  .rail-btn.rd-st .rd-eq{position:absolute;right:7px;top:7px;bottom:auto;height:11px;}
+  .rail-btn.rd-st.live .rd-eq{display:flex;}
   .rd-title{margin:0 4px 8px;}
   .rd-now{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.06em;color:var(--muted);}
   .rd-now.live{color:#e5484d;}
@@ -1548,10 +1562,10 @@
   /* bin day */
   :root{--bin-body:#2f3b35;--bin-wheel:#1d2420;}
   [data-theme="dark"]{--bin-body:#55635b;--bin-wheel:#2a312d;}
-  .bin{width:30px;height:40px;flex:0 0 auto;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18));}
+  .bin{width:25px;height:33px;flex:0 0 auto;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18));}
   .bin-main{display:flex;align-items:center;gap:14px;}
-  .bin-icons{display:flex;gap:4px;}
-  .bin-when{font-family:var(--font-display);font-optical-sizing:auto;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.2;}
+  .bin-icons{display:flex;gap:3px;}
+  .bin-when{font-family:var(--font-display);font-optical-sizing:auto;font-size:15px;font-weight:700;letter-spacing:-.015em;line-height:1.2;}
   .bin-main.soon .bin-when{color:var(--accent);}
   .bin-sub{font-size:12.5px;color:var(--muted);margin-top:2px;}
   .bin-next{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;}
@@ -2005,14 +2019,6 @@
       </div>
       <div class="mm-grid" id="mmGrid"></div>
     </section>
-    <section class="wg-radio" id="wg-radio" aria-label="Radio">
-      <div class="wg-title rd-title"><span>Radio</span><span class="rd-now" id="rdNow"></span></div>
-      <div class="rd-grid" id="rdGrid"></div>
-      <div class="rd-vol" id="rdVolRow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
-        <input type="range" id="rdVol" min="0" max="100" step="1" aria-label="Radio volume">
-      </div>
-    </section>
     <section class="wg" id="wg-bins">
       <div class="wg-title"><span>Bin day</span><button class="wg-ibtn sm" id="binEdit" aria-label="Set up bin day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button></div>
       <div id="binBody"></div>
@@ -2035,6 +2041,13 @@
   </div>
 </aside>
 </div><!-- app-row -->
+<section class="wg wg-radio" id="wg-radio" aria-label="Radio">
+  <div class="wg-title rd-title"><span>Radio</span><span class="rd-now" id="rdNow"></span></div>
+  <div class="rd-vol" id="rdVolRow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+    <input type="range" id="rdVol" min="0" max="100" step="1" aria-label="Radio volume">
+  </div>
+</section>
 <nav class="rail" aria-label="Main actions">
   <button class="rail-btn" id="wgBtnL" aria-label="Show or hide the left widgets">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/><path d="M5.5 8.5h1.5M5.5 12h1.5"/></svg>
@@ -2053,6 +2066,8 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a3 3 0 0 0 3 3v10M6 2v6M9 2v6M18 2c-1.5 0-3 1.5-3 5s1.5 4 3 4v9"/></svg>
     <span>Meals</span>
   </button>
+  <div class="rail-spacer"></div>
+  <div class="rd-rail" id="rdRail"></div>
   <div class="rail-spacer"></div>
   <button class="rail-btn" id="fsBtn" aria-label="Toggle full screen">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
@@ -2598,7 +2613,7 @@
   if(["auto","on","off"].indexOf(settings.lite)<0) settings.lite = "auto";
   if(["auto","clear","cloudy","showers","rain","storm","fog"].indexOf(settings.scene)<0) settings.scene = "auto";
   if(typeof settings.aiWake!=="boolean") settings.aiWake = true;
-  if(!settings.dim || typeof settings.dim!=="object") settings.dim = { on:true, max:60, min:20 };
+  if(!settings.dim || typeof settings.dim!=="object") settings.dim = { on:true, max:90, min:20 };
   if(typeof settings.aiSpeak!=="boolean") settings.aiSpeak = true;
   if(typeof settings.aiCal!=="boolean") settings.aiCal = true;
   if(settings.aiModel!=="smart") settings.aiModel = "fast";
@@ -3935,7 +3950,7 @@
           if(["scenes","sky","flow","aurora","off"].indexOf(settings.wallpaper)<0) settings.wallpaper = settings.skyAnim===false ? "off" : "sky";
           if(!settings.wg || typeof settings.wg!=="object") settings.wg={ month:true, bins:true, notes:true, photos:true };
           if(typeof settings.wgOpen!=="boolean") settings.wgOpen=true;
-          if(!settings.dim || typeof settings.dim!=="object") settings.dim={ on:true, max:60, min:20 };
+          if(!settings.dim || typeof settings.dim!=="object") settings.dim={ on:true, max:90, min:20 };
           if(!settings.bins || typeof settings.bins!=="object") settings.bins={ day:null, refMonday:"", refBin:"yellow" };
           if(!settings.google || !Array.isArray(settings.google.accounts)) settings.google={ clientId:(settings.google&&settings.google.clientId)||"", accounts:[] };
           if(!settings.weather) settings.weather={on:true,lat:null,lon:null,place:"",unit:"c"};
@@ -4709,7 +4724,7 @@
 
   /* ---------- Widget panel ---------- */
   var mmMonth=null, wgLastDay="";
-  var WG_ORDER=["ai","youtube","month","radio","bins","photos"];
+  var WG_ORDER=["ai","youtube","month","bins","photos"];
   var WG_DEF_SIDE={ ai:"left", youtube:"left", month:"right", radio:"right", bins:"right", photos:"right" };
   var WG_INFO={
     ai:{ name:"Ask AI", sub:"Talk to Claude. Say “Hey Claude” or type a question." },
@@ -5293,10 +5308,10 @@
     renderRadio();
   }
   function renderRadio(){
-    var g=$("rdGrid");
+    var g=$("rdRail");
     if(!g.firstChild){
       STATIONS.forEach(function(st){
-        var b=document.createElement("button"); b.type="button"; b.className="rd-tile"; b.dataset.id=st.id;
+        var b=document.createElement("button"); b.type="button"; b.className="rail-btn rd-st"; b.dataset.id=st.id;
         b.style.setProperty("--c1", st.c1); b.style.setProperty("--c2", st.c2);
         b.innerHTML='<span class="rd-badge" aria-hidden="true"></span><span class="rd-name"></span><span class="rd-sub"></span>'+
           '<span class="rd-ctl" aria-hidden="true"><svg class="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>'+
@@ -5308,7 +5323,7 @@
         g.appendChild(b);
       });
     }
-    g.querySelectorAll(".rd-tile").forEach(function(b){
+    g.querySelectorAll(".rd-st").forEach(function(b){
       var st=rdStation(b.dataset.id), on=RD.id===b.dataset.id;
       b.classList.toggle("on", on); b.classList.toggle("loading", on && RD.state==="loading"); b.classList.toggle("live", on && RD.state==="playing");
       b.setAttribute("aria-pressed", on?"true":"false");
@@ -5317,10 +5332,7 @@
     var cur=rdStation(RD.id);
     $("rdNow").textContent = cur ? (RD.state==="playing" ? "Live" : "Connecting") : "";
     $("rdNow").classList.toggle("live", RD.state==="playing");
-    $("wg-radio").classList.toggle("active", !!cur);
-    var rb = wgSideOf("radio")==="left" ? "wgBtnL" : "wgBtn";
-    $("wgBtnL").classList.toggle("radio-on", rb==="wgBtnL" && RD.state==="playing");
-    $("wgBtn").classList.toggle("radio-on", rb==="wgBtn" && RD.state==="playing");
+    $("wg-radio").classList.toggle("open", !!cur); $("wg-radio").classList.toggle("active", !!cur);
     if("mediaSession" in navigator){ try{ navigator.mediaSession.playbackState = cur ? "playing" : "none"; }catch(e){} }
   }
   /* ---------- Google Calendar (read-only merge) ---------- */
