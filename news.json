@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Indigenous people 'very rarely' sit on a jury in SA, report finds",
+   "link": "https://www.abc.net.au/news/2026-11-07/indigneous-people-underrepresented-in-juries-in-sa/107256812",
+   "published": "2026-11-06T23:53:17+00:00"
+  },
+  {
    "title": "Anger over Tungkillo data centre should have Labor on red alert",
    "link": "https://www.abc.net.au/news/2026-11-07/community-data-centre-fears-bind-greens-and-one-nation/107356102",
    "published": "2026-11-06T20:16:03+00:00"
+  },
+  {
+   "title": "Cooking classes help cut cost of living and boost social connection",
+   "link": "https://www.abc.net.au/news/2026-11-07/cooking-classes-cut-cost-of-living-boost-social-connection/107340382",
+   "published": "2026-11-06T20:30:00+00:00"
   },
   {
    "title": "Threatening, sexist messages scrawled on balloons left at MP's office",
@@ -37,6 +47,11 @@
    "published": "2026-11-05T19:19:25+00:00"
   },
   {
+   "title": "LIV Golf to wind down after five years of rebel league",
+   "link": "https://www.abc.net.au/news/2026-11-06/liv-golf-to-wind-down-after-bc-partners-withdraw-support/107353732",
+   "published": "2026-11-05T20:00:42+00:00"
+  },
+  {
    "title": "Brothers open Ceduna's first barber shop in 50 years",
    "link": "https://www.abc.net.au/news/2026-11-06/aboriginal-brothers-open-ceduna-barber-shop/107344916",
    "published": "2026-11-05T21:33:26+00:00"
@@ -45,11 +60,6 @@
    "title": "Pilot died while trying to avoid power pole, final report finds",
    "link": "https://www.abc.net.au/news/2026-11-05/jarred-wait-plane-crash-investigation/107350656",
    "published": "2026-11-05T05:58:21+00:00"
-  },
-  {
-   "title": "LIV Golf to wind down after five years of rebel league",
-   "link": "https://www.abc.net.au/news/2026-11-06/liv-golf-to-wind-down-after-bc-partners-withdraw-support/107353732",
-   "published": "2026-11-05T20:00:42+00:00"
   },
   {
    "title": "Six childcare centres to close in SA after failing to find buyer",
@@ -72,14 +82,9 @@
    "published": "2026-11-04T21:09:53+00:00"
   },
   {
-   "title": "Transport minister forced to take back seat at his own press conference",
-   "link": "https://www.abc.net.au/news/2026-11-04/torrens-to-darlington-controversy-engulfs-sa-government/107344672",
-   "published": "2026-11-04T05:33:31+00:00"
-  },
-  {
-   "title": "Calls to install toilet to give Adelaide rough sleepers 'basic human right'",
-   "link": "https://www.abc.net.au/news/2026-11-05/parklands-public-toilet-call-for-rough-sleepers-in-adelaide/107345200",
-   "published": "2026-11-04T19:11:41+00:00"
+   "title": "Albanese weighs in on 'very significant' US midterm results",
+   "link": "https://www.abc.net.au/news/2026-11-07/albanese-trump-iran-war-midterms-chogm-budget/107356124",
+   "published": "2026-11-06T18:50:09+00:00"
   },
   {
    "title": "What we learnt from murder accused's first appearance in witness box",
@@ -87,20 +92,15 @@
    "published": "2026-11-06T17:30:00+00:00"
   },
   {
-   "title": "Brands asked to keep supplying David Jones despite unpaid debts",
-   "link": "https://www.abc.net.au/news/2026-11-07/david-jones-suppliers-waiting-for-debts-to-be-paid/107355408",
-   "published": "2026-11-06T18:00:00+00:00"
-  },
-  {
-   "title": "Comedian Dara Ó Briain on the family surprise behind his new show",
-   "link": "https://www.abc.net.au/news/2026-11-07/the-interview-dara-o-briain-comedy-tour-re-creation/107329562",
-   "published": "2026-11-06T17:30:00+00:00"
-  },
-  {
    "title": "Fine line between boxing and barbarism breached in 'frightening' KO",
    "link": "https://www.abc.net.au/news/2026-11-07/nelson-asofa-solomona-knock-out-spectator-attack/107358362",
    "published": "2026-11-06T19:52:44+00:00"
+  },
+  {
+   "title": "Plane vanishes without a trace but not before chilling final transmission",
+   "link": "https://www.abc.net.au/news/2026-11-07/australian-aviation-mystery-in-the-barrington-tops/107125778",
+   "published": "2026-11-06T18:00:00+00:00"
   }
  ],
- "updated": "2026-11-06T21:28:19.791608+00:00"
+ "updated": "2026-11-07T01:10:31.592546+00:00"
 }
