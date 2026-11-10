@@ -2,14 +2,34 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Lifeguard in tears as she recalls drowning of nine-year-old boy",
+   "link": "https://www.abc.net.au/news/2026-11-10/court-family-drowned-waikerie-pool-lifeguard-coronial-inquest/107367172",
+   "published": "2026-11-10T07:05:08+00:00"
+  },
+  {
+   "title": "'Not enough evidence' to determine young woman's cause of death, inquest finds",
+   "link": "https://www.abc.net.au/news/2026-11-10/death-inquest-findings-wilcannia-nsw-coroner/107368106",
+   "published": "2026-11-10T06:54:03+00:00"
+  },
+  {
+   "title": "Mother accused of choking child remanded in custody in Coober Pedy",
+   "link": "https://www.abc.net.au/news/2026-11-10/coober-pedy-mother-appears-in-court-dv-charges/107368256",
+   "published": "2026-11-10T02:30:11+00:00"
+  },
+  {
+   "title": "Alleged murder victim stabbed repeatedly and left crying for help, jury hears",
+   "link": "https://www.abc.net.au/news/2026-11-10/trial-starts-into-alleged-murder-at-welland-over-drug-dispute/107364312",
+   "published": "2026-11-10T05:55:37+00:00"
+  },
+  {
    "title": "For commuters who rely on these small bumps, 2032 is a long way off",
    "link": "https://www.abc.net.au/news/2026-11-10/tactile-marker-train-station-bus-stop-accessibility-upgrades/107362798",
    "published": "2026-11-09T19:02:14+00:00"
   },
   {
-   "title": "150 years ago a mishap in an SA paddock revolutionised farming",
-   "link": "https://www.abc.net.au/news/2026-11-09/stump-jump-plough-150th-anniversary-yorke-peninsula/107349432",
-   "published": "2026-11-09T05:46:15+00:00"
+   "title": "Empty chair at bed shortage summit highlights state–federal tensions",
+   "link": "https://www.abc.net.au/news/2026-11-10/ramping-aged-care-bed-tensions-highlighted-by-empty-chair/107366994",
+   "published": "2026-11-10T04:15:43+00:00"
   },
   {
    "title": "Aloisi sacked from Chinese club after losing final five games in title choke",
@@ -17,9 +37,9 @@
    "published": "2026-11-10T00:27:55+00:00"
   },
   {
-   "title": "Families forced to make 'inhumane' choices amid aged care crisis",
-   "link": "https://www.abc.net.au/news/2026-11-09/residential-aged-care-bed-waitlist-south-australia-families/107341030",
-   "published": "2026-11-08T18:56:09+00:00"
+   "title": "150 years ago a mishap in an SA paddock revolutionised farming",
+   "link": "https://www.abc.net.au/news/2026-11-09/stump-jump-plough-150th-anniversary-yorke-peninsula/107349432",
+   "published": "2026-11-09T05:46:15+00:00"
   },
   {
    "title": "Arena 'electric' as 36ers debutant hits buzzer beater",
@@ -27,80 +47,60 @@
    "published": "2026-11-09T01:21:08+00:00"
   },
   {
+   "title": "Families forced to make 'inhumane' choices amid aged care crisis",
+   "link": "https://www.abc.net.au/news/2026-11-09/residential-aged-care-bed-waitlist-south-australia-families/107341030",
+   "published": "2026-11-08T18:56:09+00:00"
+  },
+  {
    "title": "Traditional owners and uni students work together to unearth history",
    "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
    "published": "2026-11-08T19:01:27+00:00"
   },
   {
-   "title": "Judge condemns Brand as a ‘sexual predator’ as he passes sentence",
-   "link": "",
-   "published": "2026-11-10T00:46:40+00:00"
+   "title": "'Sounds crazy. I love him': Lamarre-Condon quizzed over texts",
+   "link": "https://www.abc.net.au/news/2026-11-10/beau-lamarre-condon-denies-jesse-baird-obsession/107366852",
+   "published": "2026-11-10T05:25:14+00:00"
   },
   {
-   "title": "'Sexual predator' Russell Brand jailed for more than a decade",
-   "link": "https://www.abc.net.au/news/2026-11-10/russell-brand-sentenced/107365656",
-   "published": "2026-11-09T14:35:23+00:00"
+   "title": "Billionaire couple donates $120 million to conservation groups",
+   "link": "https://www.abc.net.au/news/2026-11-10/nt-conservation-donation-makes-dream-of-managing-5-per-cent-land/107367198",
+   "published": "2026-11-10T01:17:03+00:00"
   },
   {
-   "title": "Russell Brand’s many reinventions and the verdict that ended them",
-   "link": "https://www.abc.net.au/news/2026-11-10/rise-and-fall-of-russell-brand-now-in-jail-for-rape/107366098",
-   "published": "2026-11-09T19:32:56+00:00"
+   "title": "Beaconsfield 'will always connect us': Fellow survivor pays tribute to Russell",
+   "link": "https://www.abc.net.au/news/2026-11-10/tas-beaconsfield-survivor-todd-russell-tributes/107367146",
+   "published": "2026-11-10T01:17:10+00:00"
   },
   {
-   "title": "COP31 summit targets major electrification push as 1.5C goal slips away",
-   "link": "https://www.abc.net.au/news/2026-11-10/cop31-tingle-global-temperature-1-5c/107366402",
-   "published": "2026-11-09T15:15:10+00:00"
+   "title": "What to know about fuel prices after a midterm elections oil price drop",
+   "link": "https://www.abc.net.au/news/2026-11-10/fuel-update-oil-prices-drop-midterms-iran-ukraine/107364786",
+   "published": "2026-11-10T02:28:28+00:00"
   },
   {
-   "title": "Renewables and Iran war help drive fall in global fossil fuel emissions",
-   "link": "https://www.abc.net.au/news/2026-11-10/fossil-fuel-emissions-to-fall-in-2026-due-to-iran-war/107329262",
-   "published": "2026-11-10T01:00:47+00:00"
+   "title": "Mums left feeling neglected after giving birth, federal inquiry hears",
+   "link": "https://www.abc.net.au/news/2026-11-10/mothers-give-evidence-at-federal-womens-health-senate-inquiry/107365420",
+   "published": "2026-11-10T03:19:40+00:00"
   },
   {
-   "title": "Fresh attempt to impeach Hegseth introduced in US Congress",
-   "link": "https://www.abc.net.au/news/2026-11-10/us-defence-secretary-pete-hegseth-subject-of-new-impeachment-bid/107366698",
-   "published": "2026-11-09T19:24:06+00:00"
+   "title": "Data centre builder Firmus says diesel generators only for emergencies",
+   "link": "https://www.abc.net.au/news/2026-11-10/diesel-generators-firmus-ai-data-centres-/107368688",
+   "published": "2026-11-10T06:03:55+00:00"
   },
   {
-   "title": "Live: Government to mandate AI models be open for evaluation",
-   "link": "https://www.abc.net.au/news/2026-11-10/federal-politics-live-blog-chris-bowen-nov-10/107366854",
-   "published": "2026-11-09T20:02:49+00:00"
+   "title": "Victorian One Nation candidate dumped over Hitler comments",
+   "link": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834",
+   "published": "2026-11-10T06:02:17+00:00"
   },
   {
-   "title": "Court ruling paves way for Lindsay Clancy's retrial for murder",
-   "link": "https://www.abc.net.au/news/2026-11-10/lindsay-clancy-could-be-tried-again-over-childrens-deaths/107367706",
-   "published": "2026-11-10T00:42:16+00:00"
+   "title": "Russell Brand's ex Jemima Goldsmith accuses him of 'violence and abuse'",
+   "link": "https://www.abc.net.au/news/2026-11-10/jemima-goldsmith-accuses-russell-brand-of-violence-and-abuse/107367380",
+   "published": "2026-11-10T02:19:45+00:00"
   },
   {
-   "title": "Cricket Australia will not have another Sandpapergate investigation",
-   "link": "https://www.abc.net.au/news/2026-11-10/cricket-australia-no-sandpapergate-investigation/107367290",
-   "published": "2026-11-09T23:36:37+00:00"
-  },
-  {
-   "title": "How jade is sourced from the world's largest mines and smuggled to China",
-   "link": "https://www.abc.net.au/news/2026-11-10/china-hunger-for-jade-fuel-myanmar-war/107296662",
-   "published": "2026-11-09T18:42:53+00:00"
-  },
-  {
-   "title": "Police officer wore explicit patch on uniform during teen's arrest",
-   "link": "https://www.abc.net.au/news/2026-11-10/wa-police-fold-uniform-geraldton-arrest-body-worn-camera/107287660",
-   "published": "2026-11-09T21:15:44+00:00"
-  },
-  {
-   "title": "Police hopeful of finding teen missing in dense bushland since Friday",
-   "link": "https://www.abc.net.au/news/2026-11-10/search-for-missing-teen-walhalla-east-continues/107366952",
-   "published": "2026-11-09T23:02:06+00:00"
-  },
-  {
-   "title": "Floreat killer was 'control freak' upset at losing 'trophy wife'",
-   "link": "https://www.abc.net.au/news/2026-11-10/floreat-shooting-mark-bombara-control-freak-marriage-breakdown/107365950",
-   "published": "2026-11-09T21:26:07+00:00"
-  },
-  {
-   "title": "Live: Victorian Liberals to preference One Nation above Labor",
-   "link": "https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090",
-   "published": "2026-11-09T22:46:00+00:00"
+   "title": "'Unlikely' neurological conditions led to Floreat double murder, inquest hears",
+   "link": "https://www.abc.net.au/news/2026-11-10/floreat-murderer-showed-high-level-planning-skills-inquest-hears/107370088",
+   "published": "2026-11-10T06:57:45+00:00"
   }
  ],
- "updated": "2026-11-10T02:00:41.924204+00:00"
+ "updated": "2026-11-10T09:41:06.864532+00:00"
 }
