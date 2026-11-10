@@ -2,9 +2,24 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "150 years ago, a mishap in an SA paddock revolutionised farming",
+   "title": "For commuters who rely on these small bumps, 2032 is a long way off",
+   "link": "https://www.abc.net.au/news/2026-11-10/tactile-marker-train-station-bus-stop-accessibility-upgrades/107362798",
+   "published": "2026-11-09T19:02:14+00:00"
+  },
+  {
+   "title": "150 years ago a mishap in an SA paddock revolutionised farming",
    "link": "https://www.abc.net.au/news/2026-11-09/stump-jump-plough-150th-anniversary-yorke-peninsula/107349432",
    "published": "2026-11-09T05:46:15+00:00"
+  },
+  {
+   "title": "Aloisi sacked from Chinese club after losing final five games in title choke",
+   "link": "https://www.abc.net.au/news/2026-11-10/john-aloisi-sacked-from-chinese-club/107367670",
+   "published": "2026-11-10T00:27:55+00:00"
+  },
+  {
+   "title": "Families forced to make 'inhumane' choices amid aged care crisis",
+   "link": "https://www.abc.net.au/news/2026-11-09/residential-aged-care-bed-waitlist-south-australia-families/107341030",
+   "published": "2026-11-08T18:56:09+00:00"
   },
   {
    "title": "Arena 'electric' as 36ers debutant hits buzzer beater",
@@ -17,90 +32,75 @@
    "published": "2026-11-08T19:01:27+00:00"
   },
   {
-   "title": "Families forced to make 'inhumane' choices amid aged care crisis",
-   "link": "https://www.abc.net.au/news/2026-11-09/residential-aged-care-bed-waitlist-south-australia-families/107341030",
-   "published": "2026-11-08T18:56:09+00:00"
+   "title": "Judge condemns Brand as a ‘sexual predator’ as he passes sentence",
+   "link": "",
+   "published": "2026-11-10T00:46:40+00:00"
   },
   {
-   "title": "SA government plans to ban ticketless parking fines",
-   "link": "https://www.abc.net.au/news/2026-11-08/ticketless-parking-fines-to-be-banned-in-south-australia/107360976",
-   "published": "2026-11-08T06:14:24+00:00"
+   "title": "'Sexual predator' Russell Brand jailed for more than a decade",
+   "link": "https://www.abc.net.au/news/2026-11-10/russell-brand-sentenced/107365656",
+   "published": "2026-11-09T14:35:23+00:00"
   },
   {
-   "title": "Residents demand traffic fix for 'horrendous' SA road",
-   "link": "https://www.abc.net.au/news/2026-11-08/playford-residents-want-fix-curtis-road-congestion/107337464",
-   "published": "2026-11-07T20:21:52+00:00"
+   "title": "Russell Brand’s many reinventions and the verdict that ended them",
+   "link": "https://www.abc.net.au/news/2026-11-10/rise-and-fall-of-russell-brand-now-in-jail-for-rape/107366098",
+   "published": "2026-11-09T19:32:56+00:00"
   },
   {
-   "title": "94yo poet who can't read or write celebrated in Stockman's Hall of Fame",
-   "link": "https://www.abc.net.au/news/2026-11-08/australian-stockman-hall-of-fame-outback-poet-jim-oconnor/107291852",
-   "published": "2026-11-07T20:38:49+00:00"
+   "title": "COP31 summit targets major electrification push as 1.5C goal slips away",
+   "link": "https://www.abc.net.au/news/2026-11-10/cop31-tingle-global-temperature-1-5c/107366402",
+   "published": "2026-11-09T15:15:10+00:00"
   },
   {
-   "title": "Man arrested and charged for alleged harassment of SA Speaker",
-   "link": "https://www.abc.net.au/news/2026-11-07/man-arrested-and-charged-for-alleged-harassment-of-sa-speaker/107359174",
-   "published": "2026-11-07T06:43:19+00:00"
+   "title": "Renewables and Iran war help drive fall in global fossil fuel emissions",
+   "link": "https://www.abc.net.au/news/2026-11-10/fossil-fuel-emissions-to-fall-in-2026-due-to-iran-war/107329262",
+   "published": "2026-11-10T01:00:47+00:00"
   },
   {
-   "title": "Cooking classes help cut cost of living and boost social connection",
-   "link": "https://www.abc.net.au/news/2026-11-07/cooking-classes-cut-cost-of-living-boost-social-connection/107340382",
-   "published": "2026-11-06T20:30:00+00:00"
+   "title": "Fresh attempt to impeach Hegseth introduced in US Congress",
+   "link": "https://www.abc.net.au/news/2026-11-10/us-defence-secretary-pete-hegseth-subject-of-new-impeachment-bid/107366698",
+   "published": "2026-11-09T19:24:06+00:00"
   },
   {
-   "title": "Anger over Tungkillo data centre should have Labor on red alert",
-   "link": "https://www.abc.net.au/news/2026-11-07/community-data-centre-fears-bind-greens-and-one-nation/107356102",
-   "published": "2026-11-06T20:16:03+00:00"
+   "title": "Live: Government to mandate AI models be open for evaluation",
+   "link": "https://www.abc.net.au/news/2026-11-10/federal-politics-live-blog-chris-bowen-nov-10/107366854",
+   "published": "2026-11-09T20:02:49+00:00"
   },
   {
-   "title": "Indigenous people 'very rarely' sit on a jury in SA, report finds",
-   "link": "https://www.abc.net.au/news/2026-11-07/indigneous-people-underrepresented-in-juries-in-sa/107256812",
-   "published": "2026-11-06T23:53:17+00:00"
+   "title": "Court ruling paves way for Lindsay Clancy's retrial for murder",
+   "link": "https://www.abc.net.au/news/2026-11-10/lindsay-clancy-could-be-tried-again-over-childrens-deaths/107367706",
+   "published": "2026-11-10T00:42:16+00:00"
   },
   {
-   "title": "Fuel retailer accused of selling unleaded 91 as premium petrol",
-   "link": "https://www.abc.net.au/news/2026-11-09/wa-consumer-protection-fuel-retailer-supreme-court/107298706",
-   "published": "2026-11-09T08:05:51+00:00"
+   "title": "Cricket Australia will not have another Sandpapergate investigation",
+   "link": "https://www.abc.net.au/news/2026-11-10/cricket-australia-no-sandpapergate-investigation/107367290",
+   "published": "2026-11-09T23:36:37+00:00"
   },
   {
-   "title": "WA Aboriginal affairs minister visits Pilbara amid child welfare crisis",
-   "link": "https://www.abc.net.au/news/2026-11-09/don-punch-visits-hedland-amid-child-welfare-crisis/107350880",
-   "published": "2026-11-09T09:40:40+00:00"
+   "title": "How jade is sourced from the world's largest mines and smuggled to China",
+   "link": "https://www.abc.net.au/news/2026-11-10/china-hunger-for-jade-fuel-myanmar-war/107296662",
+   "published": "2026-11-09T18:42:53+00:00"
   },
   {
-   "title": "Man in waiting room dies after car crashes into medical centre",
-   "link": "https://www.abc.net.au/news/2026-11-09/man-dies-after-car-crashes-into-medical-centre/107364182",
-   "published": "2026-11-09T02:12:54+00:00"
+   "title": "Police officer wore explicit patch on uniform during teen's arrest",
+   "link": "https://www.abc.net.au/news/2026-11-10/wa-police-fold-uniform-geraldton-arrest-body-worn-camera/107287660",
+   "published": "2026-11-09T21:15:44+00:00"
   },
   {
-   "title": "Ukrainian drone attack sets Russia's Kirishi refinery ablaze",
-   "link": "https://www.abc.net.au/news/2026-11-09/ukrainian-drone-attack-at-russia-kirishi-refinery-woman-dies/107365888",
-   "published": "2026-11-09T09:22:35+00:00"
+   "title": "Police hopeful of finding teen missing in dense bushland since Friday",
+   "link": "https://www.abc.net.au/news/2026-11-10/search-for-missing-teen-walhalla-east-continues/107366952",
+   "published": "2026-11-09T23:02:06+00:00"
   },
   {
-   "title": "Trump is doubling down and that could be a big problem for Hegseth",
-   "link": "https://www.abc.net.au/news/2026-11-09/donald-trump-revamping-team-and-pete-hegeth-could-be-next/107358974",
-   "published": "2026-11-08T18:38:54+00:00"
+   "title": "Floreat killer was 'control freak' upset at losing 'trophy wife'",
+   "link": "https://www.abc.net.au/news/2026-11-10/floreat-shooting-mark-bombara-control-freak-marriage-breakdown/107365950",
+   "published": "2026-11-09T21:26:07+00:00"
   },
   {
-   "title": "Police charged over alleged e-bike hit and run in Sydney",
-   "link": "https://www.abc.net.au/news/2026-11-09/nsw-police-charged-over-alleged-ebike-hit-and-run-broadway/107366072",
-   "published": "2026-11-09T09:19:18+00:00"
-  },
-  {
-   "title": "Fagan's understudy Bruce named Brisbane's new senior coach",
-   "link": "https://www.abc.net.au/news/2026-11-09/afl-cameron-bruce-brisbane-lions-new-senior-coach/107365956",
-   "published": "2026-11-09T08:26:56+00:00"
-  },
-  {
-   "title": "Bouquet of invasive weeds wins agricultural show award",
-   "link": "https://www.abc.net.au/news/2026-11-09/margaret-river-agricultural-show-invasive-weed-arrangement/107364466",
-   "published": "2026-11-09T07:41:57+00:00"
-  },
-  {
-   "title": "Victoria inquiry hears CFMEU threatened to 'smash' subcontractor",
-   "link": "https://www.abc.net.au/news/2026-11-09/victoria-big-build-royal-commission-hears-cfmeu-influence/107364446",
-   "published": "2026-11-09T05:32:40+00:00"
+   "title": "Live: Victorian Liberals to preference One Nation above Labor",
+   "link": "https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090",
+   "published": "2026-11-09T22:46:00+00:00"
   }
  ],
- "updated": "2026-11-09T18:42:29.443593+00:00"
+ "updated": "2026-11-10T02:00:41.924204+00:00"
 }
