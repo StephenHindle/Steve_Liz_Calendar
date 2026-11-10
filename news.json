@@ -2,6 +2,11 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "South Road scandal to become subject of parliamentary inquiry",
+   "link": "https://www.abc.net.au/news/2026-11-11/t2d-scandal-to-become-subject-of-parliamentary-inquiry/107368122",
+   "published": "2026-11-10T20:05:02+00:00"
+  },
+  {
    "title": "Adelaide council backflips on fossil fuel ad ban amid Tour Down Under fears",
    "link": "https://www.abc.net.au/news/2026-11-10/adelaide-city-council-fossil-fuel-ad-ban-tour-down-under/107369768",
    "published": "2026-11-10T10:49:39+00:00"
@@ -10,6 +15,16 @@
    "title": "Lifeguard in tears as she recalls drowning of nine-year-old boy",
    "link": "https://www.abc.net.au/news/2026-11-10/court-family-drowned-waikerie-pool-lifeguard-coronial-inquest/107367172",
    "published": "2026-11-10T07:05:08+00:00"
+  },
+  {
+   "title": "SA Labor slammed 'basketball stadium' to fix ramping but the crisis is far from over",
+   "link": "https://www.abc.net.au/news/2026-11-11/sa-government-invest-in-sports-amid-ramping-crisis/107368278",
+   "published": "2026-11-10T19:00:58+00:00"
+  },
+  {
+   "title": "Buyers ditch backyards for balconies as rates rise",
+   "link": "https://www.abc.net.au/news/2026-11-11/how-house-unit-values-compare-across-capitals-2026/107337340",
+   "published": "2026-11-10T18:51:06+00:00"
   },
   {
    "title": "'Not enough evidence' to determine young woman's cause of death, inquest finds",
@@ -32,14 +47,14 @@
    "published": "2026-11-09T19:02:14+00:00"
   },
   {
-   "title": "Empty chair at bed shortage summit highlights state–federal tensions",
-   "link": "https://www.abc.net.au/news/2026-11-10/ramping-aged-care-bed-tensions-highlighted-by-empty-chair/107366994",
-   "published": "2026-11-10T04:15:43+00:00"
-  },
-  {
    "title": "Aloisi sacked from Chinese club after losing final five games in title choke",
    "link": "https://www.abc.net.au/news/2026-11-10/john-aloisi-sacked-from-chinese-club/107367670",
    "published": "2026-11-10T00:27:55+00:00"
+  },
+  {
+   "title": "Traditional owners and uni students work together to unearth history",
+   "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
+   "published": "2026-11-08T19:01:27+00:00"
   },
   {
    "title": "150 years ago a mishap in an SA paddock revolutionised farming",
@@ -52,55 +67,40 @@
    "published": "2026-11-09T01:21:08+00:00"
   },
   {
-   "title": "Families forced to make 'inhumane' choices amid aged care crisis",
-   "link": "https://www.abc.net.au/news/2026-11-09/residential-aged-care-bed-waitlist-south-australia-families/107341030",
-   "published": "2026-11-08T18:56:09+00:00"
+   "title": "Pete Hegseth vows to fight 'farce' impeachment push",
+   "link": "https://www.abc.net.au/news/2026-11-11/us-defense-secretary-pete-hegseth-fights-impeachment/107367736",
+   "published": "2026-11-10T14:44:03+00:00"
   },
   {
-   "title": "Traditional owners and uni students work together to unearth history",
-   "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
-   "published": "2026-11-08T19:01:27+00:00"
+   "title": "Taunts, heckling and fiery Netanyahu speech as Israel's Knesset sworn in",
+   "link": "https://www.abc.net.au/news/2026-11-11/knesset-sworn-in-taunts-heckling/107371226",
+   "published": "2026-11-10T18:04:14+00:00"
   },
   {
-   "title": "'Sounds crazy. I love him': Lamarre-Condon quizzed over texts",
-   "link": "https://www.abc.net.au/news/2026-11-10/beau-lamarre-condon-denies-jesse-baird-obsession/107366852",
-   "published": "2026-11-10T05:25:14+00:00"
+   "title": "Police sound alarm as youth terror cases surge despite social media ban",
+   "link": "https://www.abc.net.au/news/2026-11-11/afp-warns-of-sharp-spike-in-minor-counter-terrorism-case/107369962",
+   "published": "2026-11-10T18:00:00+00:00"
   },
   {
-   "title": "Billionaire couple donates $120 million to conservation groups",
-   "link": "https://www.abc.net.au/news/2026-11-10/nt-conservation-donation-makes-dream-of-managing-5-per-cent-land/107367198",
-   "published": "2026-11-10T01:17:03+00:00"
+   "title": "Uncomfortable with fame, Todd Russell spent years giving back",
+   "link": "https://www.abc.net.au/news/2026-11-11/mine-rescue-survivor-todd-russell-years-of-firefighter-service/107368998",
+   "published": "2026-11-10T18:34:22+00:00"
   },
   {
-   "title": "Beaconsfield 'will always connect us': Fellow survivor pays tribute to Russell",
-   "link": "https://www.abc.net.au/news/2026-11-10/tas-beaconsfield-survivor-todd-russell-tributes/107367146",
-   "published": "2026-11-10T01:17:10+00:00"
+   "title": "COP31 electric power target sparks row over cutting fossil fuel use",
+   "link": "https://www.abc.net.au/news/2026-11-11/cop31-electrification-turkiye-australia/107371196",
+   "published": "2026-11-10T17:33:02+00:00"
   },
   {
-   "title": "What to know about fuel prices after a midterm elections oil price drop",
-   "link": "https://www.abc.net.au/news/2026-11-10/fuel-update-oil-prices-drop-midterms-iran-ukraine/107364786",
-   "published": "2026-11-10T02:28:28+00:00"
+   "title": "Would you push a neighbour into unemployment to reduce inflation?",
+   "link": "https://www.abc.net.au/news/2026-11-11/rba-full-employment-andrew-hauser-trust-in-central-banks/107359286",
+   "published": "2026-11-10T18:52:55+00:00"
   },
   {
-   "title": "Mums left feeling neglected after giving birth, federal inquiry hears",
-   "link": "https://www.abc.net.au/news/2026-11-10/mothers-give-evidence-at-federal-womens-health-senate-inquiry/107365420",
-   "published": "2026-11-10T03:19:40+00:00"
-  },
-  {
-   "title": "Data centre builder Firmus says diesel generators only for emergencies",
-   "link": "https://www.abc.net.au/news/2026-11-10/diesel-generators-firmus-ai-data-centres-/107368688",
-   "published": "2026-11-10T06:03:55+00:00"
-  },
-  {
-   "title": "Victorian One Nation candidate dumped over Hitler comments",
-   "link": "https://www.abc.net.au/news/2026-11-10/vic-one-nation-preston-candidate-guardiani-dumped/107368834",
-   "published": "2026-11-10T06:02:17+00:00"
-  },
-  {
-   "title": "Russell Brand's ex Jemima Goldsmith accuses him of 'violence and abuse'",
-   "link": "https://www.abc.net.au/news/2026-11-10/jemima-goldsmith-accuses-russell-brand-of-violence-and-abuse/107367380",
-   "published": "2026-11-10T02:19:45+00:00"
+   "title": "India's sugarcane is too dry and consumers will pay the price",
+   "link": "https://www.abc.net.au/news/2026-11-11/india-sugar-prices-rise-as-super-el-nino-weakens-monsoon/107339514",
+   "published": "2026-11-10T18:57:56+00:00"
   }
  ],
- "updated": "2026-11-10T17:44:04.858922+00:00"
+ "updated": "2026-11-10T23:13:16.039694+00:00"
 }
