@@ -2,34 +2,44 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "DV survivor 'disgusted' to learn of perpetrator's release",
+   "link": "https://www.abc.net.au/news/2026-11-11/dv-survivor-learns-of-perpetrator-release-through-media/107373214",
+   "published": "2026-11-11T07:51:16+00:00"
+  },
+  {
+   "title": "Young adult dies from meningococcal disease",
+   "link": "https://www.abc.net.au/news/2026-11-11/young-adult-dies-from-meningococcal-disease/107375060",
+   "published": "2026-11-11T09:27:35+00:00"
+  },
+  {
+   "title": "Pregnant heifer rescued from mine shaft with purpose-built harness",
+   "link": "https://www.abc.net.au/news/2026-11-11/pregnant-cow-escapes-unharmed-after-mine-shaft-fall-sa/107372472",
+   "published": "2026-11-11T07:30:00+00:00"
+  },
+  {
+   "title": "Child abuse survivor: extension of abuser's jail sentence still 'falls short'",
+   "link": "https://www.abc.net.au/news/2026-11-11/child-abuse-survivor-criticises-jail-sentence-extension/107374674",
+   "published": "2026-11-11T07:16:48+00:00"
+  },
+  {
+   "title": "Tensions between SA Government, city council rise over oval dispute",
+   "link": "https://www.abc.net.au/news/2026-11-11/war-of-words-as-premier-attacks-city-council-oval-approvals/107372416",
+   "published": "2026-11-11T06:24:32+00:00"
+  },
+  {
+   "title": "Two SA David Jones stores among 19 to close",
+   "link": "https://www.abc.net.au/news/2026-11-11/david-jones-to-close-stores/107372854",
+   "published": "2026-11-11T02:07:46+00:00"
+  },
+  {
    "title": "Minister's moral dilemma as sister pleads to make cancer risk known",
    "link": "https://www.abc.net.au/news/2026-11-11/donor-conceived-woman-push-to-alert-half-sister-to-cancer-risk/107371778",
    "published": "2026-11-11T01:46:18+00:00"
   },
   {
-   "title": "Cooped-up free-range hens set free again as bird flu spread slows in SA",
-   "link": "https://www.abc.net.au/news/2026-11-11/housed-free-range-chickens-set-free-as-bird-flu-spread-slows/107368782",
-   "published": "2026-11-11T01:21:34+00:00"
-  },
-  {
-   "title": "Adelaide council backflips on fossil fuel ad ban amid Tour Down Under fears",
-   "link": "https://www.abc.net.au/news/2026-11-10/adelaide-city-council-fossil-fuel-ad-ban-tour-down-under/107369768",
-   "published": "2026-11-10T10:49:39+00:00"
-  },
-  {
-   "title": "South Road scandal to become subject of parliamentary inquiry",
-   "link": "https://www.abc.net.au/news/2026-11-11/t2d-scandal-to-become-subject-of-parliamentary-inquiry/107368122",
-   "published": "2026-11-10T20:05:02+00:00"
-  },
-  {
-   "title": "Lifeguard in tears as she recalls drowning of nine-year-old boy",
-   "link": "https://www.abc.net.au/news/2026-11-10/court-family-drowned-waikerie-pool-lifeguard-coronial-inquest/107367172",
-   "published": "2026-11-10T07:05:08+00:00"
-  },
-  {
-   "title": "Buyers ditch backyards for balconies as rates rise",
-   "link": "https://www.abc.net.au/news/2026-11-11/how-house-unit-values-compare-across-capitals-2026/107337340",
-   "published": "2026-11-10T18:51:06+00:00"
+   "title": "ACL battles haven't halted these AFL draft hopefuls",
+   "link": "https://www.abc.net.au/news/2026-11-11/acl-battles-have-not-stopped-these-afl-draft-hopefuls/107363310",
+   "published": "2026-11-11T03:08:00+00:00"
   },
   {
    "title": "SA Labor slammed 'basketball stadium' to fix ramping but the crisis is far from over",
@@ -37,9 +47,44 @@
    "published": "2026-11-10T19:00:58+00:00"
   },
   {
+   "title": "Cooped-up free-range hens set free again as bird flu spread slows in SA",
+   "link": "https://www.abc.net.au/news/2026-11-11/housed-free-range-chickens-set-free-as-bird-flu-spread-slows/107368782",
+   "published": "2026-11-11T01:21:34+00:00"
+  },
+  {
+   "title": "South Road scandal to become subject of parliamentary inquiry",
+   "link": "https://www.abc.net.au/news/2026-11-11/t2d-scandal-to-become-subject-of-parliamentary-inquiry/107368122",
+   "published": "2026-11-10T20:05:02+00:00"
+  },
+  {
+   "title": "Tribute to former Adelaide Hills passenger rail in backyard model",
+   "link": "https://www.abc.net.au/news/2026-11-11/adelaide-hills-scale-railway-layout-peter-michalak/107369154",
+   "published": "2026-11-11T03:29:45+00:00"
+  },
+  {
+   "title": "Adelaide council backflips on fossil fuel ad ban amid Tour Down Under fears",
+   "link": "https://www.abc.net.au/news/2026-11-10/adelaide-city-council-fossil-fuel-ad-ban-tour-down-under/107369768",
+   "published": "2026-11-10T10:49:39+00:00"
+  },
+  {
+   "title": "Traditional owners and uni students work together to unearth history",
+   "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
+   "published": "2026-11-08T19:01:27+00:00"
+  },
+  {
+   "title": "Buyers ditch backyards for balconies as rates rise",
+   "link": "https://www.abc.net.au/news/2026-11-11/how-house-unit-values-compare-across-capitals-2026/107337340",
+   "published": "2026-11-10T18:51:06+00:00"
+  },
+  {
    "title": "'Not enough evidence' to determine young woman's cause of death, inquest finds",
    "link": "https://www.abc.net.au/news/2026-11-10/death-inquest-findings-wilcannia-nsw-coroner/107368106",
    "published": "2026-11-10T06:54:03+00:00"
+  },
+  {
+   "title": "Lifeguard in tears as she recalls drowning of nine-year-old boy",
+   "link": "https://www.abc.net.au/news/2026-11-10/court-family-drowned-waikerie-pool-lifeguard-coronial-inquest/107367172",
+   "published": "2026-11-10T07:05:08+00:00"
   },
   {
    "title": "Mother accused of choking child remanded in custody in Coober Pedy",
@@ -52,55 +97,10 @@
    "published": "2026-11-10T05:55:37+00:00"
   },
   {
-   "title": "For commuters who rely on these small bumps, 2032 is a long way off",
-   "link": "https://www.abc.net.au/news/2026-11-10/tactile-marker-train-station-bus-stop-accessibility-upgrades/107362798",
-   "published": "2026-11-09T19:02:14+00:00"
-  },
-  {
-   "title": "Traditional owners and uni students work together to unearth history",
-   "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
-   "published": "2026-11-08T19:01:27+00:00"
-  },
-  {
-   "title": "Aloisi sacked from Chinese club after losing final five games in title choke",
-   "link": "https://www.abc.net.au/news/2026-11-10/john-aloisi-sacked-from-chinese-club/107367670",
-   "published": "2026-11-10T00:27:55+00:00"
-  },
-  {
-   "title": "150 years ago a mishap in an SA paddock revolutionised farming",
-   "link": "https://www.abc.net.au/news/2026-11-09/stump-jump-plough-150th-anniversary-yorke-peninsula/107349432",
-   "published": "2026-11-09T05:46:15+00:00"
-  },
-  {
-   "title": "Taunts, heckling and fiery Netanyahu speech as Israel's Knesset sworn in",
-   "link": "https://www.abc.net.au/news/2026-11-11/knesset-sworn-in-taunts-heckling/107371226",
-   "published": "2026-11-10T18:04:14+00:00"
-  },
-  {
-   "title": "Lamarre-Condon denies making fake Jesse Baird email and Grindr accounts",
-   "link": "https://www.abc.net.au/news/2026-11-11/beau-lamarre-condon-trial-live-blog-cross-examination-wednesday/107371808",
-   "published": "2026-11-10T23:18:13+00:00"
-  },
-  {
-   "title": "The way we travel is changing and it's not just Qantas feeling the pressure",
-   "link": "https://www.abc.net.au/news/2026-11-11/qantas-layoffs-tourism-ai/107368252",
-   "published": "2026-11-10T18:00:00+00:00"
-  },
-  {
-   "title": "Savers urged to check interest rates on accounts as Macquarie admits failings",
-   "link": "https://www.abc.net.au/news/2026-11-11/asic-sues-macquarie-for-savings-rates-failures/107371760",
-   "published": "2026-11-10T22:16:06+00:00"
-  },
-  {
-   "title": "China hits $US1 trillion trade surplus as exports to US surge",
-   "link": "https://www.abc.net.au/news/2026-11-11/china-trade-surpasses-1-trillion-for-second-straight-year/107372090",
-   "published": "2026-11-11T00:57:12+00:00"
-  },
-  {
-   "title": "COP31 electric power target sparks row over cutting fossil fuel use",
-   "link": "https://www.abc.net.au/news/2026-11-11/cop31-electrification-turkiye-australia/107371196",
-   "published": "2026-11-10T17:33:02+00:00"
+   "title": "Comedian doubtful about future in TV after blowing whistle on Walliams",
+   "link": "https://www.abc.net.au/news/2026-11-11/david-walliams-whistblower-speaks-out/107372358",
+   "published": "2026-11-11T05:53:54+00:00"
   }
  ],
- "updated": "2026-11-11T02:58:55.973200+00:00"
+ "updated": "2026-11-11T10:47:15.420166+00:00"
 }
