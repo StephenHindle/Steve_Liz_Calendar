@@ -2,14 +2,39 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "DV survivor 'disgusted' to learn of perpetrator's release",
-   "link": "https://www.abc.net.au/news/2026-11-11/dv-survivor-learns-of-perpetrator-release-through-media/107373214",
-   "published": "2026-11-11T07:51:16+00:00"
+   "title": "Developer 'pauses' AI data centre proposal after it 'misread' community feeling",
+   "link": "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052",
+   "published": "2026-11-11T21:14:22+00:00"
+  },
+  {
+   "title": "Personal data stolen after National Parks booking service hacked in three states",
+   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
+   "published": "2026-11-11T23:54:20+00:00"
+  },
+  {
+   "title": "Rising costs hurt South Australia's regional high streets",
+   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
+   "published": "2026-11-11T18:58:04+00:00"
+  },
+  {
+   "title": "One Nation's 'missing' aircraft located at hangar in outback city",
+   "link": "https://www.abc.net.au/news/2026-11-12/one-nation-missing-first-aircraft-broken-hill/107373086",
+   "published": "2026-11-11T19:55:25+00:00"
   },
   {
    "title": "Young adult dies from meningococcal disease",
    "link": "https://www.abc.net.au/news/2026-11-11/young-adult-dies-from-meningococcal-disease/107375060",
    "published": "2026-11-11T09:27:35+00:00"
+  },
+  {
+   "title": "DV survivor 'disgusted' to learn of perpetrator's release",
+   "link": "https://www.abc.net.au/news/2026-11-11/dv-survivor-learns-of-perpetrator-release-through-media/107373214",
+   "published": "2026-11-11T07:51:16+00:00"
+  },
+  {
+   "title": "'Inland ocean' of Lake Eyre Basin to be harvested under flood plain proposal",
+   "link": "https://www.abc.net.au/news/2026-11-12/outback-inland-ocean-to-be-harvested-under-flood-plain-proposal/107364548",
+   "published": "2026-11-11T21:05:45+00:00"
   },
   {
    "title": "Pregnant heifer rescued from mine shaft with purpose-built harness",
@@ -22,19 +47,9 @@
    "published": "2026-11-11T07:16:48+00:00"
   },
   {
-   "title": "Tensions between SA Government, city council rise over oval dispute",
+   "title": "Tensions between SA government, city council rise over oval dispute",
    "link": "https://www.abc.net.au/news/2026-11-11/war-of-words-as-premier-attacks-city-council-oval-approvals/107372416",
    "published": "2026-11-11T06:24:32+00:00"
-  },
-  {
-   "title": "Two SA David Jones stores among 19 to close",
-   "link": "https://www.abc.net.au/news/2026-11-11/david-jones-to-close-stores/107372854",
-   "published": "2026-11-11T02:07:46+00:00"
-  },
-  {
-   "title": "Minister's moral dilemma as sister pleads to make cancer risk known",
-   "link": "https://www.abc.net.au/news/2026-11-11/donor-conceived-woman-push-to-alert-half-sister-to-cancer-risk/107371778",
-   "published": "2026-11-11T01:46:18+00:00"
   },
   {
    "title": "ACL battles haven't halted these AFL draft hopefuls",
@@ -42,19 +57,9 @@
    "published": "2026-11-11T03:08:00+00:00"
   },
   {
-   "title": "SA Labor slammed 'basketball stadium' to fix ramping but the crisis is far from over",
-   "link": "https://www.abc.net.au/news/2026-11-11/sa-government-invest-in-sports-amid-ramping-crisis/107368278",
-   "published": "2026-11-10T19:00:58+00:00"
-  },
-  {
-   "title": "Cooped-up free-range hens set free again as bird flu spread slows in SA",
-   "link": "https://www.abc.net.au/news/2026-11-11/housed-free-range-chickens-set-free-as-bird-flu-spread-slows/107368782",
-   "published": "2026-11-11T01:21:34+00:00"
-  },
-  {
-   "title": "South Road scandal to become subject of parliamentary inquiry",
-   "link": "https://www.abc.net.au/news/2026-11-11/t2d-scandal-to-become-subject-of-parliamentary-inquiry/107368122",
-   "published": "2026-11-10T20:05:02+00:00"
+   "title": "Minister's moral dilemma as sister pleads to make cancer risk known",
+   "link": "https://www.abc.net.au/news/2026-11-11/donor-conceived-woman-push-to-alert-half-sister-to-cancer-risk/107371778",
+   "published": "2026-11-11T01:46:18+00:00"
   },
   {
    "title": "Tribute to former Adelaide Hills passenger rail in backyard model",
@@ -62,45 +67,40 @@
    "published": "2026-11-11T03:29:45+00:00"
   },
   {
-   "title": "Adelaide council backflips on fossil fuel ad ban amid Tour Down Under fears",
-   "link": "https://www.abc.net.au/news/2026-11-10/adelaide-city-council-fossil-fuel-ad-ban-tour-down-under/107369768",
-   "published": "2026-11-10T10:49:39+00:00"
+   "title": "Cooped-up free-range hens set free again as bird flu spread slows in SA",
+   "link": "https://www.abc.net.au/news/2026-11-11/housed-free-range-chickens-set-free-as-bird-flu-spread-slows/107368782",
+   "published": "2026-11-11T01:21:34+00:00"
   },
   {
-   "title": "Traditional owners and uni students work together to unearth history",
-   "link": "https://www.abc.net.au/news/2026-11-09/archaeology-students-traditional-owners-pilot-program/107359186",
-   "published": "2026-11-08T19:01:27+00:00"
+   "title": "SA Labor slammed 'basketball stadium' to fix ramping but the crisis is far from over",
+   "link": "https://www.abc.net.au/news/2026-11-11/sa-government-invest-in-sports-amid-ramping-crisis/107368278",
+   "published": "2026-11-10T19:00:58+00:00"
   },
   {
-   "title": "Buyers ditch backyards for balconies as rates rise",
-   "link": "https://www.abc.net.au/news/2026-11-11/how-house-unit-values-compare-across-capitals-2026/107337340",
-   "published": "2026-11-10T18:51:06+00:00"
+   "title": "Royalty, fashion firsts and elephants. The highs and lows of David Jones's family history",
+   "link": "https://www.abc.net.au/news/2026-11-12/family-behind-david-jones-on-retailers-past-present-and-future/107368876",
+   "published": "2026-11-11T18:00:00+00:00"
   },
   {
-   "title": "'Not enough evidence' to determine young woman's cause of death, inquest finds",
-   "link": "https://www.abc.net.au/news/2026-11-10/death-inquest-findings-wilcannia-nsw-coroner/107368106",
-   "published": "2026-11-10T06:54:03+00:00"
+   "title": "As Trump dismisses AI concerns, Albanese tries to show he's in control",
+   "link": "https://www.abc.net.au/news/2026-11-12/anthony-albanese-ai-control/107373474",
+   "published": "2026-11-11T18:00:00+00:00"
   },
   {
-   "title": "Lifeguard in tears as she recalls drowning of nine-year-old boy",
-   "link": "https://www.abc.net.au/news/2026-11-10/court-family-drowned-waikerie-pool-lifeguard-coronial-inquest/107367172",
-   "published": "2026-11-10T07:05:08+00:00"
+   "title": "The giant gas project and the billion-dollar funding question",
+   "link": "https://www.abc.net.au/news/2026-11-12/woodside-browse-project-finance-problem/107372940",
+   "published": "2026-11-11T18:00:00+00:00"
   },
   {
-   "title": "Mother accused of choking child remanded in custody in Coober Pedy",
-   "link": "https://www.abc.net.au/news/2026-11-10/coober-pedy-mother-appears-in-court-dv-charges/107368256",
-   "published": "2026-11-10T02:30:11+00:00"
+   "title": "Four million stage general strike in Spain over national housing crisis",
+   "link": "https://www.abc.net.au/news/2026-11-12/spain-protests-housing-election/107375816",
+   "published": "2026-11-11T18:03:07+00:00"
   },
   {
-   "title": "Alleged murder victim stabbed repeatedly and left crying for help, jury hears",
-   "link": "https://www.abc.net.au/news/2026-11-10/trial-starts-into-alleged-murder-at-welland-over-drug-dispute/107364312",
-   "published": "2026-11-10T05:55:37+00:00"
-  },
-  {
-   "title": "Comedian doubtful about future in TV after blowing whistle on Walliams",
-   "link": "https://www.abc.net.au/news/2026-11-11/david-walliams-whistblower-speaks-out/107372358",
-   "published": "2026-11-11T05:53:54+00:00"
+   "title": "Live: Nvidia CEO Jensen Huang allegedly had second affair, board to meet",
+   "link": "https://www.abc.net.au/news/2026-11-12/asx-markets-business-news-live-updates-thursday-12-november/107374826",
+   "published": "2026-11-11T20:33:21+00:00"
   }
  ],
- "updated": "2026-11-11T10:47:15.420166+00:00"
+ "updated": "2026-11-12T01:29:03.311795+00:00"
 }
