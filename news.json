@@ -2,9 +2,19 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "First trees felled in Adelaide parklands for MotoGP circuit",
+   "title": "Celebrity chef says tree chop in Adelaide parklands 'inexcusable'",
    "link": "https://www.abc.net.au/news/2026-11-13/first-trees-felled-in-adelaide-parklands-for-motogp-circuit/107381082",
    "published": "2026-11-12T21:25:15+00:00"
+  },
+  {
+   "title": "Isolated mothers' club provides a lifeline for postnatal women",
+   "link": "https://www.abc.net.au/news/2026-11-13/regional-mothers-support-group-postnatal-depression-sa/107363294",
+   "published": "2026-11-13T01:59:29+00:00"
+  },
+  {
+   "title": "Builder fined $150k after mother and baby injured in wall fall",
+   "link": "https://www.abc.net.au/news/2026-11-13/sa-wall-collapse-wayville-builder-fined-mother-baby-injured/107378848",
+   "published": "2026-11-13T01:23:16+00:00"
   },
   {
    "title": "SA gives green light for gas to help power future data centres",
@@ -12,9 +22,24 @@
    "published": "2026-11-12T20:06:25+00:00"
   },
   {
+   "title": "Sheep price records continue to tumble",
+   "link": "https://www.abc.net.au/news/2026-11-13/sheep-price-records-tumble-across-the-country/107372048",
+   "published": "2026-11-13T02:41:54+00:00"
+  },
+  {
    "title": "Pool's defibrillator not working when nine-year-old boy drowned",
    "link": "https://www.abc.net.au/news/2026-11-12/court-defibrillator-broken-coronial-inquest-drowning-waikerie/107376648",
    "published": "2026-11-12T06:42:58+00:00"
+  },
+  {
+   "title": "Rising costs hurt South Australia's regional high streets",
+   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
+   "published": "2026-11-11T18:58:04+00:00"
+  },
+  {
+   "title": "Personal data stolen after National Parks booking service hacked in three states",
+   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
+   "published": "2026-11-11T23:54:20+00:00"
   },
   {
    "title": "Ancient stories in the stars revealed at Indigenous-owned observatory",
@@ -27,28 +52,18 @@
    "published": "2026-11-12T03:37:32+00:00"
   },
   {
-   "title": "Data centre industry butts up against community challenges",
-   "link": "https://www.abc.net.au/news/2026-11-12/data-centre-industry-butts-up-against-community-challenges/107379250",
-   "published": "2026-11-12T07:29:48+00:00"
+   "title": "The US has been holding secretive talks with a regime it accused of genocide",
+   "link": "https://www.abc.net.au/news/2026-11-13/trump-quest-for-rare-earths-brings-us-closer-to-myanmar-regime/107376926",
+   "published": "2026-11-13T02:06:20+00:00"
   },
   {
-   "title": "Personal data stolen after National Parks booking service hacked in three states",
-   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
-   "published": "2026-11-11T23:54:20+00:00"
+   "title": "Nvidia's Jensen Huang scandal brings China's spy networks into view",
+   "link": "https://www.abc.net.au/news/2026-11-13/nvidia-scandal-china-spy-network/107381704",
+   "published": "2026-11-13T01:38:26+00:00"
   },
   {
-   "title": "Rising costs hurt South Australia's regional high streets",
-   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
-   "published": "2026-11-11T18:58:04+00:00"
-  },
-  {
-   "title": "Live: Home affairs minister considers backing down on backpacker visa policy",
-   "link": "https://www.abc.net.au/news/2026-11-13/federal-politics-live-blog-backpacker-visas/107380962",
-   "published": "2026-11-12T20:05:55+00:00"
-  },
-  {
-   "title": "Worried doctors urge action on frequent shortages of critical drugs",
-   "link": "https://www.abc.net.au/news/2026-11-13/repeated-critical-medicine-shortages-new-analysis/107242432",
+   "title": "AI disaster for banks, super funds and insurers only a matter of time",
+   "link": "https://www.abc.net.au/news/2026-11-13/regulator-apra-warns-of-interruptions-as-frontier-ai-evolves/107378944",
    "published": "2026-11-12T18:00:00+00:00"
   },
   {
@@ -57,50 +72,35 @@
    "published": "2026-11-12T19:48:27+00:00"
   },
   {
-   "title": "National park becomes known as the 'Devil's Triangle'",
+   "title": "Despite a 1960 doomsday prediction, the world won't end today",
+   "link": "https://www.abc.net.au/news/science/2026-11-13/world-has-avoided-a-predicted-population-doomsday/107320748",
+   "published": "2026-11-12T21:49:59+00:00"
+  },
+  {
+   "title": "Barrington Tops becomes known as the 'Devil's Triangle'",
    "link": "https://www.abc.net.au/news/2026-11-13/could-the-barrington-tops-be-australias-bermuda-triangle/107292880",
    "published": "2026-11-12T18:00:00+00:00"
   },
   {
-   "title": "The government is in trouble — does Albanese have the skills to fix it?",
-   "link": "https://www.abc.net.au/news/2026-11-13/michelle-grattan-anthony-albanese-leadership-woes/107377538",
+   "title": "Gazans desperate to create shelter from rubble in 'miserable' conditions",
+   "link": "https://www.abc.net.au/news/2026-11-13/scramble-for-materials-shelter-gaza-flood-storms/107377866",
+   "published": "2026-11-13T02:00:36+00:00"
+  },
+  {
+   "title": "Worried doctors urge action on frequent shortages of critical drugs",
+   "link": "https://www.abc.net.au/news/2026-11-13/repeated-critical-medicine-shortages-new-analysis/107242432",
    "published": "2026-11-12T18:00:00+00:00"
   },
   {
-   "title": "AI disaster for banks, super funds and insurers only a matter of time",
-   "link": "https://www.abc.net.au/news/2026-11-13/regulator-apra-warns-of-interruptions-as-frontier-ai-evolves/107378944",
+   "title": "Australia defends climate record after Greta Thunberg's 'snail' swipe",
+   "link": "https://www.abc.net.au/news/2026-11-13/chris-bowen-seeks-pragmatic-consensus-nto-inal-cop31-talks/107380860",
+   "published": "2026-11-12T18:50:35+00:00"
+  },
+  {
+   "title": "New $76m hub helps agencies enter 'chat room' to disrupt youth extremism",
+   "link": "https://www.abc.net.au/news/2026-11-13/sydney-counterterrorism-hub-targets-youth-extremism/107380242",
    "published": "2026-11-12T18:00:00+00:00"
-  },
-  {
-   "title": "Death of door-to-door sales, department stores heralds things to come",
-   "link": "https://www.abc.net.au/news/2026-11-13/david-jones-department-stores-decline-retail-future/107376858",
-   "published": "2026-11-12T19:44:53+00:00"
-  },
-  {
-   "title": "Skyrocketing regional airfares hurting patients needing specialist care",
-   "link": "https://www.abc.net.au/news/2026-11-13/high-regional-airfares-hurting-country-patients-wa/107379642",
-   "published": "2026-11-12T22:01:04+00:00"
-  },
-  {
-   "title": "Salmon deaths at 'eye-watering' levels in Macquarie Harbour",
-   "link": "https://www.abc.net.au/news/2026-11-13/salmon-deaths-macquarie-harbour-tasmania-rti/107379706",
-   "published": "2026-11-12T19:00:10+00:00"
-  },
-  {
-   "title": "'False crops' trick invasive weed into killing itself",
-   "link": "https://www.abc.net.au/news/rural/2026-11-13/false-crops-trick-weed-into-killing-itself/107366184",
-   "published": "2026-11-12T20:15:50+00:00"
-  },
-  {
-   "title": "PM urged to redirect funding for gas hub to new Royal Darwin Hospital",
-   "link": "https://www.abc.net.au/news/2026-11-13/anthony-albanese-middle-arm-royal-darwin-hospital-funding-letter/107379440",
-   "published": "2026-11-12T20:55:13+00:00"
-  },
-  {
-   "title": "Concerns 'watershed' moment for AI electioneering could further erode trust",
-   "link": "https://www.abc.net.au/news/2026-11-13/political-ads-vic-election-ai-social-media-use/107378416",
-   "published": "2026-11-12T18:54:30+00:00"
   }
  ],
- "updated": "2026-11-12T22:51:07.795285+00:00"
+ "updated": "2026-11-13T03:23:23.441169+00:00"
 }
