@@ -2,14 +2,14 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Celebrity chef says tree chop in Adelaide parklands 'inexcusable'",
-   "link": "https://www.abc.net.au/news/2026-11-13/first-trees-felled-in-adelaide-parklands-for-motogp-circuit/107381082",
-   "published": "2026-11-12T21:25:15+00:00"
+   "title": "Teen sentenced for 'vicious' attack on woman sleeping rough",
+   "link": "https://www.abc.net.au/news/2026-11-13/youth-court-sentences-teen-who-attacked-woman-in-mitcham/107383976",
+   "published": "2026-11-13T06:37:47+00:00"
   },
   {
-   "title": "Isolated mothers' club provides a lifeline for postnatal women",
-   "link": "https://www.abc.net.au/news/2026-11-13/regional-mothers-support-group-postnatal-depression-sa/107363294",
-   "published": "2026-11-13T01:59:29+00:00"
+   "title": "Locusts wreaking havoc across South Australia's pastoral land",
+   "link": "https://www.abc.net.au/news/2026-11-13/locusts-wreak-havoc-across-south-australia-pastoral-land/107381398",
+   "published": "2026-11-13T06:11:36+00:00"
   },
   {
    "title": "Builder fined $150k after mother and baby injured in wall fall",
@@ -17,14 +17,24 @@
    "published": "2026-11-13T01:23:16+00:00"
   },
   {
+   "title": "Emergency services called to fatal workplace incident in Adelaide",
+   "link": "https://www.abc.net.au/news/2026-11-13/fatal-workplace-incident-vista-adelaide/107383520",
+   "published": "2026-11-13T05:45:32+00:00"
+  },
+  {
+   "title": "The village on wheels helping mums combat post-birth isolation",
+   "link": "https://www.abc.net.au/news/2026-11-13/regional-mothers-support-group-postnatal-depression-sa/107363294",
+   "published": "2026-11-13T01:59:29+00:00"
+  },
+  {
+   "title": "Celebrity chef says tree chop in Adelaide parklands 'inexcusable'",
+   "link": "https://www.abc.net.au/news/2026-11-13/first-trees-felled-in-adelaide-parklands-for-motogp-circuit/107381082",
+   "published": "2026-11-12T21:25:15+00:00"
+  },
+  {
    "title": "SA gives green light for gas to help power future data centres",
    "link": "https://www.abc.net.au/news/2026-11-13/sa-gives-green-light-for-gas-to-power-data-centres/107364606",
    "published": "2026-11-12T20:06:25+00:00"
-  },
-  {
-   "title": "Sheep price records continue to tumble",
-   "link": "https://www.abc.net.au/news/2026-11-13/sheep-price-records-tumble-across-the-country/107372048",
-   "published": "2026-11-13T02:41:54+00:00"
   },
   {
    "title": "Pool's defibrillator not working when nine-year-old boy drowned",
@@ -32,14 +42,14 @@
    "published": "2026-11-12T06:42:58+00:00"
   },
   {
+   "title": "Sheep price records continue to tumble",
+   "link": "https://www.abc.net.au/news/2026-11-13/sheep-price-records-tumble-across-the-country/107372048",
+   "published": "2026-11-13T02:41:54+00:00"
+  },
+  {
    "title": "Rising costs hurt South Australia's regional high streets",
    "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
    "published": "2026-11-11T18:58:04+00:00"
-  },
-  {
-   "title": "Personal data stolen after National Parks booking service hacked in three states",
-   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
-   "published": "2026-11-11T23:54:20+00:00"
   },
   {
    "title": "Ancient stories in the stars revealed at Indigenous-owned observatory",
@@ -47,14 +57,19 @@
    "published": "2026-11-12T04:31:30+00:00"
   },
   {
+   "title": "Personal data stolen after National Parks booking service hacked in three states",
+   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
+   "published": "2026-11-11T23:54:20+00:00"
+  },
+  {
    "title": "Farmer who's 'not a great swimmer' hopes to be first to swim the Darling",
    "link": "https://www.abc.net.au/news/2026-11-12/first-person-to-swim-entire-darling-river-for-mnd-parkinsons-nsw/107376254",
    "published": "2026-11-12T03:37:32+00:00"
   },
   {
-   "title": "The US has been holding secretive talks with a regime it accused of genocide",
-   "link": "https://www.abc.net.au/news/2026-11-13/trump-quest-for-rare-earths-brings-us-closer-to-myanmar-regime/107376926",
-   "published": "2026-11-13T02:06:20+00:00"
+   "title": "Lamarre-Condon pressed on 'lies' in fiery end to cross-examination",
+   "link": "https://www.abc.net.au/news/2026-11-13/beau-lamarre-condon-purchases-searches-prior-to-alleged-murders/107381002",
+   "published": "2026-11-13T05:59:19+00:00"
   },
   {
    "title": "Nvidia's Jensen Huang scandal brings China's spy networks into view",
@@ -67,40 +82,25 @@
    "published": "2026-11-12T18:00:00+00:00"
   },
   {
+   "title": "The US has been holding secretive talks with a regime it accused of genocide",
+   "link": "https://www.abc.net.au/news/2026-11-13/trump-quest-for-rare-earths-brings-us-closer-to-myanmar-regime/107376926",
+   "published": "2026-11-13T02:06:20+00:00"
+  },
+  {
+   "title": "Teen missing for six days recounts ordeal from hospital",
+   "link": "https://www.abc.net.au/news/2026-11-13/teen-william-recovers-in-hospital-after-six-days-lost-in-bush/107381438",
+   "published": "2026-11-12T23:48:08+00:00"
+  },
+  {
    "title": "Only four government ministers have saved money this year. Here's who",
    "link": "https://www.abc.net.au/news/2026-11-13/which-ministers-have-achieved-net-savings-this-year/107377958",
    "published": "2026-11-12T19:48:27+00:00"
   },
   {
-   "title": "Despite a 1960 doomsday prediction, the world won't end today",
-   "link": "https://www.abc.net.au/news/science/2026-11-13/world-has-avoided-a-predicted-population-doomsday/107320748",
-   "published": "2026-11-12T21:49:59+00:00"
-  },
-  {
-   "title": "Barrington Tops becomes known as the 'Devil's Triangle'",
-   "link": "https://www.abc.net.au/news/2026-11-13/could-the-barrington-tops-be-australias-bermuda-triangle/107292880",
-   "published": "2026-11-12T18:00:00+00:00"
-  },
-  {
-   "title": "Gazans desperate to create shelter from rubble in 'miserable' conditions",
-   "link": "https://www.abc.net.au/news/2026-11-13/scramble-for-materials-shelter-gaza-flood-storms/107377866",
-   "published": "2026-11-13T02:00:36+00:00"
-  },
-  {
-   "title": "Worried doctors urge action on frequent shortages of critical drugs",
-   "link": "https://www.abc.net.au/news/2026-11-13/repeated-critical-medicine-shortages-new-analysis/107242432",
-   "published": "2026-11-12T18:00:00+00:00"
-  },
-  {
-   "title": "Australia defends climate record after Greta Thunberg's 'snail' swipe",
-   "link": "https://www.abc.net.au/news/2026-11-13/chris-bowen-seeks-pragmatic-consensus-nto-inal-cop31-talks/107380860",
-   "published": "2026-11-12T18:50:35+00:00"
-  },
-  {
-   "title": "New $76m hub helps agencies enter 'chat room' to disrupt youth extremism",
-   "link": "https://www.abc.net.au/news/2026-11-13/sydney-counterterrorism-hub-targets-youth-extremism/107380242",
-   "published": "2026-11-12T18:00:00+00:00"
+   "title": "Government back to the drawing board on backpacker crackdown",
+   "link": "https://www.abc.net.au/news/2026-11-13/backpacker-working-holiday-visa-immigration-uk-rethink/107381884",
+   "published": "2026-11-13T02:45:03+00:00"
   }
  ],
- "updated": "2026-11-13T03:23:23.441169+00:00"
+ "updated": "2026-11-13T11:29:57.358924+00:00"
 }
