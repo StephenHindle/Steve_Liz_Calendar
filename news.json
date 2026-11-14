@@ -2,6 +2,26 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Bird experts cover 38,000km looking for signs of H5 bird flu",
+   "link": "https://www.abc.net.au/news/2026-11-14/annual-eastern-bird-survey-monitors-bird-flu-impacts/107372532",
+   "published": "2026-11-13T20:54:50+00:00"
+  },
+  {
+   "title": "The Big Fly Swat unleashed after bar flies' inspired idea",
+   "link": "https://www.abc.net.au/news/2026-11-14/worlds-biggest-fly-swat-in-outback-kingoonya-sa/107314740",
+   "published": "2026-11-13T21:41:56+00:00"
+  },
+  {
+   "title": "Battery-powered trailers could slash diesel costs for truck operators",
+   "link": "https://www.abc.net.au/news/2026-11-14/electric-trailers-cut-diesel-costs/107377776",
+   "published": "2026-11-13T21:17:02+00:00"
+  },
+  {
+   "title": "Emergency services called to fatal workplace incident in Adelaide",
+   "link": "https://www.abc.net.au/news/2026-11-13/fatal-workplace-incident-vista-adelaide/107383520",
+   "published": "2026-11-13T05:45:32+00:00"
+  },
+  {
    "title": "Teen sentenced for 'vicious' attack on woman sleeping rough",
    "link": "https://www.abc.net.au/news/2026-11-13/youth-court-sentences-teen-who-attacked-woman-in-mitcham/107383976",
    "published": "2026-11-13T06:37:47+00:00"
@@ -10,16 +30,6 @@
    "title": "Locusts wreaking havoc across South Australia's pastoral land",
    "link": "https://www.abc.net.au/news/2026-11-13/locusts-wreak-havoc-across-south-australia-pastoral-land/107381398",
    "published": "2026-11-13T06:11:36+00:00"
-  },
-  {
-   "title": "Builder fined $150k after mother and baby injured in wall fall",
-   "link": "https://www.abc.net.au/news/2026-11-13/sa-wall-collapse-wayville-builder-fined-mother-baby-injured/107378848",
-   "published": "2026-11-13T01:23:16+00:00"
-  },
-  {
-   "title": "Emergency services called to fatal workplace incident in Adelaide",
-   "link": "https://www.abc.net.au/news/2026-11-13/fatal-workplace-incident-vista-adelaide/107383520",
-   "published": "2026-11-13T05:45:32+00:00"
   },
   {
    "title": "The village on wheels helping mums combat post-birth isolation",
@@ -32,14 +42,9 @@
    "published": "2026-11-12T21:25:15+00:00"
   },
   {
-   "title": "SA gives green light for gas to help power future data centres",
-   "link": "https://www.abc.net.au/news/2026-11-13/sa-gives-green-light-for-gas-to-power-data-centres/107364606",
-   "published": "2026-11-12T20:06:25+00:00"
-  },
-  {
-   "title": "Pool's defibrillator not working when nine-year-old boy drowned",
-   "link": "https://www.abc.net.au/news/2026-11-12/court-defibrillator-broken-coronial-inquest-drowning-waikerie/107376648",
-   "published": "2026-11-12T06:42:58+00:00"
+   "title": "Builder fined $150k after mother and baby injured in wall fall",
+   "link": "https://www.abc.net.au/news/2026-11-13/sa-wall-collapse-wayville-builder-fined-mother-baby-injured/107378848",
+   "published": "2026-11-13T01:23:16+00:00"
   },
   {
    "title": "Sheep price records continue to tumble",
@@ -47,9 +52,14 @@
    "published": "2026-11-13T02:41:54+00:00"
   },
   {
-   "title": "Rising costs hurt South Australia's regional high streets",
-   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
-   "published": "2026-11-11T18:58:04+00:00"
+   "title": "SA gives green light for gas to help power future data centres",
+   "link": "https://www.abc.net.au/news/2026-11-13/sa-gives-green-light-for-gas-to-power-data-centres/107364606",
+   "published": "2026-11-12T20:06:25+00:00"
+  },
+  {
+   "title": "Data centre industry butts up against community challenges",
+   "link": "https://www.abc.net.au/news/2026-11-12/data-centre-industry-butts-up-against-community-challenges/107379250",
+   "published": "2026-11-12T07:29:48+00:00"
   },
   {
    "title": "Ancient stories in the stars revealed at Indigenous-owned observatory",
@@ -57,50 +67,40 @@
    "published": "2026-11-12T04:31:30+00:00"
   },
   {
-   "title": "Personal data stolen after National Parks booking service hacked in three states",
-   "link": "https://www.abc.net.au/news/2026-11-12/queensland-parks-booking-system-hacked/107376788",
-   "published": "2026-11-11T23:54:20+00:00"
+   "title": "Pool's defibrillator not working when nine-year-old boy drowned",
+   "link": "https://www.abc.net.au/news/2026-11-12/court-defibrillator-broken-coronial-inquest-drowning-waikerie/107376648",
+   "published": "2026-11-12T06:42:58+00:00"
   },
   {
-   "title": "Farmer who's 'not a great swimmer' hopes to be first to swim the Darling",
-   "link": "https://www.abc.net.au/news/2026-11-12/first-person-to-swim-entire-darling-river-for-mnd-parkinsons-nsw/107376254",
-   "published": "2026-11-12T03:37:32+00:00"
+   "title": "Rising costs hurt South Australia's regional high streets",
+   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
+   "published": "2026-11-11T18:58:04+00:00"
   },
   {
-   "title": "Lamarre-Condon pressed on 'lies' in fiery end to cross-examination",
-   "link": "https://www.abc.net.au/news/2026-11-13/beau-lamarre-condon-purchases-searches-prior-to-alleged-murders/107381002",
-   "published": "2026-11-13T05:59:19+00:00"
+   "title": "Town where dust never settles over 'true' history of elusive black opals",
+   "link": "https://www.abc.net.au/news/2026-11-14/lightning-ridge-battles-for-true-opal-mining-history/107212872",
+   "published": "2026-11-13T19:37:48+00:00"
   },
   {
-   "title": "Nvidia's Jensen Huang scandal brings China's spy networks into view",
-   "link": "https://www.abc.net.au/news/2026-11-13/nvidia-scandal-china-spy-network/107381704",
-   "published": "2026-11-13T01:38:26+00:00"
+   "title": "Police are done with the Swans, but the saga is far from over",
+   "link": "https://www.abc.net.au/news/2026-11-14/sydney-swans-culture-review-shows-saga-not-over/107384692",
+   "published": "2026-11-13T20:30:50+00:00"
   },
   {
-   "title": "AI disaster for banks, super funds and insurers only a matter of time",
-   "link": "https://www.abc.net.au/news/2026-11-13/regulator-apra-warns-of-interruptions-as-frontier-ai-evolves/107378944",
-   "published": "2026-11-12T18:00:00+00:00"
+   "title": "As the world's calamities converge climate talks tread water",
+   "link": "https://www.abc.net.au/news/2026-11-14/cop31-35-by-35-climate-change-target/107384386",
+   "published": "2026-11-13T18:00:00+00:00"
   },
   {
-   "title": "The US has been holding secretive talks with a regime it accused of genocide",
-   "link": "https://www.abc.net.au/news/2026-11-13/trump-quest-for-rare-earths-brings-us-closer-to-myanmar-regime/107376926",
-   "published": "2026-11-13T02:06:20+00:00"
+   "title": "Cummins hopes his answers ended the sandpaper war. He is sadly mistaken",
+   "link": "https://www.abc.net.au/news/2026-11-13/pat-cummins-press-conference-sandpaper-civil-war/107382866",
+   "published": "2026-11-13T03:56:54+00:00"
   },
   {
-   "title": "Teen missing for six days recounts ordeal from hospital",
-   "link": "https://www.abc.net.au/news/2026-11-13/teen-william-recovers-in-hospital-after-six-days-lost-in-bush/107381438",
-   "published": "2026-11-12T23:48:08+00:00"
-  },
-  {
-   "title": "Only four government ministers have saved money this year. Here's who",
-   "link": "https://www.abc.net.au/news/2026-11-13/which-ministers-have-achieved-net-savings-this-year/107377958",
-   "published": "2026-11-12T19:48:27+00:00"
-  },
-  {
-   "title": "Government back to the drawing board on backpacker crackdown",
-   "link": "https://www.abc.net.au/news/2026-11-13/backpacker-working-holiday-visa-immigration-uk-rethink/107381884",
-   "published": "2026-11-13T02:45:03+00:00"
+   "title": "Trump to rule on tariffs for Australian lamb after trade commissioners disagree",
+   "link": "https://www.abc.net.au/news/2026-11-14/us-trade-investigation-into-lamb-imports-decision-handed-down/107385510",
+   "published": "2026-11-13T20:07:43+00:00"
   }
  ],
- "updated": "2026-11-13T11:29:57.358924+00:00"
+ "updated": "2026-11-14T00:18:48.961890+00:00"
 }
