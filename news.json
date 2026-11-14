@@ -2,6 +2,21 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Ocean that once covered Flinders Ranges preserved Earth's earliest life",
+   "link": "https://www.abc.net.au/news/2026-11-15/flinders-ranges-ocean-ediacaran-fossils-research-earth-life/107377008",
+   "published": "2026-11-14T20:36:15+00:00"
+  },
+  {
+   "title": "Can these true crime sleuths solve Australia's most infamous cold cases?",
+   "link": "https://www.abc.net.au/news/2026-11-15/true-crime-festival-victor-harbor-cold-cases/107354812",
+   "published": "2026-11-14T17:00:00+00:00"
+  },
+  {
+   "title": "'The line-up is huge': Adelaide woman caught up in US flight chaos",
+   "link": "https://www.abc.net.au/news/2026-11-14/australians-stranded-in-us-amid-flight-cancellations-chaos/107385998",
+   "published": "2026-11-14T03:24:57+00:00"
+  },
+  {
    "title": "Father Christmas greeted by estimated 335,000 at Adelaide pageant",
    "link": "https://www.abc.net.au/news/2026-11-14/father-christmas-arrives-in-adelaide-at-annual-christmas-pageant/107385880",
    "published": "2026-11-14T06:08:43+00:00"
@@ -62,45 +77,30 @@
    "published": "2026-11-12T20:06:25+00:00"
   },
   {
-   "title": "Data centre industry butts up against community challenges",
-   "link": "https://www.abc.net.au/news/2026-11-12/data-centre-industry-butts-up-against-community-challenges/107379250",
-   "published": "2026-11-12T07:29:48+00:00"
+   "title": "Albanese caught between climate ambition and political reality at COP31",
+   "link": "https://www.abc.net.au/news/2026-11-15/climate-ambition-political-reality-cop31-albanese/107383424",
+   "published": "2026-11-14T18:50:21+00:00"
   },
   {
-   "title": "Ancient stories in the stars revealed at Indigenous-owned observatory",
-   "link": "https://www.abc.net.au/news/2026-11-12/koonibba-star-observatory-paves-way-for-indigenous-storytelling/107372096",
-   "published": "2026-11-12T04:31:30+00:00"
+   "title": "Experts say Australia appears 'willing to tolerate' rheumatic heart disease",
+   "link": "https://www.abc.net.au/news/2026-11-15/australia-criticised-over-indigenous-rheumatic-heart-disease/107377218",
+   "published": "2026-11-14T19:01:48+00:00"
   },
   {
-   "title": "Pool's defibrillator not working when nine-year-old boy drowned",
-   "link": "https://www.abc.net.au/news/2026-11-12/court-defibrillator-broken-coronial-inquest-drowning-waikerie/107376648",
-   "published": "2026-11-12T06:42:58+00:00"
+   "title": "Do Australians actually want cheaper housing? We're finding out fast",
+   "link": "https://www.abc.net.au/news/2026-11-14/do-australians-actually-want-cheaper-housing/107378812",
+   "published": "2026-11-14T02:04:47+00:00"
   },
   {
-   "title": "Rising costs hurt South Australia's regional high streets",
-   "link": "https://www.abc.net.au/news/2026-11-12/mount-gambier-main-street-shopping-empty-retail-businesses-sa/107369408",
-   "published": "2026-11-11T18:58:04+00:00"
+   "title": "US blames wire replacement for ground stop as flight disruptions continue",
+   "link": "https://www.abc.net.au/news/2026-11-15/us-airlines-more-disruptions-ahead-of-thanksgiving/107386452",
+   "published": "2026-11-14T18:40:57+00:00"
   },
   {
-   "title": "'Plastic farmers' in Indonesia unaware of the dangers of burning waste",
-   "link": "https://www.abc.net.au/news/2026-11-14/plastic-farmers-in-indonesia-unaware-of-waste-burning-dangers/107274506",
-   "published": "2026-11-14T03:05:18+00:00"
-  },
-  {
-   "title": "Questions remain after Nvidia CEO's departure",
-   "link": "https://www.abc.net.au/news/2026-11-14/questions-over-jensen-huang-affair-for-us-administration-nvidia/107382476",
-   "published": "2026-11-14T00:52:34+00:00"
-  },
-  {
-   "title": "Registered psychologist accused of recruiting for Universal Medicine cult",
-   "link": "https://www.abc.net.au/news/2026-11-14/universal-medicine-cult-registered-health-professionals/107313996",
-   "published": "2026-11-13T18:00:00+00:00"
-  },
-  {
-   "title": "All passengers rescued after tanker crash causes cruise ship to sink in US",
-   "link": "https://www.abc.net.au/news/2026-11-14/tanker-collides-with-cruise-ship-new-orleans/107385650",
-   "published": "2026-11-13T21:12:52+00:00"
+   "title": "All Blacks suffer 73-year first in defeat to Wales",
+   "link": "https://www.abc.net.au/news/2026-11-15/all-blacks-beaten-by-wales-for-first-time-in-73-years/107387094",
+   "published": "2026-11-14T20:35:19+00:00"
   }
  ],
- "updated": "2026-11-14T14:05:31.419592+00:00"
+ "updated": "2026-11-14T23:21:54.471502+00:00"
 }
