@@ -2,12 +2,22 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
+   "title": "Protesters drive home message to data centre company",
+   "link": "https://www.abc.net.au/news/2026-11-15/ai-data-centre-quantum-dc-adelaide-hills-protest/107387568",
+   "published": "2026-11-15T04:55:21+00:00"
+  },
+  {
+   "title": "Two South Australian bushwalkers rescued from Tasmania's south-west",
+   "link": "https://www.abc.net.au/news/2026-11-15/bushwalkers-rescued-from-western-arthur-range-tasmania/107387554",
+   "published": "2026-11-15T04:47:03+00:00"
+  },
+  {
    "title": "Ocean that once covered Flinders Ranges preserved Earth's earliest life",
    "link": "https://www.abc.net.au/news/2026-11-15/flinders-ranges-ocean-ediacaran-fossils-research-earth-life/107377008",
    "published": "2026-11-14T20:36:15+00:00"
   },
   {
-   "title": "'The line-up is huge': Adelaide woman caught up in US flight chaos",
+   "title": "'The line-up is huge': Australians caught up in US flight chaos",
    "link": "https://www.abc.net.au/news/2026-11-14/australians-stranded-in-us-amid-flight-cancellations-chaos/107385998",
    "published": "2026-11-14T03:24:57+00:00"
   },
@@ -22,6 +32,11 @@
    "published": "2026-11-14T06:08:43+00:00"
   },
   {
+   "title": "Bird experts cover 38,000km looking for signs of H5 bird flu",
+   "link": "https://www.abc.net.au/news/2026-11-14/annual-eastern-bird-survey-monitors-bird-flu-impacts/107372532",
+   "published": "2026-11-13T20:54:50+00:00"
+  },
+  {
    "title": "The Big Fly Swat unleashed after bar flies' inspired idea",
    "link": "https://www.abc.net.au/news/2026-11-14/worlds-biggest-fly-swat-in-outback-kingoonya-sa/107314740",
    "published": "2026-11-13T21:41:56+00:00"
@@ -30,11 +45,6 @@
    "title": "Battery-powered trailers could slash diesel costs for truck operators",
    "link": "https://www.abc.net.au/news/2026-11-14/electric-trailers-cut-diesel-costs/107377776",
    "published": "2026-11-13T21:17:02+00:00"
-  },
-  {
-   "title": "Bird experts cover 38,000km looking for signs of H5 bird flu",
-   "link": "https://www.abc.net.au/news/2026-11-14/annual-eastern-bird-survey-monitors-bird-flu-impacts/107372532",
-   "published": "2026-11-13T20:54:50+00:00"
   },
   {
    "title": "Emergency services called to fatal workplace incident in Adelaide",
@@ -90,17 +100,7 @@
    "title": "Do Australians actually want cheaper housing? We're finding out fast",
    "link": "https://www.abc.net.au/news/2026-11-14/do-australians-actually-want-cheaper-housing/107378812",
    "published": "2026-11-14T02:04:47+00:00"
-  },
-  {
-   "title": "US blames wire replacement for ground stop as flight disruptions continue",
-   "link": "https://www.abc.net.au/news/2026-11-15/us-airlines-more-disruptions-ahead-of-thanksgiving/107386452",
-   "published": "2026-11-14T18:40:57+00:00"
-  },
-  {
-   "title": "All Blacks suffer 73-year first in defeat to Wales",
-   "link": "https://www.abc.net.au/news/2026-11-15/all-blacks-beaten-by-wales-for-first-time-in-73-years/107387094",
-   "published": "2026-11-14T20:35:19+00:00"
   }
  ],
- "updated": "2026-11-15T03:02:25.416002+00:00"
+ "updated": "2026-11-15T10:43:39.534546+00:00"
 }
