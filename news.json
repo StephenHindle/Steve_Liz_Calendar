@@ -2,105 +2,20 @@
  "source": "ABC News SA Top Stories",
  "items": [
   {
-   "title": "Where you go to school might impact whether you're drafted to the AFL",
+   "title": "EVs are hitting the racetracks but motorsport fans are not sold",
+   "link": "https://www.abc.net.au/news/2026-11-17/electric-cars-making-their-mark-in-motorsport-sa/107372370",
+   "published": "2026-11-16T22:30:24+00:00"
+  },
+  {
+   "title": "Private schoolboys rule the draft, but one public school bucks the trend",
    "link": "https://www.abc.net.au/news/2026-11-17/most-afl-players-drafted-from-private-schools-stats-show/107366094",
    "published": "2026-11-16T19:24:29+00:00"
   },
   {
-   "title": "'Critical information' left out of T2D phone call, opposition suggests",
-   "link": "https://www.abc.net.au/news/2026-11-16/t2d-executives-questioned-over-alleged-bikie-link-warning/107389456",
-   "published": "2026-11-16T08:09:20+00:00"
-  },
-  {
-   "title": "Alleged murderer had scoped out paediatrician's home, court told",
-   "link": "https://www.abc.net.au/news/2026-11-16/kerem-aydin-goes-on-trial-accused-of-murder-of-michael-yung/107389454",
-   "published": "2026-11-16T06:24:04+00:00"
-  },
-  {
-   "title": "'Absolute hero' intervenes as man suffers stroke while driving",
-   "link": "https://www.abc.net.au/news/2026-11-16/hero-intervenes-as-man-suffers-medical-episode-driving/107389706",
-   "published": "2026-11-16T04:34:59+00:00"
-  },
-  {
-   "title": "'Tradies' in high-vis steal Makybe Diva trophies",
-   "link": "https://www.abc.net.au/news/2026-11-16/makybe-diva-melbourne-cup-trophies-stolen/107391010",
-   "published": "2026-11-16T04:45:19+00:00"
-  },
-  {
-   "title": "Former defence employee with guns cache deemed high risk offender",
-   "link": "https://www.abc.net.au/news/2026-11-16/artem-vasilyev-strict-supervision-conditions-high-risk-offender/107390208",
-   "published": "2026-11-16T03:49:44+00:00"
-  },
-  {
-   "title": "Can non-alcoholic beer really be used as a sports drink for athletes?",
-   "link": "https://www.abc.net.au/news/2026-11-16/non-alcoholic-beer-as-a-sports-recovery-drink/107379904",
-   "published": "2026-11-16T00:57:41+00:00"
-  },
-  {
-   "title": "SA Health investigates medication errors at youth detention centre",
-   "link": "https://www.abc.net.au/news/2026-11-16/medication-errors-investigated-at-sa-youth-detention-centre/107378808",
-   "published": "2026-11-15T19:08:29+00:00"
-  },
-  {
-   "title": "'Tortuous' aged care crisis pushes town to create its own solutions",
-   "link": "https://www.abc.net.au/news/2026-11-16/loxton-aged-care-crisis-community-support-solutions-sa/107344934",
-   "published": "2026-11-15T22:31:21+00:00"
-  },
-  {
-   "title": "Protesters drive home message to data centre company",
-   "link": "https://www.abc.net.au/news/2026-11-15/ai-data-centre-quantum-dc-adelaide-hills-protest/107387568",
-   "published": "2026-11-15T04:55:21+00:00"
-  },
-  {
-   "title": "Aussie quick says 'everyone knew' about sandpaper, as Warner doubles down",
-   "link": "https://www.abc.net.au/news/2026-11-15/australia-cricket-sandpaper-claims-chadd-sayers-david-warner/107387424",
-   "published": "2026-11-15T04:27:21+00:00"
-  },
-  {
-   "title": "Can these true crime sleuths solve Australia's most infamous cold cases?",
-   "link": "https://www.abc.net.au/news/2026-11-15/true-crime-festival-victor-harbor-cold-cases/107354812",
-   "published": "2026-11-14T17:00:00+00:00"
-  },
-  {
-   "title": "Ocean that once covered Flinders Ranges preserved Earth's earliest life",
-   "link": "https://www.abc.net.au/news/2026-11-15/flinders-ranges-ocean-ediacaran-fossils-research-earth-life/107377008",
-   "published": "2026-11-14T20:36:15+00:00"
-  },
-  {
-   "title": "Bird experts cover 38,000km looking for signs of H5 bird flu",
-   "link": "https://www.abc.net.au/news/2026-11-14/annual-eastern-bird-survey-monitors-bird-flu-impacts/107372532",
-   "published": "2026-11-13T20:54:50+00:00"
-  },
-  {
-   "title": "Country boys coming of age in the manosphere",
-   "link": "https://www.abc.net.au/news/2026-11-17/regional-victoria-manosphere-social-media-young-boys/107335392",
-   "published": "2026-11-16T18:00:00+00:00"
-  },
-  {
-   "title": "Disadvantaged boys most likely to be funnelled away from NDIS: research",
-   "link": "https://www.abc.net.au/news/2026-11-17/new-thriving-kids-ndis-modelling-/107301976",
-   "published": "2026-11-16T19:05:40+00:00"
-  },
-  {
-   "title": "Barrington Tops plane crash mystery still fuelling conspiracy theories",
-   "link": "https://www.abc.net.au/news/2026-11-17/barrington-tops-plane-crash-mystery-fuels-conspiracy-theories/107293388",
-   "published": "2026-11-16T18:00:00+00:00"
-  },
-  {
-   "title": "Netanyahu rival demands probe into PM's office over election fraud claims",
-   "link": "https://www.abc.net.au/news/2026-11-17/benjamin-netanyahu-gadi-eisenkot-call-for-investigation/107392590",
-   "published": "2026-11-16T13:33:14+00:00"
-  },
-  {
-   "title": "UK investigating Russell Brand's message from behind bars",
-   "link": "https://www.abc.net.au/news/2026-11-17/russell-brand-prison-message-read-by-laura-on-sunday-service/107392812",
-   "published": "2026-11-16T19:06:42+00:00"
-  },
-  {
-   "title": "Tame Impala and Baz Luhrmann earn Grammy nods as Raye leads nominations",
-   "link": "https://www.abc.net.au/news/2026-11-17/raye-and-rosalia-lead-nominations-for-music-s-grammy-awards-/107392254",
-   "published": "2026-11-16T15:17:37+00:00"
+   "title": "Test cricket hopefuls let last chance slip to bang the door down",
+   "link": "https://www.abc.net.au/news/2026-11-16/test-cricket-hopefuls-let-last-chance-slip-to-bang-door-down/107392054",
+   "published": "2026-11-16T08:30:14+00:00"
   }
  ],
- "updated": "2026-11-16T20:57:51.620208+00:00"
+ "updated": "2026-11-17T03:45:40.333628+00:00"
 }
